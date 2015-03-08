@@ -45,6 +45,16 @@ public class FilledForm {
 
     /*New var from manhica dss*/
     private String locationName;
+    private String groupHeadId;
+    private String groupHeadPermId;
+    private String groupHeadDob;
+    private String groupHeadName;
+    private String groupHeadGender;
+    
+    private String motherPermId;
+    private String fatherPermId;
+    private String motherName;
+    private String fatherName;
     
     public FilledForm(String formName) {
         this.formName = formName;
@@ -282,6 +292,76 @@ public class FilledForm {
 		this.locationName = locationName;
 	}
 
-	
-	
+	public String getGroupHeadId() {
+		return groupHeadId;
+	}
+
+	public void setGroupHeadId(String groupHeadId) {
+		this.groupHeadId = groupHeadId;
+	}
+
+	public String getGroupHeadPermId() {
+		return groupHeadPermId;
+	}
+
+	public void setGroupHeadPermId(String groupHeadPermId) {
+		this.groupHeadPermId = groupHeadPermId;
+	}
+
+	public String getGroupHeadDob() {
+		return groupHeadDob;
+	}
+
+	public void setGroupHeadDob(String groupHeadDob) {
+		this.groupHeadDob = groupHeadDob;
+	}
+
+	public String getGroupHeadName() {
+		return groupHeadName;
+	}
+
+	public void setGroupHeadName(String groupHeadName) {
+		this.groupHeadName = groupHeadName;
+	}
+
+	public String getGroupHeadGender() {
+		return groupHeadGender;
+	}
+
+	public void setGroupHeadGender(String groupHeadGender) {
+		this.groupHeadGender = groupHeadGender;
+	}
+
+	public String getMotherPermId() {
+		return motherPermId;
+	}
+
+	public void setMotherPermId(String motherPermId) {
+		this.motherPermId = motherPermId;
+	}
+
+	public String getFatherPermId() {
+		return fatherPermId;
+	}
+
+	public void setFatherPermId(String fatherPermId) {
+		this.fatherPermId = fatherPermId;
+	}
+
+	public String getMotherName() {
+		return motherName;
+	}
+
+	public void setMotherName(String motherName) {
+		this.motherName = motherName;
+	}
+
+	public String getFatherName() {
+		return fatherName;
+	}
+
+	public void setFatherName(String fatherName) {
+		this.fatherName = fatherName;
+	}
+		
 }

@@ -1,5 +1,11 @@
 package org.openhds.mobile.model;
 
+import org.openhds.mobile.database.queries.Converter;
+import org.openhds.mobile.database.queries.Queries;
+
+import android.content.ContentResolver;
+import android.database.Cursor;
+
 /**
  * Fills in the event forms with pre-filled values based on the location visit
  * and possibly other entity types
@@ -46,6 +52,7 @@ public class FormFiller {
         addHousehold(sg, form);
 
         form.setIndividualExtId(locationVisit.getSelectedIndividual().getExtId());
+        form.setHouseholdName(locationVisit.getLocation().getName());
 
         return form;
     }
@@ -53,6 +60,7 @@ public class FormFiller {
     private void addHousehold(SocialGroup sg, FilledForm form) {
         form.setHouseholdId(sg.getExtId());
         form.setHouseholdName(sg.getGroupName());
+        form.setGroupHeadId(sg.getGroupHead());
     }
 
     public FilledForm fillMembershipForm(LocationVisit locationVisit) {
@@ -258,8 +266,7 @@ public class FormFiller {
           addVisit(locationVisit, form);
           addIndividual(locationVisit.getSelectedIndividual(), form);
           form.setLocationId(locationVisit.getLocation().getExtId());
-          form.setRoundNumber(locationVisit.getRound().getRoundNumber());
-          form.setRoundNumber(locationVisit.getRound().getRoundNumber());
+          form.setRoundNumber(locationVisit.getRound().getRoundNumber());          
           form.setMotherExtId(locationVisit.getSelectedIndividual().getMother());
           form.setHierarchyId(locationVisit.getLatestLevelExtId());
           if (sg !=null)
@@ -267,10 +274,61 @@ public class FormFiller {
 
           return form;
     }
-    
-    
-
+        
     public void appendFatherId(FilledForm filledForm, String fatherId) {
         filledForm.setFatherExtId(fatherId);
+    }
+    
+    public void addGroupHead(FilledForm filledForm, ContentResolver resolver, SocialGroup sg){
+    	if (sg != null){
+    		Cursor cursor = Queries.getIndividualByExtId(resolver, sg.getGroupHead());
+        	if (cursor.moveToFirst()) {
+        		Individual indiv = Converter.convertToIndividual(cursor);
+        		filledForm.setGroupHeadId(indiv.getExtId());
+        		filledForm.setGroupHeadPermId(indiv.getLastName());
+        		filledForm.setGroupHeadName(indiv.getFirstName());
+        		filledForm.setGroupHeadDob(indiv.getDob());
+        		filledForm.setGroupHeadGender(indiv.getGender());
+        	}
+    	}
+    }
+    
+    public void addParents(FilledForm filledForm, ContentResolver resolver, String individualExtId){
+
+		Cursor cursorIndv = Queries.getIndividualByExtId(resolver, individualExtId);
+
+		if (cursorIndv.moveToFirst()) {
+			Individual indiv = Converter.convertToIndividual(cursorIndv);
+			Individual father = null;
+			Individual mother = null;
+
+			cursorIndv.close();
+
+			if (!indiv.getFather().equalsIgnoreCase("UNK")) {
+				cursorIndv = Queries.getIndividualByExtId(resolver, indiv.getFather());
+				if (cursorIndv.moveToFirst()) {
+					father = Converter.convertToIndividual(cursorIndv);
+					cursorIndv.close();
+				}
+			}
+
+			if (!indiv.getMother().equalsIgnoreCase("UNK")) {
+				cursorIndv = Queries.getIndividualByExtId(resolver, indiv.getMother());
+				if (cursorIndv.moveToFirst()) {
+					mother = Converter.convertToIndividual(cursorIndv);
+					cursorIndv.close();
+				}
+			}
+
+			filledForm.setFatherExtId(father == null ? "UNK" : father.getExtId());
+			filledForm.setFatherPermId(father == null ? "UNK" : father.getLastName());
+			filledForm.setFatherName(father == null ? "UNK" : father.getFirstName());
+
+			filledForm.setMotherExtId(mother == null ? "UNK" : mother.getExtId());
+			filledForm.setMotherPermId(mother == null ? "UNK" : mother.getLastName());
+			filledForm.setMotherName(mother == null ? "UNK" : mother.getFirstName());
+
+		}
+	
     }
 }

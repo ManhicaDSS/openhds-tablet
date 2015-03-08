@@ -365,6 +365,8 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
         		locationVisit.getLocation().setHead(sg.getGroupHead());
         	}
         	filledForm = formFiller.fillExtraForm(locationVisit, form.getName(), sg);
+        	formFiller.addGroupHead(filledForm, resolver, sg);
+        	formFiller.addParents(filledForm, resolver, locationVisit.getSelectedIndividual().getExtId());
         	cursor.close();
         	loadForm(SELECTED_XFORM);
         	break;

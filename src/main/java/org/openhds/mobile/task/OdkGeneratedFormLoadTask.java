@@ -207,6 +207,48 @@ public class OdkGeneratedFormLoadTask extends AsyncTask<Void, Void, Boolean> {
                                 + filledForm.getMigrationType() + "</migrationType>" + "\r\n");
                     } else if (name.equals(FilledParams.socialGroupType)) {
                         sbuilder.append("<socialGroupType>FAM</socialGroupType>" + "\r\n");
+                    } else if (name.equals("locationName")) {
+                        sbuilder.append(filledForm.getLocationName() == null ? "<locationName />" + "\r\n" : "<locationName>"
+                                + filledForm.getLocationName() + "</locationName>" + "\r\n");
+                    } else if (name.equals("permId")) {
+                        sbuilder.append(filledForm.getIndividualLastName() == null ? "<permId />" + "\r\n"
+                                : "<permId>" + filledForm.getIndividualLastName() + "</permId>" + "\r\n"); 
+                    } else if (name.equals("houseno")) {
+                        sbuilder.append(filledForm.getLocationName() == null ? "<houseno />" + "\r\n"
+                                : "<houseno>" + filledForm.getLocationName() + "</houseno>" + "\r\n");                        
+                    } else if (name.equals("headPermId")) {
+                        sbuilder.append(filledForm.getGroupHeadPermId() == null ? "<headPermId />" + "\r\n"
+                                : "<headPermId>" + filledForm.getGroupHeadPermId() + "</headPermId>" + "\r\n"); 
+                    } else if (name.equals("headDob")) {
+                        sbuilder.append(filledForm.getGroupHeadDob() == null ? "<headDob />" + "\r\n"
+                                : "<headDob>" + filledForm.getGroupHeadDob() + "</headDob>" + "\r\n"); 
+                    } else if (name.equals("headName")) {
+                        sbuilder.append(filledForm.getGroupHeadName() == null ? "<headName />" + "\r\n"
+                                : "<headName>" + filledForm.getGroupHeadName() + "</headName>" + "\r\n"); 
+                    } else if (name.equals("fullname")) {
+                        sbuilder.append(filledForm.getIndividualFirstName() == null ? "<fullname />" + "\r\n"
+                                : "<fullname>" + filledForm.getIndividualFirstName() + "</fullname>" + "\r\n"); 
+                    }else if (name.equals("name")) {
+                        sbuilder.append(filledForm.getIndividualFirstName() == null ? "<name />" + "\r\n"
+                                : "<name>" + filledForm.getIndividualFirstName() + "</name>" + "\r\n"); 
+                    } else if (name.equals("headGender")) {
+                        sbuilder.append(filledForm.getGroupHeadGender() == null ? "<headGender />" + "\r\n"
+                                : "<headGender>" + filledForm.getGroupHeadGender() + "</headGender>" + "\r\n"); 
+                    } else if (name.equals("groupName")) {
+                        sbuilder.append(filledForm.getHouseholdName() == null ? "<groupName />" + "\r\n"
+                                : "<groupName>" + filledForm.getHouseholdName() + "</groupName>" + "\r\n"); 
+                    } else if (name.equals("motherPermId")) {
+                        sbuilder.append(filledForm.getMotherPermId() == null ? "<motherPermId />" + "\r\n"
+                                : "<motherPermId>" + filledForm.getMotherPermId() + "</motherPermId>" + "\r\n"); 
+                    } else if (name.equals("fatherPermId")) {
+                        sbuilder.append(filledForm.getFatherPermId() == null ? "<fatherPermId />" + "\r\n"
+                                : "<fatherPermId>" + filledForm.getFatherPermId() + "</fatherPermId>" + "\r\n"); 
+                    } else if (name.equals("motherName")) {
+                        sbuilder.append(filledForm.getMotherName() == null ? "<motherName />" + "\r\n"
+                                : "<motherName>" + filledForm.getMotherName() + "</motherName>" + "\r\n"); 
+                    } else if (name.equals("fatherName")) {
+                        sbuilder.append(filledForm.getFatherName() == null ? "<fatherName />" + "\r\n"
+                                : "<fatherName>" + filledForm.getFatherName() + "</fatherName>" + "\r\n"); 
                     } else if (name.equals(FilledParams.deviceId)) {
                      mTelephonyManager = (TelephonyManager) mContext.getSystemService(Context.TELEPHONY_SERVICE);
                      

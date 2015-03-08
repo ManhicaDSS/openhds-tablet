@@ -66,6 +66,9 @@ public class FilledParams {
 				latlong, householdId, householdName, hierarchyId, 
 				fieldWorkerId, child1Id, child2Id, childFatherId,
 				childFatherFirstName, childFatherLastName,
-				individualA, individualB, migrationType);
+				individualA, individualB, migrationType,
+				"locationName", "permId", "houseno",
+				"headPermId", "headDob", "headName", "fullname", "headGender", "groupName", 
+				"motherPermId", "fatherPermId", "motherName", "fatherName", "name");
 	}
 }
