@@ -967,7 +967,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 
         @Override
         protected Void doInBackground(Void... params) {
-            locationVisit.createLocation(getContentResolver());
+            locationVisit.createLocation(getContentResolver());            
             filledForm = formFiller.fillLocationForm(locationVisit);
             updatable = new LocationUpdate();
             return null;
@@ -1131,8 +1131,13 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 
         @Override
         protected Void doInBackground(Void... params) {
-            String id = locationVisit.generateIndividualId(getContentResolver());
+        	String id = locationVisit.generateIndividualId(getContentResolver());
+            String permId = locationVisit.generateIndividualPermID(getContentResolver());
+            
             filledForm = formFiller.fillExternalInmigration(locationVisit, id);
+            filledForm.setIndividualLastName(permId);
+            filledForm.setLocationName(locationVisit.getLocation().getName());
+            
             updatable = new ExternalInMigrationUpdate();            
             return null;
         }

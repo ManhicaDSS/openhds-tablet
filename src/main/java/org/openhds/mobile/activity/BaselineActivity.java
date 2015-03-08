@@ -968,8 +968,13 @@ EventFragment.Listener, SelectionFragment.Listener, ValueFragment.OnlyOneEntryLi
 
         @Override
         protected Void doInBackground(Void... params) {
-            String id = locationVisit.generateIndividualId(getContentResolver());
+        	String id = locationVisit.generateIndividualId(getContentResolver());
+            String permId = locationVisit.generateIndividualPermID(getContentResolver());
+            
             filledForm = formFiller.fillBaseline(locationVisit, id);
+            filledForm.setIndividualLastName(permId);
+            filledForm.setLocationName(locationVisit.getLocation().getName());
+            
             updatable = new BaselineUpdate();            
             return null;
         }
