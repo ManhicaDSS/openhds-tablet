@@ -133,7 +133,7 @@ public class Individual implements Serializable {
     public String getFullName() {
         StringBuilder builder = new StringBuilder();
         if (lastName != null) {
-            builder.append(lastName);
+            //builder.append(lastName);
         }
 
         if (firstName != null) {

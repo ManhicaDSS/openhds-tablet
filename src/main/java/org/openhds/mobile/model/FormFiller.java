@@ -29,6 +29,7 @@ public class FormFiller {
 
         form.setLocationId(locationVisit.getLocation().getExtId());
         form.setRoundNumber(locationVisit.getRound().getRoundNumber());
+        form.setLocationName(locationVisit.getLocation().getName());
         return form;
     }
 
@@ -61,7 +62,7 @@ public class FormFiller {
 
         form.setIndividualExtId(locationVisit.getSelectedIndividual().getExtId());
         form.setIndividualFirstName(locationVisit.getSelectedIndividual().getFirstName());
-        form.setIndividualFirstName(locationVisit.getSelectedIndividual().getLastName());
+        form.setIndividualLastName(locationVisit.getSelectedIndividual().getLastName());
 
         return form;
     }

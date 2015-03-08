@@ -57,8 +57,8 @@ public class ValueFragment extends ListFragment implements LoaderCallbacks<Curso
             OpenHDS.Rounds.COLUMN_ROUND_STARTDATE};
     private static final String[] LOCATION_COLUMNS = new String[] { OpenHDS.Locations.COLUMN_LOCATION_NAME,
             OpenHDS.Locations.COLUMN_LOCATION_EXTID};
-    private static final String[] INDIVIDUAL_COLUMNS = new String[] { OpenHDS.Individuals.COLUMN_INDIVIDUAL_FULLNAME,
-            OpenHDS.Individuals.COLUMN_INDIVIDUAL_EXTID, OpenHDS.Individuals.COLUMN_INDIVIDUAL_DOB };
+    private static final String[] INDIVIDUAL_COLUMNS = new String[] { OpenHDS.Individuals.COLUMN_INDIVIDUAL_FIRSTNAME,
+            OpenHDS.Individuals.COLUMN_INDIVIDUAL_EXTID, OpenHDS.Individuals.COLUMN_INDIVIDUAL_LASTNAME };
     private static final String[] SOCIALGROUP_COLUMNS = new String[] { OpenHDS.SocialGroups.COLUMN_SOCIALGROUP_GROUPNAME,
         OpenHDS.SocialGroups.COLUMN_SOCIALGROUP_EXTID};    
 
