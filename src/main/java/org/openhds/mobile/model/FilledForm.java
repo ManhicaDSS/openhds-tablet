@@ -43,6 +43,9 @@ public class FilledForm {
     private List<Child> children = new ArrayList<Child>();
     private List<Individual> hhMembers = new ArrayList<Individual>();
 
+    /*New var from manhica dss*/
+    private String locationName;
+    
     public FilledForm(String formName) {
         this.formName = formName;
     }
@@ -271,5 +274,14 @@ public class FilledForm {
 		this.socialGroupType = socialGroupType;
 	}
 
+	public String getLocationName() {
+		return locationName;
+	}
+
+	public void setLocationName(String locationName) {
+		this.locationName = locationName;
+	}
+
+	
 	
 }

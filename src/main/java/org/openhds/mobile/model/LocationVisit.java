@@ -41,6 +41,7 @@ public class LocationVisit implements Serializable {
     private LocationHierarchy hierarchy8;
    // private int levelNumbers;
     private String lowestLevelExtId;
+    private String lowestLevelName;
     private Round round;
 
     private Location location;
@@ -119,48 +120,56 @@ public class LocationVisit implements Serializable {
     public void setHierarchy1(LocationHierarchy region) {
         this.hierarchy1 = region;
     	this.lowestLevelExtId = hierarchy1.getExtId();
+    	this.lowestLevelName = hierarchy1.getName();
         clearLevelsBelow(1);
     }
     
     public void setHierarchy2(LocationHierarchy subRegion) {
         this.hierarchy2 = subRegion;
     	this.lowestLevelExtId = hierarchy2.getExtId();
+    	this.lowestLevelName = hierarchy2.getName();
         clearLevelsBelow(2);
     }
     
     public void setHierarchy3(LocationHierarchy hierarchy3) {
         this.hierarchy3 = hierarchy3;
     	this.lowestLevelExtId = hierarchy3.getExtId();
+    	this.lowestLevelName = hierarchy3.getName();
         clearLevelsBelow(3);
     }
 
     public void setHierarchy4(LocationHierarchy village) {
         this.hierarchy4 = village;
     	this.lowestLevelExtId = hierarchy4.getExtId();
+    	this.lowestLevelName = hierarchy4.getName();
         clearLevelsBelow(4);
     }
     
     public void setHierarchy5(LocationHierarchy hierarchy5) {
         this.hierarchy5 = hierarchy5;
     	this.lowestLevelExtId = hierarchy5.getExtId();
+    	this.lowestLevelName = hierarchy5.getName();
         clearLevelsBelow(5);
     }
     
     public void setHierarchy6(LocationHierarchy hierarchy6) {
         this.hierarchy6 = hierarchy6;
     	this.lowestLevelExtId = hierarchy6.getExtId();
+    	this.lowestLevelName = hierarchy6.getName();
         clearLevelsBelow(6);
     }
     
     public void setHierarchy7(LocationHierarchy hierarchy7) {
         this.hierarchy7 = hierarchy7;
     	this.lowestLevelExtId = hierarchy7.getExtId();
+    	this.lowestLevelName = hierarchy7.getName();
         clearLevelsBelow(7);
     }
 
     public void setHierarchy8(LocationHierarchy hierarchy8) {
         this.hierarchy8 = hierarchy8;
     	this.lowestLevelExtId = hierarchy8.getExtId();
+    	this.lowestLevelName = hierarchy8.getName();
         clearLevelsBelow(8);
     }
     
@@ -250,14 +259,77 @@ public class LocationVisit implements Serializable {
     public void createLocation(ContentResolver resolver) {
     	if (lowestLevelExtId==null) {
     		setLatestLevelExtId(resolver);
+    		setLatestLevelName(resolver);
     	}
         String locationId = generateLocationId(resolver);
-
+        String locationName = generateLocationName(resolver);
+        
         location = new Location();
         location.setExtId(locationId);
         location.setHierarchy(lowestLevelExtId);
-      
+        location.setName(locationName);      
     }
+    
+    //Generate the locationName to handle the HouseNo Code (##-####-###) from Manhiça DSS
+ 	private String generateLocationName(ContentResolver resolver) { 		 		 
+ 		
+         Cursor cursor = resolver.query(OpenHDS.Locations.CONTENT_ID_URI_BASE,
+                 new String[] { OpenHDS.Locations.COLUMN_LOCATION_NAME }, OpenHDS.Locations.COLUMN_LOCATION_NAME
+                         + " LIKE ?", new String[] { getLatestLevelName() + "%" }, OpenHDS.Locations.COLUMN_LOCATION_NAME
+                         + " ASC");
+
+         String generatedName = null;
+         String baseName = getLatestLevelName(); 
+         
+         //001-999
+         //NEXT       
+         if (cursor.moveToFirst()) {
+         	
+         	int nextCode = 0;        	       	        	
+         	        	
+         	for (int i=1; i<=999; i++){
+         		        		        		
+         		int locCode = 0;
+         		
+         		try{
+         			
+         			String locName = cursor.getString(0);
+             		String strLocCode = locName.substring(locName.length()-3);
+         			
+         			locCode = Integer.parseInt(strLocCode);
+         			
+         			if (i != locCode){
+         				nextCode = i;
+         				break;
+         			}else{
+         				if (!cursor.moveToNext()){ //Cant Go Next
+         					nextCode = i+1;
+         					break;
+         				}
+         				
+         				continue;
+         			}
+         			
+         		}catch (Exception e){        			
+         			e.printStackTrace();
+         			cursor.moveToNext();
+         			break;
+         		}        		
+         	}
+         	
+         	if (nextCode==0){
+         		generatedName = "COULDNT GENERATE";
+         	}else{
+         		generatedName = String.format(getLatestLevelName() + "-" + "%03d", nextCode);
+         	}        	
+             //generatedName = generateLocationNameFrom(cursor.getString(0));
+         } else {
+             generatedName = getLatestLevelName() + "-001";
+         }
+
+         cursor.close();
+         return generatedName;
+     }
 
     private void setLatestLevelExtId (ContentResolver resolver) {
         Cursor curs = Queries.getAllHierarchyLevels(resolver);
@@ -290,6 +362,36 @@ public class LocationVisit implements Serializable {
     	return lowestLevelExtId;
     }
    
+    private void setLatestLevelName(ContentResolver resolver) {
+        Cursor curs = Queries.getAllHierarchyLevels(resolver);
+        List<LocationHierarchyLevel> lhll = Converter.toLocationHierarchyLevelList(curs); 
+        curs.close();
+        
+        int levelNumbers = lhll.size() -1;
+        
+        if (levelNumbers==1) {
+        	this.lowestLevelName = hierarchy1.getName();
+        }  else if (levelNumbers==2) {
+        	this.lowestLevelName = hierarchy2.getName();
+        }  else if (levelNumbers==3) {
+        	this.lowestLevelName = hierarchy3.getName();
+        }  else if (levelNumbers==4) {
+        	this.lowestLevelName = hierarchy4.getName();
+        }  else if (levelNumbers==5) {
+        	this.lowestLevelName = hierarchy5.getName();
+        }  else if (levelNumbers==6) {
+        	this.lowestLevelName = hierarchy6.getName();
+        }  else if (levelNumbers==8) {
+        	this.lowestLevelName = hierarchy7.getName();
+        }  else if (levelNumbers==9) {
+        	this.lowestLevelName = hierarchy8.getName();
+        }
+        //location.setHierarchy(lowestLevelExtId);
+    }
+    
+    public String getLatestLevelName () {
+    	return lowestLevelName;
+    }
     
     private String generateLocationId(ContentResolver resolver) {
         Cursor cursor = resolver.query(OpenHDS.Locations.CONTENT_ID_URI_BASE,

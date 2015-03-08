@@ -13,6 +13,7 @@ public class FormFiller {
 
         form.setLocationId(locationVisit.getLocation().getExtId());
         form.setHierarchyId(locationVisit.getLatestLevelExtId());
+        form.setLocationName(locationVisit.getLocation().getName());
         return form;
     }
 
