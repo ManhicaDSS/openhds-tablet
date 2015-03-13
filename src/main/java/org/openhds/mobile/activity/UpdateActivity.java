@@ -583,6 +583,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
         @Override
         protected Void doInBackground(Void... params) {
             filledForm = formFiller.fillInternalInMigrationForm(locationVisit, individual);
+            formFiller.addOriginHouseNumber(filledForm, getContentResolver());
             updatable = new InternalInMigrationUpdate();
             return null;
         }

@@ -37,6 +37,7 @@ public class FilledForm {
     private String individualB;
     private String intervieweeId;
     private String origin;
+    private String originHouseNo;
     private String migrationType;
     private int nboutcomes;
     
@@ -266,6 +267,14 @@ public class FilledForm {
 
 	public void setOrigin(String origin) {
 		this.origin = origin;
+	}
+	
+	public String getOriginHouseNo() {
+		return originHouseNo;
+	}
+	
+	public void setOriginHouseNo(String originHouseNo) {
+		this.originHouseNo = originHouseNo;
 	}
 
 	public int getNboutcomes() {

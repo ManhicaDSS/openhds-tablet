@@ -19,7 +19,7 @@ public class FormFiller {
 
         form.setLocationId(locationVisit.getLocation().getExtId());
         form.setHierarchyId(locationVisit.getLatestLevelExtId());
-        form.setLocationName(locationVisit.getLocation().getName());
+        form.setLocationName(locationVisit.getLocation().getName());        
         return form;
     }
 
@@ -42,6 +42,7 @@ public class FormFiller {
     private void addVisit(LocationVisit locationVisit, FilledForm form) {
         form.setVisitDate(locationVisit.getVisit().getDate());
         form.setVisitExtId(locationVisit.getVisit().getExtId());
+        form.setLocationName(locationVisit.getLocation().getName());
     }
 
     public FilledForm fillSocialGroupForm(LocationVisit locationVisit, SocialGroup sg) {
@@ -328,6 +329,18 @@ public class FormFiller {
 			filledForm.setMotherPermId(mother == null ? "UNK" : mother.getLastName());
 			filledForm.setMotherName(mother == null ? "UNK" : mother.getFirstName());
 
+		}
+	
+    }
+    
+    public void addOriginHouseNumber(FilledForm filledForm, ContentResolver resolver){
+
+		Cursor cursorIndv = Queries.getLocationByExtId(resolver, filledForm.getOrigin());
+
+		if (cursorIndv.moveToFirst()) {
+			Location location = Converter.convertToLocation(cursorIndv);			
+			filledForm.setOriginHouseNo(location.getName());			
+			cursorIndv.close();
 		}
 	
     }
