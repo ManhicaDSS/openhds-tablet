@@ -400,7 +400,8 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
         case FILTER_INMIGRATION:
             handleFilterInMigrationResult(resultCode, data);
             vf.onLoaderReset(null);
-            stateMachine.transitionTo(INMIGRATION);
+            //stateMachine.transitionTo(INMIGRATION);
+            stateMachine.transitionTo("Select Individual");
             break;
         case FILTER_INMIGRATION_MOTHER:
             handleFilterMother(resultCode, data);
