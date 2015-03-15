@@ -2,7 +2,7 @@
 <resources  xmlns:tools="http://schemas.android.com/tools" tools:locale="es">
 
     <string name="amendments">Enmiendas</string>
-    <string name="app_name">OpenHDS Mobile</string>
+    <string name="app_name">OpenHDS (Manhiça DSS)</string>
     <string name="bad_authentication">Autenticación Falló</string>
     <string name="register">Registrarse</string>
     <string name="bad_xml">Error en validar el XML</string>
