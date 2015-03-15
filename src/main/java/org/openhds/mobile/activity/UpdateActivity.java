@@ -2073,7 +2073,8 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
     }
 
     public void onLoaderReset(Loader<Cursor> arg0) {
-        householdDialog.dismiss();
+        if (householdDialog != null)
+    	householdDialog.dismiss();
         householdDialog = null;
     }
 
