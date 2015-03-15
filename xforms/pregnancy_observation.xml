@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>Pregnancy observation  registration</h:title>
+    <h:title>Registo de Observação de gravidez</h:title>
     <model>
       <itext>
         <translation lang="Swahili">
@@ -13,6 +13,9 @@
           </text>
           <text id="/pregnancy_observation/expectedDeliveryDate:label">
             <value>expectedDeliveryDate</value>
+          </text>
+          <text id="/pregnancy_observation/permId:label">
+            <value>-</value>
           </text>
           <text id="/pregnancy_observation/ttinjection/NO:label">
             <value>Hapana</value>
@@ -96,7 +99,102 @@
             <value>Nambari ya Mhojaji</value>
           </text>
         </translation>
-        <translation default="true()" lang="English">
+        <translation default="true()" lang="Portuguese">
+          <text id="/pregnancy_observation/ttinjection/YES:label">
+            <value>Sim</value>
+          </text>
+          <text id="/pregnancy_observation/ttinjection:label">
+            <value>Recebeu vacina contra tetano?</value>
+          </text>
+          <text id="/pregnancy_observation/expectedDeliveryDate:label">
+            <value>Data estimada de parto</value>
+          </text>
+          <text id="/pregnancy_observation/permId:label">
+            <value>Perm Id da mulher</value>
+          </text>
+          <text id="/pregnancy_observation/ttinjection/NO:label">
+            <value>Não</value>
+          </text>
+          <text id="/pregnancy_observation/recordedDate:label">
+            <value>Data do registo de observação</value>
+          </text>
+          <text id="/pregnancy_observation/estimatedAgeOfPreg:label">
+            <value>Quantos meses tem esta gravidez</value>
+          </text>
+          <text id="/pregnancy_observation/ageOfPregFromPregNotes:label">
+            <value>Idade da gravidez de acordo com as notas de gravidez</value>
+          </text>
+          <text id="/pregnancy_observation/anteNatalClinic/NO:label">
+            <value>Não</value>
+          </text>
+          <text id="/pregnancy_observation/processedByMirth:label">
+            <value>processed</value>
+          </text>
+          <text id="/pregnancy_observation/pregnancyNumber:label">
+            <value>Numero total de gravidezes até o momento?</value>
+          </text>
+          <text id="/pregnancy_observation/healthfacility/99:label">
+            <value>Outro</value>
+          </text>
+          <text id="/pregnancy_observation/pregNotes/1:label">
+            <value>Cartão da clinica/Registo de gravidez</value>
+          </text>
+          <text id="/pregnancy_observation/medicineforpregnancy:label">
+            <value>Recebeu qualquer medicamento para a Gravidez?</value>
+          </text>
+          <text id="/pregnancy_observation/medicineforpregnancy/YES:label">
+            <value>Sim</value>
+          </text>
+          <text id="/pregnancy_observation/visitId:label">
+            <value>Id da visita</value>
+          </text>
+          <text id="/pregnancy_observation/pregNotes:label">
+            <value>Será que a futura mãe tem (notas de gravidez):</value>
+          </text>
+          <text id="/pregnancy_observation/healthfacility/1:label">
+            <value>Hospital</value>
+          </text>
+          <text id="/pregnancy_observation/lastClinicVisitDate:label">
+            <value>Data da ultima visita à clinica?</value>
+          </text>
+          <text id="/pregnancy_observation/othermedicine:label">
+            <value>Especifique, se tiver tomado outro medicamento</value>
+          </text>
+          <text id="/pregnancy_observation/anteNatalClinic/YES:label">
+            <value>Sim</value>
+          </text>
+          <text id="/pregnancy_observation/healthfacility:label">
+            <value>Chegou a ir há qualquer outra instituição de saúde?</value>
+          </text>
+          <text id="/pregnancy_observation/healthfacility/2:label">
+            <value>Centro de saude ou clinica</value>
+          </text>
+          <text id="/pregnancy_observation/medicineforpregnancy/NO:label">
+            <value>Não</value>
+          </text>
+          <text id="/pregnancy_observation/anteNatalClinic:label">
+            <value>Já esteve numa clinica de antenatal?</value>
+          </text>
+          <text id="/pregnancy_observation/healthfacility/4:label">
+            <value>Medico tradicional</value>
+          </text>
+          <text id="/pregnancy_observation/pregNotes/2:label">
+            <value>Não fui a clinica de antenatal/Não encontrei meu cartão</value>
+          </text>
+          <text id="/pregnancy_observation/individualId:label">
+            <value>ExtId da mulher</value>
+          </text>
+          <text id="/pregnancy_observation/healthfacility/3:label">
+            <value>Em casa da parteira tradicional</value>
+          </text>
+          <text id="/pregnancy_observation/healthfacility/5:label">
+            <value>Nenhum</value>
+          </text>
+          <text id="/pregnancy_observation/fieldWorkerId:label">
+            <value>Código do Inquiridor</value>
+          </text>
+        </translation>
+        <translation lang="English">
           <text id="/pregnancy_observation/ttinjection/YES:label">
             <value>Yes</value>
           </text>
@@ -105,6 +203,9 @@
           </text>
           <text id="/pregnancy_observation/expectedDeliveryDate:label">
             <value>expectedDeliveryDate</value>
+          </text>
+          <text id="/pregnancy_observation/permId:label">
+            <value>-</value>
           </text>
           <text id="/pregnancy_observation/ttinjection/NO:label">
             <value>No</value>
@@ -194,6 +295,10 @@
           <start/>
           <end/>
           <deviceid/>
+          <visitId/>
+          <fieldWorkerId/>
+          <individualId/>
+          <permId/>
           <estimatedAgeOfPreg/>
           <pregNotes/>
           <ageOfPregFromPregNotes/>
@@ -204,20 +309,22 @@
           <ttinjection/>
           <othermedicine/>
           <pregnancyNumber/>
-          <individualId/>
-          <fieldWorkerId/>
-          <visitId/>
           <expectedDeliveryDate/>
           <recordedDate/>
           <processedByMirth/>
           <meta>
             <instanceID/>
+            <instanceName/>
           </meta>
         </pregnancy_observation>
       </instance>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/pregnancy_observation/start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/pregnancy_observation/end" type="dateTime"/>
       <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/pregnancy_observation/deviceid" type="string"/>
+      <bind nodeset="/pregnancy_observation/visitId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/pregnancy_observation/fieldWorkerId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/pregnancy_observation/individualId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/pregnancy_observation/permId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/pregnancy_observation/estimatedAgeOfPreg" required="true()" type="int"/>
       <bind nodeset="/pregnancy_observation/pregNotes" required="true()" type="select1"/>
       <bind constraint=".&lt;52" nodeset="/pregnancy_observation/ageOfPregFromPregNotes" relevant="../pregNotes = 1" required="true()" type="int"/>
@@ -228,16 +335,26 @@
       <bind nodeset="/pregnancy_observation/ttinjection" required="true()" type="select1"/>
       <bind nodeset="/pregnancy_observation/othermedicine" type="string"/>
       <bind nodeset="/pregnancy_observation/pregnancyNumber" required="true()" type="int"/>
-      <bind nodeset="/pregnancy_observation/individualId" readonly="true()" required="true()" type="string"/>
-      <bind nodeset="/pregnancy_observation/fieldWorkerId" readonly="true()" required="true()" type="string"/>
-      <bind nodeset="/pregnancy_observation/visitId" readonly="true()" required="true()" type="string"/>
       <bind constraint=".&gt; today()" nodeset="/pregnancy_observation/expectedDeliveryDate" required="true()" type="date"/>
       <bind nodeset="/pregnancy_observation/recordedDate" readonly="true()" required="true()" type="date"/>
-      <bind nodeset="/pregnancy_observation/processedByMirth" relevant="1=2" type="int"/>
+      <bind nodeset="/pregnancy_observation/processedByMirth" readonly="true()" type="int"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/pregnancy_observation/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat(&quot;ObsGravidez_&quot;,  /pregnancy_observation/permId , &quot;_&quot;, format-date(today(),&quot;%Y%n%e&quot;))" nodeset="/pregnancy_observation/meta/instanceName" type="string"/>
     </model>
   </h:head>
   <h:body>
+    <input ref="/pregnancy_observation/visitId">
+      <label ref="jr:itext('/pregnancy_observation/visitId:label')"/>
+    </input>
+    <input ref="/pregnancy_observation/fieldWorkerId">
+      <label ref="jr:itext('/pregnancy_observation/fieldWorkerId:label')"/>
+    </input>
+    <input ref="/pregnancy_observation/individualId">
+      <label ref="jr:itext('/pregnancy_observation/individualId:label')"/>
+    </input>
+    <input ref="/pregnancy_observation/permId">
+      <label ref="jr:itext('/pregnancy_observation/permId:label')"/>
+    </input>
     <input ref="/pregnancy_observation/estimatedAgeOfPreg">
       <label ref="jr:itext('/pregnancy_observation/estimatedAgeOfPreg:label')"/>
     </input>
@@ -323,15 +440,6 @@
     </input>
     <input ref="/pregnancy_observation/pregnancyNumber">
       <label ref="jr:itext('/pregnancy_observation/pregnancyNumber:label')"/>
-    </input>
-    <input ref="/pregnancy_observation/individualId">
-      <label ref="jr:itext('/pregnancy_observation/individualId:label')"/>
-    </input>
-    <input ref="/pregnancy_observation/fieldWorkerId">
-      <label ref="jr:itext('/pregnancy_observation/fieldWorkerId:label')"/>
-    </input>
-    <input ref="/pregnancy_observation/visitId">
-      <label ref="jr:itext('/pregnancy_observation/visitId:label')"/>
     </input>
     <input ref="/pregnancy_observation/expectedDeliveryDate">
       <label ref="jr:itext('/pregnancy_observation/expectedDeliveryDate:label')"/>

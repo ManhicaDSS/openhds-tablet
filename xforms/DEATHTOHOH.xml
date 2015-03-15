@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>Death to Head of household</h:title>
+    <h:title>Morte do chefe do agregado</h:title>
     <model>
       <itext>
         <translation lang="Swahili">
@@ -72,6 +72,9 @@
             <value>Uhusiano Mwingine</value>
           </text>
           <text id="/DEATHTOHOH/visitId:label">
+            <value>-</value>
+          </text>
+          <text id="/DEATHTOHOH/permId:label">
             <value>-</value>
           </text>
           <text id="/DEATHTOHOH/causeofdeathdiagnosed/HIV_AIDS:label">
@@ -156,7 +159,162 @@
             <value>-</value>
           </text>
         </translation>
-        <translation default="true()" lang="English">
+        <translation default="true()" lang="Portuguese">
+          <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/6:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead:label">
+            <value>Relação com o chefe de agregado</value>
+          </text>
+          <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/2:label">
+            <value>Irmã/o</value>
+          </text>
+          <text id="/DEATHTOHOH/placeOfDeath/HOSPITAL:label">
+            <value>Hospital</value>
+          </text>
+          <text id="/DEATHTOHOH/causeofdeathdiagnosed/Age:label">
+            <value>Idade</value>
+          </text>
+          <text id="/DEATHTOHOH/householdId:label">
+            <value>Id do Agregado</value>
+          </text>
+          <text id="/DEATHTOHOH/membershiptonewhoh/memberName:label">
+            <value>Nome do membro</value>
+          </text>
+          <text id="/DEATHTOHOH/causofdeathnotdiagnosed/Unknown:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/DEATHTOHOH/causeofdeathdiagnosed/Other_viral_bacterial_infection:label">
+            <value>Outro tipo de infecção</value>
+          </text>
+          <text id="/DEATHTOHOH/date:label">
+            <value>Data da morte</value>
+          </text>
+          <text id="/DEATHTOHOH/whom/4:label">
+            <value>Médico Tradicional</value>
+          </text>
+          <text id="/DEATHTOHOH/placeOfDeath/HEALTH_CENTER:label">
+            <value>Clinica ou Centro médico</value>
+          </text>
+          <text id="/DEATHTOHOH/diagnoseddeath:label">
+            <value>As causas da morte foram diagnósticadas pelas autoridades de saúde?</value>
+          </text>
+          <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/4:label">
+            <value>Sem relação</value>
+          </text>
+          <text id="/DEATHTOHOH/causeofdeathdiagnosed/Other:label">
+            <value>Outro</value>
+          </text>
+          <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/1:label">
+            <value>Filho/a</value>
+          </text>
+          <text id="/DEATHTOHOH/processedByMirth:label">
+            <value>processedByMirth</value>
+          </text>
+          <text id="/DEATHTOHOH/diagnoseddeath/2:label">
+            <value>Não</value>
+          </text>
+          <text id="/DEATHTOHOH/diagnoseddeath/1:label">
+            <value>Sim</value>
+          </text>
+          <text id="/DEATHTOHOH/membershiptonewhoh/socialGroupId:label">
+            <value>Id do Agregado</value>
+          </text>
+          <text id="/DEATHTOHOH/causofdeathnotdiagnosed/Crime:label">
+            <value>Crime</value>
+          </text>
+          <text id="/DEATHTOHOH/new_hoh_id:label">
+            <value>Novo ID do Chefe de agregado</value>
+          </text>
+          <text id="/DEATHTOHOH/causeofdeathdiagnosed:label">
+            <value>Causa da morte diagnosticadas?</value>
+          </text>
+          <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/5:label">
+            <value>Outra relação</value>
+          </text>
+          <text id="/DEATHTOHOH/visitId:label">
+            <value>Id da visita</value>
+          </text>
+          <text id="/DEATHTOHOH/permId:label">
+            <value>Perm ID</value>
+          </text>
+          <text id="/DEATHTOHOH/causeofdeathdiagnosed/HIV_AIDS:label">
+            <value>HIV/AIDS</value>
+          </text>
+          <text id="/DEATHTOHOH/causeofdeathdiagnosed/TB:label">
+            <value>Tuberculose</value>
+          </text>
+          <text id="/DEATHTOHOH/causeofdeathdiagnosed/Unknown:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/DEATHTOHOH/placeOfDeath/OTHER:label">
+            <value>Outro</value>
+          </text>
+          <text id="/DEATHTOHOH/whom/1:label">
+            <value>Médico</value>
+          </text>
+          <text id="/DEATHTOHOH/placeOfDeath:label">
+            <value>Local da morte</value>
+          </text>
+          <text id="/DEATHTOHOH/causeofdeathdiagnosed/Malaria:label">
+            <value>Malaria</value>
+          </text>
+          <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/3:label">
+            <value>Neto/a</value>
+          </text>
+          <text id="/DEATHTOHOH/causeOfDeath:label">
+            <value>Causa da morte</value>
+          </text>
+          <text id="/DEATHTOHOH/individualId:label">
+            <value>ExtId do Individuo</value>
+          </text>
+          <text id="/DEATHTOHOH/whom:label">
+            <value>Quem diagnosticou?</value>
+          </text>
+          <text id="/DEATHTOHOH/whom/2:label">
+            <value>Enfermeira</value>
+          </text>
+          <text id="/DEATHTOHOH/membershiptonewhoh/extId:label">
+            <value>ExtId do Membro</value>
+          </text>
+          <text id="/DEATHTOHOH/causeofdeathdiagnosed/Crime:label">
+            <value>Crime</value>
+          </text>
+          <text id="/DEATHTOHOH/causofdeathnotdiagnosed/Disease_Illness:label">
+            <value>Doença</value>
+          </text>
+          <text id="/DEATHTOHOH/hh_people_nb:label">
+            <value>Resultados</value>
+          </text>
+          <text id="/DEATHTOHOH/causeofdeathdiagnosed/Accident:label">
+            <value>Acidente</value>
+          </text>
+          <text id="/DEATHTOHOH/whom/3:label">
+            <value>Trabalhador comunitario de saude</value>
+          </text>
+          <text id="/DEATHTOHOH/placeOfDeath/TRAD_HEALER:label">
+            <value>Médico Tradicional</value>
+          </text>
+          <text id="/DEATHTOHOH/OtherplaceOfDeath:label">
+            <value>Introduza o Local da morte</value>
+          </text>
+          <text id="/DEATHTOHOH/causofdeathnotdiagnosed:label">
+            <value>Causa da morte não diagnosticadas?</value>
+          </text>
+          <text id="/DEATHTOHOH/membershiptonewhoh:label">
+            <value>Nova Filiação</value>
+          </text>
+          <text id="/DEATHTOHOH/causofdeathnotdiagnosed/Accident:label">
+            <value>Acidente</value>
+          </text>
+          <text id="/DEATHTOHOH/placeOfDeath/HOME:label">
+            <value>Em Casa</value>
+          </text>
+          <text id="/DEATHTOHOH/fieldWorkerId:label">
+            <value>Código do Inquiridor</value>
+          </text>
+        </translation>
+        <translation lang="English">
           <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/6:label">
             <value>Don't Know</value>
           </text>
@@ -231,6 +389,9 @@
           </text>
           <text id="/DEATHTOHOH/visitId:label">
             <value>Visit Id</value>
+          </text>
+          <text id="/DEATHTOHOH/permId:label">
+            <value>Perm ID</value>
           </text>
           <text id="/DEATHTOHOH/causeofdeathdiagnosed/HIV_AIDS:label">
             <value>HIV/AIDS</value>
@@ -316,6 +477,7 @@
           <deviceid/>
           <visitId/>
           <individualId/>
+          <permId/>
           <new_hoh_id/>
           <fieldWorkerId/>
           <householdId/>
@@ -338,6 +500,7 @@
           <processedByMirth/>
           <meta>
             <instanceID/>
+            <instanceName/>
           </meta>
         </DEATHTOHOH>
       </instance>
@@ -346,6 +509,7 @@
       <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/DEATHTOHOH/deviceid" readonly="true()" type="string"/>
       <bind nodeset="/DEATHTOHOH/visitId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/DEATHTOHOH/individualId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/DEATHTOHOH/permId" readonly="true()" type="string"/>
       <bind nodeset="/DEATHTOHOH/new_hoh_id" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/DEATHTOHOH/fieldWorkerId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/DEATHTOHOH/householdId" readonly="true()" required="true()" type="string"/>
@@ -365,6 +529,7 @@
       <bind nodeset="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead" required="true()" type="select1"/>
       <bind nodeset="/DEATHTOHOH/processedByMirth" readonly="true()" type="int"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/DEATHTOHOH/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat(&quot;DDTHOH-&quot;, /DEATHTOHOH/permId )" nodeset="/DEATHTOHOH/meta/instanceName" type="string"/>
     </model>
   </h:head>
   <h:body>
@@ -373,6 +538,9 @@
     </input>
     <input ref="/DEATHTOHOH/individualId">
       <label ref="jr:itext('/DEATHTOHOH/individualId:label')"/>
+    </input>
+    <input ref="/DEATHTOHOH/permId">
+      <label ref="jr:itext('/DEATHTOHOH/permId:label')"/>
     </input>
     <input ref="/DEATHTOHOH/new_hoh_id">
       <label ref="jr:itext('/DEATHTOHOH/new_hoh_id:label')"/>

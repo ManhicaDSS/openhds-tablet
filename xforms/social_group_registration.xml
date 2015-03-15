@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>Social Group Registration</h:title>
+    <h:title>Registo de Agregado</h:title>
     <model>
       <itext>
         <translation lang="Swahili">
@@ -30,7 +30,33 @@
             <value>Namba Ya Kaya</value>
           </text>
         </translation>
-        <translation default="true()" lang="English">
+        <translation default="true()" lang="Portuguese">
+          <text id="/social_group_registration/processedByMirth:label">
+            <value>processed</value>
+          </text>
+          <text id="/social_group_registration/socialGroupType/FAM:label">
+            <value>Familia</value>
+          </text>
+          <text id="/social_group_registration/socialGroupType:label">
+            <value>Tipo de Agregado</value>
+          </text>
+          <text id="/social_group_registration/groupName:label">
+            <value>Número do Agregado</value>
+          </text>
+          <text id="/social_group_registration/fieldWorkerId:label">
+            <value>Código do Inquiridor</value>
+          </text>
+          <text id="/social_group_registration/individualId:label">
+            <value>ExtId do Chefe do Agregado</value>
+          </text>
+          <text id="/social_group_registration/socialGroupType/COH:label">
+            <value>Grupo</value>
+          </text>
+          <text id="/social_group_registration/householdId:label">
+            <value>ExtId do Agregado</value>
+          </text>
+        </translation>
+        <translation lang="English">
           <text id="/social_group_registration/processedByMirth:label">
             <value>processed</value>
           </text>
@@ -70,6 +96,7 @@
           <processedByMirth/>
           <meta>
             <instanceID/>
+            <instanceName/>
           </meta>
         </social_group_registration>
       </instance>
@@ -81,8 +108,9 @@
       <bind nodeset="/social_group_registration/fieldWorkerId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/social_group_registration/groupName" required="true()" type="string"/>
       <bind nodeset="/social_group_registration/socialGroupType" required="true()" type="select1"/>
-      <bind nodeset="/social_group_registration/processedByMirth" relevant="1=2" type="int"/>
+      <bind nodeset="/social_group_registration/processedByMirth" readonly="true()" type="int"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/social_group_registration/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat(&quot;Agregado_&quot;, /social_group_registration/groupName ,&quot;-&quot;, format-date(today(),&quot;%Y%n%e&quot;))" nodeset="/social_group_registration/meta/instanceName" type="string"/>
     </model>
   </h:head>
   <h:body>

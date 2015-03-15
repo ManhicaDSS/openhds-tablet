@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>Death registration</h:title>
+    <h:title>Registo de Óbito</h:title>
     <model>
       <itext>
         <translation lang="Swahili">
@@ -28,6 +28,9 @@
           </text>
           <text id="/death_registration/whom/4:label">
             <value>Traditional healer</value>
+          </text>
+          <text id="/death_registration/permId:label">
+            <value>Perm Id do Individuo</value>
           </text>
           <text id="/death_registration/causeofdeathdiagnosed/Other:label">
             <value>Other</value>
@@ -114,7 +117,120 @@
             <value>Nurse</value>
           </text>
         </translation>
-        <translation default="true()" lang="English">
+        <translation default="true()" lang="Portuguese">
+          <text id="/death_registration/placeOfDeath/HOSPITAL:label">
+            <value>Hospital</value>
+          </text>
+          <text id="/death_registration/processedByMirth:label">
+            <value>Mirth</value>
+          </text>
+          <text id="/death_registration/diagnoseddeath/1:label">
+            <value>Sim</value>
+          </text>
+          <text id="/death_registration/causeofdeathdiagnosed:label">
+            <value>Causa da morte diagnosticadas?</value>
+          </text>
+          <text id="/death_registration/diagnoseddeath:label">
+            <value>A causa da morte foi diagnosticada pelas autoridades de saúde?</value>
+          </text>
+          <text id="/death_registration/diagnoseddeath/2:label">
+            <value>Não</value>
+          </text>
+          <text id="/death_registration/placeOfDeath/TRAD_HEALER:label">
+            <value>Em casa do medico tradicional</value>
+          </text>
+          <text id="/death_registration/whom/4:label">
+            <value>Médico tradicional</value>
+          </text>
+          <text id="/death_registration/permId:label">
+            <value>Perm Id do Individuo</value>
+          </text>
+          <text id="/death_registration/causeofdeathdiagnosed/Other:label">
+            <value>Outro</value>
+          </text>
+          <text id="/death_registration/placeOfDeath/HEALTH_CENTER:label">
+            <value>Centro Médico ou clinica</value>
+          </text>
+          <text id="/death_registration/causeOfDeath:label">
+            <value>Causa da morte</value>
+          </text>
+          <text id="/death_registration/causeofdeathdiagnosed/Other_viral_bacterial_infection:label">
+            <value>Outra infecção viral/bacterial</value>
+          </text>
+          <text id="/death_registration/placeOfDeath:label">
+            <value>Local da morte</value>
+          </text>
+          <text id="/death_registration/whom/3:label">
+            <value>Agente comunitário de saúde</value>
+          </text>
+          <text id="/death_registration/causeofdeathdiagnosed/TB:label">
+            <value>TB</value>
+          </text>
+          <text id="/death_registration/visitId:label">
+            <value>Id da Visita</value>
+          </text>
+          <text id="/death_registration/causofdeathnotdiagnosed/Accident:label">
+            <value>Acidente</value>
+          </text>
+          <text id="/death_registration/dateOfDeath:label">
+            <value>Data da morte</value>
+          </text>
+          <text id="/death_registration/causofdeathnotdiagnosed/Crime:label">
+            <value>Crime</value>
+          </text>
+          <text id="/death_registration/causofdeathnotdiagnosed/Disease_Illness:label">
+            <value>Doença</value>
+          </text>
+          <text id="/death_registration/causeofdeathdiagnosed/Accident:label">
+            <value>Acidente</value>
+          </text>
+          <text id="/death_registration/causeofdeathdiagnosed/Age:label">
+            <value>Idade</value>
+          </text>
+          <text id="/death_registration/causeofdeathdiagnosed/Unknown:label">
+            <value>Desconhecido</value>
+          </text>
+          <text id="/death_registration/placeOfDeath/OTHER:label">
+            <value>Outro</value>
+          </text>
+          <text id="/death_registration/whom/1:label">
+            <value>Médico</value>
+          </text>
+          <text id="/death_registration/causeofdeathdiagnosed/HIV_AIDS:label">
+            <value>HIV/AIDS</value>
+          </text>
+          <text id="/death_registration/whom:label">
+            <value>Quem diagnosticou?</value>
+          </text>
+          <text id="/death_registration/causofdeathnotdiagnosed/Unknown:label">
+            <value>Desconhecido</value>
+          </text>
+          <text id="/death_registration/fieldWorkerId:label">
+            <value>Código do Inquiridor</value>
+          </text>
+          <text id="/death_registration/placeOfDeath/HOME:label">
+            <value>Em casa</value>
+          </text>
+          <text id="/death_registration/placeOfDeathOther:label">
+            <value>Introduza o Local da morte</value>
+          </text>
+          <text id="/death_registration/individualId:label">
+            <value>ExtId do Individuo</value>
+          </text>
+          <text id="/death_registration/causeofdeathdiagnosed/Malaria:label">
+            <value>Malaria</value>
+          </text>
+          <text id="/death_registration/causofdeathnotdiagnosed:label">
+            <value>Causa da morte não diagnosticadas?</value>
+          </text>
+          <text id="/death_registration/causeofdeathdiagnosed/Crime:label">
+            <value>Crime</value>
+          </text>
+          <text id="/death_registration/whom/2:label">
+            <value>Enfermeiro</value>
+          </text>
+        </translation>
+        <translation lang="English">
           <text id="/death_registration/placeOfDeath/HOSPITAL:label">
             <value>Hospital</value>
           </text>
@@ -138,6 +254,9 @@
           </text>
           <text id="/death_registration/whom/4:label">
             <value>Traditional healer</value>
+          </text>
+          <text id="/death_registration/permId:label">
+            <value>Perm Id do Individuo</value>
           </text>
           <text id="/death_registration/causeofdeathdiagnosed/Other:label">
             <value>Other</value>
@@ -230,9 +349,10 @@
           <start/>
           <end/>
           <deviceid/>
-          <individualId/>
-          <fieldWorkerId/>
           <visitId/>
+          <fieldWorkerId/>
+          <individualId/>
+          <permId/>
           <dateOfDeath/>
           <diagnoseddeath/>
           <whom/>
@@ -244,15 +364,17 @@
           <processedByMirth/>
           <meta>
             <instanceID/>
+            <instanceName/>
           </meta>
         </death_registration>
       </instance>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/death_registration/start" readonly="true()" required="true()" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/death_registration/end" readonly="true()" required="true()" type="dateTime"/>
       <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/death_registration/deviceid" readonly="true()" required="true()" type="string"/>
-      <bind nodeset="/death_registration/individualId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/death_registration/visitId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/death_registration/fieldWorkerId" readonly="true()" required="true()" type="string"/>
-      <bind nodeset="/death_registration/visitId" required="true()" type="string"/>
+      <bind nodeset="/death_registration/individualId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/death_registration/permId" readonly="true()" required="true()" type="string"/>
       <bind constraint=". &lt; today()" nodeset="/death_registration/dateOfDeath" required="true()" type="date"/>
       <bind nodeset="/death_registration/diagnoseddeath" required="true()" type="select1"/>
       <bind nodeset="/death_registration/whom" relevant="selected( /death_registration/diagnoseddeath , '1')" required="true()" type="select1"/>
@@ -261,19 +383,23 @@
       <bind nodeset="/death_registration/placeOfDeath" required="true()" type="select1"/>
       <bind nodeset="/death_registration/placeOfDeathOther" relevant="selected( /death_registration/placeOfDeath , 'OTHER')" required="true()" type="string"/>
       <bind calculate="concat( /death_registration/causeofdeathdiagnosed , /death_registration/causofdeathnotdiagnosed )" nodeset="/death_registration/causeOfDeath" readonly="true()" type="string"/>
-      <bind nodeset="/death_registration/processedByMirth" readonly="true()" relevant="1=2" type="int"/>
+      <bind nodeset="/death_registration/processedByMirth" readonly="true()" type="int"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/death_registration/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat(&quot;Obito_&quot;,  /death_registration/permId )" nodeset="/death_registration/meta/instanceName" type="string"/>
     </model>
   </h:head>
   <h:body>
-    <input ref="/death_registration/individualId">
-      <label ref="jr:itext('/death_registration/individualId:label')"/>
+    <input ref="/death_registration/visitId">
+      <label ref="jr:itext('/death_registration/visitId:label')"/>
     </input>
     <input ref="/death_registration/fieldWorkerId">
       <label ref="jr:itext('/death_registration/fieldWorkerId:label')"/>
     </input>
-    <input ref="/death_registration/visitId">
-      <label ref="jr:itext('/death_registration/visitId:label')"/>
+    <input ref="/death_registration/individualId">
+      <label ref="jr:itext('/death_registration/individualId:label')"/>
+    </input>
+    <input ref="/death_registration/permId">
+      <label ref="jr:itext('/death_registration/permId:label')"/>
     </input>
     <input ref="/death_registration/dateOfDeath">
       <label ref="jr:itext('/death_registration/dateOfDeath:label')"/>

@@ -1,10 +1,13 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>Pregnancy Outcome</h:title>
+    <h:title>Resultado de gravidez</h:title>
     <model>
       <itext>
         <translation lang="Swahili">
+          <text id="/pregnancy_outcome/motherPermId:label">
+            <value>-</value>
+          </text>
           <text id="/pregnancy_outcome/processedByMirth:label">
             <value>processed</value>
           </text>
@@ -89,6 +92,9 @@
           <text id="/pregnancy_outcome/outcomes/gender/M:label">
             <value>Mwanaume</value>
           </text>
+          <text id="/pregnancy_outcome/outcomes/childPermId:label">
+            <value>Nambari ya Mtoto</value>
+          </text>
           <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/5:label">
             <value>Uhusiano Mwingine</value>
           </text>
@@ -138,9 +144,152 @@
             <value>Namba ya Mama</value>
           </text>
         </translation>
-        <translation default="true()" lang="English">
+        <translation default="true()" lang="Portuguese">
+          <text id="/pregnancy_outcome/motherPermId:label">
+            <value>Perm ID da mãe</value>
+          </text>
           <text id="/pregnancy_outcome/processedByMirth:label">
+            <value>processed</value>
+          </text>
+          <text id="/pregnancy_outcome/partialDate/2:label">
+            <value>Aproximada</value>
+          </text>
+          <text id="/pregnancy_outcome/partialDate/1:label">
+            <value>Exata</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/childId:label">
+            <value>ExtId da criança</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/lastName:label">
+            <value>PermId</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/3:label">
+            <value>Neto/a</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/outcomeType/LBR:label">
+            <value>Nascido Vivo</value>
+          </text>
+          <text id="/pregnancy_outcome/birthingPlaceOther:label">
+            <value>Escreva o nome do local onde ocorreu o parto?</value>
+          </text>
+          <text id="/pregnancy_outcome/totalNumberChildrenStillLiving:label">
+            <value>De todas crianças que nasceram, quantas ainda estão vivas?</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/4:label">
+            <value>Sem relação</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/outcomeType/ABT:label">
+            <value>Aborto</value>
+          </text>
+          <text id="/pregnancy_outcome/partialDate:label">
+            <value>Data parcial</value>
+          </text>
+          <text id="/pregnancy_outcome/birthingPlace/OTHER:label">
+            <value>Outro</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/socialGroupId:label">
+            <value>ExtId do Agregado</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/ordinalPosition:label">
+            <value>Qual é a posição ordinal desta criança?</value>
+          </text>
+          <text id="/pregnancy_outcome/fatherId:label">
+            <value>ExtId do Pai</value>
+          </text>
+          <text id="/pregnancy_outcome/attendedANC/NO:label">
+            <value>Não</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes:label">
+            <value>Nascidos Vivos</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/ordinalPosition:hint">
+            <value>Primeira criança, segunda, terceira...etc Criança</value>
+          </text>
+          <text id="/pregnancy_outcome/birthingPlace/TRADITIONAL_MIDWIFE:label">
+            <value>Em casa da parteira tradicional</value>
+          </text>
+          <text id="/pregnancy_outcome/birthingPlace/HOME:label">
+            <value>Em casa</value>
+          </text>
+          <text id="/pregnancy_outcome/nboutcomes:label">
+            <value>Resultados</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/firstName:label">
+            <value>Nome</value>
+          </text>
+          <text id="/pregnancy_outcome/birthingPlace/HOSPITAL:label">
+            <value>Hospital</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/6:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/outcomeType:label">
+            <value>Tipo de resultado da gravidez</value>
+          </text>
+          <text id="/pregnancy_outcome/attendedANC:label">
+            <value>Chegou a ir há uma clinica de antenatal durante a gravidez?</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/gender/M:label">
+            <value>Masculino</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/childPermId:label">
+            <value>PermId da criança</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/5:label">
+            <value>Outro parente</value>
+          </text>
+          <text id="/pregnancy_outcome/fieldWorkerId:label">
+            <value>Código do Inquiridor</value>
+          </text>
+          <text id="/pregnancy_outcome/attendedANC/YES:label">
+            <value>Sim</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/gender:label">
+            <value>Sexo</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead:label">
+            <value>Relação com o chefe do agregado</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/2:label">
+            <value>Irmão/Irmã</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/outcomeType/MIS:label">
+            <value>Aborto Espontâneo</value>
+          </text>
+          <text id="/pregnancy_outcome/birthingPlace/HEALTHCENTERCLINIC:label">
+            <value>Centro de saúde ou Clinica</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/1:label">
+            <value>Filho/Filha</value>
+          </text>
+          <text id="/pregnancy_outcome/recordedDate:label">
+            <value>Data do resultado da gravidez</value>
+          </text>
+          <text id="/pregnancy_outcome/visitId:label">
+            <value>Id da visita</value>
+          </text>
+          <text id="/pregnancy_outcome/birthingPlace:label">
+            <value>Onde o parto ocorreu?</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/gender/F:label">
+            <value>Femenino</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/middleName:label">
+            <value>Nome do meio</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/outcomeType/SBR:label">
+            <value>Natimorto</value>
+          </text>
+          <text id="/pregnancy_outcome/motherId:label">
+            <value>ExtId da Mãe</value>
+          </text>
+        </translation>
+        <translation lang="English">
+          <text id="/pregnancy_outcome/motherPermId:label">
             <value>-</value>
+          </text>
+          <text id="/pregnancy_outcome/processedByMirth:label">
+            <value>processed</value>
           </text>
           <text id="/pregnancy_outcome/partialDate/2:label">
             <value>Approximate</value>
@@ -223,6 +372,9 @@
           <text id="/pregnancy_outcome/outcomes/gender/M:label">
             <value>Male</value>
           </text>
+          <text id="/pregnancy_outcome/outcomes/childPermId:label">
+            <value>Child Id</value>
+          </text>
           <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/5:label">
             <value>Other Relative</value>
           </text>
@@ -280,6 +432,7 @@
           <deviceid/>
           <motherId/>
           <fatherId/>
+          <motherPermId/>
           <visitId/>
           <fieldWorkerId/>
           <nboutcomes/>
@@ -290,9 +443,10 @@
             <outcomeType/>
             <childId/>
             <socialGroupId/>
+            <lastName/>
             <firstName/>
             <middleName/>
-            <lastName/>
+            <childPermId/>
             <gender/>
             <ordinalPosition/>
             <relationshipToGroupHead/>
@@ -304,26 +458,29 @@
           <processedByMirth/>
           <meta>
             <instanceID/>
+            <instanceName/>
           </meta>
         </pregnancy_outcome>
       </instance>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/pregnancy_outcome/start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/pregnancy_outcome/end" type="dateTime"/>
       <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/pregnancy_outcome/deviceid" type="string"/>
-      <bind nodeset="/pregnancy_outcome/motherId" required="true()" type="string"/>
-      <bind nodeset="/pregnancy_outcome/fatherId" required="true()" type="string"/>
-      <bind nodeset="/pregnancy_outcome/visitId" required="true()" type="string"/>
-      <bind nodeset="/pregnancy_outcome/fieldWorkerId" required="true()" type="string"/>
-      <bind nodeset="/pregnancy_outcome/nboutcomes" required="true()" type="int"/>
+      <bind nodeset="/pregnancy_outcome/motherId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/pregnancy_outcome/fatherId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/pregnancy_outcome/motherPermId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/pregnancy_outcome/visitId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/pregnancy_outcome/fieldWorkerId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/pregnancy_outcome/nboutcomes" readonly="true()" required="true()" type="int"/>
       <bind nodeset="/pregnancy_outcome/recordedDate" type="date"/>
       <bind nodeset="/pregnancy_outcome/partialDate" required="true()" type="select1"/>
       <bind calculate=" /pregnancy_outcome/nboutcomes " nodeset="/pregnancy_outcome/outcomes_count" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy_outcome/outcomes/outcomeType" required="true()" type="select1"/>
       <bind nodeset="/pregnancy_outcome/outcomes/childId" readonly="true()" relevant="selected( /pregnancy_outcome/outcomes/outcomeType , 'LBR')" required="true()" type="string"/>
       <bind nodeset="/pregnancy_outcome/outcomes/socialGroupId" readonly="true()" relevant="selected( /pregnancy_outcome/outcomes/outcomeType , 'LBR')" required="true()" type="string"/>
+      <bind nodeset="/pregnancy_outcome/outcomes/lastName" readonly="true()" relevant="selected( /pregnancy_outcome/outcomes/outcomeType , 'LBR')" required="true()" type="string"/>
       <bind nodeset="/pregnancy_outcome/outcomes/firstName" relevant="selected( /pregnancy_outcome/outcomes/outcomeType , 'LBR')" required="true()" type="string"/>
-      <bind nodeset="/pregnancy_outcome/outcomes/middleName" relevant="selected( /pregnancy_outcome/outcomes/outcomeType , 'LBR')" required="true()" type="string"/>
-      <bind nodeset="/pregnancy_outcome/outcomes/lastName" relevant="selected( /pregnancy_outcome/outcomes/outcomeType , 'LBR')" required="true()" type="string"/>
+      <bind nodeset="/pregnancy_outcome/outcomes/middleName" relevant="selected( /pregnancy_outcome/outcomes/outcomeType , 'LBR') and FALSE" required="true()" type="string"/>
+      <bind calculate=" /pregnancy_outcome/outcomes/lastName " nodeset="/pregnancy_outcome/outcomes/childPermId" readonly="true()" relevant="selected( /pregnancy_outcome/outcomes/outcomeType , 'LBR')" required="true()" type="string"/>
       <bind nodeset="/pregnancy_outcome/outcomes/gender" relevant="selected( /pregnancy_outcome/outcomes/outcomeType , 'LBR')" required="true()" type="select1"/>
       <bind nodeset="/pregnancy_outcome/outcomes/ordinalPosition" relevant="selected( /pregnancy_outcome/outcomes/outcomeType , 'LBR')" required="true()" type="int"/>
       <bind nodeset="/pregnancy_outcome/outcomes/relationshipToGroupHead" relevant="selected( /pregnancy_outcome/outcomes/outcomeType , 'LBR')" required="true()" type="select1"/>
@@ -331,8 +488,9 @@
       <bind nodeset="/pregnancy_outcome/birthingPlaceOther" relevant="selected( /pregnancy_outcome/birthingPlace , 'OTHER')" required="true()" type="string"/>
       <bind nodeset="/pregnancy_outcome/totalNumberChildrenStillLiving" required="true()" type="int"/>
       <bind nodeset="/pregnancy_outcome/attendedANC" required="true()" type="select1"/>
-      <bind calculate="1=2" nodeset="/pregnancy_outcome/processedByMirth" relevant="processed" type="int"/>
+      <bind nodeset="/pregnancy_outcome/processedByMirth" readonly="true()" type="int"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/pregnancy_outcome/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat(&quot;ResGravidez_&quot;, /pregnancy_outcome/motherPermId ,&quot;_&quot;, format-date(today(), &quot;%Y%n%e&quot;))" nodeset="/pregnancy_outcome/meta/instanceName" type="string"/>
     </model>
   </h:head>
   <h:body>
@@ -341,6 +499,9 @@
     </input>
     <input ref="/pregnancy_outcome/fatherId">
       <label ref="jr:itext('/pregnancy_outcome/fatherId:label')"/>
+    </input>
+    <input ref="/pregnancy_outcome/motherPermId">
+      <label ref="jr:itext('/pregnancy_outcome/motherPermId:label')"/>
     </input>
     <input ref="/pregnancy_outcome/visitId">
       <label ref="jr:itext('/pregnancy_outcome/visitId:label')"/>
@@ -393,14 +554,14 @@
         <input ref="/pregnancy_outcome/outcomes/socialGroupId">
           <label ref="jr:itext('/pregnancy_outcome/outcomes/socialGroupId:label')"/>
         </input>
+        <input ref="/pregnancy_outcome/outcomes/lastName">
+          <label ref="jr:itext('/pregnancy_outcome/outcomes/lastName:label')"/>
+        </input>
         <input ref="/pregnancy_outcome/outcomes/firstName">
           <label ref="jr:itext('/pregnancy_outcome/outcomes/firstName:label')"/>
         </input>
         <input ref="/pregnancy_outcome/outcomes/middleName">
           <label ref="jr:itext('/pregnancy_outcome/outcomes/middleName:label')"/>
-        </input>
-        <input ref="/pregnancy_outcome/outcomes/lastName">
-          <label ref="jr:itext('/pregnancy_outcome/outcomes/lastName:label')"/>
         </input>
         <select1 ref="/pregnancy_outcome/outcomes/gender">
           <label ref="jr:itext('/pregnancy_outcome/outcomes/gender:label')"/>

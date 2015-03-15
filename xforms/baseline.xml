@@ -1,9 +1,98 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>Baseline registration</h:title>
+    <h:title>Registo baseline de novo individuo</h:title>
     <model>
       <itext>
+        <translation default="true()" lang="Portuguese">
+          <text id="/baseline/individualInfo/gender/M:label">
+            <value>Masculino</value>
+          </text>
+          <text id="/baseline/migrationType:label">
+            <value>Tipo de Registo</value>
+          </text>
+          <text id="/baseline/individualInfo/motherId:label">
+            <value>Id da Mãe</value>
+          </text>
+          <text id="/baseline/individualInfo/dateOfBirth:label">
+            <value>Data de nascimento</value>
+          </text>
+          <text id="/baseline/locationName:label">
+            <value>Número da Casa/Agregado</value>
+          </text>
+          <text id="/baseline/individualInfo/individualId:label">
+            <value>Id do Individuo</value>
+          </text>
+          <text id="/baseline/spelasni/yes:label">
+            <value>Sim</value>
+          </text>
+          <text id="/baseline/warning:label">
+            <value>A data não pode ser maior ou igual a hoje</value>
+          </text>
+          <text id="/baseline/locationId:label">
+            <value>Id da Localização/casa</value>
+          </text>
+          <text id="/baseline/individualInfo/firstName:label">
+            <value>Nome</value>
+          </text>
+          <text id="/baseline/individualInfo/fatherId:label">
+            <value>Id do Pai</value>
+          </text>
+          <text id="/baseline/individualInfo/partialDate:label">
+            <value>Data Parcial</value>
+          </text>
+          <text id="/baseline/dateOfMigration:label">
+            <value>Data da migração/em que começou a residir nesta casa</value>
+          </text>
+          <text id="/baseline/majo4mo/yes:label">
+            <value>Sim</value>
+          </text>
+          <text id="/baseline/individualInfo/middleName:label">
+            <value>Middle Name</value>
+          </text>
+          <text id="/baseline/individualInfo/partialDate/1:label">
+            <value>Exato</value>
+          </text>
+          <text id="/baseline/individualInfo/partialDate/2:label">
+            <value>Aproximado</value>
+          </text>
+          <text id="/baseline/majo4mo/no:label">
+            <value>Não</value>
+          </text>
+          <text id="/baseline/spelasni:label">
+            <value>O individuo dormiu aqui na ultima noite?</value>
+          </text>
+          <text id="/baseline/spelasni/no:label">
+            <value>Não</value>
+          </text>
+          <text id="/baseline/fieldWorkerId:label">
+            <value>Código do Inquiridor</value>
+          </text>
+          <text id="/baseline/majo4mo:label">
+            <value>O Individuo viveu os ultimos 6 meses aqui?</value>
+          </text>
+          <text id="/baseline/individualInfo:label">
+            <value>-</value>
+          </text>
+          <text id="/baseline/individualInfo/gender:label">
+            <value>Sexo</value>
+          </text>
+          <text id="/baseline/individualInfo/lastName:label">
+            <value>Perm ID</value>
+          </text>
+          <text id="/baseline/visitDate:label">
+            <value>Data da visita</value>
+          </text>
+          <text id="/baseline/individualInfo/gender/F:label">
+            <value>Femenino</value>
+          </text>
+          <text id="/baseline/processedByMirth:label">
+            <value>processed</value>
+          </text>
+          <text id="/baseline/visitId:label">
+            <value>Id da Visita</value>
+          </text>
+        </translation>
         <translation lang="Chichewa">
           <text id="/baseline/individualInfo/gender/M:label">
             <value>Mamuna</value>
@@ -17,8 +106,8 @@
           <text id="/baseline/individualInfo/dateOfBirth:label">
             <value>Tsiku lobadwa</value>
           </text>
-          <text id="/baseline/individualInfo/gender:label">
-            <value>gender</value>
+          <text id="/baseline/locationName:label">
+            <value>Location Name</value>
           </text>
           <text id="/baseline/individualInfo/individualId:label">
             <value>-</value>
@@ -74,6 +163,9 @@
           <text id="/baseline/individualInfo:label">
             <value>individualIdInfoGRP</value>
           </text>
+          <text id="/baseline/individualInfo/gender:label">
+            <value>gender</value>
+          </text>
           <text id="/baseline/individualInfo/lastName:label">
             <value>Dzina Lomaliza</value>
           </text>
@@ -90,7 +182,7 @@
             <value>Kuyenderedwa</value>
           </text>
         </translation>
-        <translation default="true()" lang="English">
+        <translation lang="English">
           <text id="/baseline/individualInfo/gender/M:label">
             <value>Male</value>
           </text>
@@ -103,8 +195,8 @@
           <text id="/baseline/individualInfo/dateOfBirth:label">
             <value>Date of Birth</value>
           </text>
-          <text id="/baseline/individualInfo/gender:label">
-            <value>gender</value>
+          <text id="/baseline/locationName:label">
+            <value>Location Name</value>
           </text>
           <text id="/baseline/individualInfo/individualId:label">
             <value>Individual Id</value>
@@ -160,6 +252,9 @@
           <text id="/baseline/individualInfo:label">
             <value>-</value>
           </text>
+          <text id="/baseline/individualInfo/gender:label">
+            <value>gender</value>
+          </text>
           <text id="/baseline/individualInfo/lastName:label">
             <value>Last Name</value>
           </text>
@@ -184,15 +279,16 @@
           <deviceId/>
           <migrationType/>
           <locationId/>
+          <locationName/>
           <visitId/>
           <fieldWorkerId/>
           <individualInfo>
             <individualId/>
+            <lastName/>
             <motherId/>
             <fatherId/>
             <firstName/>
             <middleName/>
-            <lastName/>
             <gender/>
             <dateOfBirth/>
             <partialDate/>
@@ -205,6 +301,7 @@
           <processedByMirth/>
           <meta>
             <instanceID/>
+            <instanceName/>
           </meta>
         </baseline>
       </instance>
@@ -213,24 +310,26 @@
       <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/baseline/deviceId" type="string"/>
       <bind nodeset="/baseline/migrationType" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/baseline/locationId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/baseline/locationName" type="string"/>
       <bind nodeset="/baseline/visitId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/baseline/fieldWorkerId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/baseline/individualInfo/individualId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/baseline/individualInfo/lastName" readonly="true()" relevant=" /baseline/migrationType  = 'BASELINE'" required="true()" type="string"/>
       <bind nodeset="/baseline/individualInfo/motherId" readonly="true()" relevant=" /baseline/migrationType  = 'BASELINE'" required="true()" type="string"/>
       <bind nodeset="/baseline/individualInfo/fatherId" readonly="true()" relevant=" /baseline/migrationType  = 'BASELINE'" required="true()" type="string"/>
       <bind nodeset="/baseline/individualInfo/firstName" relevant=" /baseline/migrationType  = 'BASELINE'" required="true()" type="string"/>
-      <bind nodeset="/baseline/individualInfo/middleName" relevant=" /baseline/migrationType  = 'BASELINE'" type="string"/>
-      <bind nodeset="/baseline/individualInfo/lastName" relevant=" /baseline/migrationType  = 'BASELINE'" required="true()" type="string"/>
+      <bind nodeset="/baseline/individualInfo/middleName" relevant="( /baseline/migrationType  = 'BASELINE') and 1=0" type="string"/>
       <bind nodeset="/baseline/individualInfo/gender" relevant=" /baseline/migrationType  = 'BASELINE'" required="true()" type="select1"/>
       <bind constraint=". &lt; today()" nodeset="/baseline/individualInfo/dateOfBirth" relevant=" /baseline/migrationType  = 'BASELINE'" required="true()" type="date"/>
       <bind nodeset="/baseline/individualInfo/partialDate" relevant=" /baseline/migrationType  = 'BASELINE'" required="true()" type="select1"/>
-      <bind constraint=". &lt;= today()" jr:constraintMsg="the residency date can not be in the future" nodeset="/baseline/dateOfMigration" readonly="true()" required="true()" type="date"/>
+      <bind constraint=". &lt;= today()" jr:constraintMsg="the residency date can not be in the future" nodeset="/baseline/dateOfMigration" required="true()" type="date"/>
       <bind nodeset="/baseline/warning" readonly="true()" relevant=" /baseline/individualInfo/dateOfBirth &gt; /baseline/dateOfMigration  and ../migrationType = 'BASELINE'" required="true()" type="string"/>
-      <bind constraint=". &lt;= today()" jr:constraintMsg="the visit date can not be in the future" nodeset="/baseline/visitDate" readonly="true()" required="true()" type="date"/>
+      <bind constraint=". &lt;= today()" jr:constraintMsg="the visit date can not be in the future" nodeset="/baseline/visitDate" required="true()" type="date"/>
       <bind nodeset="/baseline/majo4mo" required="true()" type="select1"/>
       <bind nodeset="/baseline/spelasni" required="true()" type="select1"/>
-      <bind nodeset="/baseline/processedByMirth" relevant="1=2" type="int"/>
+      <bind nodeset="/baseline/processedByMirth" readonly="true()" type="int"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/baseline/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat(&quot;Baseline-&quot;, /baseline/individualInfo/lastName )" nodeset="/baseline/meta/instanceName" type="string"/>
     </model>
   </h:head>
   <h:body>
@@ -239,6 +338,9 @@
     </input>
     <input ref="/baseline/locationId">
       <label ref="jr:itext('/baseline/locationId:label')"/>
+    </input>
+    <input ref="/baseline/locationName">
+      <label ref="jr:itext('/baseline/locationName:label')"/>
     </input>
     <input ref="/baseline/visitId">
       <label ref="jr:itext('/baseline/visitId:label')"/>
@@ -251,6 +353,9 @@
       <input ref="/baseline/individualInfo/individualId">
         <label ref="jr:itext('/baseline/individualInfo/individualId:label')"/>
       </input>
+      <input ref="/baseline/individualInfo/lastName">
+        <label ref="jr:itext('/baseline/individualInfo/lastName:label')"/>
+      </input>
       <input ref="/baseline/individualInfo/motherId">
         <label ref="jr:itext('/baseline/individualInfo/motherId:label')"/>
       </input>
@@ -262,9 +367,6 @@
       </input>
       <input ref="/baseline/individualInfo/middleName">
         <label ref="jr:itext('/baseline/individualInfo/middleName:label')"/>
-      </input>
-      <input ref="/baseline/individualInfo/lastName">
-        <label ref="jr:itext('/baseline/individualInfo/lastName:label')"/>
       </input>
       <select1 ref="/baseline/individualInfo/gender">
         <label ref="jr:itext('/baseline/individualInfo/gender:label')"/>
