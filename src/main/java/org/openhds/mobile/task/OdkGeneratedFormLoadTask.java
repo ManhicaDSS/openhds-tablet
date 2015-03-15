@@ -252,8 +252,11 @@ public class OdkGeneratedFormLoadTask extends AsyncTask<Void, Void, Boolean> {
                     } else if (name.equals("originHouseNo")) {
                         sbuilder.append(filledForm.getOriginHouseNo() == null ? "<originHouseNo />" + "\r\n"
                                 : "<originHouseNo>" + filledForm.getOriginHouseNo() + "</originHouseNo>" + "\r\n");
-                        
-                    } else if (name.equals(FilledParams.deviceId)) {
+                    } else if (name.equals("nboutcomes")) {
+                        sbuilder.append(filledForm.getNboutcomes() < 0 ? "<nboutcomes />" + "\r\n"
+                                : "<nboutcomes>" + filledForm.getNboutcomes() + "</nboutcomes>" + "\r\n");
+                         
+                    }else if (name.equals(FilledParams.deviceId)) {
                      mTelephonyManager = (TelephonyManager) mContext.getSystemService(Context.TELEPHONY_SERVICE);
                      
                      String deviceId = mTelephonyManager.getDeviceId();
@@ -297,9 +300,9 @@ public class OdkGeneratedFormLoadTask extends AsyncTask<Void, Void, Boolean> {
                     for(Child child : filledForm.getPregOutcomeChildren()) {
                         sbuilder.append("<outcomes>\r\n");
                         sbuilder.append("<outcomeType></outcomeType>\r\n");
-                        sbuilder.append("<childId>" + child.getId() + "</childId>\r\n");
+                        sbuilder.append("<childId>" + child.getId() + "</childId>\r\n");                                             
                         sbuilder.append("<firstName />\r\n");
-                        sbuilder.append("<lastName />\r\n");
+                        sbuilder.append("<lastName>" + child.getPermId() + "</lastName>\r\n");
                         sbuilder.append("<gender />\r\n");
                         /*sbuilder.append("<dateOfBirth />\r\n");
                         sbuilder.append("<partialDate />\r\n");*/

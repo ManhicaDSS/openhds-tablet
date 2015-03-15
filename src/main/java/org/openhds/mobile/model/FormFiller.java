@@ -202,10 +202,12 @@ public class FormFiller {
         addVisit(locationVisit, form);
         form.setLocationId(locationVisit.getLocation().getExtId());
         form.setMotherExtId(locationVisit.getSelectedIndividual().getExtId());
+        form.setMotherPermId(locationVisit.getSelectedIndividual().getLastName());
         
         for(String childId : po.getChildIds()) {
             Child child = new Child();
-            child.setId(childId);
+            child.setId(childId);            
+            child.setPermId(po.getChildPermIds().get(nb));
             form.addChild(child);
             nb++;
         }

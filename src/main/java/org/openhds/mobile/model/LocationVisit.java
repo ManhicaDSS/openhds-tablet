@@ -449,7 +449,7 @@ public class LocationVisit implements Serializable {
             	String permId = permIds[i];
             	
                 outcome.addChildId(id);                
-                outcome.getChildren().get(i).setLastName(permId);
+                outcome.addChildPermId(permId);
             }
         }
 

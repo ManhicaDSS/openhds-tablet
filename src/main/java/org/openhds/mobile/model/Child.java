@@ -4,7 +4,8 @@ public class Child {
 
     private String id;
     private String socialGroupId;
-
+    private String permId;
+    
     public String getId() {
         return id;
     }
@@ -20,4 +21,12 @@ public class Child {
     public void setSocialGroupId(String socialGroupId) {
         this.socialGroupId = socialGroupId;
     }
+    
+    public String getPermId() {
+		return permId;
+	}
+    
+    public void setPermId(String permId) {
+		this.permId = permId;
+	}
 }

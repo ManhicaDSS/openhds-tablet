@@ -12,6 +12,7 @@ public class PregnancyOutcome implements Serializable {
     private String recordedDate;
 
     private List<String> childIds = new ArrayList<String>();
+    private List<String> childPermIds = new ArrayList<String>();
     private List<Individual> children = new ArrayList<Individual>();
 
     public Individual getMother() {
@@ -31,6 +32,13 @@ public class PregnancyOutcome implements Serializable {
         return childIds;
     }
 
+    public List<String> getChildPermIds() {
+		return childPermIds;
+	}
+    
+    public void addChildPermId(String childPermId){
+    	childPermIds.add(childPermId);
+    }
     
     public Individual getFather() {
         return father;

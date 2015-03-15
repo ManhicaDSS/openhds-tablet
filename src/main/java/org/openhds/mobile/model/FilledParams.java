@@ -69,6 +69,6 @@ public class FilledParams {
 				individualA, individualB, migrationType,
 				"locationName", "permId", "houseno",
 				"headPermId", "headDob", "headName", "fullname", "headGender", "groupName", 
-				"motherPermId", "fatherPermId", "motherName", "fatherName", "name", "originHouseNo");
+				"motherPermId", "fatherPermId", "motherName", "fatherName", "name", "originHouseNo", "nboutcomes");
 	}
 }
