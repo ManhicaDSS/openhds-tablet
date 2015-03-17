@@ -163,6 +163,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 	public static final String FINISH_VISIT = "Finish Visit";
 	public static final String INMIGRATION = "Inmigration";
 	private int CREATING_NEW_LOCATION = 0;
+	private int RETURNING_TO_DSS = 0;
 	
 	private static final List<String> stateSequence = new ArrayList<String>();
 //	private static final Map<String, Integer> stateLabels = new HashMap<String, Integer>();
@@ -848,6 +849,10 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
         	return;
          }
          
+         if (RETURNING_TO_DSS == 1){
+        	 i.putExtra("img", "IMG_RETURN");
+         }
+         
         startActivityForResult(i, requestCode);
     }
     
@@ -1104,6 +1109,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
     }
 
     public void onInMigration() {
+    	RETURNING_TO_DSS =0;
         createInMigrationFormDialog();
     }
 
@@ -1119,12 +1125,19 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
      
             }
         });
-             alertDialogBuilder.setNegativeButton(getString(R.string.update_create_inmigration_neg_button), new DialogInterface.OnClickListener() {
+        alertDialogBuilder.setNegativeButton(getString(R.string.update_create_inmigration_neg_button), new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 showProgressFragment();
                 extInm= true;
                 new CreateExternalInmigrationTask().execute();
 
+            }
+        });
+        alertDialogBuilder.setNeutralButton(getString(R.string.update_create_inmigration_neutral_button), new DialogInterface.OnClickListener() {
+       	    public void onClick(DialogInterface dialog, int which) {
+       	    	extInm= true;
+       	    	RETURNING_TO_DSS = 1;
+       	    	startFilterActivity(FILTER_INMIGRATION);    
             }
         });
         AlertDialog alertDialog = alertDialogBuilder.create();
