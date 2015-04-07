@@ -29,6 +29,16 @@
             android:text="@string/createLocationBtn_lbl" />
 
         <Button
+            android:id="@+id/houseDetailsBtn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:enabled="false"
+            android:text="@string/houseDetailsBtn_lbl" />
+        
+        <Button
             android:id="@+id/createVisitBtn"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
@@ -48,6 +58,16 @@
             android:enabled="false"
             android:text="@string/clearIndividualBtn_lbl" />
 
+        <Button
+            android:id="@+id/individualDetailsBtn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"
+            android:enabled="false"
+            android:text="@string/individualDetailsBtn_lbl" />
+        
         <Button
             android:id="@+id/householdBtn"
             android:layout_width="150dp"

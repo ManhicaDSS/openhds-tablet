@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -586,60 +587,38 @@ public class LocationVisit implements Serializable {
 								+ "%" },
 						OpenHDS.Individuals.COLUMN_INDIVIDUAL_LASTNAME + " ASC");
 
-		String generatedPermID = null;
-
-		// 001-999
-		// NEXT
-		if (cursor.moveToFirst()) {
-
-			int nextCode = 0;
-
-			for (int i = 1; i <= 99; i++) {
-				String permId = cursor.getString(0);
-				String strMemberNo = permId.substring(permId.length() - 2);
-
-				int memberNo = 0;
-
-				try {
-					memberNo = Integer.parseInt(strMemberNo);
-
-					if (i != memberNo && memberNo != 0) {
-						nextCode = i;
-						break;
-					} else {
-						
-						if (!cursor.moveToNext()){ //Cant Go Next
-        					nextCode = i+1;
-        					break;
-        				}
-        										
-						continue;
-					}
-
-				} catch (NumberFormatException e) {
-					cursor.moveToNext();
-				}
-			}
-
-			if (nextCode == 0) {
-				generatedPermID = "COULDNT GENERATE";
-			} else {
-				generatedPermID = String.format(location.getName() + "-" + "%02d", nextCode);
-			}
-			
-		} else {
-			generatedPermID = location.getName() + "-01";
+		
+		String generatedPermID = "COULDNT GENERATE";
+		List<String> permIds = new ArrayList<String>();
+		
+		while (cursor.moveToNext()){
+			permIds.add(cursor.getString(0));
 		}
-
+		
 		cursor.close();
+		
+		// 001-999
+		
+		for (int i = 1; i <= 99; i++) {			
+			
+			String permId = String.format(location.getName() + "-" + "%02d", i);
+			
+			if (!permIds.contains(permId)){
+				generatedPermID = permId;
+				break;
+			}			
+			
+		}
+		
 		return generatedPermID;
 	}
 
-	public String[] generateIndividualPermIds(ContentResolver resolver,
-			int liveBirthCount) {
+	public String[] generateIndividualPermIds(ContentResolver resolver, int liveBirthCount) {
 
 		String[] ids = new String[liveBirthCount];
-
+		List<String> permIds = new ArrayList<String>();
+		int processedBabies = 0;
+		
 		Cursor cursor = resolver
 				.query(OpenHDS.Individuals.CONTENT_ID_URI_BASE,
 						new String[] { OpenHDS.Individuals.COLUMN_INDIVIDUAL_LASTNAME },
@@ -648,55 +627,31 @@ public class LocationVisit implements Serializable {
 								+ "%" },
 						OpenHDS.Individuals.COLUMN_INDIVIDUAL_LASTNAME + " ASC");
 
-		int countBabies = 0;
+		
+		while (cursor.moveToNext()){
+			permIds.add(cursor.getString(0));
+		}
+		
+		cursor.close();
 
 		// 001-999
-		// NEXT
-		if (cursor.moveToFirst()) {
-
-			int nextCode = 0;
-
-			for (int i = 1; i <= 99; i++) {
-				String permId = cursor.getString(0);
-				String strMemberNo = permId.substring(permId.length() - 2);
-
-				int memberNo = 0;
-
-				try {
-					memberNo = Integer.parseInt(strMemberNo);
-
-					if (i != memberNo && memberNo != 0) {
-						nextCode = i;
-						ids[countBabies++] = String.format(location.getName() + "-" + "%02d", nextCode);
-
-						if (cursor.moveToNext() == false || countBabies == liveBirthCount) {
-							break;
-						}
-
-					} else {
-						if (!cursor.moveToNext()){ //Cant Go Next
-        					nextCode = i+1;
-        					ids[countBabies++] = String.format(location.getName() + "-" + "%02d", nextCode);
-        					break;
-        				}
-        				
-						cursor.moveToNext();
-						continue;
-					}
-
-				} catch (NumberFormatException e) {
-					cursor.moveToNext();
+		
+		for (int i = 1; i <= 99; i++) {
+            String permId = String.format(location.getName() + "-" + "%02d", i);
+			
+			if (!permIds.contains(permId)){
+				ids[processedBabies++] = permId;
+				
+				if (processedBabies == liveBirthCount){
+					break;
 				}
 			}
-
 		}
 
-		if (countBabies == 0) {
+		if (processedBabies == 0) {
 			for (int i = 0; i < liveBirthCount; i++)
 				ids[i] = "COULDNT GENERATE " + i;
 		}
-
-		cursor.close();
 
 		return ids;
 	}

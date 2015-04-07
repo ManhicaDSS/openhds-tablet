@@ -164,6 +164,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 	public static final String INMIGRATION = "Inmigration";
 	private int CREATING_NEW_LOCATION = 0;
 	private int RETURNING_TO_DSS = 0;
+	private int createHouseDetails = 0;
 	
 	private static final List<String> stateSequence = new ArrayList<String>();
 //	private static final Map<String, Integer> stateLabels = new HashMap<String, Integer>();
@@ -744,6 +745,12 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
             hideProgressFragment();
             
             if (result) {
+            	if (createHouseDetails == 1){
+            		onClearIndividual();
+            		createHouseDetails = 0;	
+            		return;
+            	}
+            	
             	if (stateMachine.getState()=="Inmigration") {
             		stateMachine.transitionTo("Select Event");
             		if (extInm)
@@ -767,6 +774,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
             
     		deathCreation = false;
     		extInm = false;
+    		createHouseDetails = 0;
         }
     }
     
@@ -2173,4 +2181,110 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 	    private void searchSocialGroup(){ 	
 	    	startFilterActivity(FILTER_SOCIALGROUP);
 	    }
+
+		@Override
+		public void onHouseDetails() {
+			showProgressFragment();	        
+	        new CreateHouseDetailsTask().execute(); 		
+		}
+
+		@Override
+		public void onIndividualDetails() {
+			showProgressFragment();	        
+	        new CreateIndividualDetailsTask().execute();
+		}
+		
+		private class CreateHouseDetailsTask extends AsyncTask<Void, Void, Boolean> {
+			private String errorMessage = "";
+			
+	        @Override
+	        protected Boolean doInBackground(Void... params) {
+	                    	        	
+	        	ContentResolver resolver = UpdateActivity.this.getContentResolver();	              	
+	        		        	
+	        	SocialGroup sg = null;
+	        	Cursor cursor = Queries.getSocialGroupByName(resolver,locationVisit.getLocation().getName());
+	        	
+	        	if (cursor.moveToFirst()) {
+	        		sg = Converter.convertToSocialGroup(cursor);
+	        		locationVisit.getLocation().setHead(sg.getGroupHead());	        		
+	        	}
+	        	
+	        	if (sg == null){
+	        		errorMessage = "NO_SOCIAL_GROUP";
+	        		return false;
+	        	}	        	        
+	        	
+	        	filledForm = new FilledForm("location_details");
+	        	
+	        	formFiller.addGroupHead(filledForm, resolver, sg);
+	        	 
+	        	filledForm.setFieldWorkerId(locationVisit.getFieldWorker().getExtId());
+	        	
+	        	filledForm.setVisitDate(locationVisit.getVisit().getDate());
+	            filledForm.setVisitExtId(locationVisit.getVisit().getExtId());
+	            filledForm.setLocationName(locationVisit.getLocation().getName());	            
+	            filledForm.setLocationId(locationVisit.getLocation().getExtId());
+	            
+	            filledForm.setRoundNumber(locationVisit.getRound().getRoundNumber());	            
+	            filledForm.setHierarchyId(locationVisit.getLatestLevelExtId());	                        
+	            
+	            return true;
+	        }
+	        
+	        @Override
+	        protected void onPostExecute(Boolean result) {
+	        	if (result){
+	        		hideProgressFragment();
+	        		createHouseDetails = 1;
+	        		loadForm(SELECTED_XFORM);
+	        	}else{
+	        		//There's no head of household
+	        		createCantCreateHouseDetails();
+	        	}
+	        }
+	    }
+		
+		private class CreateIndividualDetailsTask extends AsyncTask<Void, Void, Boolean> {
+			private String errorMessage = "";
+			
+	        @Override
+	        protected Boolean doInBackground(Void... params) {
+	                    	        	
+	        	ContentResolver resolver = UpdateActivity.this.getContentResolver();             	
+	        	        	
+	        
+	        	filledForm = formFiller.fillExtraForm(locationVisit, "individual_details", null);
+	        	formFiller.addParents(filledForm, resolver, locationVisit.getSelectedIndividual().getExtId());
+	        	
+	            return true;
+	        }
+	        
+	        @Override
+	        protected void onPostExecute(Boolean result) {
+	        	if (result){
+	        		hideProgressFragment();
+	        		loadForm(SELECTED_XFORM);
+	        	}else{
+	        		
+	        	}
+	        }
+	    }
+		
+	    private void createCantCreateHouseDetails() {	        
+	        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+	          alertDialogBuilder.setTitle("Detalhes da casa");
+	          alertDialogBuilder.setMessage("Não será possivel abrir criar os detalhes da casa, porque o chefe do agregado ainda não foi adicionado a esta casa!");
+	          alertDialogBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+	            public void onClick(DialogInterface dialog, int which) {  
+	            	//selectIndividual();
+	            	//stateMachine.transitionTo("Select Individual");
+	            	restoreState();
+	            }
+	        });
+	        AlertDialog alertDialog = alertDialogBuilder.create();
+	        alertDialog.show(); 
+	    }
+	    
+		
 }

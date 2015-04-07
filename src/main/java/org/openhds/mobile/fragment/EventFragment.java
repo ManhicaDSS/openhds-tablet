@@ -37,7 +37,7 @@ public class EventFragment extends Fragment implements OnClickListener {
 
     private Button findLocationGeoPointBtn, createLocationBtn, createVisitBtn, householdBtn, membershipBtn,
             relationshipBtn, inMigrationBtn, outMigrationBtn, pregRegBtn, birthRegBtn, deathBtn, finishVisitBtn,
-            clearIndividualBtn;
+            clearIndividualBtn, individualDetailsBtn, houseDetailsBtn;
 
     private Listener listener;
     private LocationVisit locationVisit;
@@ -74,6 +74,10 @@ public class EventFragment extends Fragment implements OnClickListener {
         void onClearIndividual();
         
         void onInMigration();
+        
+        void onHouseDetails();
+        
+        void onIndividualDetails();
     }
 
     @Override
@@ -140,6 +144,12 @@ public class EventFragment extends Fragment implements OnClickListener {
 
         clearIndividualBtn = (Button) view.findViewById(R.id.clearIndividualBtn);
         clearIndividualBtn.setOnClickListener(this);
+        
+        houseDetailsBtn = (Button) view.findViewById(R.id.houseDetailsBtn);
+        houseDetailsBtn.setOnClickListener(this);
+        
+        individualDetailsBtn = (Button) view.findViewById(R.id.individualDetailsBtn);
+        individualDetailsBtn.setOnClickListener(this);
     }
     
     public void setBaseLine(){
@@ -194,6 +204,10 @@ public class EventFragment extends Fragment implements OnClickListener {
 			listener.onDeath();
 		} else if (id == R.id.clearIndividualBtn) {
 			listener.onClearIndividual();
+		} else if (id == R.id.houseDetailsBtn){
+			listener.onHouseDetails();
+		} else if (id == R.id.individualDetailsBtn){
+			listener.onIndividualDetails();
 		}
     }
 
@@ -231,6 +245,8 @@ public class EventFragment extends Fragment implements OnClickListener {
         birthRegBtn.setEnabled(false);
         finishVisitBtn.setEnabled(false);
         householdBtn.setEnabled(false);    	
+        houseDetailsBtn.setEnabled(false);
+        individualDetailsBtn.setEnabled(false);
     }
     
     public void enableButtons(){
@@ -249,6 +265,9 @@ public class EventFragment extends Fragment implements OnClickListener {
             pregRegBtn.setEnabled(true);
             birthRegBtn.setEnabled(true);
         }    	
+        
+        individualDetailsBtn.setEnabled(true);
+        houseDetailsBtn.setEnabled(false);
     }
 
     private boolean individualMeetsMinimumAge(Individual indiv) {
@@ -273,11 +292,13 @@ public class EventFragment extends Fragment implements OnClickListener {
             public void onEnterState() {
                 finishVisitBtn.setEnabled(true);
                 inMigrationBtn.setEnabled(true);
+                houseDetailsBtn.setEnabled(true);
             }
 
             public void onExitState() {
                 finishVisitBtn.setEnabled(false);
                 inMigrationBtn.setEnabled(false);
+                houseDetailsBtn.setEnabled(false);
             }
         });
     }

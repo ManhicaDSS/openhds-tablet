@@ -203,6 +203,7 @@ public class FormFiller {
         form.setLocationId(locationVisit.getLocation().getExtId());
         form.setMotherExtId(locationVisit.getSelectedIndividual().getExtId());
         form.setMotherPermId(locationVisit.getSelectedIndividual().getLastName());
+        form.setMotherName(locationVisit.getSelectedIndividual().getFirstName());
         
         for(String childId : po.getChildIds()) {
             Child child = new Child();
