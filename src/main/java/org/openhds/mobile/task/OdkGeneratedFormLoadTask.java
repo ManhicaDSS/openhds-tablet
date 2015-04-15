@@ -171,7 +171,7 @@ public class OdkGeneratedFormLoadTask extends AsyncTask<Void, Void, Boolean> {
                                 : "<lastName>" + filledForm.getIndividualLastName() + "</lastName>" + "\r\n");
                     } else if (name.equals(FilledParams.gender)) {
                         sbuilder.append(filledForm.getIndividualGender() == null ? "<gender />" + "\r\n" : "<gender>"
-                                + (filledForm.getIndividualGender().startsWith("M") ? "1" : "2") + "</gender>"
+                                + (filledForm.getIndividualGender().startsWith("M") ? "M" : "F") + "</gender>"
                                 + "\r\n");
                     } else if (name.equals(FilledParams.dob)) {
                         sbuilder.append(filledForm.getIndividualDob() == null ? "<dob />" + "\r\n" : "<dob>"
@@ -257,9 +257,17 @@ public class OdkGeneratedFormLoadTask extends AsyncTask<Void, Void, Boolean> {
                                 : "<originHouseNo>" + filledForm.getOriginHouseNo() + "</originHouseNo>" + "\r\n");
                     } else if (name.equals("nboutcomes")) {
                         sbuilder.append(filledForm.getNboutcomes() < 0 ? "<nboutcomes />" + "\r\n"
-                                : "<nboutcomes>" + filledForm.getNboutcomes() + "</nboutcomes>" + "\r\n");
-                         
-                    }else if (name.equals(FilledParams.deviceId)) {
+                                : "<nboutcomes>" + filledForm.getNboutcomes() + "</nboutcomes>" + "\r\n");                         
+                    } else if (name.equals("hasSubsHead")) {
+                        sbuilder.append(filledForm.getHasSubsHead() == null ? "<hasSubsHead />" + "\r\n"
+                                : "<hasSubsHead>" + filledForm.getHasSubsHead() + "</hasSubsHead>" + "\r\n");                         
+                    } else if (name.equals("subsHeadName")) {
+                        sbuilder.append(filledForm.getSubsHeadName() == null ? "<subsHeadName />" + "\r\n"
+                                : "<subsHeadName>" + filledForm.getSubsHeadName() + "</subsHeadName>" + "\r\n");                         
+                    } else if (name.equals("subsHeadPermId")) {
+                        sbuilder.append(filledForm.getSubsHeadPermId() == null ? "<subsHeadPermId />" + "\r\n"
+                                : "<subsHeadPermId>" + filledForm.getSubsHeadPermId() + "</subsHeadPermId>" + "\r\n");                         
+                    } else if (name.equals(FilledParams.deviceId)) {
                      mTelephonyManager = (TelephonyManager) mContext.getSystemService(Context.TELEPHONY_SERVICE);
                      
                      String deviceId = mTelephonyManager.getDeviceId();

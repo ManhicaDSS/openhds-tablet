@@ -57,6 +57,10 @@ public class FilledForm {
     private String motherName;
     private String fatherName;
     
+    private String hasSubsHead;
+    private String subsHeadName;
+    private String subsHeadPermId;
+    
     public FilledForm(String formName) {
         this.formName = formName;
     }
@@ -372,5 +376,31 @@ public class FilledForm {
 	public void setFatherName(String fatherName) {
 		this.fatherName = fatherName;
 	}
+
+	public String getHasSubsHead() {
+		return hasSubsHead;
+	}
+
+	public void setHasSubsHead(String hasSubsHead) {
+		this.hasSubsHead = hasSubsHead;
+	}
+
+	public String getSubsHeadName() {
+		return subsHeadName;
+	}
+
+	public void setSubsHeadName(String subsHeadName) {
+		this.subsHeadName = subsHeadName;
+	}
+
+	public String getSubsHeadPermId() {
+		return subsHeadPermId;
+	}
+
+	public void setSubsHeadPermId(String subsHeadPermId) {
+		this.subsHeadPermId = subsHeadPermId;
+	}
+	
+	
 		
 }

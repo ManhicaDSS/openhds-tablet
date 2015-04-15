@@ -133,6 +133,8 @@ public class OpenHDSProvider extends ContentProvider {
                 OpenHDS.Individuals.COLUMN_INDIVIDUAL_MOTHER);
         individualsProjectionMap.put(OpenHDS.Individuals.COLUMN_INDIVIDUAL_RESIDENCE,
                 OpenHDS.Individuals.COLUMN_INDIVIDUAL_RESIDENCE);
+        individualsProjectionMap.put(OpenHDS.Individuals.COLUMN_RESIDENCE_END_TYPE,
+        		OpenHDS.Individuals.COLUMN_RESIDENCE_END_TYPE);
         // special case to display individuals first name and last name on the
         // value fragment
         individualsProjectionMap.put(OpenHDS.Individuals.COLUMN_INDIVIDUAL_FULLNAME,
@@ -271,7 +273,7 @@ public class OpenHDSProvider extends ContentProvider {
     static class DatabaseHelper extends SQLiteOpenHelper {
 
         DatabaseHelper(Context context) {
-            super(context, DATABASE_NAME, null, DATABASE_VERSION);
+            super(context, android.os.Environment.getExternalStorageDirectory().getAbsolutePath() + "/Android/data/org.openhds.mobile/databases/" + DATABASE_NAME, null, DATABASE_VERSION);
         }
 
         @Override
@@ -411,7 +413,7 @@ public class OpenHDSProvider extends ContentProvider {
 		SharedPreferences sp = getContext().getSharedPreferences(DATABASE_SHARED_PREF, Context.MODE_PRIVATE);
         password = sp.getString(DATABASE_PASSWORD_KEY, "");
         if (password.isEmpty()) {
-            password = UUID.randomUUID().toString();
+            password = "OPENHDS";//UUID.randomUUID().toString();
             Editor editor = sp.edit();
             editor.putString(DATABASE_PASSWORD_KEY, password);
             editor.commit();

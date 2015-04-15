@@ -67,6 +67,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -2184,8 +2185,10 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 
 		@Override
 		public void onHouseDetails() {
-			showProgressFragment();	        
-	        new CreateHouseDetailsTask().execute(); 		
+			showProgressFragment();
+			filledForm = new FilledForm("location_details");
+			buildSubstituteHeadDialog();
+	        //new CreateHouseDetailsTask().execute(); 		
 		}
 
 		@Override
@@ -2215,7 +2218,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 	        		return false;
 	        	}	        	        
 	        	
-	        	filledForm = new FilledForm("location_details");
+	        	
 	        	
 	        	formFiller.addGroupHead(filledForm, resolver, sg);
 	        	 
@@ -2286,5 +2289,137 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 	        alertDialog.show(); 
 	    }
 	    
+	    private void buildSubstituteHeadDialog() {
+	        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+	        alertDialogBuilder.setTitle(getString(R.string.substitute_head_lbl));
+	        alertDialogBuilder.setMessage(getString(R.string.substitute_head_exists_lbl));
+	        alertDialogBuilder.setCancelable(true);
+	        alertDialogBuilder.setPositiveButton(getString(R.string.yes_lbl), new DialogInterface.OnClickListener() {
+	            public void onClick(DialogInterface dialog, int which) {
+	            	filledForm.setHasSubsHead("1");	            	
+	            	//Select Substitute Head
+	            	selectSubstituteHeadDialog();
+	            }
+	        });
+	        alertDialogBuilder.setNegativeButton(getString(R.string.no_lbl), new DialogInterface.OnClickListener() {
+	            public void onClick(DialogInterface dialog, int which) {
+	                filledForm.setHasSubsHead("2");
+	            	//load House Details
+	                new CreateHouseDetailsTask().execute();
+	            }
+	        });
+	        AlertDialog alertDialog = alertDialogBuilder.create();
+	        alertDialog.show();
+	    }
+	    
+	    private void selectSubstituteHeadDialog(){
+	    	List<String> uniquePermIds = new ArrayList<String>();     
+	        List<Individual> uniqueIndividuals = new ArrayList<Individual>();
+	        
+	        
+	        
+	        SocialGroup sg = null;
+        	Cursor cursorSg = Queries.getSocialGroupByName(getContentResolver(), locationVisit.getLocation().getName());
+        	
+        	if (cursorSg.moveToFirst()) {
+        		sg = Converter.convertToSocialGroup(cursorSg);        		 		
+        	}        	
+        	cursorSg.close();
+	        
+        	
+        	Cursor cursor = Queries.getIndividualsByResidency(getContentResolver(), locationVisit.getLocation().getExtId());
+        	
+        	List<Individual> individuals = Converter.toIndividualList(cursor);
+        	
+        	for (Individual individual : individuals){
+        		
+        		Log.d("indiv", individual+"");
+        		
+        		if (individual != null){
+                    Log.d("indiv", individual.getFirstName());        			
+        			//Dont add the current head of household
+        			if (individual.getExtId().equalsIgnoreCase(sg.getGroupHead())){
+        				continue;
+        			}
+        			
+        			if (!individual.getEndType().equals("DTH") && !individual.getEndType().equals("OMG") && individualMeetsMinimumAge(individual)){
+        				uniquePermIds.add(individual.getLastName());        				
+        				uniqueIndividuals.add(individual);
+        			}
+        			
+        		}
+        		
+        		cursor.moveToNext();
+        	}
+        	   	
+        	cursor.close();
+        	cursorSg.close();
+        	
+        	final List<Individual> list = uniqueIndividuals; 
+    		@SuppressWarnings({ "unchecked", "rawtypes" })
+			ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_2, android.R.id.text1, list) {
+  			  @Override
+  			  public View getView(int position, View convertView, android.view.ViewGroup parent) {
+  			    View view = super.getView(position, convertView, parent);
+  			    TextView text1 = (TextView) view.findViewById(android.R.id.text1);
+  			    TextView text2 = (TextView) view.findViewById(android.R.id.text2);
+
+  			    text1.setTextColor(Color.BLACK);
+  			    text1.setText(list.get(position).getFirstName());
+  			    text2.setTextColor(Color.DKGRAY);
+  			    text2.setText("(" + list.get(position).getLastName() + ")");
+  			    return view;
+  			  }
+  			};
+	        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+	        builder.setTitle(getString(R.string.substitute_head_select_lbl));
+	        builder.setAdapter(adapter, new DialogInterface.OnClickListener() {
+	
+	            public void onClick(DialogInterface dialog, int which) {
+	            	ListView lw = ((AlertDialog)dialog).getListView();    	            	
+	            	Object checkedItem = lw.getItemAtPosition(which);
+	            	
+	            	Individual subsHead = null;
+	            		            	
+	            	if(checkedItem instanceof Individual){
+	            		subsHead = (Individual)checkedItem;
+	            	}
+	            		            	   	            	
+            		selectedSubstituteHead(subsHead);
+	            }
+	        });
+	        builder.setNegativeButton(getString(R.string.cancel_lbl), new DialogInterface.OnClickListener() {
+	        	public void onClick(DialogInterface dialog, int which) {
+	        		createHouseDetails = 0;
+	        	}
+	        });
+	        AlertDialog dlg = builder.create();
+	        dlg.show();  
+	    }
+	    
+	    private void selectedSubstituteHead(final Individual subsHead){
+	        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+	        builder.setTitle(getString(R.string.substitute_head_selected_lbl));
+	        
+	        if(subsHead != null){
+	        	builder.setMessage(subsHead.getFirstName() + " <" + subsHead.getLastName() +  "> ");
+	        }
+	        
+	        builder.setNegativeButton(getString(R.string.cancel_lbl), new DialogInterface.OnClickListener() {
+	        	public void onClick(DialogInterface dialog, int id) {
+	        		createHouseDetails = 0;
+	        	}
+	        });
+	        builder.setPositiveButton(R.string.continue_lbl, new DialogInterface.OnClickListener() {
+	            public void onClick(DialogInterface dialog, int id) {
+	            	filledForm.setSubsHeadName(subsHead.getFirstName());
+	            	filledForm.setSubsHeadPermId(subsHead.getLastName());
+	            	//load House Details
+	                new CreateHouseDetailsTask().execute();
+	            }
+	        });
+	        householdDialog = builder.create();
+	        householdDialog.show();  
+	    }
 		
 }

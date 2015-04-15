@@ -257,7 +257,7 @@
 	<string name="update_pregoutcome_search_hdss">Pesquisar HDSS</string>
 	<string name="update_pregoutcome_father_not_found">O Pai não está dentro do HDSS</string>
 	<string name="update_pregoutcome_not_within_hdss">Não está dentro do HDSS</string>
-	<string name="update_load_finished_select_hh_msg">Selecione o Agregado para o indivíduo</string>
+	<string name="update_load_finished_select_hh_msg">Selecionou o novo chefe de Agregado</string>
 
     <string name="hierarchy2_select_lbl">Selecionar area do Mapa</string>
     <string name="hierarchy3_select_lbl">Selecionar sector</string>
@@ -299,7 +299,7 @@
     <string name="no_round_info_found_lbl">Não foi encontrada informação sobre a ronda. Por favor sincronize com o servidor e tenha certeza que os dados foram baixados!</string>
     <string name="pls_select_new_hoh_lbl">Por favor selecione um novo chefe de agregado</string>
     <string name="no_indiv_found_onsg_lbl">Não foi encontrado nenhum indivíduo neste agregado</string>
-    <string name="selected_new_hoh_lbl">Selecione um novo chefe de agregado</string> 
+    <string name="selected_new_hoh_lbl">Com nome</string> 
     <string name="with_extid_lbl"> com extId </string>
     <string name="continue_lbl">Continuar</string>
     
@@ -328,4 +328,11 @@
 
     <string name="houseDetailsBtn_lbl">Informção da Casa</string>
 	<string name="individualDetailsBtn_lbl">Informação do Membro</string>
+	
+	<string name="substitute_head_lbl">Chefe do Agregado substituto</string>
+	<string name="substitute_head_exists_lbl">Este agregado possui um chefe do agregado substituto?</string>
+	<string name="substitute_head_select_lbl">Por favor selecione o chefe substituto</string>
+	
+	<string name="substitute_head_selected_lbl">Selecionou o chefe substituto</string>
+	
 </resources>
