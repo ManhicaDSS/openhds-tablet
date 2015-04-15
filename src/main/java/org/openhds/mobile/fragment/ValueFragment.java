@@ -397,11 +397,13 @@ public class ValueFragment extends ListFragment implements LoaderCallbacks<Curso
     }
 
     private Loader<Cursor> buildLocationCursorLoader(Bundle arg1) {
+    	String orderBy = OpenHDS.Locations.COLUMN_LOCATION_NAME+" ASC";
+    	
         if (TextUtils.isEmpty(arg1.getString("hierarchyExtId"))) {
-            return buildCursorLoader(OpenHDS.Locations.CONTENT_ID_URI_BASE, null, null);
+            return buildCursorLoader(OpenHDS.Locations.CONTENT_ID_URI_BASE, null, null, null, orderBy);
         }else {
-            return buildCursorLoader(OpenHDS.Locations.CONTENT_ID_URI_BASE, OpenHDS.Locations.COLUMN_LOCATION_HIERARCHY
-                    + " = ?", new String[] { arg1.getString("hierarchyExtId") });
+            return buildCursorLoader(OpenHDS.Locations.CONTENT_ID_URI_BASE, null, OpenHDS.Locations.COLUMN_LOCATION_HIERARCHY
+                    + " = ?", new String[] { arg1.getString("hierarchyExtId") }, orderBy);
         }
     }
 
@@ -419,6 +421,10 @@ public class ValueFragment extends ListFragment implements LoaderCallbacks<Curso
         return new CursorLoader(getActivity(), uri, null, where, args, null);
     }
 
+    private Loader<Cursor> buildCursorLoader(Uri uri, String[] projection, String where, String[] args, String sortOrder) {
+        return new CursorLoader(getActivity(), uri, projection, where, args, sortOrder);
+    }
+    
     /**
      * Builds an array of strings that will be used as the arguments to an SQL
      * query
