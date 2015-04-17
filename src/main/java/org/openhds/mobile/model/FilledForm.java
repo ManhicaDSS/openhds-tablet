@@ -61,6 +61,9 @@ public class FilledForm {
     private String subsHeadName;
     private String subsHeadPermId;
     
+    private String spousePermId;
+    private String spouseName;
+    
     public FilledForm(String formName) {
         this.formName = formName;
     }
@@ -399,6 +402,22 @@ public class FilledForm {
 
 	public void setSubsHeadPermId(String subsHeadPermId) {
 		this.subsHeadPermId = subsHeadPermId;
+	}
+
+	public String getSpousePermId() {
+		return spousePermId;
+	}
+
+	public void setSpousePermId(String spousePermId) {
+		this.spousePermId = spousePermId;
+	}
+
+	public String getSpouseName() {
+		return spouseName;
+	}
+
+	public void setSpouseName(String spouseName) {
+		this.spouseName = spouseName;
 	}
 	
 	

@@ -2259,6 +2259,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 	        
 	        	filledForm = formFiller.fillExtraForm(locationVisit, "individual_details", null);
 	        	formFiller.addParents(filledForm, resolver, locationVisit.getSelectedIndividual().getExtId());
+	        	formFiller.addSpouse(filledForm, resolver, locationVisit.getSelectedIndividual().getExtId());
 	        	
 	            return true;
 	        }

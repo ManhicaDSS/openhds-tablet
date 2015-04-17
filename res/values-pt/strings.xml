@@ -140,7 +140,7 @@
 	<string name="clearIndividualBtn_lbl">Limpar Indivíduo</string>
 	<string name="householdBtn_lbl">Agregado Familiar</string>
 	<string name="membershipBtn_lbl">Filiação</string>
-	<string name="relationshipBtn_lbl">Parentesco</string>
+	<string name="relationshipBtn_lbl">Relacionamento</string>
 	<string name="inMigrationBtn_lbl">Imigração</string>
 	<string name="outMigrationBtn_lbl">Emigração Externa</string>
 	<string name="pregRegBtn_lbl">Observação de Gravidez</string>
@@ -326,7 +326,7 @@
     <string name="hello_lbl">Olá</string>
     <string name="locale_lang">pt</string>
 
-    <string name="houseDetailsBtn_lbl">Informção da Casa</string>
+    <string name="houseDetailsBtn_lbl">Informação da Casa</string>
 	<string name="individualDetailsBtn_lbl">Informação do Membro</string>
 	
 	<string name="substitute_head_lbl">Chefe do Agregado substituto</string>

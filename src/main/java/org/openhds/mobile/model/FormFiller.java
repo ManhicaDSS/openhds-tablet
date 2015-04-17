@@ -1,5 +1,6 @@
 package org.openhds.mobile.model;
 
+import org.openhds.mobile.OpenHDS;
 import org.openhds.mobile.database.queries.Converter;
 import org.openhds.mobile.database.queries.Queries;
 
@@ -347,4 +348,27 @@ public class FormFiller {
 		}
 	
     }
+
+    /*
+     * Review correctly the relationships
+     */
+	public void addSpouse(FilledForm filledForm, ContentResolver resolver, String individualExtId) {
+		Cursor cursorRelat = Queries.getRelationshipByIndividualA(resolver, individualExtId);
+		
+		if (cursorRelat.moveToFirst()) {
+			String spouseExtId = cursorRelat.getString(cursorRelat.getColumnIndex(OpenHDS.Relationships.COLUMN_RELATIONSHIP_INDIVIDUAL_B));
+			cursorRelat.close();
+			
+			Cursor cursorIndv = Queries.getIndividualByExtId(resolver, spouseExtId);
+			
+			if (cursorIndv.moveToFirst()){
+				Individual spouse = Converter.convertToIndividual(cursorIndv);
+				
+	            filledForm.setSpouseName(spouse.getFirstName());
+	            filledForm.setSpousePermId(spouse.getLastName());				
+			}			
+            
+		}
+		
+	}
 }
