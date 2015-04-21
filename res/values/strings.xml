@@ -304,4 +304,6 @@
 
     <string name="houseDetailsBtn_lbl">L. Details</string>
 	<string name="individualDetailsBtn_lbl">I. Details</string>
+	
+	<string name="cant_create_relationship_lbl">Cannot create relationship, individual A is the same as individual B</string>
 </resources>

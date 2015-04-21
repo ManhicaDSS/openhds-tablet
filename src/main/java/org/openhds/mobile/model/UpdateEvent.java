@@ -6,7 +6,7 @@ public class UpdateEvent {
 	public static final String SUBREGION = "SUBREGION";
 	public static final String VILLAGE = "VILLAGE";
 	public static final String ROUND = "ROUND";
-	public static final String LOCATION = "LOCATION";
+	public static final String LOCATION = "LOCATION_REGISTRATION";
 	public static final String INDIVIDUAL = "INDIVIDUAL";
 	public static final String VISIT = "VISIT";
 	public static final String PREGNANCYOUTCOME = "PREGNANCY_OUTCOME";

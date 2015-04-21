@@ -329,6 +329,8 @@
     <string name="houseDetailsBtn_lbl">Informação da Casa</string>
 	<string name="individualDetailsBtn_lbl">Informação do Membro</string>
 	
+	<string name="cant_create_relationship_lbl">Não será possivel criar o relacionamento, o individuo selecionado é o mesmo</string>
+	
 	<string name="substitute_head_lbl">Chefe do Agregado substituto</string>
 	<string name="substitute_head_exists_lbl">Este agregado possui um chefe do agregado substituto?</string>
 	<string name="substitute_head_select_lbl">Por favor selecione o chefe substituto</string>
