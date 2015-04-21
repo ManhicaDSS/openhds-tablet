@@ -605,16 +605,22 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
             return;
         }
 
-        Individual individual = (Individual) data.getExtras().getSerializable("individual");
-        filledForm.setIndividualB(individual.getExtId());
+        Individual individualB = (Individual) data.getExtras().getSerializable("individual");
+        filledForm.setIndividualB(individualB.getExtId());
 
-        if (individual.getExtId().equalsIgnoreCase(filledForm.getIndividualA())){
+        if (individualB.getExtId().equalsIgnoreCase(filledForm.getIndividualA())){
         	//Cant create an relationship between an individual and it self
         	Toast.makeText(UpdateActivity.this, getString(R.string.cant_create_relationship_lbl) , Toast.LENGTH_LONG).show();
-        }else {
-        	loadForm(SELECTED_XFORM);
+        	return;
         }
-    }
+        
+        if(individualB.getGender().equalsIgnoreCase(locationVisit.getSelectedIndividual().getGender())){
+        	Toast.makeText(UpdateActivity.this, "O relacionamento conjugal deve ser entre um homem e uma mulher" , Toast.LENGTH_LONG).show();
+        	return;        	
+        }
+        
+        loadForm(SELECTED_XFORM);
+    }    
 
     private void handleXformResult(int resultCode, Intent data) {		
         if (resultCode == RESULT_OK) {
