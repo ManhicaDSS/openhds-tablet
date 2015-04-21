@@ -35,6 +35,8 @@ public class EventFragment extends Fragment implements OnClickListener {
     private static int FEMALE_MINIMUM_PREGNANCY_AGE;
     private static int DEFAULT_FEMALE_MINIMUM_PREGNANCY_AGE = 12;
 
+    boolean isBaseline = false;
+    
     private Button findLocationGeoPointBtn, createLocationBtn, createVisitBtn, householdBtn, membershipBtn,
             relationshipBtn, inMigrationBtn, outMigrationBtn, pregRegBtn, birthRegBtn, deathBtn, finishVisitBtn,
             clearIndividualBtn, individualDetailsBtn, houseDetailsBtn;
@@ -153,6 +155,7 @@ public class EventFragment extends Fragment implements OnClickListener {
     }
     
     public void setBaseLine(){
+    	isBaseline = true;
     	if(inMigrationBtn != null){
     		inMigrationBtn.setText("Baseline");
     	}
@@ -167,12 +170,18 @@ public class EventFragment extends Fragment implements OnClickListener {
     	}
     	if(birthRegBtn != null){
     		birthRegBtn.setVisibility(LinearLayout.GONE);
-    	}
+    	}    	
     	if(findLocationGeoPointBtn != null){
     		LayoutParams lp = findLocationGeoPointBtn.getLayoutParams();
     		findLocationGeoPointBtn.setVisibility(LinearLayout.GONE);
     		createLocationBtn.setLayoutParams(lp);
-    	}    	
+    	}
+    	if(houseDetailsBtn != null){
+    		houseDetailsBtn.setVisibility(LinearLayout.GONE);
+    	}
+    	if(individualDetailsBtn != null){
+    		individualDetailsBtn.setVisibility(LinearLayout.GONE);
+    	}
     }
 
     public void onClick(View view) {
@@ -318,7 +327,9 @@ public class EventFragment extends Fragment implements OnClickListener {
     private void registerLocationListener(StateMachine machine) {
         machine.registerListener("Select Location", new StateListener() {
             public void onEnterState() {
-                createLocationBtn.setEnabled(true);
+            	if (isBaseline){ //If is not in baseline doesnt create location
+            		createLocationBtn.setEnabled(true);
+            	}
             }
 
             public void onExitState() {
