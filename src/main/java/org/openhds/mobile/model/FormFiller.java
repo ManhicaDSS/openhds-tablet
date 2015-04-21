@@ -368,6 +368,23 @@ public class FormFiller {
 	            filledForm.setSpousePermId(spouse.getLastName());				
 			}			
             
+		}else{ //Swap individualA for B, and search again
+			cursorRelat = Queries.getRelationshipByIndividualB(resolver, individualExtId);
+			if (cursorRelat.moveToFirst()) {
+				String spouseExtId = cursorRelat.getString(cursorRelat.getColumnIndex(OpenHDS.Relationships.COLUMN_RELATIONSHIP_INDIVIDUAL_A));
+				cursorRelat.close();
+				
+				Cursor cursorIndv = Queries.getIndividualByExtId(resolver, spouseExtId);
+				
+				if (cursorIndv.moveToFirst()){
+					Individual spouse = Converter.convertToIndividual(cursorIndv);
+					
+		            filledForm.setSpouseName(spouse.getFirstName());
+		            filledForm.setSpousePermId(spouse.getLastName());				
+				}			
+	            
+			}
+			
 		}
 		
 	}
