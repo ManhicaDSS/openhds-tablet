@@ -119,6 +119,8 @@ EventFragment.Listener, SelectionFragment.Listener, ValueFragment.OnlyOneEntryLi
     private boolean hhCreation;
     private String jrFormId;
     
+    private boolean newIndividual;
+    
     //State machine states  
 	public static final String SELECT_HIERARCHY_1 = "Select Hierarchy 1";
 	public static final String SELECT_HIERARCHY_2 = "Select Hierarchy 2";
@@ -633,6 +635,7 @@ EventFragment.Listener, SelectionFragment.Listener, ValueFragment.OnlyOneEntryLi
                 		onFinishExternalInmigration();
             		//Select newly created indiv.
                     selectIndividual();
+                    
             	}
             	else if(stateMachine.getState() == "Select Event"){
             		if(hhCreation){
@@ -653,7 +656,15 @@ EventFragment.Listener, SelectionFragment.Listener, ValueFragment.OnlyOneEntryLi
         alertDialogBuilder.setTitle(getString(R.string.baseline_lbl));
         alertDialogBuilder.setMessage(getString(R.string.finish_household_creation_msg));
         alertDialogBuilder.setCancelable(true);
-        alertDialogBuilder.setPositiveButton("Ok", null);
+        alertDialogBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				if(newIndividual){
+		        	onMembership();
+		        	newIndividual = false;
+		        }	
+			}
+		});
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();		
                 
@@ -961,6 +972,7 @@ EventFragment.Listener, SelectionFragment.Listener, ValueFragment.OnlyOneEntryLi
     private void createBaselineFormDialog() {
     	showProgressFragment();
     	extInm= true;
+    	newIndividual = true;
     	new CreateBaselineTask().execute();
     }
 
@@ -994,7 +1006,7 @@ EventFragment.Listener, SelectionFragment.Listener, ValueFragment.OnlyOneEntryLi
         	vf.onLoaderReset(null);
         	vf.loadFilteredIndividualById(indExtId);
         	vf.selectItemNoInList(0);
-        }    	
+        }
     }
     
 	private void onFinishExternalInmigration() {
@@ -1002,11 +1014,19 @@ EventFragment.Listener, SelectionFragment.Listener, ValueFragment.OnlyOneEntryLi
         alertDialogBuilder.setTitle(getString(R.string.baseline_lbl));
         alertDialogBuilder.setMessage(getString(R.string.update_finish_ext_inmigration_msg));
         alertDialogBuilder.setCancelable(true);
-        alertDialogBuilder.setPositiveButton("Ok", null);
+        alertDialogBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				if(newIndividual){
+		        	onMembership();		        
+		        }				
+			}
+		});
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();		
                 
         extInm = false;
+        newIndividual = true;
 	}
 
     private void buildMotherDialog() {
@@ -1627,7 +1647,7 @@ EventFragment.Listener, SelectionFragment.Listener, ValueFragment.OnlyOneEntryLi
         //Display Extra Forms Menu
         if(this.menuItemForm != null) {
         	this.menuItemForm.setVisible(true);
-        }
+        }        
     }
 
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
