@@ -166,6 +166,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 	private int CREATING_NEW_LOCATION = 0;
 	private int RETURNING_TO_DSS = 0;
 	private int createHouseDetails = 0;
+	private int createIndivDetails = 0;
 	
 	private static final List<String> stateSequence = new ArrayList<String>();
 //	private static final Map<String, Integer> stateLabels = new HashMap<String, Integer>();
@@ -631,6 +632,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
     		deathCreation = false;
     		extInm= false;
     		updatable = null;
+    		createIndivDetails = 0;
         }
     }
 
@@ -641,8 +643,10 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 
         Individual individual = (Individual) data.getExtras().getSerializable("individual");
         filledForm.setFatherExtId(individual.getExtId());
+        filledForm.setFatherPermId(individual.getLastName());
+        filledForm.setFatherName(individual.getFirstName());
         filledForm.setIndividualLastName(individual.getLastName());
-        filledForm.setIndividualMiddleName(individual.getFirstName());
+        filledForm.setIndividualFirstName(individual.getFirstName());        
         loadForm(SELECTED_XFORM);
     }
 
@@ -653,6 +657,8 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 
         Individual individual = (Individual) data.getExtras().getSerializable("individual");
         filledForm.setMotherExtId(individual.getExtId());
+        filledForm.setMotherPermId(individual.getLastName());
+        filledForm.setMotherName(individual.getFirstName());
 
         buildFatherDialog();
     }
@@ -762,6 +768,12 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
             		createHouseDetails = 0;	
             		return;
             	}
+            	Log.d("details", createIndivDetails+"");
+            	if (createIndivDetails == 1){
+            		createIndivDetails = 0;
+            		onFinishIndividualDetails();
+            		return;
+            	}
             	
             	if (stateMachine.getState()=="Inmigration") {
             		stateMachine.transitionTo("Select Event");
@@ -787,6 +799,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
     		deathCreation = false;
     		extInm = false;
     		createHouseDetails = 0;
+    		createIndivDetails = 0;
         }
     }
     
@@ -1219,9 +1232,20 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
         alertDialogBuilder.setNegativeButton(getString(R.string.no_lbl), new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 filledForm.setMotherExtId("UNK");
+                filledForm.setMotherPermId("UNK");
+                filledForm.setMotherName("UNK");
                 buildFatherDialog();
             }
         });
+        
+        if (createIndivDetails == 1) {
+        	alertDialogBuilder.setNeutralButton("Não Alterar", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {                    
+                    buildFatherDialog();
+                }
+            });
+        }
+        
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }
@@ -1239,9 +1263,19 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
         alertDialogBuilder.setNegativeButton(getString(R.string.no_lbl), new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 filledForm.setFatherExtId("UNK");
+                filledForm.setFatherPermId("UNK");
+                filledForm.setFatherName("UNK");
                 loadForm(SELECTED_XFORM);
             }
         });
+        
+        if (createIndivDetails == 1) {
+        	alertDialogBuilder.setNeutralButton("Não Alterar", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {                    
+                	loadForm(SELECTED_XFORM);                    
+                }
+            });
+        }
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }
@@ -2204,8 +2238,13 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 
 		@Override
 		public void onIndividualDetails() {
-			showProgressFragment();	        
-	        new CreateIndividualDetailsTask().execute();
+			showProgressFragment();
+			createIndivDetails = 1;
+			filledForm = formFiller.fillExtraForm(locationVisit, "individual_details", null);
+			formFiller.addParents(filledForm, getContentResolver(), locationVisit.getSelectedIndividual().getExtId());
+			formFiller.addSpouse(filledForm, getContentResolver(), locationVisit.getSelectedIndividual().getExtId());
+	        //new CreateIndividualDetailsTask().execute();
+			buildUpdateParentsDialog();
 		}
 		
 		private class CreateHouseDetailsTask extends AsyncTask<Void, Void, Boolean> {
@@ -2265,12 +2304,10 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 	        @Override
 	        protected Boolean doInBackground(Void... params) {
 	                    	        	
-	        	ContentResolver resolver = UpdateActivity.this.getContentResolver();             	
+	        	ContentResolver resolver = UpdateActivity.this.getContentResolver();	                	
 	        	        	
-	        
-	        	filledForm = formFiller.fillExtraForm(locationVisit, "individual_details", null);
-	        	formFiller.addParents(filledForm, resolver, locationVisit.getSelectedIndividual().getExtId());
-	        	formFiller.addSpouse(filledForm, resolver, locationVisit.getSelectedIndividual().getExtId());
+	        	//formFiller.addParents(filledForm, resolver, locationVisit.getSelectedIndividual().getExtId());
+	        	//formFiller.addSpouse(filledForm, resolver, locationVisit.getSelectedIndividual().getExtId());
 	        	
 	            return true;
 	        }
@@ -2280,11 +2317,35 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 	        	if (result){
 	        		hideProgressFragment();
 	        		loadForm(SELECTED_XFORM);
-	        	}else{
-	        		
-	        	}
+	        	}	        	
 	        }
 	    }
+		
+		private void buildUpdateParentsDialog() {
+	        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+	        alertDialogBuilder.setTitle("Atualização dos Pais");
+	        alertDialogBuilder.setMessage("Deseja atualizar os Pais, deste individuo?");
+	        alertDialogBuilder.setCancelable(true);
+	        alertDialogBuilder.setPositiveButton(getString(R.string.yes_lbl), new DialogInterface.OnClickListener() {
+	            public void onClick(DialogInterface dialog, int which) {
+	                //Select the mother
+	            	buildMotherDialog();
+	            }
+	        });
+	        alertDialogBuilder.setNegativeButton(getString(R.string.no_lbl), new DialogInterface.OnClickListener() {
+	            public void onClick(DialogInterface dialog, int which) {
+	            	new CreateIndividualDetailsTask().execute();
+	            }
+	        });
+	        AlertDialog alertDialog = alertDialogBuilder.create();
+	        alertDialog.show();
+	    }	
+
+		private void onFinishIndividualDetails(){
+			String f = filledForm.getFatherExtId();
+			String m = filledForm.getMotherExtId();
+			Log.d("mf", "m: "+m+", f:"+f);
+		}
 		
 	    private void createCantCreateHouseDetails() {	        
 	        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
