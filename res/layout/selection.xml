@@ -311,6 +311,24 @@
 	    	</TableRow> 
 	    	<TableRow>
 	            <TextView
+			        android:id="@+id/householdHead"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="5dp"
+			        android:text="Chefe:"
+			        android:textAppearance="?android:attr/textAppearanceSmall"  />
+		    
+		     	<TextView
+			        android:id="@+id/householdHeadText"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="5dp"
+			        android:inputType="text"
+			        android:textColor="#ff8c00" 
+			        android:textAppearance="?android:attr/textAppearanceSmall"  />
+	    	</TableRow>
+	    	<TableRow>
+	            <TextView
 			        android:id="@+id/locationLatitude"
 			        android:layout_width="wrap_content"
 			        android:layout_height="wrap_content"
@@ -429,7 +447,45 @@
 			        android:paddingBottom="5dp"
 			        android:inputType="text"
 			        android:textAppearance="?android:attr/textAppearanceSmall"  />
+	    	</TableRow>
+	    	<TableRow>
+	            <TextView
+			        android:id="@+id/individualFather"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="5dp"
+			        android:text="Pai:"
+			        android:textAppearance="?android:attr/textAppearanceSmall"  />
+		    
+		     	<TextView
+			        android:id="@+id/individualFatherText"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="5dp"
+			        android:paddingBottom="5dp"
+			        android:inputType="text"
+			        android:textAppearance="?android:attr/textAppearanceSmall"  />
 	    	</TableRow> 
+	    	<TableRow>
+	            <TextView
+			        android:id="@+id/individualMother"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="5dp"
+			        android:text="Mãe:"
+			        android:textAppearance="?android:attr/textAppearanceSmall"
+			        android:textColor="@color/Red"  />
+		    
+		     	<TextView
+			        android:id="@+id/individualMotherText"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="5dp"
+			        android:paddingBottom="5dp"
+			        android:inputType="text"
+			        android:textAppearance="?android:attr/textAppearanceSmall"
+			        android:textColor="@color/Red"   />
+	    	</TableRow>  
 		</TableLayout>
 			 
 	    

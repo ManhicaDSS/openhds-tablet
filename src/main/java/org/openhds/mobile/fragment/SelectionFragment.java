@@ -3,6 +3,7 @@ package org.openhds.mobile.fragment;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openhds.mobile.OpenHDS;
 import org.openhds.mobile.R;
 import org.openhds.mobile.database.queries.Converter;
 import org.openhds.mobile.database.queries.Queries;
@@ -76,7 +77,9 @@ public class SelectionFragment extends Fragment implements OnClickListener {
             hierarchy5LabelExtIdText, hierarchy6LabelExtIdText, hierarchy7LabelExtIdText, hierarchy8LabelExtIdText,
             roundNumberText, roundStartDateText, roundEndDateText, locationNameText, locationExtIdText,
             locationLatitudeText, locationLongitudeText, individualFirstNameText, individualLastNameText,
-            individualExtIdText, individualDobText;
+            individualExtIdText, individualDobText,
+            individualFatherText, individualMotherText, householdHeadText 
+            ;
 
     @Override
     public void onAttach(Activity activity) {
@@ -218,6 +221,10 @@ public class SelectionFragment extends Fragment implements OnClickListener {
         individualFirstNameText = (TextView) view.findViewById(R.id.individualFirstNameText);
         individualLastNameText = (TextView) view.findViewById(R.id.individualLastNameText);
         individualDobText = (TextView) view.findViewById(R.id.individualDobText);
+        
+        individualFatherText = (TextView) view.findViewById(R.id.individualFatherText);
+        individualMotherText = (TextView) view.findViewById(R.id.individualMotherText);
+        householdHeadText = (TextView) view.findViewById(R.id.householdHeadText);
         
         hierarchyButtons = new ArrayList<Button>();
         hierarchyButtons.add(hierarchy1Btn);
@@ -745,15 +752,42 @@ public class SelectionFragment extends Fragment implements OnClickListener {
     }
 
     private void setIndividual() {
+    	String father = "Desconhecido";
+        String mother = "Desconhecida";
+    	
         Individual selectedIndividual = locationVisit.getSelectedIndividual();
         if (selectedIndividual == null) {
             selectedIndividual = Individual.emptyIndividual();
+            
+            father = "";
+            mother = "";
         }
 
         individualFirstNameText.setText(selectedIndividual.getFirstName());
         individualLastNameText.setText(selectedIndividual.getLastName());
         individualExtIdText.setText(selectedIndividual.getExtId());
         individualDobText.setText(selectedIndividual.getDob());
+        
+        
+        
+        if (selectedIndividual.getFather()!=null && !selectedIndividual.getFather().equals("UNK")){
+        	Cursor cursor = Queries.getIndividualByExtId(getActivity().getContentResolver(), selectedIndividual.getFather());
+        	if (cursor.moveToFirst()){
+        		father = cursor.getString(cursor.getColumnIndex(OpenHDS.Individuals.COLUMN_INDIVIDUAL_FIRSTNAME));
+           	}
+        	cursor.close();
+        }
+        
+        if (selectedIndividual.getMother()!=null && selectedIndividual.getMother().equals("UNK")){
+        	Cursor cursor = Queries.getIndividualByExtId(getActivity().getContentResolver(), selectedIndividual.getMother());
+        	if (cursor.moveToFirst()){
+        		mother = cursor.getString(cursor.getColumnIndex(OpenHDS.Individuals.COLUMN_INDIVIDUAL_FIRSTNAME));
+           	}
+        	cursor.close();
+        }
+        
+        individualFatherText.setText(father);
+        individualMotherText.setText(mother);        
     }
 
     private void setLocation() {
@@ -766,6 +800,23 @@ public class SelectionFragment extends Fragment implements OnClickListener {
         locationExtIdText.setText(location.getExtId());
         locationLatitudeText.setText(location.getLatitude());
         locationLongitudeText.setText(location.getLongitude());
+        
+        String head = "";
+        
+        if (!location.getExtId().isEmpty()){
+        	Cursor c = Queries.getSocialGroupByName(getActivity().getContentResolver(), location.getName());
+        	if (c.moveToFirst()){
+        		String headId = c.getString(c.getColumnIndex(OpenHDS.SocialGroups.COLUMN_SOCIALGROUP_GROUPHEAD));
+        		c.close();
+        		
+        		c = Queries.getIndividualByExtId(getActivity().getContentResolver(), headId);
+        		if (c.moveToFirst()){
+        			head = c.getString(c.getColumnIndex(OpenHDS.Individuals.COLUMN_INDIVIDUAL_FIRSTNAME));
+        		}
+        	}
+        }
+        
+        householdHeadText.setText(head);
     }
 
 	public void setAll() {

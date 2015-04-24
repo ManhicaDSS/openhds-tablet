@@ -126,7 +126,7 @@
 	<string name="roundStartDate_lbl">Data de Início:</string>
 	<string name="roundEndDate_lbl">Data do Fim:</string>
 	<string name="locationBtn_lbl">Selecionar Casa/Localização</string>
-	<string name="locationName_lbl">Nome:</string>
+	<string name="locationName_lbl">Casa Nr:</string>
 	<string name="locationLatitude_lbl">Latitude:</string>
 	<string name="locationLongitude_lbl">Longitude:</string>
 	<string name="searchlBtn_lbl">Filtrar Casa/Agregado</string>
@@ -251,7 +251,7 @@
 	<string name="mother_lbl">Mãe</string>
 	<string name="update_build_mother_msg">É a mãe conhecida e está registada no sistema?</string>
 	<string name="father_lbl">Pai</string>
-	<string name="update_build_father_msg">É a pai conhecido e está registada no sistema?</string>
+	<string name="update_build_father_msg">É o pai conhecido e está registada no sistema?</string>
 	<string name="update_build_pregnancy_lbr_count_msg">Número de resultados</string>
 	<string name="update_pregoutcome_choose_father">Escolher Pai</string>
 	<string name="update_pregoutcome_search_hdss">Pesquisar HDSS</string>

@@ -182,6 +182,12 @@ public class EventFragment extends Fragment implements OnClickListener {
     	if(individualDetailsBtn != null){
     		individualDetailsBtn.setVisibility(LinearLayout.GONE);
     	}
+    	if (relationshipBtn != null){
+    		relationshipBtn.setVisibility(LinearLayout.GONE);
+    	}
+    	if (pregRegBtn != null){
+    		pregRegBtn.setVisibility(LinearLayout.GONE);
+    	}
     }
 
     public void onClick(View view) {
