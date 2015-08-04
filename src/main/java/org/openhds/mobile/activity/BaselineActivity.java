@@ -56,6 +56,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -624,7 +625,7 @@ EventFragment.Listener, SelectionFragment.Listener, ValueFragment.OnlyOneEntryLi
         @Override
         protected void onPostExecute(Boolean result) {
             hideProgressFragment();
-
+            Log.d("last state", stateMachine.getState());
             if (result) {
             	if (stateMachine.getState()=="Inmigration") {
             		stateMachine.transitionTo("Select Event");
@@ -632,7 +633,7 @@ EventFragment.Listener, SelectionFragment.Listener, ValueFragment.OnlyOneEntryLi
                 		onFinishExternalInmigration();
             	} else if (stateMachine.getState()=="Select Individual") {
             		if (extInm)
-                		onFinishExternalInmigration();
+                		//onFinishExternalInmigration();
             		//Select newly created indiv.
                     selectIndividual();
                     
@@ -730,7 +731,7 @@ EventFragment.Listener, SelectionFragment.Listener, ValueFragment.OnlyOneEntryLi
         case FILTER_BIRTH_FATHER:
             i.putExtra("requireGender", "M");
         case FILTER_INMIGRATION:
-            i.putExtra("img", "IMG");
+            i.putExtra("img", "ENT");
         }
 
         startActivityForResult(i, requestCode);
@@ -949,6 +950,19 @@ EventFragment.Listener, SelectionFragment.Listener, ValueFragment.OnlyOneEntryLi
     }
 
     public void onMembership() {
+    	
+    	if (locationVisit.getSelectedIndividual()==null){
+    		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+            alertDialogBuilder.setTitle("Erro a vista");
+            alertDialogBuilder.setMessage("Não existe um individuo selecionado, não poderá continuar");
+            alertDialogBuilder.setCancelable(true);
+            alertDialogBuilder.setPositiveButton("Ok", null);
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.show();  
+    		return;
+    	}
+    	
+    	
         filledForm = formFiller.fillMembershipForm(locationVisit);
         updatable = new MembershipUpdate();
         showProgressFragment();
@@ -1006,6 +1020,12 @@ EventFragment.Listener, SelectionFragment.Listener, ValueFragment.OnlyOneEntryLi
         	vf.onLoaderReset(null);
         	vf.loadFilteredIndividualById(indExtId);
         	vf.selectItemNoInList(0);
+        	//new
+        	/*
+        	if (extInm){
+        		onFinishExternalInmigration();
+        	}
+        	*/
         }
     }
     
@@ -1269,6 +1289,7 @@ EventFragment.Listener, SelectionFragment.Listener, ValueFragment.OnlyOneEntryLi
                 if (cursor.moveToFirst()) {
                     jrFormId = cursor.getString(0);
                 }
+                cursor.close();
                 BaselineActivity.this.contentUri = contentUri;
                 startActivityForResult(new Intent(Intent.ACTION_EDIT, contentUri), requestCode);
             }
@@ -1648,6 +1669,10 @@ EventFragment.Listener, SelectionFragment.Listener, ValueFragment.OnlyOneEntryLi
         if(this.menuItemForm != null) {
         	this.menuItemForm.setVisible(true);
         }        
+        
+        if (extInm){
+    		onFinishExternalInmigration();
+    	}
     }
 
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
@@ -1805,6 +1830,8 @@ EventFragment.Listener, SelectionFragment.Listener, ValueFragment.OnlyOneEntryLi
         		sg = Converter.convertToSocialGroup(cursor);
         		locationVisit.getLocation().setHead(sg.getGroupHead());	        		
         	}
+        	
+        	cursor.close();
         	
         	if (sg == null){
         		errorMessage = "NO_SOCIAL_GROUP";

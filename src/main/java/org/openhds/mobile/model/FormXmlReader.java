@@ -327,5 +327,32 @@ public class FormXmlReader {
         }
         return null;
     }    
+    
+    public Individual readIndividualDetails(FileInputStream fileInputStream, String jrFormId)  {
+        try {
+            Document doc = buildDocument(fileInputStream);
+            if(xpath.evaluate("/"+jrFormId+"/visitId/text()", doc).length()==0) {
+            	jrFormId ="data";
+            }
+            Individual individual = new Individual();
+            individual.setCurrentResidence(xpath.evaluate("/"+jrFormId+"/locationId/text()", doc));
+            if(xpath.evaluate("/"+jrFormId+"/dob/text()", doc).length()>0) {
+            	individual.setDobIn(xpath.evaluate("/"+jrFormId+"/dob/text()", doc));
+            }
+            individual.setExtId(xpath.evaluate("/"+jrFormId+"/individualId/text()", doc));
+            individual.setFather(xpath.evaluate("/"+jrFormId+"/fatherId/text()", doc));
+            individual.setFirstName(xpath.evaluate("/"+jrFormId+"/name/text()", doc));            
+            individual.setGender(xpath.evaluate("/"+jrFormId+"/gender/text()", doc));
+            individual.setLastName(xpath.evaluate("/"+jrFormId+"/permId/text()", doc));
+            individual.setMother(xpath.evaluate("/"+jrFormId+"/motherId/text()", doc));
+            
+            return individual;
+        } catch (ParserConfigurationException e) {
+        } catch (SAXException e) {
+        } catch (IOException e) {
+        } catch (XPathExpressionException e) {
+        }
+        return null;
+    }
 
 }

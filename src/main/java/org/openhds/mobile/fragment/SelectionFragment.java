@@ -786,6 +786,7 @@ public class SelectionFragment extends Fragment implements OnClickListener {
         	cursor.close();
         }
         
+        
         individualFatherText.setText(father);
         individualMotherText.setText(mother);        
     }
@@ -803,6 +804,7 @@ public class SelectionFragment extends Fragment implements OnClickListener {
         
         String head = "";
         
+        
         if (!location.getExtId().isEmpty()){
         	Cursor c = Queries.getSocialGroupByName(getActivity().getContentResolver(), location.getName());
         	if (c.moveToFirst()){
@@ -813,6 +815,7 @@ public class SelectionFragment extends Fragment implements OnClickListener {
         		if (c.moveToFirst()){
         			head = c.getString(c.getColumnIndex(OpenHDS.Individuals.COLUMN_INDIVIDUAL_FIRSTNAME));
         		}
+        		c.close();
         	}
         }
         

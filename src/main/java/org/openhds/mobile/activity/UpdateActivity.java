@@ -17,6 +17,7 @@ import org.openhds.mobile.database.DeathOfHoHUpdate;
 import org.openhds.mobile.database.DeathUpdate;
 import org.openhds.mobile.database.ExternalInMigrationUpdate;
 import org.openhds.mobile.database.HouseholdUpdate;
+import org.openhds.mobile.database.IndividualDetailsUpdate;
 import org.openhds.mobile.database.InternalInMigrationUpdate;
 import org.openhds.mobile.database.LocationUpdate;
 import org.openhds.mobile.database.MembershipUpdate;
@@ -645,8 +646,10 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
         filledForm.setFatherExtId(individual.getExtId());
         filledForm.setFatherPermId(individual.getLastName());
         filledForm.setFatherName(individual.getFirstName());
-        filledForm.setIndividualLastName(individual.getLastName());
-        filledForm.setIndividualFirstName(individual.getFirstName());        
+        //if (createIndivDetails != 1){
+        	//filledForm.setIndividualLastName(individual.getLastName());
+        	//filledForm.setIndividualFirstName(individual.getFirstName());
+        //}
         loadForm(SELECTED_XFORM);
     }
 
@@ -733,7 +736,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
             if (cursor.moveToNext()) {
                 String filepath = cursor.getString(cursor
                         .getColumnIndex(InstanceProviderAPI.InstanceColumns.INSTANCE_FILE_PATH));
-                try{
+                try{                	
 	                if(updatable != null){
 	                	updatable.updateDatabase(getContentResolver(), filepath, jrFormId);
 	                	updatable = null;
@@ -768,11 +771,9 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
             		createHouseDetails = 0;	
             		return;
             	}
-            	Log.d("details", createIndivDetails+"");
+            	
             	if (createIndivDetails == 1){
-            		createIndivDetails = 0;
-            		onFinishIndividualDetails();
-            		return;
+            		createIndivDetails = 0;            		
             	}
             	
             	if (stateMachine.getState()=="Inmigration") {
@@ -874,7 +875,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
             i.putExtra("requireGender", "M");
             i.putExtra("minimumAge", MINIMUM_PARENTHOOD_AGE);
         case FILTER_INMIGRATION:
-            i.putExtra("img", "IMG");
+            i.putExtra("img", "ENT");
         }
 
          if (CREATING_NEW_LOCATION == 1) {
@@ -1520,6 +1521,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
                 if (cursor.moveToFirst()) {
                     jrFormId = cursor.getString(0);
                 }
+                cursor.close();
                 UpdateActivity.this.contentUri = contentUri;
                 startActivityForResult(new Intent(Intent.ACTION_EDIT, contentUri), requestCode);
             }
@@ -2239,6 +2241,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 		@Override
 		public void onIndividualDetails() {
 			showProgressFragment();
+			updatable = new IndividualDetailsUpdate();
 			createIndivDetails = 1;
 			filledForm = formFiller.fillExtraForm(locationVisit, "individual_details", null);
 			formFiller.addParents(filledForm, getContentResolver(), locationVisit.getSelectedIndividual().getExtId());
@@ -2268,7 +2271,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 	        		return false;
 	        	}	        	        
 	        	
-	        	
+	        	cursor.close();
 	        	
 	        	formFiller.addGroupHead(filledForm, resolver, sg);
 	        	 
@@ -2304,7 +2307,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 	        @Override
 	        protected Boolean doInBackground(Void... params) {
 	                    	        	
-	        	ContentResolver resolver = UpdateActivity.this.getContentResolver();	                	
+	        	//ContentResolver resolver = UpdateActivity.this.getContentResolver();	                	
 	        	        	
 	        	//formFiller.addParents(filledForm, resolver, locationVisit.getSelectedIndividual().getExtId());
 	        	//formFiller.addSpouse(filledForm, resolver, locationVisit.getSelectedIndividual().getExtId());
@@ -2340,12 +2343,6 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 	        AlertDialog alertDialog = alertDialogBuilder.create();
 	        alertDialog.show();
 	    }	
-
-		private void onFinishIndividualDetails(){
-			String f = filledForm.getFatherExtId();
-			String m = filledForm.getMotherExtId();
-			Log.d("mf", "m: "+m+", f:"+f);
-		}
 		
 	    private void createCantCreateHouseDetails() {	        
 	        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
@@ -2415,7 +2412,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
         				continue;
         			}
         			
-        			if (!individual.getEndType().equals("DTH") && !individual.getEndType().equals("OMG") && individualMeetsMinimumAge(individual)){
+        			if (!individual.getEndType().equals("DTH") && !individual.getEndType().equals("EXT") && individualMeetsMinimumAge(individual)){
         				uniquePermIds.add(individual.getLastName());        				
         				uniqueIndividuals.add(individual);
         			}

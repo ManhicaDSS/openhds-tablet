@@ -315,7 +315,7 @@ public class ValueFragment extends ListFragment implements LoaderCallbacks<Curso
 	            	filter2 = filter2 + " AND ";
 	            }   
 	            //filter2 = filter2 + "(strftime('%Y', date('now')) - substr(dob,7))>13";
-	            filter2 = filter2 + "(strftime('%Y', date('now')) - substr(dob,7))>13 AND " + OpenHDS.Individuals.COLUMN_RESIDENCE_END_TYPE +"!='OMG'";
+	            filter2 = filter2 + "(strftime('%Y', date('now')) - substr(dob,7))>13 AND " + OpenHDS.Individuals.COLUMN_RESIDENCE_END_TYPE +"!='EXT'";
 	            return new CursorLoader(getActivity(), OpenHDS.Individuals.CONTENT_ID_URI_BASE, null, filter2, args2,
 	                    OpenHDS.Individuals._ID + " ASC");
 	        }
@@ -326,7 +326,7 @@ public class ValueFragment extends ListFragment implements LoaderCallbacks<Curso
 	            String img = (String) arg1.get("img");
 	            arg1.remove("img");
 	            
-	            String filter1 = img.equals("IMG") ? buildFilter(arg1) : buildFilterOMG(arg1);
+	            String filter1 = img.equals("ENT") ? buildFilter(arg1) : buildFilterOMG(arg1);
 	            String[] args1 = buildArguments(arg1);
 	
 	            return new CursorLoader(getActivity(), OpenHDS.Individuals.CONTENT_ID_URI_BASE, null, filter1, args1,
@@ -518,7 +518,7 @@ public class ValueFragment extends ListFragment implements LoaderCallbacks<Curso
         if (builder.length() > 0)
             builder.append(" AND ");
             
-            builder.append(OpenHDS.Individuals.COLUMN_RESIDENCE_END_TYPE).append("='OMG'");
+            builder.append(OpenHDS.Individuals.COLUMN_RESIDENCE_END_TYPE).append("='EXT'");
         
         return builder.toString();
     }

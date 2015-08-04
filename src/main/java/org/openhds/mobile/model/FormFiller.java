@@ -295,6 +295,9 @@ public class FormFiller {
         		filledForm.setGroupHeadDob(indiv.getDob());
         		filledForm.setGroupHeadGender(indiv.getGender());
         	}
+        	if (!cursor.isClosed()){
+    			cursor.close();
+    		}	
     	}
     }
     
@@ -312,9 +315,11 @@ public class FormFiller {
 			if (!indiv.getFather().equalsIgnoreCase("UNK")) {
 				cursorIndv = Queries.getIndividualByExtId(resolver, indiv.getFather());
 				if (cursorIndv.moveToFirst()) {
-					father = Converter.convertToIndividual(cursorIndv);
-					cursorIndv.close();
+					father = Converter.convertToIndividual(cursorIndv);					
 				}
+				if (!cursorIndv.isClosed()){
+					cursorIndv.close();
+				}	
 			}
 
 			if (!indiv.getMother().equalsIgnoreCase("UNK")) {
@@ -323,6 +328,9 @@ public class FormFiller {
 					mother = Converter.convertToIndividual(cursorIndv);
 					cursorIndv.close();
 				}
+				if (!cursorIndv.isClosed()){
+					cursorIndv.close();
+				}	
 			}
 
 			filledForm.setFatherExtId(father == null ? "UNK" : father.getExtId());
@@ -334,6 +342,10 @@ public class FormFiller {
 			filledForm.setMotherName(mother == null ? "UNK" : mother.getFirstName());
 
 		}
+		
+		if (!cursorIndv.isClosed()){
+			cursorIndv.close();
+		}	
 	
     }
     
@@ -346,6 +358,10 @@ public class FormFiller {
 			filledForm.setOriginHouseNo(location.getName());			
 			cursorIndv.close();
 		}
+		
+		if (!cursorIndv.isClosed()){
+			cursorIndv.close();
+		}	
 	
     }
 
@@ -368,7 +384,9 @@ public class FormFiller {
 	            filledForm.setSpousePermId(spouse.getLastName());				
 			}			
             
+			cursorIndv.close();
 		}else{ //Swap individualA for B, and search again
+			cursorRelat.close();
 			cursorRelat = Queries.getRelationshipByIndividualB(resolver, individualExtId);
 			if (cursorRelat.moveToFirst()) {
 				String spouseExtId = cursorRelat.getString(cursorRelat.getColumnIndex(OpenHDS.Relationships.COLUMN_RELATIONSHIP_INDIVIDUAL_A));
@@ -382,10 +400,16 @@ public class FormFiller {
 		            filledForm.setSpouseName(spouse.getFirstName());
 		            filledForm.setSpousePermId(spouse.getLastName());				
 				}			
+				
+				cursorIndv.close();
 	            
 			}
 			
 		}
+		
+		if (!cursorRelat.isClosed()){
+			cursorRelat.close();
+		}			
 		
 	}
 }
