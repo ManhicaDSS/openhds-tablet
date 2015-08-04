@@ -170,7 +170,7 @@
       <bind nodeset="/membership/householdId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/membership/fieldWorkerId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/membership/relationshipToGroupHead" required="true()" type="select1"/>
-      <bind constraint=". &lt; today()" nodeset="/membership/startDate" required="true()" type="date"/>
+      <bind constraint=". &lt;= today()" nodeset="/membership/startDate" required="true()" type="date"/>
       <bind nodeset="/membership/processedByMirth" readonly="true()" type="int"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/membership/meta/instanceID" readonly="true()" type="string"/>
       <bind calculate="concat(&quot;Filiaca_&quot;,  /membership/individualId , format-date(today(),&quot;%Y%n%e&quot;))" nodeset="/membership/meta/instanceName" type="string"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>Registo de Parentesco</h:title>
+    <h:title>Registo de Relacionamento</h:title>
     <model>
       <itext>
         <translation lang="Swahili">
@@ -128,7 +128,7 @@
       <bind constraint=".&lt;= today()" jr:constraintMsg="The start date can not be in the future" nodeset="/relationship/startDate" required="true()" type="date"/>
       <bind nodeset="/relationship/processedByMirth" readonly="true()" type="int"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/relationship/meta/instanceID" readonly="true()" type="string"/>
-      <bind calculate="concat(&quot;Relacao_&quot;, /relationship/individualA ,&quot;_&quot;,  /relationship/individualB )" nodeset="/relationship/meta/instanceName" type="string"/>
+      <bind calculate="concat(&quot;Relationship_&quot;, /relationship/individualA ,&quot;_&quot;,  /relationship/individualB )" nodeset="/relationship/meta/instanceName" type="string"/>
     </model>
   </h:head>
   <h:body>

@@ -5,14 +5,20 @@
     <model>
       <itext>
         <translation lang="Swahili">
-          <text id="/pregnancy_outcome/motherPermId:label">
-            <value>-</value>
+          <text id="/pregnancy_outcome/anteTetanoVac/1:label">
+            <value>Sim</value>
           </text>
-          <text id="/pregnancy_outcome/processedByMirth:label">
-            <value>processed</value>
+          <text id="/pregnancy_outcome/outcomes/weightAtBirth:label">
+            <value>33. Peso ao nascer</value>
+          </text>
+          <text id="/pregnancy_outcome/birthingPlace/ONTHEWAY_TOHOSPITAL:label">
+            <value>-</value>
           </text>
           <text id="/pregnancy_outcome/partialDate/2:label">
             <value>Kadiliwa</value>
+          </text>
+          <text id="/pregnancy_outcome/motherPermId:label">
+            <value>-</value>
           </text>
           <text id="/pregnancy_outcome/partialDate/1:label">
             <value>Kamili</value>
@@ -20,8 +26,20 @@
           <text id="/pregnancy_outcome/outcomes/childId:label">
             <value>Nambari ya Mtoto</value>
           </text>
+          <text id="/pregnancy_outcome/hasTIP/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/pregnancy_outcome/birthingPlace/HEALTHCENTERCLINIC:label">
+            <value>HEALTH CENTER OR CLINIC</value>
+          </text>
           <text id="/pregnancy_outcome/outcomes/lastName:label">
             <value>Jina la Ukoo</value>
+          </text>
+          <text id="/pregnancy_outcome/nrAnteTenanoVac:label">
+            <value>14. Indica o número de vezes:</value>
+          </text>
+          <text id="/pregnancy_outcome/anteTetanoVac/2:label">
+            <value>Não</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/3:label">
             <value>Mjukuu</value>
@@ -38,14 +56,23 @@
           <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/4:label">
             <value>Hakuna Uhusiano</value>
           </text>
+          <text id="/pregnancy_outcome/outcomes/childPermId:label">
+            <value>Nambari ya Mtoto</value>
+          </text>
           <text id="/pregnancy_outcome/outcomes/outcomeType/ABT:label">
             <value>Toa Mimba</value>
           </text>
           <text id="/pregnancy_outcome/partialDate:label">
             <value>partialDate</value>
           </text>
+          <text id="/pregnancy_outcome/processedBySync:label">
+            <value>processed</value>
+          </text>
           <text id="/pregnancy_outcome/birthingPlace/OTHER:label">
             <value>KWENGINEKO</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/outcomeType:label">
+            <value>Aina ya Tukio</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/socialGroupId:label">
             <value>Nambari ya Kikundi</value>
@@ -53,11 +80,14 @@
           <text id="/pregnancy_outcome/outcomes/ordinalPosition:label">
             <value>Huyu ni mtoto wa ngapi Kuzaliwa?</value>
           </text>
+          <text id="/pregnancy_outcome/outcomes/weightAtBirth:hint">
+            <value>-</value>
+          </text>
           <text id="/pregnancy_outcome/fatherId:label">
             <value>Namba ya Baba</value>
           </text>
-          <text id="/pregnancy_outcome/attendedANC/NO:label">
-            <value>Hapana</value>
+          <text id="/pregnancy_outcome/mosquitoNet/2:label">
+            <value>Não</value>
           </text>
           <text id="/pregnancy_outcome/outcomes:label">
             <value>Amezaliwa Hai</value>
@@ -71,29 +101,65 @@
           <text id="/pregnancy_outcome/birthingPlace/HOME:label">
             <value>NYUMBANI</value>
           </text>
-          <text id="/pregnancy_outcome/nboutcomes:label">
-            <value>Matukio ya Mimba</value>
+          <text id="/pregnancy_outcome/mosquitoNet/1:label">
+            <value>Sim</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/firstName:label">
             <value>Jina la Kwanza</value>
           </text>
+          <text id="/pregnancy_outcome/outcomes/birthType/1:label">
+            <value>Normal</value>
+          </text>
+          <text id="/pregnancy_outcome/gestationalAge:hint">
+            <value>-</value>
+          </text>
           <text id="/pregnancy_outcome/birthingPlace/HOSPITAL:label">
             <value>HOSPITALI</value>
+          </text>
+          <text id="/pregnancy_outcome/hasProfessionalAssistance/88:label">
+            <value>Não sabe</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/6:label">
             <value>Sijui</value>
           </text>
-          <text id="/pregnancy_outcome/outcomes/outcomeType:label">
-            <value>Aina ya Tukio</value>
+          <text id="/pregnancy_outcome/motherName:label">
+            <value>Nome da mãe</value>
           </text>
-          <text id="/pregnancy_outcome/attendedANC:label">
-            <value>Ulipokuwa mjamzito uliwahi kupata huduma za akina mama wajawazito kutoka kliniki?</value>
+          <text id="/pregnancy_outcome/outcomes/middleName:label">
+            <value>Jina la Kati</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/birthType/3:label">
+            <value>Ventosa</value>
+          </text>
+          <text id="/pregnancy_outcome/hasProfessionalAssistance:label">
+            <value>19. O parto foi atendido por um profissional de saúde?</value>
+          </text>
+          <text id="/pregnancy_outcome/mosquitoNet:label">
+            <value>10. Recebeu alguma rede mosquiteira nas consultas pré-natal?</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/gender/M:label">
             <value>Mwanaume</value>
           </text>
-          <text id="/pregnancy_outcome/outcomes/childPermId:label">
-            <value>Nambari ya Mtoto</value>
+          <text id="/pregnancy_outcome/outcomes/headPerimeter:hint">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_outcome/hasTIP/2:label">
+            <value>Não</value>
+          </text>
+          <text id="/pregnancy_outcome/mosquitoNet/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/1:label">
+            <value>Mtoto wa Kike/Kiume</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/length:hint">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_outcome/hasProfessionalAssistance/1:label">
+            <value>Sim</value>
+          </text>
+          <text id="/pregnancy_outcome/prenatalVisits:label">
+            <value>11. A quantas consultas pré-natais atendeu?</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/5:label">
             <value>Uhusiano Mwingine</value>
@@ -101,8 +167,20 @@
           <text id="/pregnancy_outcome/fieldWorkerId:label">
             <value>Namba ya Mhojaji</value>
           </text>
-          <text id="/pregnancy_outcome/attendedANC/YES:label">
-            <value>Ndiyo</value>
+          <text id="/pregnancy_outcome/anteTetanoVac/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/pregnancy_outcome/hasTIP/1:label">
+            <value>Sim</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/birthType/2:label">
+            <value>Cesariana</value>
+          </text>
+          <text id="/pregnancy_outcome/hasProfessionalAssistance/2:label">
+            <value>Não</value>
+          </text>
+          <text id="/pregnancy_outcome/gestationalAge:label">
+            <value>20. Idade Gestacional</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/gender:label">
             <value>Jinsia</value>
@@ -110,20 +188,32 @@
           <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead:label">
             <value>Uhusiano na Mkuu wa Kikundi</value>
           </text>
+          <text id="/pregnancy_outcome/hasTIP:label">
+            <value>12. Teve Tratamento Intermitente Presuntivo de Malária (TIP) com fansidar?</value>
+          </text>
+          <text id="/pregnancy_outcome/nboutcomes:label">
+            <value>Matukio ya Mimba</value>
+          </text>
           <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/2:label">
             <value>Kaka/Dada</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/outcomeType/MIS:label">
             <value>Mimba Kuharibika</value>
           </text>
-          <text id="/pregnancy_outcome/birthingPlace/HEALTHCENTERCLINIC:label">
-            <value>HEALTH CENTER OR CLINIC</value>
+          <text id="/pregnancy_outcome/outcomes/length:label">
+            <value>29. Comprimento</value>
           </text>
-          <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/1:label">
-            <value>Mtoto wa Kike/Kiume</value>
+          <text id="/pregnancy_outcome/outcomes/outcomeType/SBR:label">
+            <value>Zaliwa Mfu</value>
           </text>
           <text id="/pregnancy_outcome/recordedDate:label">
             <value>Tarehe ya Tukio</value>
+          </text>
+          <text id="/pregnancy_outcome/anteTetanoVac:label">
+            <value>13. Recebeu alguma vacina antitetânica (VAT) durante esta gravidez?</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/headPerimeter:label">
+            <value>32. Perímetro Craneano</value>
           </text>
           <text id="/pregnancy_outcome/visitId:label">
             <value>Nambari ya Hudhurio</value>
@@ -134,34 +224,61 @@
           <text id="/pregnancy_outcome/outcomes/gender/F:label">
             <value>Mwanamke</value>
           </text>
-          <text id="/pregnancy_outcome/outcomes/middleName:label">
-            <value>Jina la Kati</value>
+          <text id="/pregnancy_outcome/processedByMirth:label">
+            <value>processed</value>
           </text>
-          <text id="/pregnancy_outcome/outcomes/outcomeType/SBR:label">
-            <value>Zaliwa Mfu</value>
+          <text id="/pregnancy_outcome/outcomes/birthType:label">
+            <value>30. Tipo de parto:</value>
           </text>
           <text id="/pregnancy_outcome/motherId:label">
             <value>Namba ya Mama</value>
           </text>
+          <text id="/pregnancy_outcome/nrLivebirths:label">
+            <value>9. Total de nados vivos que a mãe teve na vida incluindo esta criança?</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/birthType/4:label">
+            <value>Pélvico</value>
+          </text>
+          <text id="/pregnancy_outcome/nrPregnancies:label">
+            <value>8. Número total de gravidezes que a mãe teve na vida incluindo esta última?</value>
+          </text>
         </translation>
         <translation default="true()" lang="Portuguese">
           <text id="/pregnancy_outcome/motherPermId:label">
-            <value>Perm ID da mãe</value>
+            <value>3. Perm ID da mãe</value>
           </text>
-          <text id="/pregnancy_outcome/processedByMirth:label">
-            <value>processed</value>
+          <text id="/pregnancy_outcome/outcomes/weightAtBirth:label">
+            <value>12. Peso ao nascer</value>
+          </text>
+          <text id="/pregnancy_outcome/birthingPlace/ONTHEWAY_TOHOSPITAL:label">
+            <value>A caminho do hospital</value>
           </text>
           <text id="/pregnancy_outcome/partialDate/2:label">
             <value>Aproximada</value>
+          </text>
+          <text id="/pregnancy_outcome/anteTetanoVac/1:label">
+            <value>Sim</value>
           </text>
           <text id="/pregnancy_outcome/partialDate/1:label">
             <value>Exata</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/childId:label">
-            <value>ExtId da criança</value>
+            <value>2. ExtId da criança</value>
+          </text>
+          <text id="/pregnancy_outcome/hasTIP/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/pregnancy_outcome/birthingPlace/HEALTHCENTERCLINIC:label">
+            <value>Centro de saúde ou Clinica</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/lastName:label">
-            <value>PermId</value>
+            <value>4. PermId da criança</value>
+          </text>
+          <text id="/pregnancy_outcome/nrAnteTenanoVac:label">
+            <value>15.1. Indica o número de vezes:</value>
+          </text>
+          <text id="/pregnancy_outcome/anteTetanoVac/2:label">
+            <value>Não</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/3:label">
             <value>Neto/a</value>
@@ -170,33 +287,45 @@
             <value>Nascido Vivo</value>
           </text>
           <text id="/pregnancy_outcome/birthingPlaceOther:label">
-            <value>Escreva o nome do local onde ocorreu o parto?</value>
+            <value>17. Escreva o nome do local onde ocorreu o parto?</value>
           </text>
           <text id="/pregnancy_outcome/totalNumberChildrenStillLiving:label">
-            <value>De todas crianças que nasceram, quantas ainda estão vivas?</value>
+            <value>18. De todas crianças que nasceram, quantas ainda estão vivas?</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/4:label">
             <value>Sem relação</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/childPermId:label">
+            <value>PermId da criança</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/outcomeType/ABT:label">
             <value>Aborto</value>
           </text>
           <text id="/pregnancy_outcome/partialDate:label">
-            <value>Data parcial</value>
+            <value>9. Data parcial</value>
+          </text>
+          <text id="/pregnancy_outcome/processedBySync:label">
+            <value>processed by dbsync</value>
           </text>
           <text id="/pregnancy_outcome/birthingPlace/OTHER:label">
             <value>Outro</value>
           </text>
+          <text id="/pregnancy_outcome/outcomes/outcomeType:label">
+            <value>1. Tipo de resultado da gravidez</value>
+          </text>
           <text id="/pregnancy_outcome/outcomes/socialGroupId:label">
-            <value>ExtId do Agregado</value>
+            <value>3. ExtId do Agregado</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/ordinalPosition:label">
-            <value>Qual é a posição ordinal desta criança?</value>
+            <value>8. Qual é a posição ordinal desta criança?</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/weightAtBirth:hint">
+            <value>Se não sabe escreva 8891</value>
           </text>
           <text id="/pregnancy_outcome/fatherId:label">
-            <value>ExtId do Pai</value>
+            <value>2. ExtId do Pai</value>
           </text>
-          <text id="/pregnancy_outcome/attendedANC/NO:label">
+          <text id="/pregnancy_outcome/mosquitoNet/2:label">
             <value>Não</value>
           </text>
           <text id="/pregnancy_outcome/outcomes:label">
@@ -211,44 +340,98 @@
           <text id="/pregnancy_outcome/birthingPlace/HOME:label">
             <value>Em casa</value>
           </text>
-          <text id="/pregnancy_outcome/nboutcomes:label">
-            <value>Resultados</value>
+          <text id="/pregnancy_outcome/mosquitoNet/1:label">
+            <value>Sim</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/firstName:label">
-            <value>Nome</value>
+            <value>5. Nome</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/birthType/1:label">
+            <value>Normal</value>
+          </text>
+          <text id="/pregnancy_outcome/gestationalAge:hint">
+            <value>Coloque 88 se não sabe</value>
           </text>
           <text id="/pregnancy_outcome/birthingPlace/HOSPITAL:label">
             <value>Hospital</value>
           </text>
+          <text id="/pregnancy_outcome/hasProfessionalAssistance/88:label">
+            <value>Não sabe</value>
+          </text>
           <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/6:label">
             <value>Não sabe</value>
           </text>
-          <text id="/pregnancy_outcome/outcomes/outcomeType:label">
-            <value>Tipo de resultado da gravidez</value>
+          <text id="/pregnancy_outcome/motherName:label">
+            <value>4. Nome da mãe</value>
           </text>
-          <text id="/pregnancy_outcome/attendedANC:label">
-            <value>Chegou a ir há uma clinica de antenatal durante a gravidez?</value>
+          <text id="/pregnancy_outcome/outcomes/middleName:label">
+            <value>Nome do meio</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/birthType/3:label">
+            <value>Ventosa</value>
+          </text>
+          <text id="/pregnancy_outcome/hasProfessionalAssistance:label">
+            <value>19. O parto foi atendido por um profissional de saúde?</value>
+          </text>
+          <text id="/pregnancy_outcome/mosquitoNet:label">
+            <value>13. Recebeu alguma rede mosquiteira nas consultas pré-natal?</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/gender/M:label">
             <value>Masculino</value>
           </text>
-          <text id="/pregnancy_outcome/outcomes/childPermId:label">
-            <value>PermId da criança</value>
+          <text id="/pregnancy_outcome/outcomes/headPerimeter:hint">
+            <value>Se não sabe escreva 8890</value>
+          </text>
+          <text id="/pregnancy_outcome/hasTIP/2:label">
+            <value>Não</value>
+          </text>
+          <text id="/pregnancy_outcome/mosquitoNet/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/1:label">
+            <value>Filho/Filha</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/length:hint">
+            <value>Se não sabe escreva 8888</value>
+          </text>
+          <text id="/pregnancy_outcome/hasProfessionalAssistance/1:label">
+            <value>Sim</value>
+          </text>
+          <text id="/pregnancy_outcome/prenatalVisits:label">
+            <value>12. A quantas consultas pré-natais atendeu?</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/5:label">
             <value>Outro parente</value>
           </text>
           <text id="/pregnancy_outcome/fieldWorkerId:label">
-            <value>Código do Inquiridor</value>
+            <value>6. Código do Inquiridor</value>
           </text>
-          <text id="/pregnancy_outcome/attendedANC/YES:label">
+          <text id="/pregnancy_outcome/anteTetanoVac/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/pregnancy_outcome/hasTIP/1:label">
             <value>Sim</value>
           </text>
+          <text id="/pregnancy_outcome/outcomes/birthType/2:label">
+            <value>Cesariana</value>
+          </text>
+          <text id="/pregnancy_outcome/hasProfessionalAssistance/2:label">
+            <value>Não</value>
+          </text>
+          <text id="/pregnancy_outcome/gestationalAge:label">
+            <value>20. Idade Gestacional</value>
+          </text>
           <text id="/pregnancy_outcome/outcomes/gender:label">
-            <value>Sexo</value>
+            <value>6. Sexo</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead:label">
-            <value>Relação com o chefe do agregado</value>
+            <value>7. Relação com o chefe do agregado</value>
+          </text>
+          <text id="/pregnancy_outcome/hasTIP:label">
+            <value>14. Teve Tratamento Intermitente Presuntivo de Malária (TIP) com fansidar?</value>
+          </text>
+          <text id="/pregnancy_outcome/nboutcomes:label">
+            <value>7. Resultados</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/2:label">
             <value>Irmão/Irmã</value>
@@ -256,43 +439,64 @@
           <text id="/pregnancy_outcome/outcomes/outcomeType/MIS:label">
             <value>Aborto Espontâneo</value>
           </text>
-          <text id="/pregnancy_outcome/birthingPlace/HEALTHCENTERCLINIC:label">
-            <value>Centro de saúde ou Clinica</value>
+          <text id="/pregnancy_outcome/outcomes/length:label">
+            <value>9. Comprimento</value>
           </text>
-          <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/1:label">
-            <value>Filho/Filha</value>
+          <text id="/pregnancy_outcome/outcomes/outcomeType/SBR:label">
+            <value>Nado morto</value>
           </text>
           <text id="/pregnancy_outcome/recordedDate:label">
-            <value>Data do resultado da gravidez</value>
+            <value>8. Data do resultado da gravidez</value>
+          </text>
+          <text id="/pregnancy_outcome/anteTetanoVac:label">
+            <value>15. Recebeu alguma vacina antitetânica (VAT) durante esta gravidez?</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/headPerimeter:label">
+            <value>11. Perímetro Craneano</value>
           </text>
           <text id="/pregnancy_outcome/visitId:label">
-            <value>Id da visita</value>
+            <value>5. Id da visita</value>
           </text>
           <text id="/pregnancy_outcome/birthingPlace:label">
-            <value>Onde o parto ocorreu?</value>
+            <value>16. Onde o parto ocorreu?</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/gender/F:label">
             <value>Femenino</value>
           </text>
-          <text id="/pregnancy_outcome/outcomes/middleName:label">
-            <value>Nome do meio</value>
-          </text>
-          <text id="/pregnancy_outcome/outcomes/outcomeType/SBR:label">
-            <value>Natimorto</value>
-          </text>
-          <text id="/pregnancy_outcome/motherId:label">
-            <value>ExtId da Mãe</value>
-          </text>
-        </translation>
-        <translation lang="English">
-          <text id="/pregnancy_outcome/motherPermId:label">
-            <value>-</value>
-          </text>
           <text id="/pregnancy_outcome/processedByMirth:label">
             <value>processed</value>
           </text>
+          <text id="/pregnancy_outcome/outcomes/birthType:label">
+            <value>10. Tipo de parto:</value>
+          </text>
+          <text id="/pregnancy_outcome/motherId:label">
+            <value>1. ExtId da Mãe</value>
+          </text>
+          <text id="/pregnancy_outcome/nrLivebirths:label">
+            <value>11. Total de nados vivos que a mãe teve na vida incluindo esta criança?</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/birthType/4:label">
+            <value>Pélvico</value>
+          </text>
+          <text id="/pregnancy_outcome/nrPregnancies:label">
+            <value>10. Número total de gravidezes que a mãe teve na vida incluindo esta última?</value>
+          </text>
+        </translation>
+        <translation lang="English">
+          <text id="/pregnancy_outcome/anteTetanoVac/1:label">
+            <value>Sim</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/weightAtBirth:label">
+            <value>33. Peso ao nascer</value>
+          </text>
+          <text id="/pregnancy_outcome/birthingPlace/ONTHEWAY_TOHOSPITAL:label">
+            <value>-</value>
+          </text>
           <text id="/pregnancy_outcome/partialDate/2:label">
             <value>Approximate</value>
+          </text>
+          <text id="/pregnancy_outcome/motherPermId:label">
+            <value>-</value>
           </text>
           <text id="/pregnancy_outcome/partialDate/1:label">
             <value>Exact</value>
@@ -300,8 +504,20 @@
           <text id="/pregnancy_outcome/outcomes/childId:label">
             <value>Child Id</value>
           </text>
+          <text id="/pregnancy_outcome/hasTIP/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/pregnancy_outcome/birthingPlace/HEALTHCENTERCLINIC:label">
+            <value>HEALTH CENTER OR CLINIC</value>
+          </text>
           <text id="/pregnancy_outcome/outcomes/lastName:label">
             <value>Last Name</value>
+          </text>
+          <text id="/pregnancy_outcome/nrAnteTenanoVac:label">
+            <value>14. Indica o número de vezes:</value>
+          </text>
+          <text id="/pregnancy_outcome/anteTetanoVac/2:label">
+            <value>Não</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/3:label">
             <value>Grandchild</value>
@@ -318,14 +534,23 @@
           <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/4:label">
             <value>Not Related</value>
           </text>
+          <text id="/pregnancy_outcome/outcomes/childPermId:label">
+            <value>Child Id</value>
+          </text>
           <text id="/pregnancy_outcome/outcomes/outcomeType/ABT:label">
             <value>Abortion</value>
           </text>
           <text id="/pregnancy_outcome/partialDate:label">
             <value>Partial Date</value>
           </text>
+          <text id="/pregnancy_outcome/processedBySync:label">
+            <value>processed</value>
+          </text>
           <text id="/pregnancy_outcome/birthingPlace/OTHER:label">
             <value>OTHER</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/outcomeType:label">
+            <value>Outcome Type</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/socialGroupId:label">
             <value>Social Group Id</value>
@@ -333,11 +558,14 @@
           <text id="/pregnancy_outcome/outcomes/ordinalPosition:label">
             <value>What is the ordinal position of this child?</value>
           </text>
+          <text id="/pregnancy_outcome/outcomes/weightAtBirth:hint">
+            <value>-</value>
+          </text>
           <text id="/pregnancy_outcome/fatherId:label">
             <value>Father Id</value>
           </text>
-          <text id="/pregnancy_outcome/attendedANC/NO:label">
-            <value>No</value>
+          <text id="/pregnancy_outcome/mosquitoNet/2:label">
+            <value>Não</value>
           </text>
           <text id="/pregnancy_outcome/outcomes:label">
             <value>Live Birth</value>
@@ -351,29 +579,65 @@
           <text id="/pregnancy_outcome/birthingPlace/HOME:label">
             <value>HOME</value>
           </text>
-          <text id="/pregnancy_outcome/nboutcomes:label">
-            <value>Outcomes</value>
+          <text id="/pregnancy_outcome/mosquitoNet/1:label">
+            <value>Sim</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/firstName:label">
             <value>First Name</value>
           </text>
+          <text id="/pregnancy_outcome/outcomes/birthType/1:label">
+            <value>Normal</value>
+          </text>
+          <text id="/pregnancy_outcome/gestationalAge:hint">
+            <value>-</value>
+          </text>
           <text id="/pregnancy_outcome/birthingPlace/HOSPITAL:label">
             <value>HOSPITAL</value>
+          </text>
+          <text id="/pregnancy_outcome/hasProfessionalAssistance/88:label">
+            <value>Não sabe</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/6:label">
             <value>Don't Know</value>
           </text>
-          <text id="/pregnancy_outcome/outcomes/outcomeType:label">
-            <value>Outcome Type</value>
+          <text id="/pregnancy_outcome/motherName:label">
+            <value>Nome da mãe</value>
           </text>
-          <text id="/pregnancy_outcome/attendedANC:label">
-            <value>Did you attend ANC clinics during your pregnancy?</value>
+          <text id="/pregnancy_outcome/outcomes/middleName:label">
+            <value>Middle Name</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/birthType/3:label">
+            <value>Ventosa</value>
+          </text>
+          <text id="/pregnancy_outcome/hasProfessionalAssistance:label">
+            <value>19. O parto foi atendido por um profissional de saúde?</value>
+          </text>
+          <text id="/pregnancy_outcome/mosquitoNet:label">
+            <value>10. Recebeu alguma rede mosquiteira nas consultas pré-natal?</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/gender/M:label">
             <value>Male</value>
           </text>
-          <text id="/pregnancy_outcome/outcomes/childPermId:label">
-            <value>Child Id</value>
+          <text id="/pregnancy_outcome/outcomes/headPerimeter:hint">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_outcome/hasTIP/2:label">
+            <value>Não</value>
+          </text>
+          <text id="/pregnancy_outcome/mosquitoNet/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/1:label">
+            <value>Son/Daughter</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/length:hint">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_outcome/hasProfessionalAssistance/1:label">
+            <value>Sim</value>
+          </text>
+          <text id="/pregnancy_outcome/prenatalVisits:label">
+            <value>11. A quantas consultas pré-natais atendeu?</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/5:label">
             <value>Other Relative</value>
@@ -381,8 +645,20 @@
           <text id="/pregnancy_outcome/fieldWorkerId:label">
             <value>Field Worker Id</value>
           </text>
-          <text id="/pregnancy_outcome/attendedANC/YES:label">
-            <value>Yes</value>
+          <text id="/pregnancy_outcome/anteTetanoVac/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/pregnancy_outcome/hasTIP/1:label">
+            <value>Sim</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/birthType/2:label">
+            <value>Cesariana</value>
+          </text>
+          <text id="/pregnancy_outcome/hasProfessionalAssistance/2:label">
+            <value>Não</value>
+          </text>
+          <text id="/pregnancy_outcome/gestationalAge:label">
+            <value>20. Idade Gestacional</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/gender:label">
             <value>Gender</value>
@@ -390,20 +666,32 @@
           <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead:label">
             <value>Relationship to Group Head</value>
           </text>
+          <text id="/pregnancy_outcome/hasTIP:label">
+            <value>12. Teve Tratamento Intermitente Presuntivo de Malária (TIP) com fansidar?</value>
+          </text>
+          <text id="/pregnancy_outcome/nboutcomes:label">
+            <value>Outcomes</value>
+          </text>
           <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/2:label">
             <value>Brother/Sister</value>
           </text>
           <text id="/pregnancy_outcome/outcomes/outcomeType/MIS:label">
             <value>Miscarriage</value>
           </text>
-          <text id="/pregnancy_outcome/birthingPlace/HEALTHCENTERCLINIC:label">
-            <value>HEALTH CENTER OR CLINIC</value>
+          <text id="/pregnancy_outcome/outcomes/length:label">
+            <value>29. Comprimento</value>
           </text>
-          <text id="/pregnancy_outcome/outcomes/relationshipToGroupHead/1:label">
-            <value>Son/Daughter</value>
+          <text id="/pregnancy_outcome/outcomes/outcomeType/SBR:label">
+            <value>Still Birth</value>
           </text>
           <text id="/pregnancy_outcome/recordedDate:label">
             <value>Outcome Date</value>
+          </text>
+          <text id="/pregnancy_outcome/anteTetanoVac:label">
+            <value>13. Recebeu alguma vacina antitetânica (VAT) durante esta gravidez?</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/headPerimeter:label">
+            <value>32. Perímetro Craneano</value>
           </text>
           <text id="/pregnancy_outcome/visitId:label">
             <value>Visit Id</value>
@@ -414,14 +702,23 @@
           <text id="/pregnancy_outcome/outcomes/gender/F:label">
             <value>Female</value>
           </text>
-          <text id="/pregnancy_outcome/outcomes/middleName:label">
-            <value>Middle Name</value>
+          <text id="/pregnancy_outcome/processedByMirth:label">
+            <value>processed</value>
           </text>
-          <text id="/pregnancy_outcome/outcomes/outcomeType/SBR:label">
-            <value>Still Birth</value>
+          <text id="/pregnancy_outcome/outcomes/birthType:label">
+            <value>30. Tipo de parto:</value>
           </text>
           <text id="/pregnancy_outcome/motherId:label">
             <value>Mother Id</value>
+          </text>
+          <text id="/pregnancy_outcome/nrLivebirths:label">
+            <value>9. Total de nados vivos que a mãe teve na vida incluindo esta criança?</value>
+          </text>
+          <text id="/pregnancy_outcome/outcomes/birthType/4:label">
+            <value>Pélvico</value>
+          </text>
+          <text id="/pregnancy_outcome/nrPregnancies:label">
+            <value>8. Número total de gravidezes que a mãe teve na vida incluindo esta última?</value>
           </text>
         </translation>
       </itext>
@@ -433,11 +730,19 @@
           <motherId/>
           <fatherId/>
           <motherPermId/>
+          <motherName/>
           <visitId/>
           <fieldWorkerId/>
           <nboutcomes/>
           <recordedDate/>
           <partialDate/>
+          <nrPregnancies/>
+          <nrLivebirths/>
+          <prenatalVisits/>
+          <mosquitoNet/>
+          <hasTIP/>
+          <anteTetanoVac/>
+          <nrAnteTenanoVac/>
           <outcomes_count/>
           <outcomes jr:template="">
             <outcomeType/>
@@ -448,14 +753,20 @@
             <middleName/>
             <childPermId/>
             <gender/>
-            <ordinalPosition/>
             <relationshipToGroupHead/>
+            <ordinalPosition/>
+            <length/>
+            <birthType/>
+            <headPerimeter/>
+            <weightAtBirth/>
           </outcomes>
           <birthingPlace/>
           <birthingPlaceOther/>
           <totalNumberChildrenStillLiving/>
-          <attendedANC/>
+          <hasProfessionalAssistance/>
+          <gestationalAge/>
           <processedByMirth/>
+          <processedBySync/>
           <meta>
             <instanceID/>
             <instanceName/>
@@ -468,11 +779,19 @@
       <bind nodeset="/pregnancy_outcome/motherId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/pregnancy_outcome/fatherId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/pregnancy_outcome/motherPermId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/pregnancy_outcome/motherName" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/pregnancy_outcome/visitId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/pregnancy_outcome/fieldWorkerId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/pregnancy_outcome/nboutcomes" readonly="true()" required="true()" type="int"/>
       <bind nodeset="/pregnancy_outcome/recordedDate" type="date"/>
       <bind nodeset="/pregnancy_outcome/partialDate" required="true()" type="select1"/>
+      <bind constraint=". &gt; 0" jr:constraintMsg="O valor deve ser maior que zero" nodeset="/pregnancy_outcome/nrPregnancies" required="true()" type="int"/>
+      <bind constraint=". &gt;= 0" jr:constraintMsg="O valor deve ser maior ou igual a zero" nodeset="/pregnancy_outcome/nrLivebirths" required="true()" type="int"/>
+      <bind constraint=". &gt;= 0" jr:constraintMsg="O valor deve ser maior ou igual a zero" nodeset="/pregnancy_outcome/prenatalVisits" required="true()" type="int"/>
+      <bind nodeset="/pregnancy_outcome/mosquitoNet" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_outcome/hasTIP" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_outcome/anteTetanoVac" required="true()" type="select1"/>
+      <bind constraint=". &gt;= 0" jr:constraintMsg="O valor deve ser maior ou igual a zero" nodeset="/pregnancy_outcome/nrAnteTenanoVac" relevant=" /pregnancy_outcome/anteTetanoVac  = 1" required="true()" type="int"/>
       <bind calculate=" /pregnancy_outcome/nboutcomes " nodeset="/pregnancy_outcome/outcomes_count" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy_outcome/outcomes/outcomeType" required="true()" type="select1"/>
       <bind nodeset="/pregnancy_outcome/outcomes/childId" readonly="true()" relevant="selected( /pregnancy_outcome/outcomes/outcomeType , 'LBR')" required="true()" type="string"/>
@@ -482,13 +801,19 @@
       <bind nodeset="/pregnancy_outcome/outcomes/middleName" relevant="selected( /pregnancy_outcome/outcomes/outcomeType , 'LBR') and FALSE" required="true()" type="string"/>
       <bind calculate=" /pregnancy_outcome/outcomes/lastName " nodeset="/pregnancy_outcome/outcomes/childPermId" readonly="true()" relevant="selected( /pregnancy_outcome/outcomes/outcomeType , 'LBR')" required="true()" type="string"/>
       <bind nodeset="/pregnancy_outcome/outcomes/gender" relevant="selected( /pregnancy_outcome/outcomes/outcomeType , 'LBR')" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy_outcome/outcomes/ordinalPosition" relevant="selected( /pregnancy_outcome/outcomes/outcomeType , 'LBR')" required="true()" type="int"/>
       <bind nodeset="/pregnancy_outcome/outcomes/relationshipToGroupHead" relevant="selected( /pregnancy_outcome/outcomes/outcomeType , 'LBR')" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_outcome/outcomes/ordinalPosition" relevant="selected( /pregnancy_outcome/outcomes/outcomeType , 'LBR')" required="true()" type="int"/>
+      <bind constraint=". &gt; 0" jr:constraintMsg="O valor deve ser maior que zero" nodeset="/pregnancy_outcome/outcomes/length" relevant="selected( /pregnancy_outcome/outcomes/outcomeType , 'LBR')" required="true()" type="int"/>
+      <bind constraint=". &gt; 0" jr:constraintMsg="O valor deve ser maior que zero" nodeset="/pregnancy_outcome/outcomes/birthType" relevant="selected( /pregnancy_outcome/outcomes/outcomeType , 'LBR')" required="true()" type="select1"/>
+      <bind constraint=". &gt; 0" jr:constraintMsg="O valor deve ser maior que zero" nodeset="/pregnancy_outcome/outcomes/headPerimeter" relevant="selected( /pregnancy_outcome/outcomes/outcomeType , 'LBR')" required="true()" type="int"/>
+      <bind constraint=". &gt; 0" jr:constraintMsg="O valor deve ser maior que zero" nodeset="/pregnancy_outcome/outcomes/weightAtBirth" relevant="selected( /pregnancy_outcome/outcomes/outcomeType , 'LBR')" required="true()" type="int"/>
       <bind nodeset="/pregnancy_outcome/birthingPlace" required="true()" type="select1"/>
       <bind nodeset="/pregnancy_outcome/birthingPlaceOther" relevant="selected( /pregnancy_outcome/birthingPlace , 'OTHER')" required="true()" type="string"/>
       <bind nodeset="/pregnancy_outcome/totalNumberChildrenStillLiving" required="true()" type="int"/>
-      <bind nodeset="/pregnancy_outcome/attendedANC" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_outcome/hasProfessionalAssistance" required="true()" type="select1"/>
+      <bind constraint=". &gt; 0" jr:constraintMsg="O valor deve ser maior que zero" nodeset="/pregnancy_outcome/gestationalAge" required="true()" type="int"/>
       <bind nodeset="/pregnancy_outcome/processedByMirth" readonly="true()" type="int"/>
+      <bind nodeset="/pregnancy_outcome/processedBySync" readonly="true()" type="int"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/pregnancy_outcome/meta/instanceID" readonly="true()" type="string"/>
       <bind calculate="concat(&quot;ResGravidez_&quot;, /pregnancy_outcome/motherPermId ,&quot;_&quot;, format-date(today(), &quot;%Y%n%e&quot;))" nodeset="/pregnancy_outcome/meta/instanceName" type="string"/>
     </model>
@@ -502,6 +827,9 @@
     </input>
     <input ref="/pregnancy_outcome/motherPermId">
       <label ref="jr:itext('/pregnancy_outcome/motherPermId:label')"/>
+    </input>
+    <input ref="/pregnancy_outcome/motherName">
+      <label ref="jr:itext('/pregnancy_outcome/motherName:label')"/>
     </input>
     <input ref="/pregnancy_outcome/visitId">
       <label ref="jr:itext('/pregnancy_outcome/visitId:label')"/>
@@ -526,6 +854,63 @@
         <value>2</value>
       </item>
     </select1>
+    <input ref="/pregnancy_outcome/nrPregnancies">
+      <label ref="jr:itext('/pregnancy_outcome/nrPregnancies:label')"/>
+    </input>
+    <input ref="/pregnancy_outcome/nrLivebirths">
+      <label ref="jr:itext('/pregnancy_outcome/nrLivebirths:label')"/>
+    </input>
+    <input ref="/pregnancy_outcome/prenatalVisits">
+      <label ref="jr:itext('/pregnancy_outcome/prenatalVisits:label')"/>
+    </input>
+    <select1 ref="/pregnancy_outcome/mosquitoNet">
+      <label ref="jr:itext('/pregnancy_outcome/mosquitoNet:label')"/>
+      <item>
+        <label ref="jr:itext('/pregnancy_outcome/mosquitoNet/1:label')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/pregnancy_outcome/mosquitoNet/2:label')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/pregnancy_outcome/mosquitoNet/88:label')"/>
+        <value>88</value>
+      </item>
+    </select1>
+    <select1 ref="/pregnancy_outcome/hasTIP">
+      <label ref="jr:itext('/pregnancy_outcome/hasTIP:label')"/>
+      <item>
+        <label ref="jr:itext('/pregnancy_outcome/hasTIP/1:label')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/pregnancy_outcome/hasTIP/2:label')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/pregnancy_outcome/hasTIP/88:label')"/>
+        <value>88</value>
+      </item>
+    </select1>
+    <select1 ref="/pregnancy_outcome/anteTetanoVac">
+      <label ref="jr:itext('/pregnancy_outcome/anteTetanoVac:label')"/>
+      <item>
+        <label ref="jr:itext('/pregnancy_outcome/anteTetanoVac/1:label')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/pregnancy_outcome/anteTetanoVac/2:label')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/pregnancy_outcome/anteTetanoVac/88:label')"/>
+        <value>88</value>
+      </item>
+    </select1>
+    <input ref="/pregnancy_outcome/nrAnteTenanoVac">
+      <label ref="jr:itext('/pregnancy_outcome/nrAnteTenanoVac:label')"/>
+    </input>
     <group ref="/pregnancy_outcome/outcomes">
       <label ref="jr:itext('/pregnancy_outcome/outcomes:label')"/>
       <repeat jr:count=" /pregnancy_outcome/outcomes_count " nodeset="/pregnancy_outcome/outcomes">
@@ -574,10 +959,6 @@
             <value>F</value>
           </item>
         </select1>
-        <input ref="/pregnancy_outcome/outcomes/ordinalPosition">
-          <label ref="jr:itext('/pregnancy_outcome/outcomes/ordinalPosition:label')"/>
-          <hint ref="jr:itext('/pregnancy_outcome/outcomes/ordinalPosition:hint')"/>
-        </input>
         <select1 ref="/pregnancy_outcome/outcomes/relationshipToGroupHead">
           <label ref="jr:itext('/pregnancy_outcome/outcomes/relationshipToGroupHead:label')"/>
           <item>
@@ -605,6 +986,41 @@
             <value>6</value>
           </item>
         </select1>
+        <input ref="/pregnancy_outcome/outcomes/ordinalPosition">
+          <label ref="jr:itext('/pregnancy_outcome/outcomes/ordinalPosition:label')"/>
+          <hint ref="jr:itext('/pregnancy_outcome/outcomes/ordinalPosition:hint')"/>
+        </input>
+        <input ref="/pregnancy_outcome/outcomes/length">
+          <label ref="jr:itext('/pregnancy_outcome/outcomes/length:label')"/>
+          <hint ref="jr:itext('/pregnancy_outcome/outcomes/length:hint')"/>
+        </input>
+        <select1 ref="/pregnancy_outcome/outcomes/birthType">
+          <label ref="jr:itext('/pregnancy_outcome/outcomes/birthType:label')"/>
+          <item>
+            <label ref="jr:itext('/pregnancy_outcome/outcomes/birthType/1:label')"/>
+            <value>1</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy_outcome/outcomes/birthType/2:label')"/>
+            <value>2</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy_outcome/outcomes/birthType/3:label')"/>
+            <value>3</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy_outcome/outcomes/birthType/4:label')"/>
+            <value>4</value>
+          </item>
+        </select1>
+        <input ref="/pregnancy_outcome/outcomes/headPerimeter">
+          <label ref="jr:itext('/pregnancy_outcome/outcomes/headPerimeter:label')"/>
+          <hint ref="jr:itext('/pregnancy_outcome/outcomes/headPerimeter:hint')"/>
+        </input>
+        <input ref="/pregnancy_outcome/outcomes/weightAtBirth">
+          <label ref="jr:itext('/pregnancy_outcome/outcomes/weightAtBirth:label')"/>
+          <hint ref="jr:itext('/pregnancy_outcome/outcomes/weightAtBirth:hint')"/>
+        </input>
       </repeat>
     </group>
     <select1 ref="/pregnancy_outcome/birthingPlace">
@@ -626,6 +1042,10 @@
         <value>HEALTHCENTERCLINIC</value>
       </item>
       <item>
+        <label ref="jr:itext('/pregnancy_outcome/birthingPlace/ONTHEWAY_TOHOSPITAL:label')"/>
+        <value>ONTHEWAY_TOHOSPITAL</value>
+      </item>
+      <item>
         <label ref="jr:itext('/pregnancy_outcome/birthingPlace/OTHER:label')"/>
         <value>OTHER</value>
       </item>
@@ -636,19 +1056,30 @@
     <input ref="/pregnancy_outcome/totalNumberChildrenStillLiving">
       <label ref="jr:itext('/pregnancy_outcome/totalNumberChildrenStillLiving:label')"/>
     </input>
-    <select1 ref="/pregnancy_outcome/attendedANC">
-      <label ref="jr:itext('/pregnancy_outcome/attendedANC:label')"/>
+    <select1 ref="/pregnancy_outcome/hasProfessionalAssistance">
+      <label ref="jr:itext('/pregnancy_outcome/hasProfessionalAssistance:label')"/>
       <item>
-        <label ref="jr:itext('/pregnancy_outcome/attendedANC/YES:label')"/>
-        <value>YES</value>
+        <label ref="jr:itext('/pregnancy_outcome/hasProfessionalAssistance/1:label')"/>
+        <value>1</value>
       </item>
       <item>
-        <label ref="jr:itext('/pregnancy_outcome/attendedANC/NO:label')"/>
-        <value>NO</value>
+        <label ref="jr:itext('/pregnancy_outcome/hasProfessionalAssistance/2:label')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/pregnancy_outcome/hasProfessionalAssistance/88:label')"/>
+        <value>88</value>
       </item>
     </select1>
+    <input ref="/pregnancy_outcome/gestationalAge">
+      <label ref="jr:itext('/pregnancy_outcome/gestationalAge:label')"/>
+      <hint ref="jr:itext('/pregnancy_outcome/gestationalAge:hint')"/>
+    </input>
     <input ref="/pregnancy_outcome/processedByMirth">
       <label ref="jr:itext('/pregnancy_outcome/processedByMirth:label')"/>
+    </input>
+    <input ref="/pregnancy_outcome/processedBySync">
+      <label ref="jr:itext('/pregnancy_outcome/processedBySync:label')"/>
     </input>
   </h:body>
 </h:html>

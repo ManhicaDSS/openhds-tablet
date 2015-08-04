@@ -310,7 +310,7 @@
       <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/baseline/deviceId" type="string"/>
       <bind nodeset="/baseline/migrationType" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/baseline/locationId" readonly="true()" required="true()" type="string"/>
-      <bind nodeset="/baseline/locationName" type="string"/>
+      <bind nodeset="/baseline/locationName" readonly="true()" type="string"/>
       <bind nodeset="/baseline/visitId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/baseline/fieldWorkerId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/baseline/individualInfo/individualId" readonly="true()" required="true()" type="string"/>
@@ -320,7 +320,7 @@
       <bind nodeset="/baseline/individualInfo/firstName" relevant=" /baseline/migrationType  = 'BASELINE'" required="true()" type="string"/>
       <bind nodeset="/baseline/individualInfo/middleName" relevant="( /baseline/migrationType  = 'BASELINE') and 1=0" type="string"/>
       <bind nodeset="/baseline/individualInfo/gender" relevant=" /baseline/migrationType  = 'BASELINE'" required="true()" type="select1"/>
-      <bind constraint=". &lt; today()" nodeset="/baseline/individualInfo/dateOfBirth" relevant=" /baseline/migrationType  = 'BASELINE'" required="true()" type="date"/>
+      <bind constraint=". &lt;= today()" nodeset="/baseline/individualInfo/dateOfBirth" relevant=" /baseline/migrationType  = 'BASELINE'" required="true()" type="date"/>
       <bind nodeset="/baseline/individualInfo/partialDate" relevant=" /baseline/migrationType  = 'BASELINE'" required="true()" type="select1"/>
       <bind constraint=". &lt;= today()" jr:constraintMsg="the residency date can not be in the future" nodeset="/baseline/dateOfMigration" required="true()" type="date"/>
       <bind nodeset="/baseline/warning" readonly="true()" relevant=" /baseline/individualInfo/dateOfBirth &gt; /baseline/dateOfMigration  and ../migrationType = 'BASELINE'" required="true()" type="string"/>

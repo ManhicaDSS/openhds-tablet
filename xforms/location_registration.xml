@@ -14,20 +14,23 @@
           <text id="/location_registration/processedByMirth:label">
             <value>processed</value>
           </text>
+          <text id="/location_registration/locationType:label">
+            <value>Aina ya Kaya</value>
+          </text>
           <text id="/location_registration/locationType/RUR:label">
             <value>Kijijini</value>
           </text>
           <text id="/location_registration/locationId:label">
             <value>Nambari ya Kaya</value>
           </text>
+          <text id="/location_registration/locationType/URB:label">
+            <value>Urbano/Vila</value>
+          </text>
           <text id="/location_registration/geopoint:label">
             <value>Geopoint</value>
           </text>
           <text id="/location_registration/fieldWorkerId:label">
             <value>Nambari ya Mhojaji</value>
-          </text>
-          <text id="/location_registration/locationType:label">
-            <value>Aina ya Kaya</value>
           </text>
         </translation>
         <translation default="true()" lang="Portuguese">
@@ -40,20 +43,23 @@
           <text id="/location_registration/processedByMirth:label">
             <value>processed</value>
           </text>
+          <text id="/location_registration/locationType:label">
+            <value>Tipo da localização</value>
+          </text>
           <text id="/location_registration/locationType/RUR:label">
             <value>Rural</value>
           </text>
           <text id="/location_registration/locationId:label">
             <value>ExtId da Localização/Casa</value>
           </text>
+          <text id="/location_registration/locationType/URB:label">
+            <value>Urbano/Vila</value>
+          </text>
           <text id="/location_registration/geopoint:label">
             <value>Coordenadas Geograficas</value>
           </text>
           <text id="/location_registration/fieldWorkerId:label">
             <value>Código do Inquiridor</value>
-          </text>
-          <text id="/location_registration/locationType:label">
-            <value>Tipo da localização</value>
           </text>
         </translation>
         <translation lang="English">
@@ -66,20 +72,23 @@
           <text id="/location_registration/processedByMirth:label">
             <value>processed</value>
           </text>
+          <text id="/location_registration/locationType:label">
+            <value>Location Type</value>
+          </text>
           <text id="/location_registration/locationType/RUR:label">
             <value>Rural</value>
           </text>
           <text id="/location_registration/locationId:label">
             <value>Location Id</value>
           </text>
+          <text id="/location_registration/locationType/URB:label">
+            <value>Urbano/Vila</value>
+          </text>
           <text id="/location_registration/geopoint:label">
             <value>Geopoint</value>
           </text>
           <text id="/location_registration/fieldWorkerId:label">
             <value>Field Worker Id</value>
-          </text>
-          <text id="/location_registration/locationType:label">
-            <value>Location Type</value>
           </text>
         </translation>
       </itext>
@@ -130,6 +139,10 @@
     </input>
     <select1 ref="/location_registration/locationType">
       <label ref="jr:itext('/location_registration/locationType:label')"/>
+      <item>
+        <label ref="jr:itext('/location_registration/locationType/URB:label')"/>
+        <value>URB</value>
+      </item>
       <item>
         <label ref="jr:itext('/location_registration/locationType/RUR:label')"/>
         <value>RUR</value>

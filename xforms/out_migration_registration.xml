@@ -5,6 +5,9 @@
     <model>
       <itext>
         <translation lang="Swahili">
+          <text id="/out_migration_registration/nameOfDestination/5:label">
+            <value>Sofala</value>
+          </text>
           <text id="/out_migration_registration/maritalChange/WID:label">
             <value>Kufiwa</value>
           </text>
@@ -20,20 +23,26 @@
           <text id="/out_migration_registration/processedByMirth:label">
             <value>processed</value>
           </text>
-          <text id="/out_migration_registration/reasonForOutMigration/EDUCACAO:label">
-            <value>Educação</value>
+          <text id="/out_migration_registration/reasonForOutMigration/MAIORIDADE_INDEPENDENCIA:label">
+            <value>NYINGINE</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/14:label">
+            <value>Outro país Africano</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/88:label">
+            <value>Não sabe</value>
           </text>
           <text id="/out_migration_registration/reasonForOutMigration/NAO_SABE:label">
             <value>Não sabe</value>
           </text>
-          <text id="/out_migration_registration/reasonForOutMigration/MAIORIDADE_INDEPENDENCIA:label">
-            <value>NYINGINE</value>
+          <text id="/out_migration_registration/nameOfDestination/13:label">
+            <value>Swazilandia</value>
           </text>
-          <text id="/out_migration_registration/isMozambique/OTHER:label">
-            <value>Outro país</value>
+          <text id="/out_migration_registration/nameOfDestination/17:label">
+            <value>Americas</value>
           </text>
-          <text id="/out_migration_registration/locality:label">
-            <value>Localidade</value>
+          <text id="/out_migration_registration/nameOfDestination/6:label">
+            <value>Manica</value>
           </text>
           <text id="/out_migration_registration/reasonForOutMigration/EMPREGO:label">
             <value>FISHING</value>
@@ -41,29 +50,32 @@
           <text id="/out_migration_registration/reasonForOutMigration:label">
             <value>Sababu ya Kuhama</value>
           </text>
+          <text id="/out_migration_registration/maritalChange/SEP:label">
+            <value>Kutengana</value>
+          </text>
           <text id="/out_migration_registration/timeAbsence/4:label">
             <value>Mudança definitiva</value>
           </text>
-          <text id="/out_migration_registration/shortlongterm/2:label">
-            <value>Long term</value>
+          <text id="/out_migration_registration/nameOfDestination/7:label">
+            <value>Tete</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/10:label">
+            <value>Cabo Delgado</value>
           </text>
           <text id="/out_migration_registration/reasonForOutMigration/SITUACAO_ECONOMICA:label">
             <value>Situação Economica</value>
           </text>
-          <text id="/out_migration_registration/district:label">
-            <value>Distrito</value>
+          <text id="/out_migration_registration/name:label">
+            <value>Name</value>
           </text>
-          <text id="/out_migration_registration/maritalChange/REC:label">
-            <value>Kupatana</value>
+          <text id="/out_migration_registration/maritalChange/DIV:label">
+            <value>Talaka</value>
           </text>
-          <text id="/out_migration_registration/reasonForOutMigration/OUTRO:label">
-            <value>Outro</value>
+          <text id="/out_migration_registration/nameOfDestination/4:label">
+            <value>Inhambane</value>
           </text>
-          <text id="/out_migration_registration/isMozambique/MOZ:label">
-            <value>Moçambique</value>
-          </text>
-          <text id="/out_migration_registration/adminPost:label">
-            <value>Posto Administrativo</value>
+          <text id="/out_migration_registration/shortlongterm/2:label">
+            <value>Long term</value>
           </text>
           <text id="/out_migration_registration/individualId:label">
             <value>Nambari ya Mwanakaya</value>
@@ -80,8 +92,14 @@
           <text id="/out_migration_registration/reasonForOutMigration/ACOMPANHANTES_DOS_PROGENITORES:label">
             <value>Acompanhantes dos progenitores/responsaveis</value>
           </text>
-          <text id="/out_migration_registration/countryName:label">
-            <value>Nome do Pais</value>
+          <text id="/out_migration_registration/nameOfDestination/3:label">
+            <value>Gaza</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/12:label">
+            <value>Africa de Sul</value>
+          </text>
+          <text id="/out_migration_registration/reasonForOutMigration/OUTRO:label">
+            <value>Outro</value>
           </text>
           <text id="/out_migration_registration/fieldWorkerId:label">
             <value>Nambari ya Mhojaji</value>
@@ -92,11 +110,17 @@
           <text id="/out_migration_registration/reasonForOutMigration/SEPARACAO:label">
             <value>MOVED TO NEW HOUSE</value>
           </text>
+          <text id="/out_migration_registration/nameOfDestination/18:label">
+            <value>Outro</value>
+          </text>
+          <text id="/out_migration_registration/maritalChange/REC:label">
+            <value>Kupatana</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/9:label">
+            <value>Nampula</value>
+          </text>
           <text id="/out_migration_registration/shortlongterm/3:label">
             <value>Unknown</value>
-          </text>
-          <text id="/out_migration_registration/isMozambique:label">
-            <value>Pais de destino</value>
           </text>
           <text id="/out_migration_registration/nameOfDestination:label">
             <value>Jina Eneo Alikohamia</value>
@@ -107,11 +131,17 @@
           <text id="/out_migration_registration/reasonForOutMigration/DIVORCIO:label">
             <value>KUBADILIKA KWA HALI YA NDOA</value>
           </text>
-          <text id="/out_migration_registration/maritalChange/DIV:label">
-            <value>Talaka</value>
+          <text id="/out_migration_registration/processedBySync:label">
+            <value>processed</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/1:label">
+            <value>Provincia de Maputo</value>
           </text>
           <text id="/out_migration_registration/reasonForOutMigration/SAUDE:label">
             <value>ELIMU/SHULE</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/11:label">
+            <value>Niassa</value>
           </text>
           <text id="/out_migration_registration/maritalChange/MAR:label">
             <value>Ndoa</value>
@@ -119,35 +149,47 @@
           <text id="/out_migration_registration/timeAbsence/3:label">
             <value>Mais de 12 meses</value>
           </text>
-          <text id="/out_migration_registration/timeAbsence/2:label">
-            <value>6 á 12 meses</value>
+          <text id="/out_migration_registration/nameOfDestination/15:label">
+            <value>Europa</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/16:label">
+            <value>Asia</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/8:label">
+            <value>Zambezia</value>
           </text>
           <text id="/out_migration_registration/reasonForOutMigration/CUSTO_DE_ALUGUER_DA_CASA:label">
             <value>Custo de Aluguer da casa</value>
           </text>
-          <text id="/out_migration_registration/province:label">
-            <value>Provincia</value>
-          </text>
-          <text id="/out_migration_registration/visitId:label">
-            <value>Nambari ya Hudhurio</value>
-          </text>
-          <text id="/out_migration_registration/reasonForOutMigrationOther:label">
-            <value>Sababu ya Kuhama(Nyingine)</value>
-          </text>
-          <text id="/out_migration_registration/maritalChange/SEP:label">
-            <value>Kutengana</value>
-          </text>
-          <text id="/out_migration_registration/reasonForOutMigration/PERCA_DE_PARENTES:label">
-            <value>Perca de parentes/responsaveis</value>
-          </text>
-          <text id="/out_migration_registration/permId:label">
-            <value>Perm ID</value>
+          <text id="/out_migration_registration/reasonForOutMigration/EDUCACAO:label">
+            <value>Educação</value>
           </text>
           <text id="/out_migration_registration/timeAbsence/1:label">
             <value>3 á 6 meses</value>
           </text>
+          <text id="/out_migration_registration/reasonForOutMigrationOther:label">
+            <value>Sababu ya Kuhama(Nyingine)</value>
+          </text>
+          <text id="/out_migration_registration/timeAbsence/2:label">
+            <value>6 á 12 meses</value>
+          </text>
+          <text id="/out_migration_registration/reasonForOutMigration/PERCA_DE_PARENTES:label">
+            <value>Perca de parentes/responsaveis</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/2:label">
+            <value>Cidade de Maputo</value>
+          </text>
+          <text id="/out_migration_registration/permId:label">
+            <value>Perm ID</value>
+          </text>
+          <text id="/out_migration_registration/visitId:label">
+            <value>Nambari ya Hudhurio</value>
+          </text>
         </translation>
         <translation default="true()" lang="Portuguese">
+          <text id="/out_migration_registration/nameOfDestination/5:label">
+            <value>Sofala</value>
+          </text>
           <text id="/out_migration_registration/maritalChange/WID:label">
             <value>Tornou-se Viuvo/a</value>
           </text>
@@ -163,20 +205,26 @@
           <text id="/out_migration_registration/processedByMirth:label">
             <value>processed</value>
           </text>
-          <text id="/out_migration_registration/reasonForOutMigration/EDUCACAO:label">
-            <value>Educação</value>
+          <text id="/out_migration_registration/reasonForOutMigration/MAIORIDADE_INDEPENDENCIA:label">
+            <value>Maioridade/Independência</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/14:label">
+            <value>Outro país Africano</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/88:label">
+            <value>Não sabe</value>
           </text>
           <text id="/out_migration_registration/reasonForOutMigration/NAO_SABE:label">
             <value>Não sabe</value>
           </text>
-          <text id="/out_migration_registration/reasonForOutMigration/MAIORIDADE_INDEPENDENCIA:label">
-            <value>Maioridade/Independência</value>
+          <text id="/out_migration_registration/nameOfDestination/13:label">
+            <value>Swazilandia</value>
           </text>
-          <text id="/out_migration_registration/isMozambique/OTHER:label">
-            <value>Outro país</value>
+          <text id="/out_migration_registration/nameOfDestination/17:label">
+            <value>Americas</value>
           </text>
-          <text id="/out_migration_registration/locality:label">
-            <value>Localidade</value>
+          <text id="/out_migration_registration/nameOfDestination/6:label">
+            <value>Manica</value>
           </text>
           <text id="/out_migration_registration/reasonForOutMigration/EMPREGO:label">
             <value>Emprego</value>
@@ -184,29 +232,32 @@
           <text id="/out_migration_registration/reasonForOutMigration:label">
             <value>Razão da Emigração</value>
           </text>
+          <text id="/out_migration_registration/maritalChange/SEP:label">
+            <value>Separação</value>
+          </text>
           <text id="/out_migration_registration/timeAbsence/4:label">
             <value>Mudança definitiva</value>
           </text>
-          <text id="/out_migration_registration/shortlongterm/2:label">
-            <value>Longo periodo</value>
+          <text id="/out_migration_registration/nameOfDestination/7:label">
+            <value>Tete</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/10:label">
+            <value>Cabo Delgado</value>
           </text>
           <text id="/out_migration_registration/reasonForOutMigration/SITUACAO_ECONOMICA:label">
             <value>Situação Economica</value>
           </text>
-          <text id="/out_migration_registration/district:label">
-            <value>Distrito</value>
+          <text id="/out_migration_registration/name:label">
+            <value>Nome</value>
           </text>
-          <text id="/out_migration_registration/maritalChange/REC:label">
-            <value>Reconciliação</value>
+          <text id="/out_migration_registration/maritalChange/DIV:label">
+            <value>Divórcio</value>
           </text>
-          <text id="/out_migration_registration/reasonForOutMigration/OUTRO:label">
-            <value>Outro</value>
+          <text id="/out_migration_registration/nameOfDestination/4:label">
+            <value>Inhambane</value>
           </text>
-          <text id="/out_migration_registration/isMozambique/MOZ:label">
-            <value>Moçambique</value>
-          </text>
-          <text id="/out_migration_registration/adminPost:label">
-            <value>Posto Administrativo</value>
+          <text id="/out_migration_registration/shortlongterm/2:label">
+            <value>Longo periodo</value>
           </text>
           <text id="/out_migration_registration/individualId:label">
             <value>ExtId do Individuo</value>
@@ -223,8 +274,14 @@
           <text id="/out_migration_registration/reasonForOutMigration/ACOMPANHANTES_DOS_PROGENITORES:label">
             <value>Acompanhantes dos progenitores/responsaveis</value>
           </text>
-          <text id="/out_migration_registration/countryName:label">
-            <value>Nome do Pais</value>
+          <text id="/out_migration_registration/nameOfDestination/3:label">
+            <value>Gaza</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/12:label">
+            <value>Africa de Sul</value>
+          </text>
+          <text id="/out_migration_registration/reasonForOutMigration/OUTRO:label">
+            <value>Outro</value>
           </text>
           <text id="/out_migration_registration/fieldWorkerId:label">
             <value>Código do Inquiridor</value>
@@ -235,14 +292,20 @@
           <text id="/out_migration_registration/reasonForOutMigration/SEPARACAO:label">
             <value>Separação</value>
           </text>
+          <text id="/out_migration_registration/nameOfDestination/18:label">
+            <value>Outro</value>
+          </text>
+          <text id="/out_migration_registration/maritalChange/REC:label">
+            <value>Reconciliação</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/9:label">
+            <value>Nampula</value>
+          </text>
           <text id="/out_migration_registration/shortlongterm/3:label">
             <value>Não sabe</value>
           </text>
-          <text id="/out_migration_registration/isMozambique:label">
-            <value>Pais de destino</value>
-          </text>
           <text id="/out_migration_registration/nameOfDestination:label">
-            <value>Nome do Destino/Bairro</value>
+            <value>Nome do Destino</value>
           </text>
           <text id="/out_migration_registration/maritalChange/888:label">
             <value>Nenhuma das opções</value>
@@ -250,11 +313,17 @@
           <text id="/out_migration_registration/reasonForOutMigration/DIVORCIO:label">
             <value>Divorcio</value>
           </text>
-          <text id="/out_migration_registration/maritalChange/DIV:label">
-            <value>Divórcio</value>
+          <text id="/out_migration_registration/processedBySync:label">
+            <value>processed by dbsync</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/1:label">
+            <value>Provincia de Maputo</value>
           </text>
           <text id="/out_migration_registration/reasonForOutMigration/SAUDE:label">
             <value>Saúde</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/11:label">
+            <value>Niassa</value>
           </text>
           <text id="/out_migration_registration/maritalChange/MAR:label">
             <value>Casamento</value>
@@ -262,35 +331,47 @@
           <text id="/out_migration_registration/timeAbsence/3:label">
             <value>Mais de 12 meses</value>
           </text>
-          <text id="/out_migration_registration/timeAbsence/2:label">
-            <value>6 á 12 meses</value>
+          <text id="/out_migration_registration/nameOfDestination/15:label">
+            <value>Europa</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/16:label">
+            <value>Asia</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/8:label">
+            <value>Zambezia</value>
           </text>
           <text id="/out_migration_registration/reasonForOutMigration/CUSTO_DE_ALUGUER_DA_CASA:label">
             <value>Custo de Aluguer da casa</value>
           </text>
-          <text id="/out_migration_registration/province:label">
-            <value>Provincia</value>
-          </text>
-          <text id="/out_migration_registration/visitId:label">
-            <value>Id da Visita</value>
-          </text>
-          <text id="/out_migration_registration/reasonForOutMigrationOther:label">
-            <value>Introduza a razão da emigração</value>
-          </text>
-          <text id="/out_migration_registration/maritalChange/SEP:label">
-            <value>Separação</value>
-          </text>
-          <text id="/out_migration_registration/reasonForOutMigration/PERCA_DE_PARENTES:label">
-            <value>Perca de parentes/responsaveis</value>
-          </text>
-          <text id="/out_migration_registration/permId:label">
-            <value>Perm ID</value>
+          <text id="/out_migration_registration/reasonForOutMigration/EDUCACAO:label">
+            <value>Educação</value>
           </text>
           <text id="/out_migration_registration/timeAbsence/1:label">
             <value>3 á 6 meses</value>
           </text>
+          <text id="/out_migration_registration/reasonForOutMigrationOther:label">
+            <value>Introduza a razão da emigração</value>
+          </text>
+          <text id="/out_migration_registration/timeAbsence/2:label">
+            <value>6 á 12 meses</value>
+          </text>
+          <text id="/out_migration_registration/reasonForOutMigration/PERCA_DE_PARENTES:label">
+            <value>Perca de parentes/responsaveis</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/2:label">
+            <value>Cidade de Maputo</value>
+          </text>
+          <text id="/out_migration_registration/permId:label">
+            <value>Perm ID</value>
+          </text>
+          <text id="/out_migration_registration/visitId:label">
+            <value>Id da Visita</value>
+          </text>
         </translation>
         <translation lang="English">
+          <text id="/out_migration_registration/nameOfDestination/5:label">
+            <value>Sofala</value>
+          </text>
           <text id="/out_migration_registration/maritalChange/WID:label">
             <value>Widowed</value>
           </text>
@@ -306,20 +387,26 @@
           <text id="/out_migration_registration/processedByMirth:label">
             <value>processed</value>
           </text>
-          <text id="/out_migration_registration/reasonForOutMigration/EDUCACAO:label">
-            <value>Educação</value>
+          <text id="/out_migration_registration/reasonForOutMigration/MAIORIDADE_INDEPENDENCIA:label">
+            <value>OTHER</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/14:label">
+            <value>Outro país Africano</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/88:label">
+            <value>Não sabe</value>
           </text>
           <text id="/out_migration_registration/reasonForOutMigration/NAO_SABE:label">
             <value>Não sabe</value>
           </text>
-          <text id="/out_migration_registration/reasonForOutMigration/MAIORIDADE_INDEPENDENCIA:label">
-            <value>OTHER</value>
+          <text id="/out_migration_registration/nameOfDestination/13:label">
+            <value>Swazilandia</value>
           </text>
-          <text id="/out_migration_registration/isMozambique/OTHER:label">
-            <value>Outro país</value>
+          <text id="/out_migration_registration/nameOfDestination/17:label">
+            <value>Americas</value>
           </text>
-          <text id="/out_migration_registration/locality:label">
-            <value>Localidade</value>
+          <text id="/out_migration_registration/nameOfDestination/6:label">
+            <value>Manica</value>
           </text>
           <text id="/out_migration_registration/reasonForOutMigration/EMPREGO:label">
             <value>FISHING</value>
@@ -327,29 +414,32 @@
           <text id="/out_migration_registration/reasonForOutMigration:label">
             <value>Reason for Out Migration</value>
           </text>
+          <text id="/out_migration_registration/maritalChange/SEP:label">
+            <value>Separation</value>
+          </text>
           <text id="/out_migration_registration/timeAbsence/4:label">
             <value>Mudança definitiva</value>
           </text>
-          <text id="/out_migration_registration/shortlongterm/2:label">
-            <value>Long term</value>
+          <text id="/out_migration_registration/nameOfDestination/7:label">
+            <value>Tete</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/10:label">
+            <value>Cabo Delgado</value>
           </text>
           <text id="/out_migration_registration/reasonForOutMigration/SITUACAO_ECONOMICA:label">
             <value>Situação Economica</value>
           </text>
-          <text id="/out_migration_registration/district:label">
-            <value>Distrito</value>
+          <text id="/out_migration_registration/name:label">
+            <value>Name</value>
           </text>
-          <text id="/out_migration_registration/maritalChange/REC:label">
-            <value>Reconciliation</value>
+          <text id="/out_migration_registration/maritalChange/DIV:label">
+            <value>Divorce</value>
           </text>
-          <text id="/out_migration_registration/reasonForOutMigration/OUTRO:label">
-            <value>Outro</value>
+          <text id="/out_migration_registration/nameOfDestination/4:label">
+            <value>Inhambane</value>
           </text>
-          <text id="/out_migration_registration/isMozambique/MOZ:label">
-            <value>Moçambique</value>
-          </text>
-          <text id="/out_migration_registration/adminPost:label">
-            <value>Posto Administrativo</value>
+          <text id="/out_migration_registration/shortlongterm/2:label">
+            <value>Long term</value>
           </text>
           <text id="/out_migration_registration/individualId:label">
             <value>Individual Id</value>
@@ -366,8 +456,14 @@
           <text id="/out_migration_registration/reasonForOutMigration/ACOMPANHANTES_DOS_PROGENITORES:label">
             <value>Acompanhantes dos progenitores/responsaveis</value>
           </text>
-          <text id="/out_migration_registration/countryName:label">
-            <value>Nome do Pais</value>
+          <text id="/out_migration_registration/nameOfDestination/3:label">
+            <value>Gaza</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/12:label">
+            <value>Africa de Sul</value>
+          </text>
+          <text id="/out_migration_registration/reasonForOutMigration/OUTRO:label">
+            <value>Outro</value>
           </text>
           <text id="/out_migration_registration/fieldWorkerId:label">
             <value>Field Worker Id</value>
@@ -378,11 +474,17 @@
           <text id="/out_migration_registration/reasonForOutMigration/SEPARACAO:label">
             <value>MOVED TO NEW HOUSE</value>
           </text>
+          <text id="/out_migration_registration/nameOfDestination/18:label">
+            <value>Outro</value>
+          </text>
+          <text id="/out_migration_registration/maritalChange/REC:label">
+            <value>Reconciliation</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/9:label">
+            <value>Nampula</value>
+          </text>
           <text id="/out_migration_registration/shortlongterm/3:label">
             <value>Unknown</value>
-          </text>
-          <text id="/out_migration_registration/isMozambique:label">
-            <value>Pais de destino</value>
           </text>
           <text id="/out_migration_registration/nameOfDestination:label">
             <value>Name of Destination</value>
@@ -393,11 +495,17 @@
           <text id="/out_migration_registration/reasonForOutMigration/DIVORCIO:label">
             <value>MARITAL CHANGE</value>
           </text>
-          <text id="/out_migration_registration/maritalChange/DIV:label">
-            <value>Divorce</value>
+          <text id="/out_migration_registration/processedBySync:label">
+            <value>processed</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/1:label">
+            <value>Provincia de Maputo</value>
           </text>
           <text id="/out_migration_registration/reasonForOutMigration/SAUDE:label">
             <value>EDUCATION/SCHOOL</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/11:label">
+            <value>Niassa</value>
           </text>
           <text id="/out_migration_registration/maritalChange/MAR:label">
             <value>Marriage</value>
@@ -405,32 +513,41 @@
           <text id="/out_migration_registration/timeAbsence/3:label">
             <value>Mais de 12 meses</value>
           </text>
-          <text id="/out_migration_registration/timeAbsence/2:label">
-            <value>6 á 12 meses</value>
+          <text id="/out_migration_registration/nameOfDestination/15:label">
+            <value>Europa</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/16:label">
+            <value>Asia</value>
+          </text>
+          <text id="/out_migration_registration/nameOfDestination/8:label">
+            <value>Zambezia</value>
           </text>
           <text id="/out_migration_registration/reasonForOutMigration/CUSTO_DE_ALUGUER_DA_CASA:label">
             <value>Custo de Aluguer da casa</value>
           </text>
-          <text id="/out_migration_registration/province:label">
-            <value>Provincia</value>
+          <text id="/out_migration_registration/reasonForOutMigration/EDUCACAO:label">
+            <value>Educação</value>
           </text>
-          <text id="/out_migration_registration/visitId:label">
-            <value>Visit Id</value>
+          <text id="/out_migration_registration/timeAbsence/1:label">
+            <value>3 á 6 meses</value>
           </text>
           <text id="/out_migration_registration/reasonForOutMigrationOther:label">
             <value>Reason for Out Migration(Other)</value>
           </text>
-          <text id="/out_migration_registration/maritalChange/SEP:label">
-            <value>Separation</value>
+          <text id="/out_migration_registration/timeAbsence/2:label">
+            <value>6 á 12 meses</value>
           </text>
           <text id="/out_migration_registration/reasonForOutMigration/PERCA_DE_PARENTES:label">
             <value>Perca de parentes/responsaveis</value>
           </text>
+          <text id="/out_migration_registration/nameOfDestination/2:label">
+            <value>Cidade de Maputo</value>
+          </text>
           <text id="/out_migration_registration/permId:label">
             <value>Perm ID</value>
           </text>
-          <text id="/out_migration_registration/timeAbsence/1:label">
-            <value>3 á 6 meses</value>
+          <text id="/out_migration_registration/visitId:label">
+            <value>Visit Id</value>
           </text>
         </translation>
       </itext>
@@ -443,20 +560,16 @@
           <fieldWorkerId/>
           <individualId/>
           <permId/>
+          <name/>
           <dateOfMigration/>
           <nameOfDestination/>
-          <isMozambique/>
-          <countryName/>
-          <province/>
-          <district/>
-          <adminPost/>
-          <locality/>
           <timeAbsence/>
           <reasonForOutMigration/>
           <maritalChange/>
           <reasonForOutMigrationOther/>
           <shortlongterm/>
           <processedByMirth/>
+          <processedBySync/>
           <meta>
             <instanceID/>
             <instanceName/>
@@ -470,20 +583,16 @@
       <bind nodeset="/out_migration_registration/fieldWorkerId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/out_migration_registration/individualId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/out_migration_registration/permId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/out_migration_registration/name" readonly="true()" type="string"/>
       <bind constraint="(.&lt;=today() and . &gt;date(date('2012-06-01')))" jr:constraintMsg="Date of migration can not be in the future or before the start of the study" nodeset="/out_migration_registration/dateOfMigration" required="true()" type="date"/>
-      <bind nodeset="/out_migration_registration/nameOfDestination" required="true()" type="string"/>
-      <bind nodeset="/out_migration_registration/isMozambique" required="true()" type="select1"/>
-      <bind nodeset="/out_migration_registration/countryName" relevant=" /out_migration_registration/isMozambique  = 'OTHER'" required="true()" type="string"/>
-      <bind nodeset="/out_migration_registration/province" relevant=" /out_migration_registration/isMozambique  = 'MOZ'" required="true()" type="string"/>
-      <bind nodeset="/out_migration_registration/district" relevant=" /out_migration_registration/isMozambique  = 'MOZ'" required="true()" type="string"/>
-      <bind nodeset="/out_migration_registration/adminPost" relevant=" /out_migration_registration/isMozambique  = 'MOZ'" required="true()" type="string"/>
-      <bind nodeset="/out_migration_registration/locality" relevant=" /out_migration_registration/isMozambique  = 'MOZ'" required="true()" type="string"/>
+      <bind nodeset="/out_migration_registration/nameOfDestination" required="true()" type="select1"/>
       <bind nodeset="/out_migration_registration/timeAbsence" required="true()" type="select1"/>
       <bind nodeset="/out_migration_registration/reasonForOutMigration" required="true()" type="select1"/>
       <bind nodeset="/out_migration_registration/maritalChange" relevant="../reasonForOutMigration = 'MARITAL_CHANGE'" required="true()" type="select1"/>
       <bind nodeset="/out_migration_registration/reasonForOutMigrationOther" relevant="../reasonForOutMigration = 'OTHER'" required="true()" type="string"/>
       <bind nodeset="/out_migration_registration/shortlongterm" required="true()" type="select1"/>
       <bind nodeset="/out_migration_registration/processedByMirth" readonly="true()" type="int"/>
+      <bind nodeset="/out_migration_registration/processedBySync" readonly="true()" type="int"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/out_migration_registration/meta/instanceID" readonly="true()" type="string"/>
       <bind calculate="concat(&quot;EmExterna_&quot;, /out_migration_registration/permId )" nodeset="/out_migration_registration/meta/instanceName" type="string"/>
     </model>
@@ -501,38 +610,91 @@
     <input ref="/out_migration_registration/permId">
       <label ref="jr:itext('/out_migration_registration/permId:label')"/>
     </input>
+    <input ref="/out_migration_registration/name">
+      <label ref="jr:itext('/out_migration_registration/name:label')"/>
+    </input>
     <input ref="/out_migration_registration/dateOfMigration">
       <label ref="jr:itext('/out_migration_registration/dateOfMigration:label')"/>
     </input>
-    <input ref="/out_migration_registration/nameOfDestination">
+    <select1 ref="/out_migration_registration/nameOfDestination">
       <label ref="jr:itext('/out_migration_registration/nameOfDestination:label')"/>
-    </input>
-    <select1 ref="/out_migration_registration/isMozambique">
-      <label ref="jr:itext('/out_migration_registration/isMozambique:label')"/>
       <item>
-        <label ref="jr:itext('/out_migration_registration/isMozambique/MOZ:label')"/>
-        <value>MOZ</value>
+        <label ref="jr:itext('/out_migration_registration/nameOfDestination/1:label')"/>
+        <value>1</value>
       </item>
       <item>
-        <label ref="jr:itext('/out_migration_registration/isMozambique/OTHER:label')"/>
-        <value>OTHER</value>
+        <label ref="jr:itext('/out_migration_registration/nameOfDestination/2:label')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/out_migration_registration/nameOfDestination/3:label')"/>
+        <value>3</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/out_migration_registration/nameOfDestination/4:label')"/>
+        <value>4</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/out_migration_registration/nameOfDestination/5:label')"/>
+        <value>5</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/out_migration_registration/nameOfDestination/6:label')"/>
+        <value>6</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/out_migration_registration/nameOfDestination/7:label')"/>
+        <value>7</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/out_migration_registration/nameOfDestination/8:label')"/>
+        <value>8</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/out_migration_registration/nameOfDestination/9:label')"/>
+        <value>9</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/out_migration_registration/nameOfDestination/10:label')"/>
+        <value>10</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/out_migration_registration/nameOfDestination/11:label')"/>
+        <value>11</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/out_migration_registration/nameOfDestination/12:label')"/>
+        <value>12</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/out_migration_registration/nameOfDestination/13:label')"/>
+        <value>13</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/out_migration_registration/nameOfDestination/14:label')"/>
+        <value>14</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/out_migration_registration/nameOfDestination/15:label')"/>
+        <value>15</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/out_migration_registration/nameOfDestination/16:label')"/>
+        <value>16</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/out_migration_registration/nameOfDestination/17:label')"/>
+        <value>17</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/out_migration_registration/nameOfDestination/18:label')"/>
+        <value>18</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/out_migration_registration/nameOfDestination/88:label')"/>
+        <value>88</value>
       </item>
     </select1>
-    <input ref="/out_migration_registration/countryName">
-      <label ref="jr:itext('/out_migration_registration/countryName:label')"/>
-    </input>
-    <input ref="/out_migration_registration/province">
-      <label ref="jr:itext('/out_migration_registration/province:label')"/>
-    </input>
-    <input ref="/out_migration_registration/district">
-      <label ref="jr:itext('/out_migration_registration/district:label')"/>
-    </input>
-    <input ref="/out_migration_registration/adminPost">
-      <label ref="jr:itext('/out_migration_registration/adminPost:label')"/>
-    </input>
-    <input ref="/out_migration_registration/locality">
-      <label ref="jr:itext('/out_migration_registration/locality:label')"/>
-    </input>
     <select1 ref="/out_migration_registration/timeAbsence">
       <label ref="jr:itext('/out_migration_registration/timeAbsence:label')"/>
       <item>
@@ -658,6 +820,9 @@
     </select1>
     <input ref="/out_migration_registration/processedByMirth">
       <label ref="jr:itext('/out_migration_registration/processedByMirth:label')"/>
+    </input>
+    <input ref="/out_migration_registration/processedBySync">
+      <label ref="jr:itext('/out_migration_registration/processedBySync:label')"/>
     </input>
   </h:body>
 </h:html>
