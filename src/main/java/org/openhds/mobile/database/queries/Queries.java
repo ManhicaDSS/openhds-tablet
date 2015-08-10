@@ -82,6 +82,16 @@ public class Queries {
 				OpenHDS.Locations.COLUMN_LOCATION_EXTID, temp);
 	}
 
+	public static boolean hasLocationByName(ContentResolver resolver, String temp) {
+		return queryForSingleRow(resolver, OpenHDS.Locations.CONTENT_ID_URI_BASE,
+				OpenHDS.Locations.COLUMN_LOCATION_NAME, temp);
+	}
+	
+	public static boolean hasIndividualByPermId(ContentResolver resolver, String permId) {
+		return queryForSingleRow(resolver, OpenHDS.Individuals.CONTENT_ID_URI_BASE,
+				OpenHDS.Individuals.COLUMN_INDIVIDUAL_LASTNAME, permId);
+	}
+	
 	public static Cursor getLocationByExtId(ContentResolver resolver, String extId) {
 		return getCursor(resolver, OpenHDS.Locations.CONTENT_ID_URI_BASE,
 				OpenHDS.Locations.COLUMN_LOCATION_EXTID, extId);

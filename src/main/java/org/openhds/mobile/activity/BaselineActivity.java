@@ -1,5 +1,8 @@
 package org.openhds.mobile.activity;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -29,6 +32,7 @@ import org.openhds.mobile.model.FieldWorker;
 import org.openhds.mobile.model.FilledForm;
 import org.openhds.mobile.model.Form;
 import org.openhds.mobile.model.FormFiller;
+import org.openhds.mobile.model.FormXmlReader;
 import org.openhds.mobile.model.Individual;
 import org.openhds.mobile.model.Location;
 import org.openhds.mobile.model.LocationHierarchy;
@@ -161,7 +165,7 @@ EventFragment.Listener, SelectionFragment.Listener, ValueFragment.OnlyOneEntryLi
 
 	}    
 	
-
+	String unfinishedFormDialogMsg = "";
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -433,6 +437,30 @@ EventFragment.Listener, SelectionFragment.Listener, ValueFragment.OnlyOneEntryLi
             if (cursor.moveToNext()) {
                 String filepath = cursor.getString(cursor
                         .getColumnIndex(InstanceProviderAPI.InstanceColumns.INSTANCE_FILE_PATH));
+                
+                FormXmlReader xmlReader = new FormXmlReader();
+            	
+            	//check if is BaselineUpdate            	
+				try {
+					Location location = xmlReader.readLocation(new FileInputStream(new File(filepath)), jrFormId);
+
+					if (location == null) {
+						return false;
+					}
+
+					// check if perm id exists
+					if (Queries.hasLocationByName(resolver, location.getName())) {
+						//Toast.makeText(BaselineActivity.this, "Perm ID da casa já existe,  não será possivel adiciona-lo ao sistema", 5000);
+						unfinishedFormDialogMsg = "Perm ID da casa já existe,  não será possivel adiciona-lo ao sistema";
+						return false;
+					}
+
+				} catch (FileNotFoundException e) {
+					Log.e(BaselineUpdate.class.getName(),"Could not read In Migration XML file");
+				}
+
+            	xmlReader = null;
+                
                 LocationUpdate update = new LocationUpdate();
                 update.updateDatabase(resolver, filepath, jrFormId);
                 cursor.close();
@@ -611,6 +639,35 @@ EventFragment.Listener, SelectionFragment.Listener, ValueFragment.OnlyOneEntryLi
                 String filepath = cursor.getString(cursor
                         .getColumnIndex(InstanceProviderAPI.InstanceColumns.INSTANCE_FILE_PATH));
                 if(updatable != null){
+                	FormXmlReader xmlReader = new FormXmlReader();
+                	
+                	//check if is BaselineUpdate
+                	//Log.d("testXX", "instanceof " + (updatable instanceof BaselineUpdate));
+                	if (updatable instanceof BaselineUpdate){
+                		try {
+                			Individual individual = xmlReader.readBaseline(new FileInputStream(new File(filepath)), jrFormId);
+                			
+                			//Log.d("testXX", "individual " + (individual));
+                			if (individual == null) {
+                            	return false;
+                        	}
+                			
+                			//check if perm id exists
+                			if (Queries.hasIndividualByPermId(resolver, individual.getLastName())){
+                				//Toast.makeText(BaselineActivity.this, "Perm ID do individuo já existe,  não será possivel adiciona-lo ao sistema", 5000);
+                				unfinishedFormDialogMsg = "Perm ID do individuo já existe,  não será possivel adiciona-lo ao sistema";
+                				//Log.d("testXX", "cant create baseline");
+                				return false;
+                			}
+                					
+                        	
+                		} catch (FileNotFoundException e) {
+                            Log.e(BaselineUpdate.class.getName(), "Could not read In Migration XML file");
+                        }
+                	}
+                	
+                	xmlReader = null;
+                	
                 	updatable.updateDatabase(getContentResolver(), filepath, jrFormId);
                 	updatable = null;
                 }
@@ -812,7 +869,13 @@ EventFragment.Listener, SelectionFragment.Listener, ValueFragment.OnlyOneEntryLi
         if (xformUnfinishedDialog == null) {
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
             alertDialogBuilder.setTitle(getString(R.string.warning_lbl));
-            alertDialogBuilder.setMessage(getString(R.string.update_unfinish_msg1));
+            
+            if (unfinishedFormDialogMsg.isEmpty()){
+            	alertDialogBuilder.setMessage(getString(R.string.update_unfinish_msg1));
+            }else {
+            	alertDialogBuilder.setMessage(unfinishedFormDialogMsg + "\n\n" + getString(R.string.update_unfinish_msg1));
+            }
+            
             alertDialogBuilder.setCancelable(true);
             alertDialogBuilder.setPositiveButton(getString(R.string.update_unfinish_pos_button), new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
@@ -831,6 +894,8 @@ EventFragment.Listener, SelectionFragment.Listener, ValueFragment.OnlyOneEntryLi
             });
             xformUnfinishedDialog = alertDialogBuilder.create();
         }
+        
+        unfinishedFormDialogMsg = "";
 
         xformUnfinishedDialog.show();
     }
