@@ -112,7 +112,7 @@ public class ValueFragment extends ListFragment implements LoaderCallbacks<Curso
     public void onActivityCreated(Bundle savedInstanceState) {
     	super.onActivityCreated(savedInstanceState);
     	
-        adapter = new SimpleCursorAdapter(getActivity(), R.layout.list_item, null, HIERARCHY_COLUMNS,
+        adapter = new org.openhds.mobile.dss.adapter.CustomCursorAdapter(getActivity(), R.layout.list_item, null, HIERARCHY_COLUMNS,
                 VIEW_BINDINGS, 0);
         
         setListAdapter(adapter);
@@ -293,7 +293,7 @@ public class ValueFragment extends ListFragment implements LoaderCallbacks<Curso
 	        case INDIVIDUAL_LOADER:
 	            adapter.changeCursorAndColumns(null, INDIVIDUAL_COLUMNS, VIEW_BINDINGSI);
 	            return new CursorLoader(getActivity(), OpenHDS.Individuals.CONTENT_ID_URI_BASE, null,
-	                    OpenHDS.Individuals.COLUMN_INDIVIDUAL_RESIDENCE + " = ? AND " + OpenHDS.Individuals.COLUMN_RESIDENCE_END_TYPE +"='NA'",
+	                    OpenHDS.Individuals.COLUMN_INDIVIDUAL_RESIDENCE + " = ?", ///*Show everyone*/ AND " + OpenHDS.Individuals.COLUMN_RESIDENCE_END_TYPE +"='NA'",
 	                    new String[] { arg1.getString("locationExtId") }, null);
 	        case INDIVIDUAL_FILTER_LOADER:
 	        {

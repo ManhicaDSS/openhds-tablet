@@ -283,6 +283,18 @@ public class EventFragment extends Fragment implements OnClickListener {
         
         individualDetailsBtn.setEnabled(true);
         houseDetailsBtn.setEnabled(false);
+        
+        if (indiv != null){
+            String endType = indiv.getEndType();
+                	
+            if (endType.equals("DTH") || endType.equals("EXT")){
+            	householdBtn.setEnabled(false);    	
+            	membershipBtn.setEnabled(false);
+               	relationshipBtn.setEnabled(false);
+               	outMigrationBtn.setEnabled(false);
+             	deathBtn.setEnabled(false);
+            }
+        }
     }
 
     private boolean individualMeetsMinimumAge(Individual indiv) {
@@ -333,9 +345,9 @@ public class EventFragment extends Fragment implements OnClickListener {
     private void registerLocationListener(StateMachine machine) {
         machine.registerListener("Select Location", new StateListener() {
             public void onEnterState() {
-            	if (isBaseline){ //If is not in baseline doesnt create location
+            	//if (isBaseline){ //If is not in baseline doesnt create location
             		createLocationBtn.setEnabled(true);
-            	}
+            	//}
             }
 
             public void onExitState() {
