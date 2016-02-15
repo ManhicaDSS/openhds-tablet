@@ -61,6 +61,7 @@ public class FieldWorkerLoginFragment extends Fragment implements
 		//params.leftMargin = 107;
 		RelativeLayout child = (RelativeLayout)v.findViewById(R.id.generic_login_fragment); 
 		child.addView(baseLineCheckbox, params);
+		baseLineCheckbox.setVisibility(View.INVISIBLE);
 		
 		return v;
 	}

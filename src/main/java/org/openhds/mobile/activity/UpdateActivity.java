@@ -584,7 +584,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
             		vf.loadFilteredLocationById(locationExtId);
             		vf.selectItemNoInList(0);
             		CREATING_NEW_LOCATION = 1;
-            		onCreateVisit();
+            		//onCreateVisit();
             	}
             } else {
                 createUnfinishedFormDialog();
