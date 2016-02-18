@@ -273,7 +273,11 @@ public class OdkGeneratedFormLoadTask extends AsyncTask<Void, Void, Boolean> {
                     } else if (name.equals("spouseName")) {
                         sbuilder.append(filledForm.getSpouseName() == null ? "<spouseName />" + "\r\n"
                                 : "<spouseName>" + filledForm.getSpouseName() + "</spouseName>" + "\r\n");                         
-                    } else if (name.equals(FilledParams.deviceId)) {
+                    } else if (name.equals("new_hoh_name")) {
+                        sbuilder.append(filledForm.getIndividualFirstName() == null ? "<new_hoh_name />" + "\r\n"
+                                : "<new_hoh_name>" + filledForm.getIndividualFirstName() + "</new_hoh_name>" + "\r\n");                         
+                    }
+                    else if (name.equals(FilledParams.deviceId)) {
                      mTelephonyManager = (TelephonyManager) mContext.getSystemService(Context.TELEPHONY_SERVICE);
                      
                      String deviceId = mTelephonyManager.getDeviceId();

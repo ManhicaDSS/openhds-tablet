@@ -70,6 +70,6 @@ public class FilledParams {
 				"locationName", "permId", "houseno", "houseNumber",
 				"headPermId", "headDob", "headName", "fullname", "headGender", "groupName", 
 				"motherPermId", "fatherPermId", "motherName", "fatherName", "name", "originHouseNo", "nboutcomes",
-				"hasSubsHead", "subsHeadName", "subsHeadPermId", "spousePermId", "spouseName");
+				"hasSubsHead", "subsHeadName", "subsHeadPermId", "spousePermId", "spouseName", "new_hoh_name");
 	}
 }
