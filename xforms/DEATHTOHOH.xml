@@ -6,13 +6,13 @@
       <itext>
         <translation lang="Swahili">
           <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/6:label">
-            <value>Sijui</value>
+            <value>Mjukuu</value>
           </text>
           <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead:label">
             <value>-</value>
           </text>
           <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/2:label">
-            <value>Kaka/Dada</value>
+            <value>Mke/Mme</value>
           </text>
           <text id="/DEATHTOHOH/placeOfDeath/HOSPITAL:label">
             <value>Hospitali</value>
@@ -23,8 +23,11 @@
           <text id="/DEATHTOHOH/householdId:label">
             <value>-</value>
           </text>
-          <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/1:label">
-            <value>Mtoto wa Kike/Kiume</value>
+          <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/5:label">
+            <value>Mzazi</value>
+          </text>
+          <text id="/DEATHTOHOH/new_hoh_id:label">
+            <value>-</value>
           </text>
           <text id="/DEATHTOHOH/causofdeathnotdiagnosed/Unknown:label">
             <value>Unknown</value>
@@ -34,6 +37,9 @@
           </text>
           <text id="/DEATHTOHOH/date:label">
             <value>-</value>
+          </text>
+          <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/9:label">
+            <value>Sijui</value>
           </text>
           <text id="/DEATHTOHOH/whom/4:label">
             <value>Traditional healer</value>
@@ -45,7 +51,7 @@
             <value>-</value>
           </text>
           <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/4:label">
-            <value>Hakuna Uhusiano</value>
+            <value>Kaka/Dada</value>
           </text>
           <text id="/DEATHTOHOH/causeofdeathdiagnosed/Other:label">
             <value>Other</value>
@@ -62,14 +68,11 @@
           <text id="/DEATHTOHOH/causofdeathnotdiagnosed/Crime:label">
             <value>Crime</value>
           </text>
-          <text id="/DEATHTOHOH/new_hoh_id:label">
-            <value>-</value>
+          <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/8:label">
+            <value>Uhusiano Mwingine</value>
           </text>
           <text id="/DEATHTOHOH/causeofdeathdiagnosed/Malaria:label">
             <value>Malaria</value>
-          </text>
-          <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/5:label">
-            <value>Uhusiano Mwingine</value>
           </text>
           <text id="/DEATHTOHOH/visitId:label">
             <value>-</value>
@@ -99,7 +102,7 @@
             <value>-</value>
           </text>
           <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/3:label">
-            <value>Mjukuu</value>
+            <value>Mtoto Kiume/Kike</value>
           </text>
           <text id="/DEATHTOHOH/causeOfDeath:label">
             <value>-</value>
@@ -114,6 +117,9 @@
             <value>Nurse</value>
           </text>
           <text id="/DEATHTOHOH/membershiptonewhoh/extId:label">
+            <value>-</value>
+          </text>
+          <text id="/DEATHTOHOH/causofdeathnotdiagnosed:label">
             <value>-</value>
           </text>
           <text id="/DEATHTOHOH/whom:label">
@@ -140,8 +146,8 @@
           <text id="/DEATHTOHOH/OtherplaceOfDeath:label">
             <value>-</value>
           </text>
-          <text id="/DEATHTOHOH/causofdeathnotdiagnosed:label">
-            <value>-</value>
+          <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/7:label">
+            <value>Hakuna Mahusiano</value>
           </text>
           <text id="/DEATHTOHOH/membershiptonewhoh:label">
             <value>-</value>
@@ -161,13 +167,13 @@
         </translation>
         <translation default="true()" lang="Portuguese">
           <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/6:label">
-            <value>Não sabe</value>
+            <value>Neto/a</value>
           </text>
           <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead:label">
             <value>Relação com o chefe de agregado</value>
           </text>
           <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/2:label">
-            <value>Irmã/o</value>
+            <value>Esposo/a</value>
           </text>
           <text id="/DEATHTOHOH/placeOfDeath/HOSPITAL:label">
             <value>Hospital</value>
@@ -190,6 +196,9 @@
           <text id="/DEATHTOHOH/date:label">
             <value>Data da morte</value>
           </text>
+          <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/9:label">
+            <value>Não sabe</value>
+          </text>
           <text id="/DEATHTOHOH/whom/4:label">
             <value>Médico Tradicional</value>
           </text>
@@ -200,13 +209,10 @@
             <value>As causas da morte foram diagnósticadas pelas autoridades de saúde?</value>
           </text>
           <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/4:label">
-            <value>Sem relação</value>
+            <value>Irmão/Irmã</value>
           </text>
           <text id="/DEATHTOHOH/causeofdeathdiagnosed/Other:label">
             <value>Outro</value>
-          </text>
-          <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/1:label">
-            <value>Filho/a</value>
           </text>
           <text id="/DEATHTOHOH/processedByMirth:label">
             <value>processedByMirth</value>
@@ -216,6 +222,9 @@
           </text>
           <text id="/DEATHTOHOH/diagnoseddeath/1:label">
             <value>Sim</value>
+          </text>
+          <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/8:label">
+            <value>Outro parente</value>
           </text>
           <text id="/DEATHTOHOH/membershiptonewhoh/socialGroupId:label">
             <value>Id do Agregado</value>
@@ -230,7 +239,7 @@
             <value>Causa da morte diagnosticadas?</value>
           </text>
           <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/5:label">
-            <value>Outra relação</value>
+            <value>Pai/Mãe</value>
           </text>
           <text id="/DEATHTOHOH/visitId:label">
             <value>Id da visita</value>
@@ -260,7 +269,7 @@
             <value>Malaria</value>
           </text>
           <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/3:label">
-            <value>Neto/a</value>
+            <value>Filho/Filha</value>
           </text>
           <text id="/DEATHTOHOH/causeOfDeath:label">
             <value>Causa da morte</value>
@@ -276,6 +285,9 @@
           </text>
           <text id="/DEATHTOHOH/membershiptonewhoh/extId:label">
             <value>ExtId do Membro</value>
+          </text>
+          <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/7:label">
+            <value>Sem relação</value>
           </text>
           <text id="/DEATHTOHOH/causeofdeathdiagnosed/Crime:label">
             <value>Crime</value>
@@ -316,13 +328,13 @@
         </translation>
         <translation lang="English">
           <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/6:label">
-            <value>Don't Know</value>
+            <value>Grandchild</value>
           </text>
           <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead:label">
             <value>Relationship to Group Head</value>
           </text>
           <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/2:label">
-            <value>Brother/Sister</value>
+            <value>Spouse</value>
           </text>
           <text id="/DEATHTOHOH/placeOfDeath/HOSPITAL:label">
             <value>Hospital</value>
@@ -345,6 +357,9 @@
           <text id="/DEATHTOHOH/date:label">
             <value>Date of Death</value>
           </text>
+          <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/9:label">
+            <value>Don't Know</value>
+          </text>
           <text id="/DEATHTOHOH/whom/4:label">
             <value>Traditional healer</value>
           </text>
@@ -355,13 +370,10 @@
             <value>Death Cause diagnosed by health authority?</value>
           </text>
           <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/4:label">
-            <value>Not Related</value>
+            <value>Brother/Sister</value>
           </text>
           <text id="/DEATHTOHOH/causeofdeathdiagnosed/Other:label">
             <value>Other</value>
-          </text>
-          <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/1:label">
-            <value>Son/Daughter</value>
           </text>
           <text id="/DEATHTOHOH/processedByMirth:label">
             <value>processedByMirth</value>
@@ -371,6 +383,9 @@
           </text>
           <text id="/DEATHTOHOH/diagnoseddeath/1:label">
             <value>Yes</value>
+          </text>
+          <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/8:label">
+            <value>Other Relative</value>
           </text>
           <text id="/DEATHTOHOH/membershiptonewhoh/socialGroupId:label">
             <value>Social Group Id</value>
@@ -385,7 +400,7 @@
             <value>Cause of death?</value>
           </text>
           <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/5:label">
-            <value>Other Relative</value>
+            <value>Parent</value>
           </text>
           <text id="/DEATHTOHOH/visitId:label">
             <value>Visit Id</value>
@@ -415,7 +430,7 @@
             <value>Malaria</value>
           </text>
           <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/3:label">
-            <value>Grandchild</value>
+            <value>Son/Daughter</value>
           </text>
           <text id="/DEATHTOHOH/causeOfDeath:label">
             <value>Cause of death</value>
@@ -431,6 +446,9 @@
           </text>
           <text id="/DEATHTOHOH/membershiptonewhoh/extId:label">
             <value>Member Id</value>
+          </text>
+          <text id="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/7:label">
+            <value>Not Related</value>
           </text>
           <text id="/DEATHTOHOH/causeofdeathdiagnosed/Crime:label">
             <value>Crime</value>
@@ -689,10 +707,6 @@
         <select1 ref="/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead">
           <label ref="jr:itext('/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead:label')"/>
           <item>
-            <label ref="jr:itext('/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/1:label')"/>
-            <value>1</value>
-          </item>
-          <item>
             <label ref="jr:itext('/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/2:label')"/>
             <value>2</value>
           </item>
@@ -711,6 +725,18 @@
           <item>
             <label ref="jr:itext('/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/6:label')"/>
             <value>6</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/7:label')"/>
+            <value>7</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/8:label')"/>
+            <value>8</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/DEATHTOHOH/membershiptonewhoh/relationshipToGroupHead/9:label')"/>
+            <value>9</value>
           </item>
         </select1>
       </repeat>
