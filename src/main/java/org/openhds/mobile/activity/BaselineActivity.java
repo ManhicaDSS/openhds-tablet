@@ -1972,5 +1972,11 @@ EventFragment.Listener, SelectionFragment.Listener, ValueFragment.OnlyOneEntryLi
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show(); 
     }
+
+	@Override
+	public void onChangeHouseholdHead() {
+		// TODO Auto-generated method stub
+		
+	}
     
 }

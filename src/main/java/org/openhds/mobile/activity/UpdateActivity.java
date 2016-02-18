@@ -64,6 +64,7 @@ import android.app.FragmentTransaction;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.app.ProgressDialog;
 import android.content.ContentResolver;
+import android.content.ContentValues;
 import android.content.CursorLoader;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -173,6 +174,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 	private int RETURNING_TO_DSS = 0;
 	private int createHouseDetails = 0;
 	private int createIndivDetails = 0;
+	private int changingHouseholdHead = 0;
 	
 	private static final List<String> stateSequence = new ArrayList<String>();
 //	private static final Map<String, Integer> stateLabels = new HashMap<String, Integer>();
@@ -665,6 +667,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
     		extInm= false;
     		updatable = null;
     		createIndivDetails = 0;
+    		changingHouseholdHead = 0;
         }
     }
 
@@ -851,6 +854,20 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
             	if (createHouseDetails == 1){
             		onClearIndividual();
             		createHouseDetails = 0;	
+            		return;
+            	}
+            	
+            	if (changingHouseholdHead == 1){
+            		//save new head of household
+            		Log.d("new head of household", filledForm.getHouseholdId()+" to "+filledForm.getIndividualA()+": "+filledForm.getIndividualFirstName());
+            		//changing head of household
+            	    ContentValues cv = new ContentValues();
+                    cv.put(OpenHDS.SocialGroups.COLUMN_SOCIALGROUP_GROUPHEAD, filledForm.getIndividualA());                    
+                    resolver.update(OpenHDS.SocialGroups.CONTENT_ID_URI_BASE, cv, OpenHDS.SocialGroups.COLUMN_SOCIALGROUP_EXTID+"=?", new String[]{ filledForm.getHouseholdId()} );
+            		sf.setHouseholdHead(filledForm.getIndividualFirstName());
+                    
+            		onClearIndividual();
+            		changingHouseholdHead = 0;	
             		return;
             	}
             	
@@ -2575,7 +2592,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 	        builder.setPositiveButton(R.string.continue_lbl, new DialogInterface.OnClickListener() {
 	            public void onClick(DialogInterface dialog, int id) {
 	            	filledForm.setSubsHeadName(subsHead.getFirstName());
-	            	filledForm.setSubsHeadPermId(subsHead.getLastName());
+	            	filledForm.setSubsHeadPermId(subsHead.getLastName());	            	
 	            	//load House Details
 	                new CreateHouseDetailsTask().execute();
 	            }
@@ -2583,5 +2600,209 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 	        householdDialog = builder.create();
 	        householdDialog.show();  
 	    }
+
+		@Override
+		public void onChangeHouseholdHead() {
+			showProgressFragment();
+			filledForm = new FilledForm("change_household_head");
+			selectNewHouseholdHeadDialog();
+	        //new CreateHouseDetailsTask().execute();
+		}
 		
+		private void selectNewHouseholdHeadDialog(){
+	    	List<String> uniquePermIds = new ArrayList<String>();     
+	        List<Individual> uniqueIndividuals = new ArrayList<Individual>();
+	        
+	        
+	        
+	        SocialGroup sg = null;
+        	Cursor cursorSg = Queries.getSocialGroupByName(getContentResolver(), locationVisit.getLocation().getName());
+        	
+        	if (cursorSg.moveToFirst()) {
+        		sg = Converter.convertToSocialGroup(cursorSg);        		 		
+        	}        	
+        	cursorSg.close();
+	        
+        	
+        	Cursor cursor = Queries.getIndividualsByResidency(getContentResolver(), locationVisit.getLocation().getExtId());
+        	
+        	List<Individual> individuals = Converter.toIndividualList(cursor);
+        	
+        	for (Individual individual : individuals){
+        		
+        		Log.d("indiv", individual+"");
+        		
+        		if (individual != null){
+                    Log.d("indiv", individual.getFirstName());        			
+        			//Dont add the current head of household
+        			if (individual.getExtId().equalsIgnoreCase(sg.getGroupHead())){
+        				continue;
+        			}
+        			
+        			if (!individual.getEndType().equals("DTH") && !individual.getEndType().equals("EXT") && individualMeetsMinimumAge(individual)){
+        				uniquePermIds.add(individual.getLastName());        				
+        				uniqueIndividuals.add(individual);
+        			}
+        			
+        		}
+        		
+        		cursor.moveToNext();
+        	}
+        	   	
+        	cursor.close();
+        	cursorSg.close();
+        	
+        	final List<Individual> list = uniqueIndividuals; 
+    		@SuppressWarnings({ "unchecked", "rawtypes" })
+			ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_2, android.R.id.text1, list) {
+  			  @Override
+  			  public View getView(int position, View convertView, android.view.ViewGroup parent) {
+  			    View view = super.getView(position, convertView, parent);
+  			    TextView text1 = (TextView) view.findViewById(android.R.id.text1);
+  			    TextView text2 = (TextView) view.findViewById(android.R.id.text2);
+
+  			    text1.setTextColor(Color.BLACK);
+  			    text1.setText(list.get(position).getFirstName());
+  			    text2.setTextColor(Color.DKGRAY);
+  			    text2.setText("(" + list.get(position).getLastName() + ")");
+  			    return view;
+  			  }
+  			};
+	        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+	        builder.setTitle(getString(R.string.change_household_head_select_lbl));
+	        builder.setAdapter(adapter, new DialogInterface.OnClickListener() {
+	
+	            public void onClick(DialogInterface dialog, int which) {
+	            	ListView lw = ((AlertDialog)dialog).getListView();    	            	
+	            	Object checkedItem = lw.getItemAtPosition(which);
+	            	
+	            	Individual newHead = null;
+	            	List<Individual> members = new ArrayList<Individual>();
+	            		            	
+	            	if(checkedItem instanceof Individual){
+	            		newHead = (Individual)checkedItem;
+	            	}
+	            	
+	            	ListAdapter listAdapter = lw.getAdapter();
+	            	for(int i = 0; i < listAdapter.getCount();i++){
+	            		Object obj = listAdapter.getItem(i);
+	            		if(obj instanceof Individual){
+	            			Individual member = (Individual)obj;
+	            			if(newHead != null && !newHead.getExtId().equalsIgnoreCase(member.getExtId())){
+	            				members.add(member);
+	            			}
+	            		}
+	            	}   	    
+	            		            	   	            	
+            		selectedNewHouseholdHead(newHead, members);
+	            }
+	        });
+	        builder.setNegativeButton(getString(R.string.cancel_lbl), new DialogInterface.OnClickListener() {
+	        	public void onClick(DialogInterface dialog, int which) {
+	        		changingHouseholdHead = 0;
+	        	}
+	        });
+	        AlertDialog dlg = builder.create();
+	        dlg.show();  
+	    }
+		
+		private void selectedNewHouseholdHead(final Individual newHead, final List<Individual> members){
+	        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+	        builder.setTitle(getString(R.string.change_household_head_selected_lbl));
+	        
+	        if(newHead != null){
+	        	builder.setMessage(newHead.getFirstName() + " <" + newHead.getLastName() +  "> ");
+	        }
+	        
+	        builder.setNegativeButton(getString(R.string.cancel_lbl), new DialogInterface.OnClickListener() {
+	        	public void onClick(DialogInterface dialog, int id) {
+	        		changingHouseholdHead = 0;
+	        	}
+	        });
+	        builder.setPositiveButton(R.string.continue_lbl, new DialogInterface.OnClickListener() {
+	            public void onClick(DialogInterface dialog, int id) {
+	            	//filledForm.setSubsHeadName(newHead.getFirstName());
+	            	//filledForm.setSubsHeadPermId(newHead.getLastName());
+	            	//we are imittating the death of hoh, in that case the new household head is individualA
+	            	filledForm.setIndividualA(newHead.getExtId());
+	            	filledForm.setIndividualFirstName(newHead.getFirstName());
+	            	filledForm.setHouseHoldMembers(members);
+	            	
+	            	//load House Details
+	                new CreateChangeHouseholdHeadTask().execute();
+	            }
+	        });
+	        householdDialog = builder.create();
+	        householdDialog.show();  
+	    }
+		
+		private class CreateChangeHouseholdHeadTask extends AsyncTask<Void, Void, Boolean> {
+			private String errorMessage = "";
+			
+	        @Override
+	        protected Boolean doInBackground(Void... params) {
+	                    	        	
+	        	ContentResolver resolver = UpdateActivity.this.getContentResolver();	              	
+	        		        	
+	        	SocialGroup sg = null;
+	        	Cursor cursor = Queries.getSocialGroupByName(resolver,locationVisit.getLocation().getName());
+	        	
+	        	if (cursor.moveToFirst()) {
+	        		sg = Converter.convertToSocialGroup(cursor);
+	        		locationVisit.getLocation().setHead(sg.getGroupHead());	        		
+	        	}
+	        	
+	        	if (sg == null){
+	        		errorMessage = "NO_SOCIAL_GROUP";
+	        		return false;
+	        	}	        	        
+	        	
+	        	cursor.close();
+	        	
+	        	filledForm.setHouseholdId(sg.getExtId());
+	        	filledForm.setHouseholdName(sg.getGroupName());
+	        	filledForm.setGroupHeadId(sg.getGroupHead());
+	        	 //addHousehold(sg, form);
+	        	filledForm.setFieldWorkerId(locationVisit.getFieldWorker().getExtId());
+	        	
+	        	filledForm.setVisitDate(locationVisit.getVisit().getDate());
+	            filledForm.setVisitExtId(locationVisit.getVisit().getExtId());
+	            filledForm.setLocationName(locationVisit.getLocation().getName());	            
+	            filledForm.setLocationId(locationVisit.getLocation().getExtId());
+	            
+	            filledForm.setRoundNumber(locationVisit.getRound().getRoundNumber());	            
+	            filledForm.setHierarchyId(locationVisit.getLatestLevelExtId());	                        
+	            
+	            return true;
+	        }
+	        
+	        @Override
+	        protected void onPostExecute(Boolean result) {
+	        	if (result){
+	        		hideProgressFragment();
+	        		changingHouseholdHead = 1;
+	        		loadForm(SELECTED_XFORM);
+	        	}else{
+	        		//There's no head of household
+	        		createCantChangeHouseholdHead();
+	        	}
+	        }
+	    }
+		
+		private void createCantChangeHouseholdHead() {	        
+	        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+	          alertDialogBuilder.setTitle("Mudança de chefe de agregado");
+	          alertDialogBuilder.setMessage("Não será possivel abrir mudar de chefe do agregado!");
+	          alertDialogBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+	            public void onClick(DialogInterface dialog, int which) {  
+	            	//selectIndividual();
+	            	//stateMachine.transitionTo("Select Individual");
+	            	restoreState();
+	            }
+	        });
+	        AlertDialog alertDialog = alertDialogBuilder.create();
+	        alertDialog.show(); 
+	    }
+	    
+	    
 }

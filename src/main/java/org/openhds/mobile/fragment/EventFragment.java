@@ -39,7 +39,7 @@ public class EventFragment extends Fragment implements OnClickListener {
     
     private Button findLocationGeoPointBtn, createLocationBtn, createVisitBtn, householdBtn, membershipBtn,
             relationshipBtn, inMigrationBtn, outMigrationBtn, pregRegBtn, birthRegBtn, deathBtn, finishVisitBtn,
-            clearIndividualBtn, individualDetailsBtn, houseDetailsBtn;
+            clearIndividualBtn, individualDetailsBtn, houseDetailsBtn, changeHouseholdHeadBtn;
 
     private Listener listener;
     private LocationVisit locationVisit;
@@ -80,6 +80,8 @@ public class EventFragment extends Fragment implements OnClickListener {
         void onHouseDetails();
         
         void onIndividualDetails();
+        
+        void onChangeHouseholdHead();
     }
 
     @Override
@@ -152,6 +154,9 @@ public class EventFragment extends Fragment implements OnClickListener {
         
         individualDetailsBtn = (Button) view.findViewById(R.id.individualDetailsBtn);
         individualDetailsBtn.setOnClickListener(this);
+        
+        changeHouseholdHeadBtn = (Button) view.findViewById(R.id.changeHouseholdHeadBtn);
+        changeHouseholdHeadBtn.setOnClickListener(this);
     }
     
     public void setBaseLine(){
@@ -223,6 +228,8 @@ public class EventFragment extends Fragment implements OnClickListener {
 			listener.onHouseDetails();
 		} else if (id == R.id.individualDetailsBtn){
 			listener.onIndividualDetails();
+		} else if (id == R.id.changeHouseholdHeadBtn){
+			listener.onChangeHouseholdHead();
 		}
     }
 
@@ -262,6 +269,7 @@ public class EventFragment extends Fragment implements OnClickListener {
         householdBtn.setEnabled(false);    	
         houseDetailsBtn.setEnabled(false);
         individualDetailsBtn.setEnabled(false);
+        changeHouseholdHeadBtn.setEnabled(false);
     }
     
     public void enableButtons(){
@@ -283,6 +291,7 @@ public class EventFragment extends Fragment implements OnClickListener {
         
         individualDetailsBtn.setEnabled(true);
         houseDetailsBtn.setEnabled(false);
+        changeHouseholdHeadBtn.setEnabled(false);
         
         if (indiv != null){
             String endType = indiv.getEndType();
@@ -320,12 +329,14 @@ public class EventFragment extends Fragment implements OnClickListener {
                 finishVisitBtn.setEnabled(true);
                 inMigrationBtn.setEnabled(true);
                 houseDetailsBtn.setEnabled(true);
+                changeHouseholdHeadBtn.setEnabled(true);
             }
 
             public void onExitState() {
                 finishVisitBtn.setEnabled(false);
                 inMigrationBtn.setEnabled(false);
                 houseDetailsBtn.setEnabled(false);
+                changeHouseholdHeadBtn.setEnabled(true);
             }
         });
     }

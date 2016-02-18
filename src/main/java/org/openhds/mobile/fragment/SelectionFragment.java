@@ -821,6 +821,10 @@ public class SelectionFragment extends Fragment implements OnClickListener {
         
         householdHeadText.setText(head);
     }
+    
+    public void setHouseholdHead(String head){
+    	householdHeadText.setText(head);
+    }
 
 	public void setAll() {
 		setLocation();
