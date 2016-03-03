@@ -354,5 +354,33 @@ public class FormXmlReader {
         }
         return null;
     }
+    
+
+    public PregnancyObservation readPregnancyObservation(FileInputStream fileInputStream, String jrFormId)  {
+        try {
+            Document doc = buildDocument(fileInputStream);
+            
+            PregnancyObservation pregObservation = new PregnancyObservation();
+            if(xpath.evaluate("/"+jrFormId+"/openhds/individualId/text()", doc).length()==0) {
+            	jrFormId ="data";
+            }
+            Individual mother = new Individual();
+            mother.setExtId(xpath.evaluate("/"+jrFormId+"/openhds/individualId/text()", doc));
+            pregObservation.setMother(mother);
+            
+          
+            
+            pregObservation.setRecordedDate(xpath.evaluate("/"+jrFormId+"/recordedDate/text()", doc));
+            
+
+            
+            return pregObservation;
+        } catch (ParserConfigurationException e) {
+        } catch (SAXException e) {
+        } catch (IOException e) {
+        } catch (XPathExpressionException e) {
+        }
+        return null;
+    }
 
 }
