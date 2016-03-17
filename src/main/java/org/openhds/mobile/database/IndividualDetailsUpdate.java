@@ -32,6 +32,7 @@ public class IndividualDetailsUpdate implements Updatable {
             cv.put(OpenHDS.Individuals.COLUMN_INDIVIDUAL_GENDER, individual.getGender());
             cv.put(OpenHDS.Individuals.COLUMN_INDIVIDUAL_LASTNAME, individual.getLastName());
             cv.put(OpenHDS.Individuals.COLUMN_INDIVIDUAL_MOTHER, individual.getMother());
+            cv.put(OpenHDS.Individuals.COLUMN_INDIVIDUAL_VISITED, "Yes");
             //cv.put(OpenHDS.Individuals.COLUMN_INDIVIDUAL_RESIDENCE, individual.getCurrentResidence());
             //cv.put(OpenHDS.Individuals.COLUMN_RESIDENCE_END_TYPE, "NA");
             

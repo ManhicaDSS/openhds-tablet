@@ -64,20 +64,26 @@ public class CustomCursorAdapter extends SimpleCursorAdapter {
 	        
 	        if (indexOfEndType != -1){ //Is displaying Individuals
 	        	String endType = cursor.getString(indexOfEndType);
-	        	        	
+	        	String visited = cursor.getString(cursor.getColumnIndex(OpenHDS.Individuals.COLUMN_INDIVIDUAL_VISITED));    	
 	        	
 	        	if (endType.equals("DTH")){
-	        		text1.setTextColor(Color.GREEN);
-	        		text2.setTextColor(Color.GREEN);
+	        		text1.setTextColor(Color.RED);
+	        		text2.setTextColor(Color.RED);
 	        		text3.setTextColor(Color.GREEN);
 	        		text2.setText(text2.getText()+" <DTH>");
-	        	}
-	        	
-	        	if (endType.equals("EXT")){
-	        		text1.setTextColor(Color.GREEN);
-	        		text2.setTextColor(Color.GREEN);
+	        	}else if (endType.equals("EXT")){
+	        		text1.setTextColor(Color.RED);
+	        		text2.setTextColor(Color.RED);
 	        		text3.setTextColor(Color.GREEN);
 	        		text2.setText(text2.getText()+" <EXT>");
+	        	}else if (visited!=null && visited.equals("Yes")){
+	        		text1.setTextColor(Color.parseColor("#FFFF99"));
+	        		text2.setTextColor(Color.parseColor("#FFFF99"));
+	        		text3.setTextColor(Color.parseColor("#FFFF99"));
+	        	}else {
+	        		text1.setTextColor(Color.LTGRAY);
+	        		text2.setTextColor(Color.LTGRAY);
+	        		text3.setTextColor(Color.LTGRAY);
 	        	}
 
 	        }

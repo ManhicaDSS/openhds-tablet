@@ -22,10 +22,12 @@ import org.openhds.mobile.database.DeathUpdate;
 import org.openhds.mobile.database.ExternalInMigrationUpdate;
 import org.openhds.mobile.database.HouseholdUpdate;
 import org.openhds.mobile.database.IndividualDetailsUpdate;
+import org.openhds.mobile.database.IndividualVisitedUpdate;
 import org.openhds.mobile.database.InternalInMigrationUpdate;
 import org.openhds.mobile.database.LocationUpdate;
 import org.openhds.mobile.database.MembershipUpdate;
 import org.openhds.mobile.database.OutMigrationUpdate;
+import org.openhds.mobile.database.PregnancyObservationUpdate;
 import org.openhds.mobile.database.PregnancyOutcomeUpdate;
 import org.openhds.mobile.database.RelationshipUpdate;
 import org.openhds.mobile.database.Updatable;
@@ -36,6 +38,7 @@ import org.openhds.mobile.fragment.EventFragment;
 import org.openhds.mobile.fragment.ProgressFragment;
 import org.openhds.mobile.fragment.SelectionFragment;
 import org.openhds.mobile.fragment.ValueFragment;
+import org.openhds.mobile.fragment.ValueFragment.Displayed;
 import org.openhds.mobile.listener.OdkFormLoadListener;
 import org.openhds.mobile.model.FieldWorker;
 import org.openhds.mobile.model.FilledForm;
@@ -47,7 +50,6 @@ import org.openhds.mobile.model.Location;
 import org.openhds.mobile.model.LocationHierarchy;
 import org.openhds.mobile.model.LocationHierarchyLevel;
 import org.openhds.mobile.model.LocationVisit;
-import org.openhds.mobile.model.PregnancyObservationUpdate;
 import org.openhds.mobile.model.PregnancyOutcome;
 import org.openhds.mobile.model.Round;
 import org.openhds.mobile.model.Settings;
@@ -485,18 +487,21 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 	    }
 	}    
 
-    private void handleFilterIndivVisit(int resultCode, Intent data) { 	
-    		if (resultCode != RESULT_OK) {
-                return;
-            }
+    private void handleFilterIndivVisit(int resultCode, Intent data) { 
+    	SocialGroup sg;
+    	if (resultCode != RESULT_OK) {
+            return;
+        }
 
-            Individual individual = (Individual) data.getExtras().getSerializable("individual");
-            if (individual!=null){
-            	filledForm.setIntervieweeId(individual.getExtId());
-            }else{
-            	filledForm.setIntervieweeId("UNK");
-            }
-            loadForm(SELECTED_XFORM);
+        Individual individual = (Individual) data.getExtras().getSerializable("individual");
+        
+        if (individual!=null){
+          	filledForm.setIntervieweeId(individual.getExtId());
+        }else{
+           	filledForm.setIntervieweeId("UNK");
+        }
+        
+        loadForm(SELECTED_XFORM);
 	}
 
 	private void handleFatherBirthResult(int resultCode, Intent data) {
@@ -1163,26 +1168,75 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
     }
 
     public void onFinishVisit() {
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setTitle(getString(R.string.visit_lbl));
-        alertDialogBuilder.setMessage(getString(R.string.update_finish_visit_msg));
-        alertDialogBuilder.setCancelable(true);
-        alertDialogBuilder.setPositiveButton(getString(R.string.yes_lbl), new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-            	if(menuItemForm != null) {
-                  	menuItemForm.setVisible(false);
-                 }    
-            	locationVisit = locationVisit.completeVisit();
-                sf.setLocationVisit(locationVisit);
-                ef.setLocationVisit(locationVisit);
-                stateMachine.transitionTo("Finish Visit");
-                stateMachine.transitionTo("Select Location");
-                vf.onLoaderReset(null);
-                }
-        });
-        alertDialogBuilder.setNegativeButton(getString(R.string.cancel_lbl), null);
-        AlertDialog alertDialog = alertDialogBuilder.create();
-        alertDialog.show();
+        validateVisit();
+    }
+    
+    private void validateVisit(){
+    	Cursor curs = null;
+    	    	
+    	curs = Queries.getActiveIndividualsByResidency(getContentResolver(), locationVisit.getLocation().getExtId());    		
+    	    	    	
+    	final List<Individual> individualList = Converter.toIndividualList(curs);
+    	int individualCount = individualList.size();
+    	
+    	int visitedIndividualsCount = 0;
+    	    	
+    	for(int i = 0 ; i < individualCount; i++){
+    		Individual individual = individualList.get(i);
+    		if(individual.getVisited().equalsIgnoreCase("Yes")){
+    			visitedIndividualsCount++;
+    		}
+    	}
+    	    	
+    	final boolean notAllIndividualsVisited = visitedIndividualsCount < individualCount;
+    	String message;
+    	if(notAllIndividualsVisited){
+    		message = getString(R.string.update_finish_not_all_visited_msg);
+    	}
+    	else{
+    		message = getString(R.string.update_finish_visit_msg);
+    	}
+    	   		
+		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+		alertDialogBuilder.setTitle(getString(R.string.visit_lbl));
+		alertDialogBuilder.setMessage(message);
+		alertDialogBuilder.setCancelable(true);
+		alertDialogBuilder.setPositiveButton(getString(R.string.yes_lbl),
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int which) {
+						if (notAllIndividualsVisited) {
+							/*//If not all individuals have visit - just left as it is
+							 for (Individual ind : individualList) {
+								if (!ind.getVisited().equalsIgnoreCase("Yes"))
+									setIndividualVisitedFlag(ind);
+							}
+							*/
+						}
+						finishVisit();
+					}
+				});
+		alertDialogBuilder.setNegativeButton(getString(R.string.cancel_lbl),
+				null);
+		AlertDialog alertDialog = alertDialogBuilder.create();
+		alertDialog.show();
+    }
+    
+    private void finishVisit(){
+    	if(menuItemForm != null) {
+          	menuItemForm.setVisible(false);
+    	}    
+    	locationVisit = locationVisit.completeVisit();
+        sf.setLocationVisit(locationVisit);
+        ef.setLocationVisit(locationVisit);
+        stateMachine.transitionTo("Finish Visit");
+        stateMachine.transitionTo("Select Location");
+        vf.onLoaderReset(null);
+        //vf.setListCurrentlyDisplayed(Displayed.LOCATION);
+    }
+    
+    private void setIndividualVisitedFlag(Individual individiual){
+    	IndividualVisitedUpdate update = new IndividualVisitedUpdate();
+    	update.updateDatabase(getContentResolver(), individiual);
     }
 
     public void onHousehold() {

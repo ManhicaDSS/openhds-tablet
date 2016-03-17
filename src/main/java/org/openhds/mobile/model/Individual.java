@@ -20,7 +20,7 @@ public class Individual implements Serializable {
     private String father;
     private String currentResidence;
     private String endType;
-    private String visited;
+    private String visited = "";
 
     private List<SocialGroup> socialGroups;
 
@@ -177,7 +177,7 @@ public class Individual implements Serializable {
 	}
 
 	public void setVisited(String visited) {
-		this.visited = visited;
+		this.visited = visited==null ? "" : visited;
 	}
 	
 	

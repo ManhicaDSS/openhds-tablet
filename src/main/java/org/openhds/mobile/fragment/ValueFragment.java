@@ -75,7 +75,7 @@ public class ValueFragment extends ListFragment implements LoaderCallbacks<Curso
     
     private OnlyOneEntryListener onlyOneEntryListener;
 
-    private enum Displayed {
+    public enum Displayed {
         NONE, HIERARCHY_1, HIERARCHY_2, HIERARCHY_3, HIERARCHY_4, HIERARCHY_5, HIERARCHY_6, HIERARCHY_7, HIERARCHY_8, ROUND, LOCATION, INDIVIDUAL, SOCIALGROUP;
     }
 
@@ -294,7 +294,7 @@ public class ValueFragment extends ListFragment implements LoaderCallbacks<Curso
 	            adapter.changeCursorAndColumns(null, INDIVIDUAL_COLUMNS, VIEW_BINDINGSI);
 	            return new CursorLoader(getActivity(), OpenHDS.Individuals.CONTENT_ID_URI_BASE, null,
 	                    OpenHDS.Individuals.COLUMN_INDIVIDUAL_RESIDENCE + " = ?", ///*Show everyone*/ AND " + OpenHDS.Individuals.COLUMN_RESIDENCE_END_TYPE +"='NA'",
-	                    new String[] { arg1.getString("locationExtId") }, null);
+	                    new String[] { arg1.getString("locationExtId") }, OpenHDS.Individuals.COLUMN_RESIDENCE_END_TYPE + " DESC");
 	        case INDIVIDUAL_FILTER_LOADER:
 	        {
 	            adapter.changeCursorAndColumns(null, INDIVIDUAL_COLUMNS, VIEW_BINDINGSI);

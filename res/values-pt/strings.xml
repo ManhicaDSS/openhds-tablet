@@ -236,6 +236,7 @@
 	<string name="update_unfinish_neg_button">Alterar formulário</string>
 	<string name="update_xform_not_found_msg">O XForm não pôde ser encontrado dentro do ODK Collect. Por favor, certifique-se que ele existe e que foi escrito corretamente.</string>
 	<string name="visit_lbl">Visita</string>
+	<string name="update_finish_not_all_visited_msg">Nem todos os individuos registaram um evento. Ainda deseja terminar a visita? Ao terminar a visita os individuos não visitados permaneceram considerados (não visitados).</string>
 	<string name="update_finish_visit_msg">Já capturou todos eventos e deseja terminar a visita?</string>
 	<string name="cancel_lbl">Cancelar</string>
 	<string name="socialgroup_lbl">Agregado</string>
