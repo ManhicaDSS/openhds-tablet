@@ -34,6 +34,8 @@ import org.openhds.mobile.database.Updatable;
 import org.openhds.mobile.database.VisitUpdate;
 import org.openhds.mobile.database.queries.Converter;
 import org.openhds.mobile.database.queries.Queries;
+import org.openhds.mobile.dss.database.Database.ImunizationTable;
+import org.openhds.mobile.dss.model.Imunization;
 import org.openhds.mobile.fragment.EventFragment;
 import org.openhds.mobile.fragment.ProgressFragment;
 import org.openhds.mobile.fragment.SelectionFragment;
@@ -176,6 +178,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 	private int RETURNING_TO_DSS = 0;
 	private int createHouseDetails = 0;
 	private int createIndivDetails = 0;
+	private int createImunizationDetails = 0; //0-NA, 1-opened using preregistered, 2-opened a new imunization
 	private int changingHouseholdHead = 0;
 	
 	private static final List<String> stateSequence = new ArrayList<String>();
@@ -673,6 +676,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
     		updatable = null;
     		createIndivDetails = 0;
     		changingHouseholdHead = 0;
+    		createImunizationDetails = 0;
         }
     }
 
@@ -876,6 +880,38 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
             		return;
             	}
             	
+            	if (createImunizationDetails > 0){
+            		//save contentUri to form
+            		Imunization im = Imunization.emptyImunization();
+            		org.openhds.mobile.dss.database.Database db = new org.openhds.mobile.dss.database.Database(UpdateActivity.this);
+    	    		db.open();
+    	    		
+    	    		Cursor cursor = db.query(Imunization.class, ImunizationTable.COLUMN_INDIVIDUAL_ID + " = ?", new String[] { filledForm.getIndividualExtId() }, null, null, null);
+    	    		
+    	    		if (cursor != null && cursor.moveToFirst()){ //If already exists a imunization	    			
+    	    			im = org.openhds.mobile.dss.database.Converter.cursorToImunization(cursor);  
+    	    			//Log.d("update imunization", "");
+    	    			ContentValues cv = new ContentValues();    	    			
+    	    			cv.put(org.openhds.mobile.dss.database.Database.ImunizationTable.COLUMN_CONTENT_URI, this.contentUri.toString());
+    	    			    	    					
+    	    			db.update(Imunization.class, cv, org.openhds.mobile.dss.database.Database.ImunizationTable.COLUMN_INDIVIDUAL_ID+" = ?", new String[] { im.getIndividualId() });
+    	    			
+    	    		}else{ //new imunization
+    	    			//Log.d("saving new imunization", "");
+    	    			im.setHouseNumber(filledForm.getHouseName());
+    	    			im.setIndividualId(filledForm.getIndividualExtId());
+    	    			im.setPermId(filledForm.getIndividualLastName());
+    	    			im.setName(filledForm.getIndividualFirstName());
+    	    			im.setGender(filledForm.getIndividualGender());
+    	    			im.setDob(filledForm.getIndividualDob());
+    	    			im.setLastContentUri(this.contentUri.toString());
+    	    			db.insert(im);
+    	    		}   
+    	    		
+    	    		if (cursor != null) cursor.close();
+    	    		db.close();    	    		
+            	}
+            	
             	if (createIndivDetails == 1){
             		createIndivDetails = 0;            		
             	}
@@ -907,6 +943,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
     		extInm = false;
     		createHouseDetails = 0;
     		createIndivDetails = 0;
+    		createImunizationDetails = 0;
         }
     }
     
@@ -2857,6 +2894,150 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 	        AlertDialog alertDialog = alertDialogBuilder.create();
 	        alertDialog.show(); 
 	    }
+
+		@Override
+		public void onImunization() {
+			showProgressFragment();
+			new CreateImunizationTask().execute();
+		}
 	    
-	    
+		private class CreateImunizationTask extends AsyncTask<Void, Void, Boolean> {
+			private String errorMessage = "";			
+			private String lastContentUri = "";
+			
+	        @Override
+	        protected Boolean doInBackground(Void... params) {
+	                    	        	
+	        	ContentResolver resolver = UpdateActivity.this.getContentResolver();
+	        	
+	        	filledForm = formFiller.fillExtraForm(locationVisit, "imunization", null);	
+	        	
+	        	Imunization im = null;	        	
+	        	
+	        	org.openhds.mobile.dss.database.Database db = new org.openhds.mobile.dss.database.Database(UpdateActivity.this);
+	    		db.open();
+	    		
+	    		Cursor cursor = db.query(Imunization.class, ImunizationTable.COLUMN_INDIVIDUAL_ID + " = ?", new String[] { filledForm.getIndividualExtId() }, null, null, null);
+	    		
+	    		if (cursor != null && cursor.moveToFirst()){ //If already exists a pregnancy_id	    			
+	    			im = org.openhds.mobile.dss.database.Converter.cursorToImunization(cursor);	  
+	    			createImunizationDetails = 1; //creating imunization using pre-saved data
+	    		}else{     			
+	    			im = Imunization.emptyImunization();
+	    			createImunizationDetails = 2; //creating imunization using new form	    			    			
+	    		}    			    		
+	    		if (cursor != null) cursor.close();
+	    		db.close();
+	        	
+	        	
+	        	        	
+	        	formFiller.addParents(filledForm, resolver, locationVisit.getSelectedIndividual().getExtId());
+	        	
+	        	Log.d("last_content_uri", ""+im.getLastContentUri()+", imu_details="+createImunizationDetails);
+	        	//Try to load last opened form
+	        	if (im.getLastContentUri() != null && !im.getLastContentUri().isEmpty()){
+	        		lastContentUri = im.getLastContentUri();
+	        		Log.d("is going to load", "last created form");
+	        		return true;
+	        	}
+	        	
+	        	
+	        	
+	        	filledForm.addExtraParam("hasAllVaccines", im.getVacsOnDatabase().isEmpty() ? "2" : im.getVacsOnDatabase());
+	        	filledForm.addExtraParam("vaccinesOnDatabase", im.getVacsOnDatabase().isEmpty() ? "2" : im.getVacsOnDatabase());
+	        	
+	        	filledForm.addExtraParam("hasRegisteredBcg", im.getVacBcg().isEmpty() ? "2":"1" );
+	        	filledForm.addExtraParam("receivedBcg", im.getVacBcg().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedBcgDate", im.getVacBcg());
+	        	
+	        	filledForm.addExtraParam("hasRegisteredPd0", im.getVacPolioDose0().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedPd0", im.getVacPolioDose0().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedPd0Date", im.getVacPolioDose0());
+	        	
+	        	
+	        	filledForm.addExtraParam("hasRegisteredPd1", im.getVacPolioDose1().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedPd1", im.getVacPolioDose1().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedPd1Date", im.getVacPolioDose1());
+	        	
+	        	
+	        	filledForm.addExtraParam("hasRegisteredPd2", im.getVacPolioDose2().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedPd2", im.getVacPolioDose2().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedPd2Date", im.getVacPolioDose2());
+	        	
+	        	
+	        	filledForm.addExtraParam("hasRegisteredPd3", im.getVacPolioDose3().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedPd3", im.getVacPolioDose3().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedPd3Date", im.getVacPolioDose3());
+	        	
+	        	
+	        	filledForm.addExtraParam("hasRegisteredDpt1", im.getVacDptDose1().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedDpt1", im.getVacDptDose1().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedDpt1Date", im.getVacDptDose1());
+	        	
+	        	filledForm.addExtraParam("hasRegisteredDpt2", im.getVacDptDose2().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedDpt2", im.getVacDptDose2().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedDpt2Date", im.getVacDptDose2());
+	        	
+	        	filledForm.addExtraParam("hasRegisteredDpt3", im.getVacDptDose3().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedDpt3", im.getVacDptDose3().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedDpt3Date", im.getVacDptDose3());
+	        	
+	        	filledForm.addExtraParam("hasRegisteredPcv1", im.getVacPcv10Dose1().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedPcv1", im.getVacPcv10Dose1().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedPcv1Date", im.getVacPcv10Dose1());
+	        	
+	        	
+	        	filledForm.addExtraParam("hasRegisteredPcv2", im.getVacPcv10Dose2().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedPcv2", im.getVacPcv10Dose2().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedPcv2Date", im.getVacPcv10Dose2());
+	        	
+	        	filledForm.addExtraParam("hasRegisteredPcv3", im.getVacPcv10Dose3().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedPcv3", im.getVacPcv10Dose3().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedPcv3Date", im.getVacPcv10Dose3());
+	        	
+	        	filledForm.addExtraParam("hasRegisteredSmp", im.getVacSarampo().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedSmp", im.getVacSarampo().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedSmpDate", im.getVacSarampo());
+	        	
+	        	filledForm.addExtraParam("hasRegisteredRv1", im.getVacRotavirusDose1().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedRv1", im.getVacRotavirusDose1().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedRv1Date", im.getVacRotavirusDose1());
+	        	
+	        	filledForm.addExtraParam("hasRegisteredRv2", im.getVacRotavirusDose2().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedRv2", im.getVacRotavirusDose2().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedRv2Date", im.getVacRotavirusDose2());
+	        	
+	        	filledForm.addExtraParam("hasRegisteredRv3", im.getVacRotavirusDose3().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedRv3", im.getVacRotavirusDose3().isEmpty() ? "2":"1");
+	        	filledForm.addExtraParam("receivedRv3Date", im.getVacRotavirusDose3());
+	        	
+	        	filledForm.addExtraParam("vitaminaATotal", im.getVacVitaminaATotal());
+	        	filledForm.addExtraParam("mebendazolTotal", im.getVacMebendazolTotal());
+	        	filledForm.addExtraParam("othersTotal", im.getVacOthersTotal());
+	        	
+	            return true;
+	        }
+	        
+	        @Override
+	        protected void onPostExecute(Boolean result) {
+	        	if (result){
+	        		hideProgressFragment();
+	        		Log.d("lastContentURi", ""+lastContentUri);
+	        		if (lastContentUri == null || lastContentUri.isEmpty()){
+	        			loadForm(SELECTED_XFORM);
+	        		}else {
+	        			loadLastCreatedForm();
+	        		}
+	        	}	        	
+	        }
+	        
+	        private void loadLastCreatedForm() {
+	    		String strUri = lastContentUri;
+	    		contentUri = Uri.parse(strUri);
+	    		
+	    		Log.d("load_last_odk", ""+lastContentUri);
+	    		
+	    		startActivityForResult(new Intent(Intent.ACTION_EDIT, contentUri), 2);
+	    	}
+	    }
 }

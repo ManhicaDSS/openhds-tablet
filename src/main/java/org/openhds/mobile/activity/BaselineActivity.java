@@ -1978,5 +1978,11 @@ EventFragment.Listener, SelectionFragment.Listener, ValueFragment.OnlyOneEntryLi
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void onImunization() {
+		// TODO Auto-generated method stub
+		
+	}
     
 }

@@ -34,12 +34,13 @@ import android.widget.LinearLayout;
 public class EventFragment extends Fragment implements OnClickListener {
     private static int FEMALE_MINIMUM_PREGNANCY_AGE;
     private static int DEFAULT_FEMALE_MINIMUM_PREGNANCY_AGE = 12;
+    private static int DEFAULT_MAXIMUM_IMUNIZATION_AGE = 5;
 
     boolean isBaseline = false;
     
     private Button findLocationGeoPointBtn, createLocationBtn, createVisitBtn, householdBtn, membershipBtn,
             relationshipBtn, inMigrationBtn, outMigrationBtn, pregRegBtn, birthRegBtn, deathBtn, finishVisitBtn,
-            clearIndividualBtn, individualDetailsBtn, houseDetailsBtn, changeHouseholdHeadBtn;
+            clearIndividualBtn, individualDetailsBtn, houseDetailsBtn, changeHouseholdHeadBtn, imunizationBtn;
 
     private Listener listener;
     private LocationVisit locationVisit;
@@ -82,6 +83,8 @@ public class EventFragment extends Fragment implements OnClickListener {
         void onIndividualDetails();
         
         void onChangeHouseholdHead();
+        
+        void onImunization();
     }
 
     @Override
@@ -157,6 +160,9 @@ public class EventFragment extends Fragment implements OnClickListener {
         
         changeHouseholdHeadBtn = (Button) view.findViewById(R.id.changeHouseholdHeadBtn);
         changeHouseholdHeadBtn.setOnClickListener(this);
+        
+        imunizationBtn = (Button) view.findViewById(R.id.imunizationBtn);
+        imunizationBtn.setOnClickListener(this);
     }
     
     public void setBaseLine(){
@@ -230,6 +236,8 @@ public class EventFragment extends Fragment implements OnClickListener {
 			listener.onIndividualDetails();
 		} else if (id == R.id.changeHouseholdHeadBtn){
 			listener.onChangeHouseholdHead();
+		} else if (id == R.id.imunizationBtn){
+			listener.onImunization();
 		}
     }
 
@@ -270,6 +278,7 @@ public class EventFragment extends Fragment implements OnClickListener {
         houseDetailsBtn.setEnabled(false);
         individualDetailsBtn.setEnabled(false);
         changeHouseholdHeadBtn.setEnabled(false);
+        imunizationBtn.setEnabled(false);
     }
     
     public void enableButtons(){
@@ -303,6 +312,10 @@ public class EventFragment extends Fragment implements OnClickListener {
                	outMigrationBtn.setEnabled(false);
              	deathBtn.setEnabled(false);
             }
+            
+            if (individualMeetsMinimumAgeForImunization(indiv)){
+            	imunizationBtn.setEnabled(true);
+            }
         }
     }
 
@@ -323,6 +336,23 @@ public class EventFragment extends Fragment implements OnClickListener {
         return false;
     }
 
+    private boolean individualMeetsMinimumAgeForImunization(Individual indiv) {
+        try {
+            DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+            Date dob = formatter.parse(indiv.getDob());
+            Calendar cal = Calendar.getInstance();
+            cal.setTime(dob);
+            if ((new GregorianCalendar().get(Calendar.YEAR) - cal.get(Calendar.YEAR)) <= DEFAULT_MAXIMUM_IMUNIZATION_AGE) {
+                return true;
+            }
+        } catch (Exception e) {
+            // no dob or malformed
+            return true;
+        }
+
+        return false;
+    }
+    
     private void registerIndividualListeners(StateMachine machine) {
         machine.registerListener("Select Individual", new StateListener() {
             public void onEnterState() {

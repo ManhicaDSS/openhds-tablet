@@ -297,6 +297,7 @@
     <string name="sync_task_saved"> Saved </string>
     <string name="sync_task_items"> items</string>
     <string name="sync_task_extraforms"> Extra forms.</string>
+    <string name="sync_task_imunizations"> Vaccines.</string>    
     <string name="synced_fws_lbl">Synced field workers.</string>
     <string name="failed_sync_fws_lbl">Failed to sync field workers.</string>
     <string name="hello_lbl">Hello</string>
@@ -309,4 +310,10 @@
 	<string name="cant_create_relationship_lbl">Cannot create relationship, individual A is the same as individual B</string>
 	
 	<string name="changeHouseholdHeadBtn_lbl">Change Household Head</string>
+	
+	<string name="imunizationBtn_lbl">Vaccines</string>
+	
+	<string name="sync_imunization_name">Sync Vaccines</string>
+	<string name="sync_imunization_description">Synchronization of Imunization!</string>
+	
 </resources>
