@@ -1,7 +1,9 @@
 package org.openhds.mobile.model;
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * A filled form represents an ODK form that has been prefilled with values from
@@ -63,6 +65,9 @@ public class FilledForm {
     
     private String spousePermId;
     private String spouseName;
+    
+    /*Extra Variables Variables*/
+    private Map<String, String> extraParams = new LinkedHashMap<String, String>();
     
     public FilledForm(String formName) {
         this.formName = formName;
@@ -420,6 +425,12 @@ public class FilledForm {
 		this.spouseName = spouseName;
 	}
 	
+	public void addExtraParam(String key, String value){
+		this.extraParams.put(key, value);
+	}
 	
+	public Map<String,String> getExtraParams(){
+		return this.extraParams;
+	}
 		
 }

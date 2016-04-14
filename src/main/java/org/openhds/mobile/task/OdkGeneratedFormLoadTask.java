@@ -9,6 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 import java.util.TimeZone;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -118,11 +119,21 @@ public class OdkGeneratedFormLoadTask extends AsyncTask<Void, Void, Boolean> {
         NodeList childElements = node.getChildNodes();
 
         List<String> params = FilledParams.getParamsArray();
+        Set<String> extraParams = filledForm.getExtraParams().keySet();
+        
         for (int i = 0; i < childElements.getLength(); i++) {
             Node n = childElements.item(i);
             if (n.getNodeType() == Node.ELEMENT_NODE) {
                 String name = n.getNodeName();
 
+
+                
+                //add extra params
+                if (extraParams.contains(name)){
+                	String value = filledForm.getExtraParams().get(name);
+                	
+                	sbuilder.append(value==null ? "<"+name+" />" + "\r\n" : "<"+name+">" + value + "</"+name+">" + "\r\n");
+                }
                 if (params.contains(name)) {
                     if (name.equals(FilledParams.visitId)) {
                         sbuilder.append(filledForm.getVisitExtId() == null ? "<visitId />" + "\r\n" : "<visitId>"
