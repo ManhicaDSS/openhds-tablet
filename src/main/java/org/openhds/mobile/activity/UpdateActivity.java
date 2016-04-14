@@ -835,6 +835,11 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 	                	
 	                	Log.d("end-chf", ""+new Date());
 	                }
+	                
+	                if (createImunizationDetails > 0){
+	                	//declare visited
+	    	    		setIndividualVisitedFlag(filledForm.getIndividualExtId());
+	                }
                 }finally{
                 	try{
                 		cursor.close();
@@ -909,7 +914,9 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
     	    		}   
     	    		
     	    		if (cursor != null) cursor.close();
-    	    		db.close();    	    		
+    	    		db.close();    	    
+    	    		
+    	    		
             	}
             	
             	if (createIndivDetails == 1){
@@ -1276,6 +1283,11 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
     	update.updateDatabase(getContentResolver(), individiual);
     }
 
+    private void setIndividualVisitedFlag(String individiualId){
+    	IndividualVisitedUpdate update = new IndividualVisitedUpdate();
+    	update.updateDatabase(getContentResolver(), individiualId);
+    }
+    
     public void onHousehold() {
         showProgressFragment();
         new CreateSocialGroupTask().execute();
@@ -3037,7 +3049,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 	    		
 	    		Log.d("load_last_odk", ""+lastContentUri);
 	    		
-	    		startActivityForResult(new Intent(Intent.ACTION_EDIT, contentUri), 2);
+	    		startActivityForResult(new Intent(Intent.ACTION_EDIT, contentUri), SELECTED_XFORM);
 	    	}
 	    }
 }

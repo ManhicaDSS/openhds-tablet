@@ -33,5 +33,27 @@ public class IndividualVisitedUpdate {
             Log.e(IndividualVisitedUpdate.class.getName(), "Exception in IndividualVisitedUpdate");
         }
     }
+	
+	public void updateDatabase(ContentResolver resolver, String individualId) {
+        try {
+            if (individualId == null || individualId.isEmpty()) {
+                return;
+            }
+
+            ContentValues cv = new ContentValues();
+            cv.put(OpenHDS.Individuals.COLUMN_INDIVIDUAL_VISITED, "Yes");
+            Cursor cursor = resolver.query(OpenHDS.Individuals.CONTENT_ID_URI_BASE,
+                    new String[] { OpenHDS.Individuals._ID }, OpenHDS.Individuals.COLUMN_INDIVIDUAL_EXTID + " = ?",
+                    new String[] { individualId }, null);
+            if (cursor.moveToNext()) {
+                Uri uri = ContentUris.withAppendedId(OpenHDS.Individuals.CONTENT_ID_URI_BASE, cursor.getLong(0));
+                resolver.update(uri, cv, null, null);
+            }
+            
+            cursor.close();
+        } catch (Exception e) {
+            Log.e(IndividualVisitedUpdate.class.getName(), "Exception in IndividualVisitedUpdate");
+        }
+    }
 
 }
