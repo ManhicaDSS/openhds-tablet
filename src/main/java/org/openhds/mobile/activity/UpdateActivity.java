@@ -951,6 +951,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
     		createHouseDetails = 0;
     		createIndivDetails = 0;
     		createImunizationDetails = 0;
+    		RETURNING_TO_DSS = 0;
         }
     }
     

@@ -311,6 +311,7 @@ public class EventFragment extends Fragment implements OnClickListener {
                	relationshipBtn.setEnabled(false);
                	outMigrationBtn.setEnabled(false);
              	deathBtn.setEnabled(false);
+             	individualDetailsBtn.setEnabled(false);
             }
             
             if (individualMeetsMinimumAgeForImunization(indiv)){

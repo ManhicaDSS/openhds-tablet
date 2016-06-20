@@ -21,6 +21,7 @@ import android.app.Fragment;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -778,7 +779,7 @@ public class SelectionFragment extends Fragment implements OnClickListener {
         	cursor.close();
         }
         
-        if (selectedIndividual.getMother()!=null && selectedIndividual.getMother().equals("UNK")){
+        if (selectedIndividual.getMother()!=null && !selectedIndividual.getMother().equals("UNK")){
         	Cursor cursor = Queries.getIndividualByExtId(getActivity().getContentResolver(), selectedIndividual.getMother());
         	if (cursor.moveToFirst()){
         		mother = cursor.getString(cursor.getColumnIndex(OpenHDS.Individuals.COLUMN_INDIVIDUAL_FIRSTNAME));
