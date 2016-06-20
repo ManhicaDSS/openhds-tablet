@@ -298,6 +298,12 @@ public class OpenHDSProvider extends ContentProvider {
                     + " CREATE UNIQUE INDEX IDX_INDIVIDUAL_EXTID ON " +  OpenHDS.Individuals.TABLE_NAME
                     + "(" +  OpenHDS.Individuals.COLUMN_INDIVIDUAL_EXTID + ");"
                     
+                    + " CREATE INDEX IDX_INDIVIDUAL_FATHER ON " +  OpenHDS.Individuals.TABLE_NAME
+                    + "(" +  OpenHDS.Individuals.COLUMN_INDIVIDUAL_FATHER + ");"
+                    
+                    + " CREATE INDEX IDX_INDIVIDUAL_MOTHER ON " +  OpenHDS.Individuals.TABLE_NAME
+                    + "(" +  OpenHDS.Individuals.COLUMN_INDIVIDUAL_MOTHER + ");"
+                    
                     + " CREATE INDEX IDX_RESIDENCY ON " +  OpenHDS.Individuals.TABLE_NAME
                     + "(" +  OpenHDS.Individuals.COLUMN_INDIVIDUAL_RESIDENCE + ")");
 
@@ -356,7 +362,9 @@ public class OpenHDSProvider extends ContentProvider {
                     + OpenHDS.SocialGroups.COLUMN_SOCIALGROUP_GROUPHEAD + " TEXT NOT NULL,"
                     + OpenHDS.SocialGroups.COLUMN_SOCIALGROUP_GROUPNAME + " TEXT NOT NULL);"
                     + " CREATE UNIQUE INDEX SOCIALGROUP_EXTID ON " +  OpenHDS.SocialGroups.TABLE_NAME
-                    + "(" +  OpenHDS.SocialGroups.COLUMN_SOCIALGROUP_EXTID + ")");
+                    + "(" +  OpenHDS.SocialGroups.COLUMN_SOCIALGROUP_EXTID + ")"
+            		+ " CREATE UNIQUE INDEX SOCIALGROUP_HEAD ON " +  OpenHDS.SocialGroups.TABLE_NAME
+            		+ "(" +  OpenHDS.SocialGroups.COLUMN_SOCIALGROUP_GROUPHEAD + ")");
                     
 
             db.execSQL("CREATE TABLE " + OpenHDS.IndividualGroups.TABLE_NAME + " (" + OpenHDS.IndividualGroups._ID
