@@ -326,7 +326,7 @@ public class ValueFragment extends ListFragment implements LoaderCallbacks<Curso
 	            String img = (String) arg1.get("img");
 	            arg1.remove("img");
 	            
-	            String filter1 = img.equals("ENT") ? buildFilter(arg1) : buildFilterOMG(arg1);
+	            String filter1 = img.equals("ENT") ? buildFilterActive(arg1) : buildFilterOMG(arg1);
 	            String[] args1 = buildArguments(arg1);
 	
 	            return new CursorLoader(getActivity(), OpenHDS.Individuals.CONTENT_ID_URI_BASE, null, filter1, args1,
@@ -483,6 +483,42 @@ public class ValueFragment extends ListFragment implements LoaderCallbacks<Curso
             builder.append(" AND ");
             
             builder.append(OpenHDS.Individuals.COLUMN_RESIDENCE_END_TYPE).append("!='DTH'");
+        
+        return builder.toString();
+    }
+    
+    /**
+     * Constructs the filtering SQL clause for getting a list of active individuals on a household
+     * 
+     * @param arg1
+     *            bundle which contains possible filtering options
+     * @return
+     */
+    private String buildFilterActive(Bundle arg1) {
+        StringBuilder builder = new StringBuilder();
+
+        if (!TextUtils.isEmpty(arg1.getString("location"))) {
+            builder.append(OpenHDS.Individuals.COLUMN_INDIVIDUAL_RESIDENCE + " LIKE ?");
+        }
+        if (!TextUtils.isEmpty(arg1.getString("firstName"))) {
+            if (builder.length() > 0)
+                builder.append(" AND ");
+            builder.append(OpenHDS.Individuals.COLUMN_INDIVIDUAL_FIRSTNAME + " LIKE ?");
+        }
+        if (!TextUtils.isEmpty(arg1.getString("lastName"))) {
+            if (builder.length() > 0)
+                builder.append(" AND ");
+            builder.append(OpenHDS.Individuals.COLUMN_INDIVIDUAL_LASTNAME + " LIKE ?");
+        }
+        if (!TextUtils.isEmpty(arg1.getString("gender"))) {
+            if (builder.length() > 0)
+                builder.append(" AND ");
+            builder.append(OpenHDS.Individuals.COLUMN_INDIVIDUAL_GENDER + " = ?");
+        }
+        if (builder.length() > 0)
+            builder.append(" AND ");
+            
+            builder.append(OpenHDS.Individuals.COLUMN_RESIDENCE_END_TYPE).append("='NA'");
         
         return builder.toString();
     }
