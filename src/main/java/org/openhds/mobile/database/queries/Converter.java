@@ -86,6 +86,7 @@ public class Converter {
         location.setLatitude(cursor.getString(cursor.getColumnIndex(OpenHDS.Locations.COLUMN_LOCATION_LATITUDE)));
         location.setLongitude(cursor.getString(cursor.getColumnIndex(OpenHDS.Locations.COLUMN_LOCATION_LONGITUDE)));
         location.setName(cursor.getString(cursor.getColumnIndex(OpenHDS.Locations.COLUMN_LOCATION_NAME)));
+        location.setVisited(cursor.getString(cursor.getColumnIndex(OpenHDS.Locations.COLUMN_LOCATION_VISITED)));
     }
 
     public static LocationHierarchy toHierarhcy(Cursor cursor, boolean close) {

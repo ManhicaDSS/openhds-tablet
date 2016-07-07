@@ -154,6 +154,7 @@ public class OpenHDSProvider extends ContentProvider {
         locationsProjectionMap.put(OpenHDS.Locations.COLUMN_LOCATION_LONGITUDE,
                 OpenHDS.Locations.COLUMN_LOCATION_LONGITUDE);
         locationsProjectionMap.put(OpenHDS.Locations.COLUMN_LOCATION_NAME, OpenHDS.Locations.COLUMN_LOCATION_NAME);
+        locationsProjectionMap.put(OpenHDS.Locations.COLUMN_LOCATION_VISITED, OpenHDS.Locations.COLUMN_LOCATION_VISITED);
 
         hierarchyitemsProjectionMap = new HashMap<String, String>();
         hierarchyitemsProjectionMap.put(OpenHDS.HierarchyItems._ID, OpenHDS.HierarchyItems._ID);
@@ -311,8 +312,9 @@ public class OpenHDSProvider extends ContentProvider {
                     + " INTEGER PRIMARY KEY," + OpenHDS.Locations.COLUMN_LOCATION_EXTID + " TEXT NOT NULL,"
                     + OpenHDS.Locations.COLUMN_LOCATION_HIERARCHY + " TEXT NOT NULL,"
                     + OpenHDS.Locations.COLUMN_LOCATION_LATITUDE + " TEXT,"
-                    + OpenHDS.Locations.COLUMN_LOCATION_LONGITUDE + " TEXT," + OpenHDS.Locations.COLUMN_LOCATION_NAME
-                    + " TEXT NOT NULL);" 
+                    + OpenHDS.Locations.COLUMN_LOCATION_LONGITUDE + " TEXT," 
+                    + OpenHDS.Locations.COLUMN_LOCATION_NAME + " TEXT NOT NULL,"
+                    + OpenHDS.Locations.COLUMN_LOCATION_VISITED + " TEXT);"
                     + " CREATE UNIQUE INDEX IDX_LOCATION_EXTID ON " +  OpenHDS.Locations.TABLE_NAME
                     + "(" +  OpenHDS.Locations.COLUMN_LOCATION_EXTID + ")");
    

@@ -10,6 +10,7 @@ public class Location implements Serializable {
     private String latitude;
     private String longitude;
     private String hierarchy;
+    private String visited;
 
     // specific field for cross river
     private String head;
@@ -62,9 +63,17 @@ public class Location implements Serializable {
 
     public void setHead(String head) {
         this.head = head;
-    }
+    }    
 
-    public static Location emptyLocation() {
+    public String getVisited() {
+		return visited;
+	}
+
+	public void setVisited(String visited) {
+		this.visited = visited;
+	}
+
+	public static Location emptyLocation() {
         if (location == null) {
             location = new Location();
             location.extId = "";
@@ -73,6 +82,7 @@ public class Location implements Serializable {
             location.latitude = "";
             location.longitude = "";
             location.name = "";
+            location.visited = "";
         }
 
         return location;

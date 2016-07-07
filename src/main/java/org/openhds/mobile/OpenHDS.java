@@ -71,6 +71,7 @@ public class OpenHDS {
         public static final String COLUMN_LOCATION_LATITUDE = "latitude";
         public static final String COLUMN_LOCATION_LONGITUDE = "longitude";
         public static final String COLUMN_LOCATION_HIERARCHY = "hierarchy";
+        public static final String COLUMN_LOCATION_VISITED = "visited";
     }
 
     public static final class HierarchyItems implements BaseColumns {
