@@ -137,15 +137,18 @@
 	<string name="findLocationGeoPointBtn_lbl">Encontrar Casa através de GPS</string>
 	<string name="createLocationBtn_lbl">Criar Casa/Agregado</string>
 	<string name="createVisitBtn_lbl">Criar Visita</string>
-	<string name="clearIndividualBtn_lbl">Limpar Indivíduo</string>
-	<string name="householdBtn_lbl">Agregado Familiar</string>
-	<string name="membershipBtn_lbl">Filiação</string>
-	<string name="relationshipBtn_lbl">Relacionamento</string>
-	<string name="inMigrationBtn_lbl">Imigração</string>
-	<string name="outMigrationBtn_lbl">Emigração Externa</string>
-	<string name="pregRegBtn_lbl">Observação de Gravidez</string>
-	<string name="birthRegBtn_lbl">Resultado da Gravidez</string>
-	<string name="deathBtn_lbl">Óbito</string>
+	<string name="clearIndividualBtn_lbl">Limpar Indivíduo</string>	
+	<string name="houseDetailsBtn_lbl">Informação da Casa</string>
+	<string name="individualDetailsBtn_lbl">1. Informação do Membro</string>
+	<string name="imunizationBtn_lbl">2. Imunização</string>
+	<string name="householdBtn_lbl">3. Agregado Familiar</string>
+	<string name="membershipBtn_lbl">4. Relação com chefe</string>
+	<string name="relationshipBtn_lbl">5. Estado Civil</string>
+	<string name="inMigrationBtn_lbl">6. Imigração</string>
+	<string name="outMigrationBtn_lbl">7. Emigração Externa</string>
+	<string name="pregRegBtn_lbl">8. Observação de Gravidez</string>
+	<string name="birthRegBtn_lbl">9. Resultado da Gravidez</string>
+	<string name="deathBtn_lbl">A. Óbito</string>
 	<string name="finishVisitBtn_lbl">Terminar Visita</string>
     
 	<string name="fworkerExtId_lbl">ExtId do Trabalhador de Campo</string>
@@ -244,9 +247,9 @@
 	<string name="in_migration_lbl">Imigração</string>
 	<string name="baseline_lbl">Baseline/Censo</string>
 	<string name="update_create_inmigration_msg">É esta uma Imigração Interna ou Externa?</string>
-	<string name="update_create_inmigration_pos_button">Interna</string>
-	<string name="update_create_inmigration_neg_button">Externa</string>
-	<string name="update_create_inmigration_neutral_button">Retorno ao DSS</string>
+	<string name="update_create_inmigration_pos_button">1. Interna</string>
+	<string name="update_create_inmigration_neg_button">3. Externa</string>
+	<string name="update_create_inmigration_neutral_button">2. Retorno ao DSS</string>
 	<string name="update_finish_ext_inmigration_msg">Por favor, agora crie uma Associação(Filiação) para o individuo</string>
 	<string name="finish_household_creation_msg">Por favor, agora crie as Filiações para o agregado</string>
 	<string name="mother_lbl">Mãe</string>
@@ -326,10 +329,7 @@
     
     <string name="hello_lbl">Olá</string>
     <string name="locale_lang">pt</string>
-
-    <string name="houseDetailsBtn_lbl">Informação da Casa</string>
-	<string name="individualDetailsBtn_lbl">Informação do Membro</string>
-	
+    	
 	<string name="cant_create_relationship_lbl">Não será possivel criar o relacionamento, o individuo selecionado é o mesmo</string>
 	
 	<string name="substitute_head_lbl">Chefe do Agregado substituto</string>
@@ -346,7 +346,7 @@
 	
 	<string name="change_household_head_selected_lbl">Selecionou o novo chefe</string>
 	
-	<string name="imunizationBtn_lbl">Imunização</string>
+	
 	
 	<string name="sync_imunization_name">Sincronizar Imunização</string>
 	<string name="sync_imunization_description">Sincronização de imunização!</string>
