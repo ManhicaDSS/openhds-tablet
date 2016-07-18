@@ -65,7 +65,7 @@ public class CustomCursorAdapter extends SimpleCursorAdapter {
 	        if (indexOfEndType != -1){ //Is displaying Individuals
 	        	String endType = cursor.getString(indexOfEndType);
 	        	String visited = cursor.getString(cursor.getColumnIndex(OpenHDS.Individuals.COLUMN_INDIVIDUAL_VISITED));    	
-	        	
+	        	String visitedForms = cursor.getString(cursor.getColumnIndex(OpenHDS.Individuals.COLUMN_INDIVIDUAL_VISITED_FORMS));
 	        	if (endType.equals("DTH")){
 	        		text1.setTextColor(Color.RED);
 	        		text2.setTextColor(Color.RED);
@@ -80,6 +80,7 @@ public class CustomCursorAdapter extends SimpleCursorAdapter {
 	        		text1.setTextColor(Color.parseColor("#FFFF99"));
 	        		text2.setTextColor(Color.parseColor("#FFFF99"));
 	        		text3.setTextColor(Color.parseColor("#FFFF99"));
+	        		text2.setText(text2.getText()+" [" +visitedForms+ "]");
 	        	}else {
 	        		text1.setTextColor(Color.LTGRAY);
 	        		text2.setTextColor(Color.LTGRAY);

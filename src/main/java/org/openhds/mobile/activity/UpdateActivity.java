@@ -838,7 +838,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 	                
 	                if (createImunizationDetails > 0){
 	                	//declare visited
-	    	    		setIndividualVisitedFlag(filledForm.getIndividualExtId());
+	    	    		setIndividualVisitedFlag(filledForm.getIndividualExtId(), "2");
 	                }
                 }finally{
                 	try{
@@ -1279,13 +1279,15 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
         //vf.setListCurrentlyDisplayed(Displayed.LOCATION);
     }
     
-    private void setIndividualVisitedFlag(Individual individiual){
+    private void setIndividualVisitedFlag(Individual individiual, String event){
     	IndividualVisitedUpdate update = new IndividualVisitedUpdate();
+    	update.setEvent(event);
     	update.updateDatabase(getContentResolver(), individiual);
     }
 
-    private void setIndividualVisitedFlag(String individiualId){
+    private void setIndividualVisitedFlag(String individiualId, String event){
     	IndividualVisitedUpdate update = new IndividualVisitedUpdate();
+    	update.setEvent(event);
     	update.updateDatabase(getContentResolver(), individiualId);
     }
     

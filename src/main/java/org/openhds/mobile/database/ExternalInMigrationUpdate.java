@@ -23,6 +23,8 @@ public class ExternalInMigrationUpdate implements Updatable {
                 return;
             }
             
+            individual.setVisitedForms("6.3");
+            
             ContentValues cv = new ContentValues();
             cv.put(OpenHDS.Individuals.COLUMN_INDIVIDUAL_DOB, individual.getDob());
             cv.put(OpenHDS.Individuals.COLUMN_INDIVIDUAL_EXTID, individual.getExtId());
@@ -34,6 +36,7 @@ public class ExternalInMigrationUpdate implements Updatable {
             cv.put(OpenHDS.Individuals.COLUMN_INDIVIDUAL_RESIDENCE, individual.getCurrentResidence());
             cv.put(OpenHDS.Individuals.COLUMN_RESIDENCE_END_TYPE, "NA");
             cv.put(OpenHDS.Individuals.COLUMN_INDIVIDUAL_VISITED, "Yes");
+            cv.put(OpenHDS.Individuals.COLUMN_INDIVIDUAL_VISITED_FORMS, individual.getVisitedForms());
             
             resolver.insert(OpenHDS.Individuals.CONTENT_ID_URI_BASE, cv);
         } catch (FileNotFoundException e) {

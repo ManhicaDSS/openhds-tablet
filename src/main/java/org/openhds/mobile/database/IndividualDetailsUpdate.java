@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 import org.openhds.mobile.OpenHDS;
+import org.openhds.mobile.database.queries.Converter;
 import org.openhds.mobile.model.FormXmlReader;
 import org.openhds.mobile.model.Individual;
 
@@ -24,6 +25,8 @@ public class IndividualDetailsUpdate implements Updatable {
                 return;
             }
             
+            individual.setVisitedForms("1");
+            
             ContentValues cv = new ContentValues();
             cv.put(OpenHDS.Individuals.COLUMN_INDIVIDUAL_DOB, individual.getDob());
             cv.put(OpenHDS.Individuals.COLUMN_INDIVIDUAL_EXTID, individual.getExtId());
@@ -33,6 +36,7 @@ public class IndividualDetailsUpdate implements Updatable {
             cv.put(OpenHDS.Individuals.COLUMN_INDIVIDUAL_LASTNAME, individual.getLastName());
             cv.put(OpenHDS.Individuals.COLUMN_INDIVIDUAL_MOTHER, individual.getMother());
             cv.put(OpenHDS.Individuals.COLUMN_INDIVIDUAL_VISITED, "Yes");
+            cv.put(OpenHDS.Individuals.COLUMN_INDIVIDUAL_VISITED_FORMS, individual.getVisitedForms());
             //cv.put(OpenHDS.Individuals.COLUMN_INDIVIDUAL_RESIDENCE, individual.getCurrentResidence());
             //cv.put(OpenHDS.Individuals.COLUMN_RESIDENCE_END_TYPE, "NA");
             

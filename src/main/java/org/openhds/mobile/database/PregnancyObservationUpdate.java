@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 
 import org.openhds.mobile.OpenHDS;
 import org.openhds.mobile.model.FormXmlReader;
+import org.openhds.mobile.model.Individual;
 import org.openhds.mobile.model.PregnancyObservation;
 
 import android.content.ContentResolver;
@@ -16,7 +17,7 @@ import android.net.Uri;
 import android.util.Log;
 
 public class PregnancyObservationUpdate implements Updatable {
-
+	
     public void updateDatabase(ContentResolver resolver, String filepath,String jrFormId) {
         FormXmlReader xmlReader = new FormXmlReader();
         try {
@@ -25,15 +26,15 @@ public class PregnancyObservationUpdate implements Updatable {
             if (pregnObs == null) {
                 return;
             }
-
-            ContentValues cv = new ContentValues();
-            cv.put(OpenHDS.Individuals.COLUMN_INDIVIDUAL_VISITED, "Yes");
-
-
+            
             Cursor cursor = resolver.query(OpenHDS.Individuals.CONTENT_ID_URI_BASE,
-                    new String[] { OpenHDS.Individuals._ID }, OpenHDS.Individuals.COLUMN_INDIVIDUAL_EXTID + " = ?",
+                    new String[] { OpenHDS.Individuals._ID, OpenHDS.Individuals.COLUMN_INDIVIDUAL_VISITED_FORMS }, OpenHDS.Individuals.COLUMN_INDIVIDUAL_EXTID + " = ?",
                     new String[] { pregnObs.getMother().getExtId() }, null);
             if (cursor.moveToNext()) {
+            	ContentValues cv = new ContentValues();
+                cv.put(OpenHDS.Individuals.COLUMN_INDIVIDUAL_VISITED, "Yes");
+                cv.put(OpenHDS.Individuals.COLUMN_INDIVIDUAL_VISITED_FORMS, Individual.addVisitedForms(cursor.getString(1), "8"));
+            	
                 Uri uri = ContentUris.withAppendedId(OpenHDS.Individuals.CONTENT_ID_URI_BASE, cursor.getLong(0));
                 resolver.update(uri, cv, null, null);
             }
