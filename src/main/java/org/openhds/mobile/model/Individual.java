@@ -6,6 +6,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
+import android.util.Log;
+
 public class Individual implements Serializable {
 
     private static final long serialVersionUID = -799404570247633403L;
@@ -21,6 +23,7 @@ public class Individual implements Serializable {
     private String currentResidence;
     private String endType;
     private String visited = "";
+    private String visitedForms = "";
 
     private List<SocialGroup> socialGroups;
 
@@ -179,6 +182,37 @@ public class Individual implements Serializable {
 	public void setVisited(String visited) {
 		this.visited = visited==null ? "" : visited;
 	}
+
+	public String getVisitedForms() {
+		return visitedForms;
+	}
+
+	public void setVisitedForms(String visitedForms) {
+		if (visitedForms==null) return;
+		
+		if (this.visitedForms.length()==0){
+			this.visitedForms = visitedForms.trim();
+		}else{
+			for (String spl : this.visitedForms.split(", ")){
+				if (spl.equals(visitedForms)) return; //if already registered ignore change
+			}
+			this.visitedForms += ", "+visitedForms;
+		}
+	}	
 	
-	
+	public static String addVisitedForms(String oldVisitedForms, String visitedForms) {
+		if (oldVisitedForms==null) oldVisitedForms="";
+		if (visitedForms==null) return oldVisitedForms;
+		
+		if (oldVisitedForms.length()==0){
+			oldVisitedForms = visitedForms.trim();
+		}else{
+			for (String spl : oldVisitedForms.split(", ")){
+				if (spl.equals(visitedForms)) return oldVisitedForms; //if already registered ignore change
+			}
+			oldVisitedForms += ", "+visitedForms;
+		}		
+		
+		return oldVisitedForms;
+	}	
 }

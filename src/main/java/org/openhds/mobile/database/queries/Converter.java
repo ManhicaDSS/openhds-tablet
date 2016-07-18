@@ -65,7 +65,7 @@ public class Converter {
         individual.setMother(cursor.getString(cursor.getColumnIndex(OpenHDS.Individuals.COLUMN_INDIVIDUAL_MOTHER)));
         individual.setEndType(cursor.getString(cursor.getColumnIndex(OpenHDS.Individuals.COLUMN_RESIDENCE_END_TYPE)));
         individual.setVisited(cursor.getString(cursor.getColumnIndex(OpenHDS.Individuals.COLUMN_INDIVIDUAL_VISITED)));
-        
+        individual.setVisitedForms(cursor.getString(cursor.getColumnIndex(OpenHDS.Individuals.COLUMN_INDIVIDUAL_VISITED_FORMS)));        
     }
 
     public static Location toLocation(Cursor cursor) {
