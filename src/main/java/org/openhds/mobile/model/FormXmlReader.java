@@ -75,6 +75,7 @@ public class FormXmlReader {
             visit.setLocation(xpath.evaluate("/"+jrFormId+"/locationId/text()", doc));
             visit.setRound(xpath.evaluate("/"+jrFormId+"/roundNumber/text()", doc));
             visit.setIntervieweeId(xpath.evaluate("/"+jrFormId+"/intervieweeId/text()", doc));
+            visit.setCompletedQuest(xpath.evaluate("/"+jrFormId+"/completedQuest/text()", doc));
             return visit;
         } catch (ParserConfigurationException e) {
         } catch (SAXException e) {

@@ -10,6 +10,7 @@ public class Visit implements Serializable {
 	private String date;
 	private String round;
 	private String intervieweeId;
+	private String completedQuest; /*Is it possible to complete the visit*/
 	
 	public String getIntervieweeId() {
 		return intervieweeId;
@@ -50,4 +51,13 @@ public class Visit implements Serializable {
 	public void setRound(String round) {
 		this.round = round;
 	}
+
+	public String getCompletedQuest() {
+		return completedQuest;
+	}
+
+	public void setCompletedQuest(String completedQuest) {
+		this.completedQuest = completedQuest;
+	}	
+	
 }

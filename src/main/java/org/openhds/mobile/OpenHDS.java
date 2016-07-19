@@ -159,6 +159,7 @@ public class OpenHDS {
         public static final String COLUMN_VISIT_DATE = "date";
         public static final String COLUMN_VISIT_LOCATION = "location";
         public static final String COLUMN_INTERVIEWEE = "interviewee";
+        public static final String COLUMN_COMPLETED_QUEST = "completedQuest";
 
     }
 

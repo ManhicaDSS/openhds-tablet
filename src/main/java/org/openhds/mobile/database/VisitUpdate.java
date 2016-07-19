@@ -28,6 +28,7 @@ public class VisitUpdate implements Updatable {
             cv.put(OpenHDS.Visits.COLUMN_VISIT_LOCATION, visit.getLocation());
             cv.put(OpenHDS.Visits.COLUMN_VISIT_DATE, visit.getDate());
             cv.put(OpenHDS.Visits.COLUMN_VISIT_ROUND, visit.getRound());
+            cv.put(OpenHDS.Visits.COLUMN_COMPLETED_QUEST, visit.getCompletedQuest());
 
             resolver.insert(OpenHDS.Visits.CONTENT_ID_URI_BASE, cv);
         } catch (FileNotFoundException e) {

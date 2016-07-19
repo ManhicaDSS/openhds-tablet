@@ -68,6 +68,7 @@ import android.app.FragmentTransaction;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.app.ProgressDialog;
 import android.content.ContentResolver;
+import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.CursorLoader;
 import android.content.DialogInterface;
@@ -78,6 +79,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech.OnUtteranceCompletedListener;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -180,6 +182,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
 	private int createIndivDetails = 0;
 	private int createImunizationDetails = 0; //0-NA, 1-opened using preregistered, 2-opened a new imunization
 	private int changingHouseholdHead = 0;
+	private int creatingVisit = 0;
 	
 	private static final List<String> stateSequence = new ArrayList<String>();
 //	private static final Map<String, Integer> stateLabels = new HashMap<String, Integer>();
@@ -504,6 +507,8 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
            	filledForm.setIntervieweeId("UNK");
         }
         
+        creatingVisit = 1;
+        
         loadForm(SELECTED_XFORM);
 	}
 
@@ -677,6 +682,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
     		createIndivDetails = 0;
     		changingHouseholdHead = 0;
     		createImunizationDetails = 0;
+    		creatingVisit = 0;
         }
     }
 
@@ -923,6 +929,37 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
             		createIndivDetails = 0;            		
             	}
             	
+            	if (creatingVisit == 1){ //is createVisit - read completedVisit
+            		Log.d("executing-crvisit", "");
+            		Cursor cursor = resolver.query(OpenHDS.Visits.CONTENT_ID_URI_BASE,
+                            new String[] { OpenHDS.Visits._ID, OpenHDS.Visits.COLUMN_COMPLETED_QUEST }, OpenHDS.Visits.COLUMN_VISIT_EXTID + " = ?",
+                            new String[] { locationVisit.getVisit().getExtId() }, null);
+                    if (cursor.moveToNext()) {
+                    	String completedQuest = cursor.getString(1);
+                    	locationVisit.getVisit().setCompletedQuest(completedQuest);
+                    	Log.d("executing-crvisit", "cq="+completedQuest);
+                    }
+                    cursor.close();
+                    
+                    String cq = locationVisit.getVisit().getCompletedQuest();
+                    if (cq != null && cq.equals("2")){ //impossible to visit the house
+                    	//showDialog saying the visit will be closed
+                    	//finishVisit
+                    	onCannotCompleteVisit();
+                    	onFinishVisit();
+                    	
+                    	deathCreation = false;
+                		extInm = false;
+                		createHouseDetails = 0;
+                		createIndivDetails = 0;
+                		createImunizationDetails = 0;
+                		RETURNING_TO_DSS = 0;
+                		creatingVisit = 0;
+                    	
+                    	return;
+                    }
+            	}
+            	
             	if (stateMachine.getState()=="Inmigration") {
             		stateMachine.transitionTo("Select Event");
             		if (extInm)
@@ -952,6 +989,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
     		createIndivDetails = 0;
     		createImunizationDetails = 0;
     		RETURNING_TO_DSS = 0;
+    		creatingVisit = 0;
         }
     }
     
@@ -967,6 +1005,16 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
         hhCreation = false;
 	}       
 
+	private void onCannotCompleteVisit() {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setTitle("Visita");
+        alertDialogBuilder.setMessage("A visita será terminada, pois não é possivel efetuar a visita pelas razões já respondidas!");
+        alertDialogBuilder.setCancelable(true);
+        alertDialogBuilder.setPositiveButton("Ok", null);
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
+	}      
+	
     /**
      * Creates the 'Configure Server' option in the action menu.
      */
@@ -1217,6 +1265,15 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
     }
     
     private void validateVisit(){
+    	
+    	if (locationVisit.getVisit() != null){
+    		String cq = locationVisit.getVisit().getCompletedQuest();
+         	if (cq != null && cq.equals("2")){ //cannot complete a visit for a especified reason
+         		finishVisit();
+         		return;
+         	}
+    	}
+    	
     	Cursor curs = null;
     	    	
     	curs = Queries.getActiveIndividualsByResidency(getContentResolver(), locationVisit.getLocation().getExtId());    		

@@ -191,6 +191,7 @@ public class OpenHDSProvider extends ContentProvider {
         visitsProjectionMap.put(OpenHDS.Visits.COLUMN_VISIT_EXTID, OpenHDS.Visits.COLUMN_VISIT_EXTID);
         visitsProjectionMap.put(OpenHDS.Visits.COLUMN_VISIT_LOCATION, OpenHDS.Visits.COLUMN_VISIT_LOCATION);
         visitsProjectionMap.put(OpenHDS.Visits.COLUMN_VISIT_ROUND, OpenHDS.Visits.COLUMN_VISIT_ROUND);
+        visitsProjectionMap.put(OpenHDS.Visits.COLUMN_COMPLETED_QUEST, OpenHDS.Visits.COLUMN_COMPLETED_QUEST);
 
         relationshipsProjectionMap = new HashMap<String, String>();
         relationshipsProjectionMap.put(OpenHDS.Relationships._ID, OpenHDS.Relationships._ID);
@@ -344,9 +345,12 @@ public class OpenHDSProvider extends ContentProvider {
                     + " TEXT NOT NULL);");
 
             db.execSQL("CREATE TABLE " + OpenHDS.Visits.TABLE_NAME + " (" + OpenHDS.Visits._ID
-                    + " INTEGER PRIMARY KEY," + OpenHDS.Visits.COLUMN_VISIT_DATE + " TEXT NOT NULL,"
-                    + OpenHDS.Visits.COLUMN_VISIT_EXTID + " TEXT NOT NULL," + OpenHDS.Visits.COLUMN_VISIT_LOCATION
-                    + " TEXT NOT NULL," + OpenHDS.Visits.COLUMN_VISIT_ROUND + " TEXT NOT NULL);"
+                    + " INTEGER PRIMARY KEY," 
+                    + OpenHDS.Visits.COLUMN_VISIT_DATE + " TEXT NOT NULL,"
+                    + OpenHDS.Visits.COLUMN_VISIT_EXTID + " TEXT NOT NULL,"
+                    + OpenHDS.Visits.COLUMN_VISIT_LOCATION + " TEXT NOT NULL," 
+                    + OpenHDS.Visits.COLUMN_VISIT_ROUND + " TEXT NOT NULL,"
+                    + OpenHDS.Visits.COLUMN_COMPLETED_QUEST +" TEXT); "
                     + " CREATE UNIQUE INDEX IDX_VISIT_EXTID ON " +  OpenHDS.Visits.TABLE_NAME
                     + "(" +  OpenHDS.Visits.COLUMN_VISIT_EXTID + ")");
    
