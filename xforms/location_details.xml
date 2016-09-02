@@ -1,0 +1,1016 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Informação sobre a Casa</h:title>
+    <model>
+      <instance>
+        <location_details id="location_details">
+          <deviceid/>
+          <start/>
+          <end/>
+          <visitId/>
+          <roundNumber/>
+          <fieldWorkerId/>
+          <locationId/>
+          <houseNumber/>
+          <region/>
+          <headName/>
+          <headPermId/>
+          <hasSubsHead/>
+          <subsHeadName/>
+          <subsHeadPermId/>
+          <note1/>
+          <houseNoLocated/>
+          <houseNoNeedRepaint/>
+          <nrConstructions/>
+          <nrBedrooms/>
+          <nrHouseDivisions/>
+          <nrHouseDivUsed/>
+          <habitationType/>
+          <habitationName/>
+          <wallMaterial/>
+          <wallMaterialName/>
+          <coverageMaterial/>
+          <coverageMaterialName/>
+          <floorMaterial/>
+          <floorMaterialName/>
+          <cellNumbers/>
+          <note2/>
+          <hasKitchen/>
+          <isKitchenInside/>
+          <kitchenHasWall/>
+          <kitchenHasCoverage/>
+          <kitchenFuel/>
+          <kitchenFuelName/>
+          <iluminationFuel/>
+          <iluminationFuelName/>
+          <note3/>
+          <isWaterSrcInside/>
+          <waterSource/>
+          <waterSourceName/>
+          <outsideWaterSrc/>
+          <outsideWaterSrcName/>
+          <timeToCollectWater/>
+          <watTreatmentProc/>
+          <watTreatmentProcName/>
+          <hasWaterRecipient/>
+          <canSeeRecipient/>
+          <waterRecptElevated/>
+          <waterRecptCovered/>
+          <howWaterCollected/>
+          <howWaterCollectedName/>
+          <wuWellMaintained/>
+          <waterSupplier/>
+          <waterMoney/>
+          <note4/>
+          <hasLatrine/>
+          <latrineType/>
+          <pooTreatment/>
+          <canSeeLatrine/>
+          <cleanedLatrine/>
+          <latrineHasPrivacy/>
+          <washAfterPoop/>
+          <otherPoopPlace/>
+          <note5/>
+          <trashDeposit/>
+          <trashDepositName/>
+          <trashTreatment/>
+          <trashTreatmentName/>
+          <trashRecycledPart/>
+          <trashRecycleMethod/>
+          <trashUsedAsFertilizer/>
+          <processedByMirth/>
+          <processedBySync/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </location_details>
+      </instance>
+      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/location_details/deviceid" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/location_details/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/location_details/end" type="dateTime"/>
+      <bind nodeset="/location_details/visitId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/location_details/roundNumber" readonly="true()" required="true()" type="int"/>
+      <bind nodeset="/location_details/fieldWorkerId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/location_details/locationId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/location_details/houseNumber" readonly="true()" required="true()" type="string"/>
+      <bind calculate="substr( /location_details/houseNumber , 0, 4)" nodeset="/location_details/region" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/location_details/headName" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/location_details/headPermId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/location_details/hasSubsHead" readonly="true()" required="true()" type="select1"/>
+      <bind nodeset="/location_details/subsHeadName" readonly="true()" relevant=" /location_details/hasSubsHead =1" required="true()" type="string"/>
+      <bind nodeset="/location_details/subsHeadPermId" readonly="true()" relevant=" /location_details/hasSubsHead =1" required="true()" type="string"/>
+      <bind nodeset="/location_details/note1" readonly="true()" type="string"/>
+      <bind nodeset="/location_details/houseNoLocated" required="true()" type="select1"/>
+      <bind nodeset="/location_details/houseNoNeedRepaint" required="true()" type="select1"/>
+      <bind constraint=". &gt; 0" jr:constraintMsg="O valor deve ser maior que zero" nodeset="/location_details/nrConstructions" required="true()" type="int"/>
+      <bind constraint=". &gt; 0" nodeset="/location_details/nrBedrooms" required="true()" type="int"/>
+      <bind constraint=". &gt; 0" jr:constraintMsg="O valor deve ser maior que zero" nodeset="/location_details/nrHouseDivisions" required="true()" type="int"/>
+      <bind nodeset="/location_details/nrHouseDivUsed" required="true()" type="int"/>
+      <bind nodeset="/location_details/habitationType" required="true()" type="select"/>
+      <bind nodeset="/location_details/habitationName" relevant="selected( /location_details/habitationType , '98')" required="true()" type="string"/>
+      <bind nodeset="/location_details/wallMaterial" required="true()" type="select1"/>
+      <bind nodeset="/location_details/wallMaterialName" relevant=" /location_details/wallMaterial =98" required="true()" type="string"/>
+      <bind nodeset="/location_details/coverageMaterial" required="true()" type="select1"/>
+      <bind nodeset="/location_details/coverageMaterialName" relevant=" /location_details/coverageMaterial =98" required="true()" type="string"/>
+      <bind nodeset="/location_details/floorMaterial" required="true()" type="select1"/>
+      <bind nodeset="/location_details/floorMaterialName" relevant=" /location_details/floorMaterial =98" required="true()" type="string"/>
+      <bind nodeset="/location_details/cellNumbers" required="true()" type="string"/>
+      <bind nodeset="/location_details/note2" readonly="true()" type="string"/>
+      <bind nodeset="/location_details/hasKitchen" required="true()" type="select1"/>
+      <bind nodeset="/location_details/isKitchenInside" relevant=" /location_details/hasKitchen =1" required="true()" type="select1"/>
+      <bind nodeset="/location_details/kitchenHasWall" relevant=" /location_details/hasKitchen =1 and  /location_details/isKitchenInside =2" required="true()" type="select1"/>
+      <bind nodeset="/location_details/kitchenHasCoverage" relevant=" /location_details/hasKitchen =1 and  /location_details/isKitchenInside =2" required="true()" type="select1"/>
+      <bind nodeset="/location_details/kitchenFuel" required="true()" type="select1"/>
+      <bind nodeset="/location_details/kitchenFuelName" relevant=" /location_details/kitchenFuel =98" required="true()" type="string"/>
+      <bind nodeset="/location_details/iluminationFuel" required="true()" type="select1"/>
+      <bind nodeset="/location_details/iluminationFuelName" relevant=" /location_details/iluminationFuel =98" required="true()" type="string"/>
+      <bind nodeset="/location_details/note3" readonly="true()" type="string"/>
+      <bind nodeset="/location_details/isWaterSrcInside" required="true()" type="select1"/>
+      <bind nodeset="/location_details/waterSource" relevant=" /location_details/isWaterSrcInside =1" required="true()" type="select1"/>
+      <bind nodeset="/location_details/waterSourceName" relevant=" /location_details/isWaterSrcInside =1 and  /location_details/waterSource =98" required="true()" type="string"/>
+      <bind nodeset="/location_details/outsideWaterSrc" relevant=" /location_details/isWaterSrcInside =2" required="true()" type="select1"/>
+      <bind nodeset="/location_details/outsideWaterSrcName" relevant=" /location_details/outsideWaterSrc =98 and  /location_details/isWaterSrcInside =2" required="true()" type="string"/>
+      <bind nodeset="/location_details/timeToCollectWater" relevant=" /location_details/isWaterSrcInside =2" required="true()" type="select1"/>
+      <bind nodeset="/location_details/watTreatmentProc" required="true()" type="select1"/>
+      <bind nodeset="/location_details/watTreatmentProcName" relevant=" /location_details/watTreatmentProc =5" required="true()" type="string"/>
+      <bind nodeset="/location_details/hasWaterRecipient" required="true()" type="select1"/>
+      <bind nodeset="/location_details/canSeeRecipient" relevant=" /location_details/hasWaterRecipient =1" required="true()" type="select1"/>
+      <bind nodeset="/location_details/waterRecptElevated" relevant=" /location_details/canSeeRecipient =1 or  /location_details/canSeeRecipient =2" required="true()" type="select1"/>
+      <bind nodeset="/location_details/waterRecptCovered" relevant=" /location_details/canSeeRecipient =1 or  /location_details/canSeeRecipient =2" required="true()" type="select1"/>
+      <bind nodeset="/location_details/howWaterCollected" relevant=" /location_details/canSeeRecipient =1 or  /location_details/canSeeRecipient =2" required="true()" type="select1"/>
+      <bind nodeset="/location_details/howWaterCollectedName" relevant=" /location_details/howWaterCollected =98" required="true()" type="string"/>
+      <bind nodeset="/location_details/wuWellMaintained" relevant=" /location_details/canSeeRecipient =1 or  /location_details/canSeeRecipient =2" required="true()" type="select1"/>
+      <bind nodeset="/location_details/waterSupplier" required="true()" type="select1"/>
+      <bind constraint="(regex(., '^[0-9]{1,4}$'))" jr:constraintMsg="O formato do valor deve ser XXXX (no max 9999mt)" nodeset="/location_details/waterMoney" required="true()" type="int"/>
+      <bind nodeset="/location_details/note4" readonly="true()" type="string"/>
+      <bind nodeset="/location_details/hasLatrine" required="true()" type="select1"/>
+      <bind nodeset="/location_details/latrineType" relevant=" /location_details/hasLatrine =1" required="true()" type="select1"/>
+      <bind nodeset="/location_details/pooTreatment" relevant=" /location_details/hasLatrine =1" required="true()" type="select1"/>
+      <bind nodeset="/location_details/canSeeLatrine" relevant=" /location_details/hasLatrine =1" required="true()" type="select1"/>
+      <bind nodeset="/location_details/cleanedLatrine" relevant=" /location_details/canSeeLatrine =1 or  /location_details/canSeeLatrine =3" required="true()" type="select1"/>
+      <bind nodeset="/location_details/latrineHasPrivacy" relevant=" /location_details/canSeeLatrine =1 or  /location_details/canSeeLatrine =3" required="true()" type="select1"/>
+      <bind nodeset="/location_details/washAfterPoop" relevant=" /location_details/canSeeLatrine =1 or  /location_details/canSeeLatrine =3" required="true()" type="select1"/>
+      <bind nodeset="/location_details/otherPoopPlace" relevant=" /location_details/hasLatrine =2" required="true()" type="select1"/>
+      <bind nodeset="/location_details/note5" readonly="true()" type="string"/>
+      <bind nodeset="/location_details/trashDeposit" required="true()" type="select1"/>
+      <bind nodeset="/location_details/trashDepositName" relevant=" /location_details/trashDeposit =98" required="true()" type="string"/>
+      <bind nodeset="/location_details/trashTreatment" relevant=" /location_details/trashDeposit  != 3" required="true()" type="select1"/>
+      <bind nodeset="/location_details/trashTreatmentName" relevant=" /location_details/trashTreatment =98" required="true()" type="string"/>
+      <bind nodeset="/location_details/trashRecycledPart" relevant=" /location_details/trashTreatment =5" required="true()" type="string"/>
+      <bind nodeset="/location_details/trashRecycleMethod" relevant=" /location_details/trashTreatment =5" required="true()" type="string"/>
+      <bind nodeset="/location_details/trashUsedAsFertilizer" relevant=" /location_details/trashTreatment =7" required="true()" type="string"/>
+      <bind nodeset="/location_details/processedByMirth" readonly="true()" type="int"/>
+      <bind nodeset="/location_details/processedBySync" readonly="true()" type="int"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/location_details/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat(&quot;Info_Casa_&quot;, /location_details/houseNumber )" nodeset="/location_details/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/location_details/visitId">
+      <label>1. Id da Visita</label>
+    </input>
+    <input ref="/location_details/roundNumber">
+      <label>2. Número da ronda</label>
+    </input>
+    <input ref="/location_details/fieldWorkerId">
+      <label>3. Código do Inquiridor</label>
+    </input>
+    <input ref="/location_details/locationId">
+      <label>4. ExtId do Agregado</label>
+    </input>
+    <input ref="/location_details/houseNumber">
+      <label>5. Número do Agregado</label>
+    </input>
+    <input ref="/location_details/headName">
+      <label>7. Nome do Chefe de Agregado</label>
+    </input>
+    <input ref="/location_details/headPermId">
+      <label>8. Perm Id do Chefe de Agregado</label>
+    </input>
+    <select1 ref="/location_details/hasSubsHead">
+      <label>9. Esta possui chefe de Agregado Substituto?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <input ref="/location_details/subsHeadName">
+      <label>10. Nome do Chefe de Substituto</label>
+    </input>
+    <input ref="/location_details/subsHeadPermId">
+      <label>11. Perm Id do Chefe de Substituto</label>
+    </input>
+    <input ref="/location_details/note1">
+      <label>A seguir perguntas sobre: Caracteristícas e Condições da Habitação</label>
+    </input>
+    <select1 ref="/location_details/houseNoLocated">
+      <label>12. Localização do número do agregado?</label>
+      <hint>Localização do número do agregado?</hint>
+      <item>
+        <label>Porta</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Parede</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Árvore</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Porta de quintal</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Outro Local</label>
+        <value>98</value>
+      </item>
+    </select1>
+    <select1 ref="/location_details/houseNoNeedRepaint">
+      <label>13. A casa precisa ser repintada?</label>
+      <hint>A casa precisa ser repintada?</hint>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <input ref="/location_details/nrConstructions">
+      <label>14. Numero total de construções?</label>
+      <hint>Nb: Incluir cozinha, celeiro, capoeira, garagem, casa de banho, barraca erguidas separadamente da casa</hint>
+    </input>
+    <input ref="/location_details/nrBedrooms">
+      <label>14.1. Quantos destas construções são efetivamente casas (para dormir)?</label>
+      <hint>Nb: excluir cozinha, celeiro, capoeira, garagem, casa de banho, barraca erguidas separadamente da casa</hint>
+    </input>
+    <input ref="/location_details/nrHouseDivisions">
+      <label>15. Número de divisões usadas para dormir (mesmo que não sejam quartos)</label>
+    </input>
+    <input ref="/location_details/nrHouseDivUsed">
+      <label>15.1. Quantas destas divisões foram usadas na ultima noite para dormir?</label>
+    </input>
+    <select ref="/location_details/habitationType">
+      <label>16. Tipo de habitação:</label>
+      <item>
+        <label>Casa convencional</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Flat/Apartamento</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Palhota</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Precário</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Madeira/Zinco</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>Outro Especificar</label>
+        <value>98</value>
+      </item>
+    </select>
+    <input ref="/location_details/habitationName">
+      <label>16.1. Especifique o tipo de habitação?</label>
+    </input>
+    <select1 ref="/location_details/wallMaterial">
+      <label>17. Tipo de material de construção de paredes na casa principal:</label>
+      <item>
+        <label>Blocos de cimento</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Bloco de tijolo</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Madeira/zinco</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Bloco de adobe</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Caniço/pau/bambu/palmeira</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>Pau maticado</label>
+        <value>6</value>
+      </item>
+      <item>
+        <label>Lata/carvão/papel/saco/casca</label>
+        <value>7</value>
+      </item>
+      <item>
+        <label>Outro Especificar</label>
+        <value>98</value>
+      </item>
+    </select1>
+    <input ref="/location_details/wallMaterialName">
+      <label>17.1. Especifique o tipo de material de construção das paredes?</label>
+    </input>
+    <select1 ref="/location_details/coverageMaterial">
+      <label>18. Qual é o material usado para cobertura da casa principal?</label>
+      <item>
+        <label>Laje de Betão</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Telha</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Chapa de lusalite</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Chapa de zinco</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Capim/Palmeira</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>Outros</label>
+        <value>98</value>
+      </item>
+    </select1>
+    <input ref="/location_details/coverageMaterialName">
+      <label>18.1. Especifique o tipo de material usado para cobertura da casa?</label>
+    </input>
+    <select1 ref="/location_details/floorMaterial">
+      <label>19. Qual é o meterial usado no pavimento da casa principal?</label>
+      <item>
+        <label>Madeira/Parquet</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Mármore/Granulito</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Cimento</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Mosaico/Tijoleira</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Adobe/Terra batida</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>Sem nada</label>
+        <value>6</value>
+      </item>
+      <item>
+        <label>Outros (Especificar)</label>
+        <value>98</value>
+      </item>
+    </select1>
+    <input ref="/location_details/floorMaterialName">
+      <label>19.1. Especifique o tipo de material usado no pavimento da casa?</label>
+    </input>
+    <input ref="/location_details/cellNumbers">
+      <label>20. Pode nos fornecer o número de contactos telefónicos de alguns residentes da casa? (maximo 3)</label>
+      <hint>Digite correctamente os numeros de telefone, caso não saiba coloque 88, se recusarem a responder coloque 99</hint>
+    </input>
+    <input ref="/location_details/note2">
+      <label>A seguir perguntas sobre: Caracteristícas da cozinha</label>
+    </input>
+    <select1 ref="/location_details/hasKitchen">
+      <label>21. Tem cozinha?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Recusa</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 ref="/location_details/isKitchenInside">
+      <label>22. A Cozinha está no interior da casa?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Recusa</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 ref="/location_details/kitchenHasWall">
+      <label>22.1. A cozinha tem paredes?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/location_details/kitchenHasCoverage">
+      <label>22.2. A cozinha tem cobertura?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/location_details/kitchenFuel">
+      <label>23. Que combustível usa para preparar os alimentos?</label>
+      <item>
+        <label>Lenha ou madeira</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Carvão</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Gás</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Electricidade</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Petróleo</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>Não usa nenhum combustível</label>
+        <value>7</value>
+      </item>
+      <item>
+        <label>Outros</label>
+        <value>98</value>
+      </item>
+    </select1>
+    <input ref="/location_details/kitchenFuelName">
+      <label>23.1 Especifique a principal combustível usado para preparar os alimentos?</label>
+    </input>
+    <select1 ref="/location_details/iluminationFuel">
+      <label>24. Principal fonte de energia usado para iluminação no agregado:</label>
+      <item>
+        <label>Electricidade</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Gerador</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Placa solar</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Gás</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Petróleo</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>Velas</label>
+        <value>6</value>
+      </item>
+      <item>
+        <label>Baterias</label>
+        <value>7</value>
+      </item>
+      <item>
+        <label>Lenha</label>
+        <value>8</value>
+      </item>
+      <item>
+        <label>Outros</label>
+        <value>98</value>
+      </item>
+    </select1>
+    <input ref="/location_details/iluminationFuelName">
+      <label>24.1 Especifique a fonte de energia usado para iluminação no agregado?</label>
+    </input>
+    <input ref="/location_details/note3">
+      <label>A seguir perguntas sobre: Água de Uso Doméstico e sua Conservação</label>
+    </input>
+    <select1 ref="/location_details/isWaterSrcInside">
+      <label>25. O agregado tem a sua principal fonte de água dentro do quintal/na própria casa?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/location_details/waterSource">
+      <label>26. Qual é a principal fonte de água para consumo (cozinhar e higiene):</label>
+      <item>
+        <label>Água canalizada dentro de casa</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Água canalizada no quintal</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Fontenário</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Poço protegido</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Poço não protegido</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>Água da chuva</label>
+        <value>7</value>
+      </item>
+      <item>
+        <label>Furo protegido com bomba manual</label>
+        <value>8</value>
+      </item>
+      <item>
+        <label>Outra</label>
+        <value>98</value>
+      </item>
+    </select1>
+    <input ref="/location_details/waterSourceName">
+      <label>26.1. Especifique Qual é a principal fonte de água para consumo (cozinhar e higiene):</label>
+    </input>
+    <select1 ref="/location_details/outsideWaterSrc">
+      <label>27. Qual é a principal fonte de água para consumo (cozinhar e higiene):</label>
+      <item>
+        <label>Água canalizada na casa vizinha</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Fontanário com torneira</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Poço protegido fora do quintal da casa</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Poço não protegido fora do quintal da casa</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Furo protegido com bomba manual fora quintal da casa</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>Água captada directamente do Rio/Lago/Lagoa</label>
+        <value>6</value>
+      </item>
+      <item>
+        <label>Água da chuva fora do quintal da casa</label>
+        <value>7</value>
+      </item>
+      <item>
+        <label>Outra</label>
+        <value>98</value>
+      </item>
+    </select1>
+    <input ref="/location_details/outsideWaterSrcName">
+      <label>27.1. Especifique Qual é a principal fonte de água para consumo (cozinhar e higiene):</label>
+    </input>
+    <select1 ref="/location_details/timeToCollectWater">
+      <label>28. Quanto tempo leva no total para chegar à principal fonte de água, cartar a água e voltar?</label>
+      <item>
+        <label>Menos de 10min</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>10-30min</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>30-60min</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Mais de uma hora</label>
+        <value>4</value>
+      </item>
+    </select1>
+    <select1 ref="/location_details/watTreatmentProc">
+      <label>29. Há algum processo de tratamento de água para torná-la potável no agregado?</label>
+      <item>
+        <label>Não há tratamento</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Ferver a água</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Cloração (certeza, lixivia)</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Filtração</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Métodos tradicionais</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>Não sabe</label>
+        <value>99</value>
+      </item>
+    </select1>
+    <input ref="/location_details/watTreatmentProcName">
+      <label>29.1. Especifique o processo de tratamento de água para torná-la potável no agregado?</label>
+    </input>
+    <select1 ref="/location_details/hasWaterRecipient">
+      <label>30. A água para consumir é conservada num recipiente específico para o efeito?</label>
+      <hint>(Atenção inquiridores: estas perguntas incluem observação directa.)</hint>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/location_details/canSeeRecipient">
+      <label>30.1. O Sr/a aceita que eu possa verificar o recipiente no qual guardam a água para o consumo?</label>
+      <hint>(Atenção inquiridores: estas perguntas incluem observação directa.)</hint>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não aceita deixar ver, mas aceita responder as perguntas sobre o recipiente</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Recusa</label>
+        <value>99</value>
+      </item>
+    </select1>
+    <select1 ref="/location_details/waterRecptElevated">
+      <label>30.2. O recipiente usado para conservar a água para consumir está num lugar elevado do chão?</label>
+      <hint>(Atenção inquiridores: estas perguntas incluem observação directa.)</hint>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/location_details/waterRecptCovered">
+      <label>30.3. O recipiente usado para conservar a água para consumir está tapado?</label>
+      <hint>(Atenção inquiridores: estas perguntas incluem observação directa.)</hint>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/location_details/howWaterCollected">
+      <label>30.4. Como é que a água é cartada do recipiente?</label>
+      <hint>(Atenção inquiridores: estas perguntas incluem observação directa.)</hint>
+      <item>
+        <label>É retirada por uma torneira</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Tijela ou copo ou outro instrumento sem pega</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>caneca, copo, ou outro instrumento com pega</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>98</value>
+      </item>
+    </select1>
+    <input ref="/location_details/howWaterCollectedName">
+      <label>30.5. Especifique Como é que a água é cartada do recipiente?</label>
+      <hint>(Atenção inquiridores: estas perguntas incluem observação directa.)</hint>
+    </input>
+    <select1 ref="/location_details/wuWellMaintained">
+      <label>30.6. O utensílio usado para cartar a água no recipiente fica guardado num lugar limpo (não fica no chão)?</label>
+      <hint>(Atenção inquiridores: estas perguntas incluem observação directa.)</hint>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/location_details/waterSupplier">
+      <label>31. Qual o principal fornecedor de agua para consumo e higiene neste agregado ?</label>
+      <item>
+        <label>Governo</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Privado</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Municipio</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Particular (dentro do agregado)</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Outros</label>
+        <value>98</value>
+      </item>
+    </select1>
+    <input ref="/location_details/waterMoney">
+      <label>32. Quanto gasta aproximadamente por mês com as despesas relacionadas com a água consumida neste agregado?</label>
+    </input>
+    <input ref="/location_details/note4">
+      <label>A seguir perguntas sobre: Caracteristícas de saneamento ao nivel do agregado</label>
+    </input>
+    <select1 ref="/location_details/hasLatrine">
+      <label>33. Este agregado possui latrina?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/location_details/latrineType">
+      <label>34. Que tipo de latrina é utilizada neste agregado</label>
+      <item>
+        <label>Retrete ligado a fossa séptica</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Latrina não melhorada</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Latrina ventilada</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Latrina com laje não ventilada</label>
+        <value>4</value>
+      </item>
+    </select1>
+    <select1 ref="/location_details/pooTreatment">
+      <label>35. Como é feito tratamento das fezes neste agregado quando a latrina enche?</label>
+      <item>
+        <label>Tapa o buraco da latrina e abre outra</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Contrata os serviços de limpeza de fossas e evacuação mecânica das fezes</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>O agregado faz pessoalmente a evacuação das fezes</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 ref="/location_details/canSeeLatrine">
+      <label>36. O Sr/a aceita que eu possa verificar as condições da latrina do seu agregado?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Recusa</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Não aceita para verificar mais concorda em responder as perguntas</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 ref="/location_details/cleanedLatrine">
+      <label>37. A latrina apresenta condições adequadas de limpeza?</label>
+      <hint>(Atenção inquiridores: estas perguntas incluem observação directa.)</hint>
+      <item>
+        <label>Limpa (sem fezes ou urina)</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Suja (fezes ou urina no chão)</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/location_details/latrineHasPrivacy">
+      <label>38. A latrina apresenta condições adequadas de privacidade?</label>
+      <hint>(Atenção inquiridores: estas perguntas incluem observação directa.)</hint>
+      <item>
+        <label>Privacidade adequada (com paredes e porta)</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Privacidade limitada (sem porta)</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Sem privacidade</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 ref="/location_details/washAfterPoop">
+      <label>39. Tem disponível um recipiente ou torneira com água para lavagem das mãos com sabão depois de usar a latrina no agregado?</label>
+      <hint>(Atenção inquiridores: estas perguntas incluem observação directa.)</hint>
+      <item>
+        <label>Sim, com água e sabão</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Só água, sem sabão</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Só sabão</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Não tem nada</label>
+        <value>4</value>
+      </item>
+    </select1>
+    <select1 ref="/location_details/otherPoopPlace">
+      <label>40. Se não tem latrina neste agregado aonde é que os residentes deste agregado defecam?</label>
+      <item>
+        <label>Retrete ligado a fossa séptica da casa vizinha</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Latrina ventilada da casa vizinha</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Latrina com laje não ventilada da casa vizinha</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Latrina não melhorada da casa vizinha</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Balde</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>Defecam no mato com enxada</label>
+        <value>6</value>
+      </item>
+      <item>
+        <label>Defecam no mato a céu aberto</label>
+        <value>7</value>
+      </item>
+    </select1>
+    <input ref="/location_details/note5">
+      <label>A seguir perguntas sobre: Gestão do Lixo Doméstico</label>
+    </input>
+    <select1 ref="/location_details/trashDeposit">
+      <label>41. Onde é que depositam o lixo domestico que é produzido diariamente neste agregado?</label>
+      <item>
+        <label>Recipiente próprio para lixo</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Deixado a céu aberto</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Enterrado</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Depositado numa cova</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>É depositado em plásticos</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>98</value>
+      </item>
+    </select1>
+    <input ref="/location_details/trashDepositName">
+      <label>41.1. Especifique onde é que depositam o lixo domestico que é produzido diariamente neste agregado?</label>
+    </input>
+    <select1 ref="/location_details/trashTreatment">
+      <label>42. Como é que é feito a tratamento final do lixo domestico?</label>
+      <item>
+        <label>Enterrado</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Queimado</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>É exposto a céu aberto</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>É recolhido pelo Município</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Uma parte é reciclada</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>É depositado fora do quintal da casa numa lixeira improvisada</label>
+        <value>6</value>
+      </item>
+      <item>
+        <label>É usado como fertilizante</label>
+        <value>7</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>98</value>
+      </item>
+    </select1>
+    <input ref="/location_details/trashTreatmentName">
+      <label>42.1. Especifique Como é que é feito a tratamento final do lixo domestico?</label>
+    </input>
+    <input ref="/location_details/trashRecycledPart">
+      <label>42.2. Indique qual parte é reciclada?</label>
+      <hint>Esta resposta só pode ser respondida se a resposta da perg. 43 for &quot;Uma parte é reciclada&quot;</hint>
+    </input>
+    <input ref="/location_details/trashRecycleMethod">
+      <label>42.3. Indique como esta parte é reciclada?</label>
+      <hint>Esta resposta só pode ser respondida se a resposta da perg. 43 for &quot;Uma parte é reciclada&quot;</hint>
+    </input>
+    <input ref="/location_details/trashUsedAsFertilizer">
+      <label>42.4. Qual parte é usada como fertilizante?</label>
+      <hint>Esta resposta só pode ser respondida se a resposta da perg. 43 for &quot;É usado como fertilizante&quot;</hint>
+    </input>
+    <input ref="/location_details/processedByMirth">
+      <label>processed</label>
+      <hint>processed</hint>
+    </input>
+    <input ref="/location_details/processedBySync">
+      <label>processed by dbsync</label>
+      <hint>processed</hint>
+    </input>
+  </h:body>
+</h:html>

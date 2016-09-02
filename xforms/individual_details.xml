@@ -1,0 +1,1579 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Informação sobre o individuo</h:title>
+    <model>
+      <instance>
+        <individual_details id="individual_details">
+          <deviceid/>
+          <start/>
+          <end/>
+          <visitId/>
+          <roundNumber/>
+          <fieldWorkerId/>
+          <locationId/>
+          <individualId/>
+          <houseNumber/>
+          <region/>
+          <permId/>
+          <name/>
+          <gender/>
+          <dob/>
+          <age/>
+          <fatherId/>
+          <motherId/>
+          <fatherPermId/>
+          <fatherName/>
+          <motherPermId/>
+          <motherName/>
+          <spousePermId/>
+          <spouseName/>
+          <isUpdatable/>
+          <reasonToNotUpdate/>
+          <isPresent/>
+          <hasCismCard/>
+          <cardState/>
+          <consent/>
+          <hasIdentityDoc/>
+          <identityDocType/>
+          <identityDocName/>
+          <hasIdCard/>
+          <idExpStat/>
+          <hasCedula/>
+          <hasBirthCertificate/>
+          <hasIdReceipt/>
+          <idReceiptExpStat/>
+          <hasPassport/>
+          <passportExpStat/>
+          <hasDrivingLicense/>
+          <drivLicenseExpStat/>
+          <hasVoterCard/>
+          <placeOfBirth/>
+          <fatherAlive/>
+          <fatherLivesHere/>
+          <fatherDeathDate/>
+          <motherAlive/>
+          <motherLivesHere/>
+          <motherDeathDate/>
+          <headLivesHere/>
+          <relationWithHead/>
+          <relationWithSubsHead/>
+          <canReadWrite/>
+          <education/>
+          <motherTongue/>
+          <religion/>
+          <maritalStatus/>
+          <eventDate/>
+          <eventPlace/>
+          <nrOfWives/>
+          <nrOfHusbandWives/>
+          <wivesOnSameHouse/>
+          <ocupation/>
+          <ocupationName/>
+          <workRegime/>
+          <selfEmployed/>
+          <worksForOthers/>
+          <secundaryOcupation/>
+          <secundaryOcupationName/>
+          <stoppedWorkLastMonth/>
+          <nonWorkDays/>
+          <hasDeficiency/>
+          <deficiency/>
+          <deficiencyName/>
+          <deficiencyCauses/>
+          <deficiencyCausesName/>
+          <fertility>
+            <hasPrevPregnancies/>
+            <nrPregnancies/>
+            <nrLivebirths/>
+            <nrBoys/>
+            <nrGirls/>
+            <nrAliveBoys/>
+            <nrAliveGirls/>
+            <nrMiscarriages/>
+            <nrAbortions/>
+            <nrStillbirths/>
+            <nrTwinOutcomes/>
+            <nrTripletOutcomes/>
+            <nrQuadrOutcomes/>
+            <nrTwinAbortions/>
+            <nrTwinStillbirths/>
+            <nrTwinsAlive/>
+          </fertility>
+          <processedByMirth/>
+          <processedBySync/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </individual_details>
+      </instance>
+      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/individual_details/deviceid" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/individual_details/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/individual_details/end" type="dateTime"/>
+      <bind nodeset="/individual_details/visitId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/individual_details/roundNumber" readonly="true()" required="true()" type="int"/>
+      <bind nodeset="/individual_details/fieldWorkerId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/individual_details/locationId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/individual_details/individualId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/individual_details/houseNumber" readonly="true()" required="true()" type="string"/>
+      <bind calculate="substr( /individual_details/houseNumber , 0, 4)" nodeset="/individual_details/region" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/individual_details/permId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/individual_details/name" required="true()" type="string"/>
+      <bind nodeset="/individual_details/gender" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/dob" required="true()" type="date"/>
+      <bind calculate="int((today() -  /individual_details/dob ) div 365.24)" nodeset="/individual_details/age" type="string"/>
+      <bind nodeset="/individual_details/fatherId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/individual_details/motherId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/individual_details/fatherPermId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/individual_details/fatherName" readonly="true()" type="string"/>
+      <bind nodeset="/individual_details/motherPermId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/individual_details/motherName" readonly="true()" type="string"/>
+      <bind nodeset="/individual_details/spousePermId" readonly="true()" type="string"/>
+      <bind nodeset="/individual_details/spouseName" readonly="true()" type="string"/>
+      <bind nodeset="/individual_details/isUpdatable" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/reasonToNotUpdate" relevant=" /individual_details/isUpdatable =2" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/isPresent" relevant=" /individual_details/isUpdatable =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/hasCismCard" relevant=" /individual_details/isUpdatable =1 and  /individual_details/age  &lt; 15" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/cardState" relevant=" /individual_details/isUpdatable =1 and  /individual_details/age  &lt; 15 and  /individual_details/hasCismCard =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/consent" relevant=" /individual_details/isUpdatable =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/hasIdentityDoc" relevant=" /individual_details/isUpdatable =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/identityDocType" relevant=" /individual_details/isUpdatable =1 and  /individual_details/hasIdentityDoc =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/identityDocName" relevant=" /individual_details/isUpdatable =1 and  /individual_details/identityDocType =98" required="true()" type="string"/>
+      <bind nodeset="/individual_details/hasIdCard" relevant=" /individual_details/isUpdatable =1 and  /individual_details/hasIdentityDoc =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/idExpStat" relevant=" /individual_details/isUpdatable =1 and  /individual_details/hasIdentityDoc =1 and  /individual_details/hasIdCard =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/hasCedula" relevant=" /individual_details/isUpdatable =1 and  /individual_details/hasIdentityDoc =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/hasBirthCertificate" relevant=" /individual_details/isUpdatable =1 and  /individual_details/hasIdentityDoc =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/hasIdReceipt" relevant=" /individual_details/isUpdatable =1 and  /individual_details/hasIdentityDoc =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/idReceiptExpStat" relevant=" /individual_details/isUpdatable =1 and  /individual_details/hasIdentityDoc =1and  /individual_details/hasIdReceipt =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/hasPassport" relevant=" /individual_details/isUpdatable =1 and  /individual_details/hasIdentityDoc =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/passportExpStat" relevant=" /individual_details/isUpdatable =1 and  /individual_details/hasIdentityDoc =1 and  /individual_details/hasPassport =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/hasDrivingLicense" relevant=" /individual_details/isUpdatable =1 and  /individual_details/hasIdentityDoc =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/drivLicenseExpStat" relevant=" /individual_details/isUpdatable =1 and  /individual_details/hasIdentityDoc =1 and  /individual_details/hasDrivingLicense =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/hasVoterCard" relevant=" /individual_details/isUpdatable =1 and  /individual_details/hasIdentityDoc =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/placeOfBirth" relevant=" /individual_details/isUpdatable =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/fatherAlive" relevant=" /individual_details/isUpdatable =1 and  /individual_details/age &lt;15" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/fatherLivesHere" relevant=" /individual_details/isUpdatable =1 and  /individual_details/fatherAlive =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/fatherDeathDate" relevant=" /individual_details/isUpdatable =1 and  /individual_details/fatherAlive =2" required="true()" type="date"/>
+      <bind nodeset="/individual_details/motherAlive" relevant=" /individual_details/isUpdatable =1 and  /individual_details/age  &lt; 15" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/motherLivesHere" relevant=" /individual_details/isUpdatable =1 and  /individual_details/motherAlive =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/motherDeathDate" relevant=" /individual_details/isUpdatable =1 and  /individual_details/motherAlive =2" required="true()" type="date"/>
+      <bind nodeset="/individual_details/headLivesHere" relevant=" /individual_details/isUpdatable =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/relationWithHead" relevant=" /individual_details/isUpdatable =1 and  /individual_details/headLivesHere =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/relationWithSubsHead" relevant=" /individual_details/isUpdatable =1 and  /individual_details/headLivesHere =2" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/canReadWrite" relevant=" /individual_details/isUpdatable =1 and ( /individual_details/age  &gt; 6)" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/education" relevant=" /individual_details/isUpdatable =1 and ( /individual_details/age  &gt; 6)" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/motherTongue" relevant=" /individual_details/isUpdatable =1 and ( /individual_details/age  &gt;= 15)" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/religion" relevant=" /individual_details/isUpdatable =1 and ( /individual_details/age  &gt;= 15)" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/maritalStatus" relevant=" /individual_details/isUpdatable =1 and ( /individual_details/age  &gt;= 15)" required="true()" type="select1"/>
+      <bind constraint=". &lt;= today()" jr:constraintMsg="A data deve ser menor que hoje" nodeset="/individual_details/eventDate" relevant=" /individual_details/isUpdatable =1 and  /individual_details/maritalStatus !=1 and ( /individual_details/age  &gt;= 15)" required="true()" type="date"/>
+      <bind nodeset="/individual_details/eventPlace" relevant=" /individual_details/isUpdatable =1 and  /individual_details/maritalStatus !=1 and ( /individual_details/age  &gt;= 15)" required="true()" type="select1"/>
+      <bind constraint=". &gt; 0" jr:constraintMsg="Introduza valores maiores que zero" nodeset="/individual_details/nrOfWives" relevant=" /individual_details/isUpdatable =1 and  /individual_details/gender ='M' and ( /individual_details/age  &gt;= 18) and ( /individual_details/maritalStatus =2 or  /individual_details/maritalStatus =3 or  /individual_details/maritalStatus =4)" required="true()" type="int"/>
+      <bind constraint=". &gt;= 0" jr:constraintMsg="Introduza valores maiores que zero" nodeset="/individual_details/nrOfHusbandWives" relevant=" /individual_details/isUpdatable =1 and  /individual_details/gender ='F' and ( /individual_details/age  &gt;= 18) and ( /individual_details/maritalStatus =2 or  /individual_details/maritalStatus =3 )" required="true()" type="int"/>
+      <bind nodeset="/individual_details/wivesOnSameHouse" relevant=" /individual_details/isUpdatable =1 and  /individual_details/gender ='F' and ( /individual_details/age  &gt;= 18) and ( /individual_details/maritalStatus =2 or  /individual_details/maritalStatus =3 ) and ( /individual_details/nrOfWives &gt;0 and ( /individual_details/nrOfWives !=77 or  /individual_details/nrOfWives !=88 or  /individual_details/nrOfWives !=99))" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/ocupation" relevant=" /individual_details/isUpdatable =1 and ( /individual_details/age  &gt;= 18)" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/ocupationName" relevant=" /individual_details/isUpdatable =1 and  /individual_details/ocupation =98 and ( /individual_details/age  &gt;= 18)" required="true()" type="string"/>
+      <bind nodeset="/individual_details/workRegime" relevant="( /individual_details/isUpdatable =1 and  /individual_details/age  &gt;= 18) and ( /individual_details/ocupation !=9 and  /individual_details/ocupation !=14 and  /individual_details/ocupation !=16 and  /individual_details/ocupation !=17 and  /individual_details/ocupation !=23)" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/selfEmployed" relevant=" /individual_details/workRegime =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/worksForOthers" relevant=" /individual_details/workRegime =2" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/secundaryOcupation" relevant=" /individual_details/isUpdatable =1 and ( /individual_details/age  &gt;= 18) and  /individual_details/ocupation !=23" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/secundaryOcupationName" relevant=" /individual_details/secundaryOcupation =98" required="true()" type="string"/>
+      <bind nodeset="/individual_details/stoppedWorkLastMonth" relevant=" /individual_details/isUpdatable =1 and  /individual_details/age  &gt;= 18" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/nonWorkDays" relevant=" /individual_details/stoppedWorkLastMonth =1" required="true()" type="int"/>
+      <bind nodeset="/individual_details/hasDeficiency" relevant=" /individual_details/isUpdatable =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/deficiency" relevant=" /individual_details/hasDeficiency =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/deficiencyName" relevant=" /individual_details/deficiency =98" required="true()" type="string"/>
+      <bind nodeset="/individual_details/deficiencyCauses" relevant=" /individual_details/isUpdatable =1 and  /individual_details/hasDeficiency =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/deficiencyCausesName" relevant=" /individual_details/isUpdatable =1 and  /individual_details/deficiencyCauses =98" required="true()" type="string"/>
+      <bind nodeset="/individual_details/fertility" relevant=" /individual_details/isUpdatable =1 and  /individual_details/gender ='F' and  /individual_details/age  &gt;= 12"/>
+      <bind nodeset="/individual_details/fertility/hasPrevPregnancies" required="true()" type="select1"/>
+      <bind constraint=". &gt;= 1" jr:constraintMsg="O valor deve ser maior ou igual a 1" nodeset="/individual_details/fertility/nrPregnancies" relevant=" /individual_details/fertility/hasPrevPregnancies =1" required="true()" type="int"/>
+      <bind constraint=". &gt;= 0" jr:constraintMsg="O valor deve ser maior ou igual a zero" nodeset="/individual_details/fertility/nrLivebirths" relevant=" /individual_details/fertility/hasPrevPregnancies =1" required="true()" type="int"/>
+      <bind constraint="(. &gt;= 0) and (. &lt;=  /individual_details/fertility/nrLivebirths )" jr:constraintMsg="O número de filhos rapazes não pode ser maior que o número de nascidos vivos (Perg. 45)" nodeset="/individual_details/fertility/nrBoys" relevant=" /individual_details/fertility/hasPrevPregnancies =1" required="true()" type="int"/>
+      <bind constraint="(. +  /individual_details/fertility/nrBoys ) =  /individual_details/fertility/nrLivebirths " jr:constraintMsg="O somatório do número de filhos (rapazes + meninas) deve ser igual ao número de nascidos vivos" nodeset="/individual_details/fertility/nrGirls" relevant=" /individual_details/fertility/hasPrevPregnancies =1" required="true()" type="int"/>
+      <bind constraint="(. &gt;= 0) and (. &lt;=  /individual_details/fertility/nrBoys )" jr:constraintMsg="Este valor não pode ser maior que o números de rapazes nascidos vivos (Perg. 45.1)" nodeset="/individual_details/fertility/nrAliveBoys" relevant=" /individual_details/fertility/hasPrevPregnancies =1 and  /individual_details/fertility/nrBoys &gt;=1" required="true()" type="int"/>
+      <bind constraint="(. &gt;= 0) and (. &lt;=  /individual_details/fertility/nrGirls )" jr:constraintMsg="Este valor não pode ser maior que o números de meninas nascidas vivos (Perg. 45.2)" nodeset="/individual_details/fertility/nrAliveGirls" relevant=" /individual_details/fertility/hasPrevPregnancies =1 and  /individual_details/fertility/nrGirls &gt;=1" required="true()" type="int"/>
+      <bind constraint="(. &gt;= 0) and (. &lt;=  /individual_details/fertility/nrPregnancies )" jr:constraintMsg="O valor deve ser menor ou igual ao número total de gravidezes que a senhora teve (Perg. 45)" nodeset="/individual_details/fertility/nrMiscarriages" relevant=" /individual_details/fertility/hasPrevPregnancies =1" required="true()" type="int"/>
+      <bind constraint="(. &gt;= 0) and (. &lt;=  /individual_details/fertility/nrPregnancies )" jr:constraintMsg="O valor deve ser menor ou igual ao número total de gravidezes que a senhora teve (Perg. 45)" nodeset="/individual_details/fertility/nrAbortions" relevant=" /individual_details/fertility/hasPrevPregnancies =1" required="true()" type="int"/>
+      <bind constraint="(. &gt;= 0) and (. &lt;=  /individual_details/fertility/nrPregnancies )" jr:constraintMsg="O valor deve ser menor ou igual ao número total de gravidezes que a senhora teve (Perg. 45)" nodeset="/individual_details/fertility/nrStillbirths" relevant=" /individual_details/fertility/hasPrevPregnancies =1" required="true()" type="int"/>
+      <bind constraint="(. &gt;= 0) and (. &lt;=  /individual_details/fertility/nrPregnancies )" jr:constraintMsg="O valor deve ser menor ou igual ao número total de gravidezes que a senhora teve (Perg. 45)" nodeset="/individual_details/fertility/nrTwinOutcomes" relevant=" /individual_details/fertility/hasPrevPregnancies =1" required="true()" type="int"/>
+      <bind constraint="(. &gt;= 0) and (. &lt;=  /individual_details/fertility/nrPregnancies )" jr:constraintMsg="O valor deve ser menor ou igual ao número total de gravidezes que a senhora teve (Perg. 45)" nodeset="/individual_details/fertility/nrTripletOutcomes" relevant=" /individual_details/fertility/hasPrevPregnancies =1 and  /individual_details/fertility/nrTwinOutcomes &gt;=1" required="true()" type="int"/>
+      <bind constraint="(. &gt;= 0) and (. &lt;=  /individual_details/fertility/nrPregnancies )" jr:constraintMsg="O valor deve ser menor ou igual ao número total de gravidezes que a senhora teve (Perg. 45)" nodeset="/individual_details/fertility/nrQuadrOutcomes" relevant=" /individual_details/fertility/hasPrevPregnancies =1 and  /individual_details/fertility/nrTwinOutcomes &gt;=1" required="true()" type="int"/>
+      <bind constraint="(. &gt;= 0) and (. &lt;=  /individual_details/fertility/nrPregnancies )" jr:constraintMsg="O valor deve ser menor ou igual ao número total de gravidezes que a senhora teve (Perg. 45)" nodeset="/individual_details/fertility/nrTwinAbortions" relevant=" /individual_details/fertility/hasPrevPregnancies =1" required="true()" type="int"/>
+      <bind constraint="(. &gt;= 0) and (. &lt;=  /individual_details/fertility/nrPregnancies )" jr:constraintMsg="O valor deve ser menor ou igual ao número total de gravidezes que a senhora teve (Perg. 45)" nodeset="/individual_details/fertility/nrTwinStillbirths" relevant=" /individual_details/fertility/hasPrevPregnancies =1" required="true()" type="int"/>
+      <bind constraint="(. &gt;= 0) and (. &lt;=  /individual_details/fertility/nrLivebirths )" jr:constraintMsg="O número de filhos por nascimentos multiplos não pode ser maior que o número de nascidos vivos (Perg. 45)" nodeset="/individual_details/fertility/nrTwinsAlive" relevant=" /individual_details/fertility/hasPrevPregnancies =1" required="true()" type="int"/>
+      <bind nodeset="/individual_details/processedByMirth" readonly="true()" type="int"/>
+      <bind nodeset="/individual_details/processedBySync" readonly="true()" type="int"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/individual_details/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat(&quot;Individual_Dtls_&quot;, /individual_details/permId )" nodeset="/individual_details/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/individual_details/visitId">
+      <label>1. Id da Visita</label>
+    </input>
+    <input ref="/individual_details/roundNumber">
+      <label>2. Número da ronda</label>
+    </input>
+    <input ref="/individual_details/fieldWorkerId">
+      <label>3. Código do Inquiridor</label>
+    </input>
+    <input ref="/individual_details/locationId">
+      <label>4. ExtId do Agregado</label>
+    </input>
+    <input ref="/individual_details/individualId">
+      <label>5. ExtId do Individuo</label>
+    </input>
+    <input ref="/individual_details/houseNumber">
+      <label>6. Número do Agregado</label>
+    </input>
+    <input ref="/individual_details/region">
+      <label>7. Bairro</label>
+    </input>
+    <input ref="/individual_details/permId">
+      <label>8. Perm ID</label>
+    </input>
+    <input ref="/individual_details/name">
+      <label>9. Nome</label>
+    </input>
+    <select1 ref="/individual_details/gender">
+      <label>10. Sexo</label>
+      <item>
+        <label>Masculino</label>
+        <value>M</value>
+      </item>
+      <item>
+        <label>Feminino</label>
+        <value>F</value>
+      </item>
+    </select1>
+    <input ref="/individual_details/dob">
+      <label>11. Data de Nascimento</label>
+    </input>
+    <input ref="/individual_details/fatherId">
+      <label>12. ExtId do Pai</label>
+    </input>
+    <input ref="/individual_details/motherId">
+      <label>13. ExtId da Mãe</label>
+    </input>
+    <input ref="/individual_details/fatherPermId">
+      <label>14. Perm Id do Pai</label>
+    </input>
+    <input ref="/individual_details/fatherName">
+      <label>15. Nome do Pai</label>
+    </input>
+    <input ref="/individual_details/motherPermId">
+      <label>16. Perm Id da Mãe</label>
+    </input>
+    <input ref="/individual_details/motherName">
+      <label>17. Nome da mãe</label>
+    </input>
+    <input ref="/individual_details/spousePermId">
+      <label>18. Perm Id do Parceiro</label>
+    </input>
+    <input ref="/individual_details/spouseName">
+      <label>19. Nome do Parceiro</label>
+    </input>
+    <select1 ref="/individual_details/isUpdatable">
+      <label>20. É possível actualizar os dados do membro?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/reasonToNotUpdate">
+      <label>20.1. Indique o motivo?</label>
+      <item>
+        <label>O membro emigrou para ouro agregado não localizável</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Falta de informante com informação credível</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Recusa</label>
+        <value>99</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/isPresent">
+      <label>21. O membro à actualizar esta presente?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/hasCismCard">
+      <label>22. Tem Cartão de identifição do CISM?</label>
+      <hint>Para individuos menores de 15 anos</hint>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/cardState">
+      <label>22.1. Estado do cartão de identifição do CISM</label>
+      <hint>Para individuos menores de 15 anos</hint>
+      <item>
+        <label>Bom</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Imprimir novo</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Cartao não visto</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/consent">
+      <label>23. Tem consentimento informado assinado?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Não sabe</label>
+        <value>99</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/hasIdentityDoc">
+      <label>24. Possui algum documento formal de identificação?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Não sabe</label>
+        <value>99</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/identityDocType">
+      <label>24.1. Que tipo de documento apresentou?</label>
+      <item>
+        <label>Bilhete de Identidade</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Cédula</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Certidão/Boletim de nascimento</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Recibo de BI</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Passaporte</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>Carta de condução</label>
+        <value>6</value>
+      </item>
+      <item>
+        <label>Cartão de eleitor</label>
+        <value>7</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>98</value>
+      </item>
+    </select1>
+    <input ref="/individual_details/identityDocName">
+      <label>24.1.1. Especifique que tipo de documento apresentou?</label>
+    </input>
+    <select1 ref="/individual_details/hasIdCard">
+      <label>24.2. Tem bilhete de Identidade?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/idExpStat">
+      <label>24.2.1. Esta dentro do prazo?</label>
+      <item>
+        <label>Esta dentro do prazo</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Esta fora do prazo</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/hasCedula">
+      <label>24.3. Tem Cédula?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/hasBirthCertificate">
+      <label>24.4. Tem Certidão/Boletim de nascimento?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/hasIdReceipt">
+      <label>24.5.Tem Recibo de BI?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/idReceiptExpStat">
+      <label>24.5.1. Esta dentro do prazo?</label>
+      <item>
+        <label>Esta dentro do prazo</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Esta fora do prazo</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/hasPassport">
+      <label>24.6. Tem Passaporte</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/passportExpStat">
+      <label>24.6.1. Esta dentro do prazo?</label>
+      <item>
+        <label>Esta dentro do prazo</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Esta fora do prazo</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/hasDrivingLicense">
+      <label>24.7. Tem Carta de condução</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/drivLicenseExpStat">
+      <label>24.7.1. Esta dentro do prazo?</label>
+      <item>
+        <label>Esta dentro do prazo</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Esta fora do prazo</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/hasVoterCard">
+      <label>24.8. Tem Cartão de eleitor</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/placeOfBirth">
+      <label>25. Lugar de Nascimento?</label>
+      <item>
+        <label>Distrito da Manhiça</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Província de Maputo</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Cidade de Maputo</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Cidade da Matola</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Gaza</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>Inhambane</label>
+        <value>6</value>
+      </item>
+      <item>
+        <label>Sofala</label>
+        <value>7</value>
+      </item>
+      <item>
+        <label>Manica</label>
+        <value>8</value>
+      </item>
+      <item>
+        <label>Tete</label>
+        <value>9</value>
+      </item>
+      <item>
+        <label>Zambézia</label>
+        <value>10</value>
+      </item>
+      <item>
+        <label>Nampula</label>
+        <value>11</value>
+      </item>
+      <item>
+        <label>Cabo-Delgado</label>
+        <value>12</value>
+      </item>
+      <item>
+        <label>Niassa</label>
+        <value>13</value>
+      </item>
+      <item>
+        <label>Africa do Sul</label>
+        <value>14</value>
+      </item>
+      <item>
+        <label>Swazilandia</label>
+        <value>15</value>
+      </item>
+      <item>
+        <label>Outro país Africano</label>
+        <value>16</value>
+      </item>
+      <item>
+        <label>Europa</label>
+        <value>17</value>
+      </item>
+      <item>
+        <label>Ásia</label>
+        <value>18</value>
+      </item>
+      <item>
+        <label>América</label>
+        <value>19</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>98</value>
+      </item>
+      <item>
+        <label>Não sabe</label>
+        <value>88</value>
+      </item>
+      <item>
+        <label>Recusa-se a responder</label>
+        <value>99</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/fatherAlive">
+      <label>26. O Pai biológico desta criança está vivo?</label>
+      <hint>Para individuos menores de 15 anos</hint>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Não sabe</label>
+        <value>99</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/fatherLivesHere">
+      <label>26.1. Vivem juntos neste agregado?</label>
+      <hint>Para individuos menores de 15 anos</hint>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <input ref="/individual_details/fatherDeathDate">
+      <label>26.2. Quando é que o Pai faleceu?</label>
+      <hint>Para individuos menores de 15 anos</hint>
+    </input>
+    <select1 ref="/individual_details/motherAlive">
+      <label>27. A mãe biológica desta criança está viva?</label>
+      <hint>Para individuos menores de 15 anos</hint>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Não sabe</label>
+        <value>99</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/motherLivesHere">
+      <label>27.1. Vivem juntos neste agregado?</label>
+      <hint>Para individuos menores de 15 anos</hint>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <input ref="/individual_details/motherDeathDate">
+      <label>27.2. Quando é que a Mãe faleceu?</label>
+      <hint>Para individuos menores de 15 anos</hint>
+    </input>
+    <select1 ref="/individual_details/headLivesHere">
+      <label>28. O Chefe do Agregado reside neste agregado?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/relationWithHead">
+      <label>29. Relação com chefe de agregado?</label>
+      <item>
+        <label>O Proprio chefe</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Esposo/a</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Filho/a</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Irmao/a</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Pai/mãe</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>Nora</label>
+        <value>6</value>
+      </item>
+      <item>
+        <label>Cunhado/a</label>
+        <value>7</value>
+      </item>
+      <item>
+        <label>Tio/a</label>
+        <value>8</value>
+      </item>
+      <item>
+        <label>Neto/a</label>
+        <value>9</value>
+      </item>
+      <item>
+        <label>Enteado</label>
+        <value>10</value>
+      </item>
+      <item>
+        <label>Adoptado/a</label>
+        <value>11</value>
+      </item>
+      <item>
+        <label>Primo/a</label>
+        <value>12</value>
+      </item>
+      <item>
+        <label>Sobrinho/a</label>
+        <value>13</value>
+      </item>
+      <item>
+        <label>Sem parentesco</label>
+        <value>14</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>98</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/relationWithSubsHead">
+      <label>30. Relação com o chefe de agregado substituto?</label>
+      <item>
+        <label>O Proprio chefe substituto</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Esposo/a</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Filho/a</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Irmao/a</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Pai/mãe</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>Nora</label>
+        <value>6</value>
+      </item>
+      <item>
+        <label>Cunhado/a</label>
+        <value>7</value>
+      </item>
+      <item>
+        <label>Tio/a</label>
+        <value>8</value>
+      </item>
+      <item>
+        <label>Neto</label>
+        <value>9</value>
+      </item>
+      <item>
+        <label>Enteado</label>
+        <value>10</value>
+      </item>
+      <item>
+        <label>Adoptado</label>
+        <value>11</value>
+      </item>
+      <item>
+        <label>Primo</label>
+        <value>12</value>
+      </item>
+      <item>
+        <label>Sobrinho</label>
+        <value>13</value>
+      </item>
+      <item>
+        <label>Sem parentesco</label>
+        <value>14</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>98</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/canReadWrite">
+      <label>31. O Sr/a sabe ler e escrever?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/education">
+      <label>32. Qual é a classe mais elevada que o Sr/a concluiu?</label>
+      <item>
+        <label>Analfabeto</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Abaixo de 5 grau</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>5ª classe</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>7ª classe</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>10ª classe</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>12ª classe</label>
+        <value>6</value>
+      </item>
+      <item>
+        <label>Ensino técnico elementar</label>
+        <value>7</value>
+      </item>
+      <item>
+        <label>Ensino técnico básico</label>
+        <value>8</value>
+      </item>
+      <item>
+        <label>Ensino técnico médio</label>
+        <value>9</value>
+      </item>
+      <item>
+        <label>Bacharel</label>
+        <value>10</value>
+      </item>
+      <item>
+        <label>Licenciatura</label>
+        <value>11</value>
+      </item>
+      <item>
+        <label>Mestrado</label>
+        <value>12</value>
+      </item>
+      <item>
+        <label>Doutoramento</label>
+        <value>13</value>
+      </item>
+      <item>
+        <label>Nenhuma</label>
+        <value>14</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>98</value>
+      </item>
+      <item>
+        <label>Não sabe</label>
+        <value>88</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/motherTongue">
+      <label>33. Qual é a sua língua materna?</label>
+      <item>
+        <label>Bitonga</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Cibalke</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Cicopi</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Cindau</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Cinsenga</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>Cinyanja</label>
+        <value>6</value>
+      </item>
+      <item>
+        <label>Cinyungwe</label>
+        <value>7</value>
+      </item>
+      <item>
+        <label>Ciphimbi</label>
+        <value>8</value>
+      </item>
+      <item>
+        <label>Cisena</label>
+        <value>9</value>
+      </item>
+      <item>
+        <label>Citshwa</label>
+        <value>10</value>
+      </item>
+      <item>
+        <label>Echuwabo</label>
+        <value>11</value>
+      </item>
+      <item>
+        <label>Ekoti</label>
+        <value>12</value>
+      </item>
+      <item>
+        <label>Elomwe</label>
+        <value>13</value>
+      </item>
+      <item>
+        <label>Emakhuwa</label>
+        <value>14</value>
+      </item>
+      <item>
+        <label>Isizulu</label>
+        <value>15</value>
+      </item>
+      <item>
+        <label>Kimwani</label>
+        <value>16</value>
+      </item>
+      <item>
+        <label>Kiswahili</label>
+        <value>17</value>
+      </item>
+      <item>
+        <label>Português</label>
+        <value>18</value>
+      </item>
+      <item>
+        <label>Shimakonde</label>
+        <value>19</value>
+      </item>
+      <item>
+        <label>Siswati</label>
+        <value>20</value>
+      </item>
+      <item>
+        <label>Xingoni</label>
+        <value>21</value>
+      </item>
+      <item>
+        <label>Xirhonga</label>
+        <value>22</value>
+      </item>
+      <item>
+        <label>Xitsonga</label>
+        <value>23</value>
+      </item>
+      <item>
+        <label>Espanhol</label>
+        <value>24</value>
+      </item>
+      <item>
+        <label>Catalão</label>
+        <value>25</value>
+      </item>
+      <item>
+        <label>Françês</label>
+        <value>26</value>
+      </item>
+      <item>
+        <label>Inglês</label>
+        <value>27</value>
+      </item>
+      <item>
+        <label>Afrikhans</label>
+        <value>28</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>98</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/religion">
+      <label>34. Religião?</label>
+      <item>
+        <label>Católica</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Protestante/Anglicana</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Cristão indeterminada</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Islamica</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Hindus</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>Zione/ Sião</label>
+        <value>6</value>
+      </item>
+      <item>
+        <label>Animistas</label>
+        <value>7</value>
+      </item>
+      <item>
+        <label>Ateus</label>
+        <value>8</value>
+      </item>
+      <item>
+        <label>Evangelica</label>
+        <value>9</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>98</value>
+      </item>
+      <item>
+        <label>Não sabe</label>
+        <value>88</value>
+      </item>
+      <item>
+        <label>Recusa-se a responder</label>
+        <value>99</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/maritalStatus">
+      <label>35. Estado Civil?</label>
+      <item>
+        <label>Solteiro (nunca viveu maritalmente)</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Casado</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>União-de-facto</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Divorciado</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Separado</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>Viuvo</label>
+        <value>6</value>
+      </item>
+    </select1>
+    <input ref="/individual_details/eventDate">
+      <label>35.1. Data do evento</label>
+      <hint>Data referente ao Estado civil selecionado</hint>
+    </input>
+    <select1 ref="/individual_details/eventPlace">
+      <label>35.2. Lugar do evento</label>
+      <item>
+        <label>Distrito da Manhiça</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Maputo</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Matola</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Outras Provincias</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>RSA</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>Outros Paises</label>
+        <value>98</value>
+      </item>
+    </select1>
+    <input ref="/individual_details/nrOfWives">
+      <label>36. Quantas esposas o senhor tem?</label>
+      <hint>Se não sabe coloque: 88, Se não for aplicavel: 77, Se houver recusa em responder: 99</hint>
+    </input>
+    <input ref="/individual_details/nrOfHusbandWives">
+      <label>37. Quantas esposas têm o seu marido actualmente (ou tinha quando se separaram/divorciaram ou quando ele morreu), contando com a senhora?</label>
+      <hint>Se não sabe coloque: 88, Se não for aplicavel: 77, Se houver recusa em responder: 99</hint>
+    </input>
+    <select1 ref="/individual_details/wivesOnSameHouse">
+      <label>38. Todas vivem/viviam no mesmo agregado?</label>
+      <hint>Se não sabe coloque: 88, Se não for aplicavel: 77, Se houver recusa em responder: 99</hint>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Não sabe</label>
+        <value>88</value>
+      </item>
+      <item>
+        <label>Recusa</label>
+        <value>99</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/ocupation">
+      <label>39. Ocupação primária?</label>
+      <item>
+        <label>Camponês</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Pescador</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Carvoeiro/lenhador</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Vendedores fixos</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Comerciantes</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>Vendedores ambulantes</label>
+        <value>6</value>
+      </item>
+      <item>
+        <label>Guardas/Seguranças</label>
+        <value>7</value>
+      </item>
+      <item>
+        <label>Pessoal da saude</label>
+        <value>8</value>
+      </item>
+      <item>
+        <label>Estudante</label>
+        <value>9</value>
+      </item>
+      <item>
+        <label>Professor</label>
+        <value>10</value>
+      </item>
+      <item>
+        <label>Militares/Policias</label>
+        <value>11</value>
+      </item>
+      <item>
+        <label>Carpinteiro/Electricista</label>
+        <value>12</value>
+      </item>
+      <item>
+        <label>Serralheiro/Pedreiro</label>
+        <value>13</value>
+      </item>
+      <item>
+        <label>Incapacitado</label>
+        <value>14</value>
+      </item>
+      <item>
+        <label>Voluntário</label>
+        <value>15</value>
+      </item>
+      <item>
+        <label>Religioso</label>
+        <value>16</value>
+      </item>
+      <item>
+        <label>Reformado/pensionista</label>
+        <value>17</value>
+      </item>
+      <item>
+        <label>Empregado doméstico</label>
+        <value>18</value>
+      </item>
+      <item>
+        <label>Trabalhador na RSA</label>
+        <value>19</value>
+      </item>
+      <item>
+        <label>Mineiro na RSA</label>
+        <value>20</value>
+      </item>
+      <item>
+        <label>Trabalhador na açucareira de Xinavane</label>
+        <value>21</value>
+      </item>
+      <item>
+        <label>Trabalhador na açucareira de Maragra</label>
+        <value>22</value>
+      </item>
+      <item>
+        <label>Não trabalha</label>
+        <value>23</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>98</value>
+      </item>
+    </select1>
+    <input ref="/individual_details/ocupationName">
+      <label>39.1. Especifique a Ocupação?</label>
+    </input>
+    <select1 ref="/individual_details/workRegime">
+      <label>39.2. Regime de Trabalho?</label>
+      <item>
+        <label>Por conta própria</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Por conta de outrém</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/selfEmployed">
+      <label>39.3. Se trabalha por conta própria, a produção é para?</label>
+      <item>
+        <label>Consumo familiar</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Negocio</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Ambos</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/worksForOthers">
+      <label>39.4. Se trabalha por conta de outrem, o senhor recebe?</label>
+      <item>
+        <label>Salário</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Em espécie</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Não recebe</label>
+        <value>3</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/secundaryOcupation">
+      <label>40. Ocupação secundária</label>
+      <item>
+        <label>Camponês</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Pescador</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Carvoeiro/lenhador</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Vendedores fixos</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Comerciantes</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>Vendedores ambulantes</label>
+        <value>6</value>
+      </item>
+      <item>
+        <label>Guardas/Seguranças</label>
+        <value>7</value>
+      </item>
+      <item>
+        <label>Pessoal da saude</label>
+        <value>8</value>
+      </item>
+      <item>
+        <label>Estudante</label>
+        <value>9</value>
+      </item>
+      <item>
+        <label>Professor</label>
+        <value>10</value>
+      </item>
+      <item>
+        <label>Militares/Policias</label>
+        <value>11</value>
+      </item>
+      <item>
+        <label>Carpinteiro/Electricista</label>
+        <value>12</value>
+      </item>
+      <item>
+        <label>Serralheiro/Pedreiro</label>
+        <value>13</value>
+      </item>
+      <item>
+        <label>Incapacitado</label>
+        <value>14</value>
+      </item>
+      <item>
+        <label>Voluntário</label>
+        <value>15</value>
+      </item>
+      <item>
+        <label>Religioso</label>
+        <value>16</value>
+      </item>
+      <item>
+        <label>Reformado/pensionista</label>
+        <value>17</value>
+      </item>
+      <item>
+        <label>Empregado doméstico</label>
+        <value>18</value>
+      </item>
+      <item>
+        <label>Trabalhador na RSA</label>
+        <value>19</value>
+      </item>
+      <item>
+        <label>Mineiro na RSA</label>
+        <value>20</value>
+      </item>
+      <item>
+        <label>Trabalhador na açucareira de Xinavane</label>
+        <value>21</value>
+      </item>
+      <item>
+        <label>Trabalhador na açucareira de Maragra</label>
+        <value>22</value>
+      </item>
+      <item>
+        <label>Não tem</label>
+        <value>23</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>98</value>
+      </item>
+    </select1>
+    <input ref="/individual_details/secundaryOcupationName">
+      <label>40.1. Especifique a Ocupação?</label>
+    </input>
+    <select1 ref="/individual_details/stoppedWorkLastMonth">
+      <label>41. Deixou de fazer a sua ocupação no último mês por doença?</label>
+      <hint>Tanto a ocupação primaria como a secundaria</hint>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <input ref="/individual_details/nonWorkDays">
+      <label>41.1. Por quantos dias?</label>
+    </input>
+    <select1 ref="/individual_details/hasDeficiency">
+      <label>42. É portador de alguma deficiência?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/deficiency">
+      <label>42.1. É portador de que deficiência?</label>
+      <item>
+        <label>Cego</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Surdo</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Braço amputado</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Braço atrofiado</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Perna amputada</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>Perna atrofiado</label>
+        <value>6</value>
+      </item>
+      <item>
+        <label>Paralesia Infantil(polio)</label>
+        <value>7</value>
+      </item>
+      <item>
+        <label>Paralesia Adulta(trombose)</label>
+        <value>8</value>
+      </item>
+      <item>
+        <label>Mental</label>
+        <value>9</value>
+      </item>
+      <item>
+        <label>Outro</label>
+        <value>98</value>
+      </item>
+    </select1>
+    <input ref="/individual_details/deficiencyName">
+      <label>42.1.1. Especifique a deficiência?</label>
+    </input>
+    <select1 ref="/individual_details/deficiencyCauses">
+      <label>42.2. Quais foram as causas da deficiência?</label>
+      <item>
+        <label>Nascença</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Doença</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Minas/guerra</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Serviço militar</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Acidente de trabalho</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>Acidente de viação</label>
+        <value>6</value>
+      </item>
+      <item>
+        <label>Outros</label>
+        <value>98</value>
+      </item>
+    </select1>
+    <input ref="/individual_details/deficiencyCausesName">
+      <label>42.2.1. Especifique as causas da deficiência?</label>
+    </input>
+    <group ref="/individual_details/fertility">
+      <label>Secção de Fecundidade</label>
+      <select1 ref="/individual_details/fertility/hasPrevPregnancies">
+        <label>43. A senhora já esteve grávida alguma vez na vida?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não</label>
+          <value>2</value>
+        </item>
+      </select1>
+      <input ref="/individual_details/fertility/nrPregnancies">
+        <label>44. Quantas gravidezes no total a senhora já teve na vida, incluindo a gravidez corrente (caso esteja gravida neste momento)</label>
+        <hint>88 = Não sabe; 99 Recusa</hint>
+      </input>
+      <input ref="/individual_details/fertility/nrLivebirths">
+        <label>45. Quantos nascidos vivos a senhora teve na sua vida(toda)?</label>
+      </input>
+      <input ref="/individual_details/fertility/nrBoys">
+        <label>45.1. Quantos filhos são rapazes?</label>
+      </input>
+      <input ref="/individual_details/fertility/nrGirls">
+        <label>45.2. Quantas filhas são meninas?</label>
+      </input>
+      <input ref="/individual_details/fertility/nrAliveBoys">
+        <label>45.3. Dos rapazes, quantos estão actualmente vivos?</label>
+      </input>
+      <input ref="/individual_details/fertility/nrAliveGirls">
+        <label>45.4. Das meninas, quantas estão actualmente vivas</label>
+      </input>
+      <input ref="/individual_details/fertility/nrMiscarriages">
+        <label>46. Quantas vezes a senhora teve alguma gravidez que resultou num aborto espontâneo/Não esperado (Aborto = menos de 28 semanas de gestação)?</label>
+        <hint>(Aborto = menos de 28 semanas de gestação)</hint>
+      </input>
+      <input ref="/individual_details/fertility/nrAbortions">
+        <label>47. Quantas vezes a senhora teve alguma gravidez que resultou num aborto induzido/programado (Aborto = menos de 28 semanas de gestação)?</label>
+        <hint>(Aborto = menos de 28 semanas de gestação).</hint>
+      </input>
+      <input ref="/individual_details/fertility/nrStillbirths">
+        <label>48. Quantas vezes a senhora teve alguma gravidez que resultou num nado morto (Nado morto = mais de 28 semanas de gestação)?</label>
+      </input>
+      <input ref="/individual_details/fertility/nrTwinOutcomes">
+        <label>49. Quantas vezes a senhora teve alguma gravidez que resultou em gémeos?</label>
+      </input>
+      <input ref="/individual_details/fertility/nrTripletOutcomes">
+        <label>50. Quantas vezes a senhora teve alguma gravidez que resultou em trigémeos?</label>
+      </input>
+      <input ref="/individual_details/fertility/nrQuadrOutcomes">
+        <label>51. Quantas vezes a senhora teve alguma gravidez que resultou em quadrigémeos?</label>
+      </input>
+      <input ref="/individual_details/fertility/nrTwinAbortions">
+        <label>52. Quantas gravidezes de gémeos teve que resultaram em aborto?</label>
+      </input>
+      <input ref="/individual_details/fertility/nrTwinStillbirths">
+        <label>53. Quantas gravidezes de gémeos teve que resultaram em nados mortos?</label>
+      </input>
+      <input ref="/individual_details/fertility/nrTwinsAlive">
+        <label>54. Quantos filhos de nascimentos multiplos continuam vivos, no total?</label>
+      </input>
+    </group>
+    <input ref="/individual_details/processedByMirth">
+      <label>processed</label>
+      <hint>processed</hint>
+    </input>
+    <input ref="/individual_details/processedBySync">
+      <label>processed by dbsync</label>
+      <hint>processed</hint>
+    </input>
+  </h:body>
+</h:html>

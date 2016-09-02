@@ -1,91 +1,21 @@
 <?xml version="1.0"?>
 <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>Registo de Relacionamento</h:title>
+    <h:title>Registo de União Marital</h:title>
     <model>
       <itext>
-        <translation lang="Swahili">
-          <text id="/relationship/relationshipType/4:label">
-            <value>Mjane</value>
-          </text>
-          <text id="/relationship/relationshipType/3:label">
-            <value>Wametengana/Talakiana</value>
-          </text>
-          <text id="/relationship/relationshipType:label">
-            <value>Aina ya Uhusiano</value>
-          </text>
-          <text id="/relationship/relationshipType/5:label">
-            <value>Ishi Pamoja</value>
-          </text>
-          <text id="/relationship/relationshipType/2:label">
-            <value>Wameoana</value>
-          </text>
-          <text id="/relationship/individualA:label">
-            <value>Mwanakaya A</value>
-          </text>
-          <text id="/relationship/fieldWorkerId:label">
-            <value>Nambari ya Mhojaji</value>
-          </text>
-          <text id="/relationship/processedByMirth:label">
-            <value>processed</value>
-          </text>
-          <text id="/relationship/individualB:label">
-            <value>Mwanakaya B</value>
-          </text>
-          <text id="/relationship/startDate:label">
-            <value>Tarehe ya kuanza</value>
-          </text>
-        </translation>
-        <translation default="true()" lang="Portuguese">
-          <text id="/relationship/relationshipType/4:label">
-            <value>Viúvo/a</value>
-          </text>
-          <text id="/relationship/relationshipType/3:label">
-            <value>Divorciado/a</value>
-          </text>
-          <text id="/relationship/relationshipType:label">
-            <value>Tipo de relação</value>
-          </text>
-          <text id="/relationship/relationshipType/5:label">
-            <value>Vivendo Maritalmente</value>
-          </text>
-          <text id="/relationship/relationshipType/2:label">
-            <value>Casado</value>
-          </text>
-          <text id="/relationship/individualA:label">
-            <value>Individuo A</value>
-          </text>
-          <text id="/relationship/fieldWorkerId:label">
-            <value>Código do Inquiridor</value>
-          </text>
-          <text id="/relationship/processedByMirth:label">
-            <value>processed</value>
-          </text>
-          <text id="/relationship/individualB:label">
-            <value>Individuo B</value>
-          </text>
-          <text id="/relationship/startDate:label">
-            <value>Data de Inicio (da relação)</value>
-          </text>
-        </translation>
         <translation lang="English">
-          <text id="/relationship/relationshipType/4:label">
-            <value>Widowed</value>
-          </text>
           <text id="/relationship/relationshipType/3:label">
             <value>Separated/Divorced</value>
           </text>
-          <text id="/relationship/relationshipType:label">
-            <value>Relationship Type</value>
-          </text>
-          <text id="/relationship/relationshipType/5:label">
-            <value>Living Together</value>
-          </text>
-          <text id="/relationship/relationshipType/2:label">
-            <value>Married</value>
+          <text id="/relationship/individualB:label">
+            <value>Individual B</value>
           </text>
           <text id="/relationship/individualA:label">
             <value>Individual A</value>
+          </text>
+          <text id="/relationship/relationshipType/4:label">
+            <value>Widowed</value>
           </text>
           <text id="/relationship/fieldWorkerId:label">
             <value>Field Worker Id</value>
@@ -93,11 +23,81 @@
           <text id="/relationship/processedByMirth:label">
             <value>processed</value>
           </text>
-          <text id="/relationship/individualB:label">
-            <value>Individual B</value>
-          </text>
           <text id="/relationship/startDate:label">
             <value>Start Date</value>
+          </text>
+          <text id="/relationship/relationshipType:label">
+            <value>Relationship Type</value>
+          </text>
+          <text id="/relationship/relationshipType/2:label">
+            <value>Married</value>
+          </text>
+          <text id="/relationship/relationshipType/5:label">
+            <value>Living Together</value>
+          </text>
+        </translation>
+        <translation default="true()" lang="Portuguese">
+          <text id="/relationship/relationshipType/3:label">
+            <value>Divorciado/a</value>
+          </text>
+          <text id="/relationship/individualB:label">
+            <value>2. Individuo B</value>
+          </text>
+          <text id="/relationship/individualA:label">
+            <value>1. Individuo A</value>
+          </text>
+          <text id="/relationship/relationshipType/4:label">
+            <value>Viúvo/a</value>
+          </text>
+          <text id="/relationship/fieldWorkerId:label">
+            <value>3. Código do Inquiridor</value>
+          </text>
+          <text id="/relationship/processedByMirth:label">
+            <value>processed</value>
+          </text>
+          <text id="/relationship/startDate:label">
+            <value>5. Data de Inicio (da relação)</value>
+          </text>
+          <text id="/relationship/relationshipType:label">
+            <value>4. Tipo de relação</value>
+          </text>
+          <text id="/relationship/relationshipType/2:label">
+            <value>Casado</value>
+          </text>
+          <text id="/relationship/relationshipType/5:label">
+            <value>Vivendo Maritalmente</value>
+          </text>
+        </translation>
+        <translation lang="Swahili">
+          <text id="/relationship/relationshipType/3:label">
+            <value>Wametengana/Talakiana</value>
+          </text>
+          <text id="/relationship/individualB:label">
+            <value>Mwanakaya B</value>
+          </text>
+          <text id="/relationship/individualA:label">
+            <value>Mwanakaya A</value>
+          </text>
+          <text id="/relationship/relationshipType/4:label">
+            <value>Mjane</value>
+          </text>
+          <text id="/relationship/fieldWorkerId:label">
+            <value>Nambari ya Mhojaji</value>
+          </text>
+          <text id="/relationship/processedByMirth:label">
+            <value>processed</value>
+          </text>
+          <text id="/relationship/startDate:label">
+            <value>Tarehe ya kuanza</value>
+          </text>
+          <text id="/relationship/relationshipType:label">
+            <value>Aina ya Uhusiano</value>
+          </text>
+          <text id="/relationship/relationshipType/2:label">
+            <value>Wameoana</value>
+          </text>
+          <text id="/relationship/relationshipType/5:label">
+            <value>Ishi Pamoja</value>
           </text>
         </translation>
       </itext>
@@ -128,7 +128,7 @@
       <bind constraint=".&lt;= today()" jr:constraintMsg="The start date can not be in the future" nodeset="/relationship/startDate" required="true()" type="date"/>
       <bind nodeset="/relationship/processedByMirth" readonly="true()" type="int"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/relationship/meta/instanceID" readonly="true()" type="string"/>
-      <bind calculate="concat(&quot;Relationship_&quot;, /relationship/individualA ,&quot;_&quot;,  /relationship/individualB )" nodeset="/relationship/meta/instanceName" type="string"/>
+      <bind calculate="concat(&quot;RegUniao_&quot;, /relationship/individualA ,&quot;_&quot;,  /relationship/individualB )" nodeset="/relationship/meta/instanceName" type="string"/>
     </model>
   </h:head>
   <h:body>

@@ -4,12 +4,41 @@
     <h:title>Registo de Agregado</h:title>
     <model>
       <itext>
-        <translation lang="Swahili">
+        <translation default="true()" lang="Portuguese">
+          <text id="/social_group_registration/socialGroupType/COH:label">
+            <value>Grupo</value>
+          </text>
+          <text id="/social_group_registration/individualId:label">
+            <value>2. ExtId do Chefe do Agregado</value>
+          </text>
           <text id="/social_group_registration/processedByMirth:label">
             <value>processed</value>
           </text>
+          <text id="/social_group_registration/socialGroupType:label">
+            <value>5. Tipo de Agregado</value>
+          </text>
+          <text id="/social_group_registration/groupName:label">
+            <value>4. Número do Agregado</value>
+          </text>
+          <text id="/social_group_registration/fieldWorkerId:label">
+            <value>3. Código do Inquiridor</value>
+          </text>
+          <text id="/social_group_registration/householdId:label">
+            <value>1. ExtId do Agregado</value>
+          </text>
           <text id="/social_group_registration/socialGroupType/FAM:label">
             <value>Familia</value>
+          </text>
+        </translation>
+        <translation lang="Swahili">
+          <text id="/social_group_registration/socialGroupType/COH:label">
+            <value>Cohort</value>
+          </text>
+          <text id="/social_group_registration/individualId:label">
+            <value>Mkuu wa Kikundi</value>
+          </text>
+          <text id="/social_group_registration/processedByMirth:label">
+            <value>processed</value>
           </text>
           <text id="/social_group_registration/socialGroupType:label">
             <value>Aina ya Kikundi</value>
@@ -20,48 +49,22 @@
           <text id="/social_group_registration/fieldWorkerId:label">
             <value>Namba ya Mhojaji</value>
           </text>
-          <text id="/social_group_registration/individualId:label">
-            <value>Mkuu wa Kikundi</value>
-          </text>
-          <text id="/social_group_registration/socialGroupType/COH:label">
-            <value>Cohort</value>
-          </text>
           <text id="/social_group_registration/householdId:label">
             <value>Namba Ya Kaya</value>
-          </text>
-        </translation>
-        <translation default="true()" lang="Portuguese">
-          <text id="/social_group_registration/processedByMirth:label">
-            <value>processed</value>
           </text>
           <text id="/social_group_registration/socialGroupType/FAM:label">
             <value>Familia</value>
           </text>
-          <text id="/social_group_registration/socialGroupType:label">
-            <value>Tipo de Agregado</value>
-          </text>
-          <text id="/social_group_registration/groupName:label">
-            <value>Número do Agregado</value>
-          </text>
-          <text id="/social_group_registration/fieldWorkerId:label">
-            <value>Código do Inquiridor</value>
-          </text>
-          <text id="/social_group_registration/individualId:label">
-            <value>ExtId do Chefe do Agregado</value>
-          </text>
-          <text id="/social_group_registration/socialGroupType/COH:label">
-            <value>Grupo</value>
-          </text>
-          <text id="/social_group_registration/householdId:label">
-            <value>ExtId do Agregado</value>
-          </text>
         </translation>
         <translation lang="English">
+          <text id="/social_group_registration/socialGroupType/COH:label">
+            <value>Cohort</value>
+          </text>
+          <text id="/social_group_registration/individualId:label">
+            <value>Social Group Head</value>
+          </text>
           <text id="/social_group_registration/processedByMirth:label">
             <value>processed</value>
-          </text>
-          <text id="/social_group_registration/socialGroupType/FAM:label">
-            <value>Family</value>
           </text>
           <text id="/social_group_registration/socialGroupType:label">
             <value>Social Group Type</value>
@@ -72,14 +75,11 @@
           <text id="/social_group_registration/fieldWorkerId:label">
             <value>Field Worker Id</value>
           </text>
-          <text id="/social_group_registration/individualId:label">
-            <value>Social Group Head</value>
-          </text>
-          <text id="/social_group_registration/socialGroupType/COH:label">
-            <value>Cohort</value>
-          </text>
           <text id="/social_group_registration/householdId:label">
             <value>Household Id</value>
+          </text>
+          <text id="/social_group_registration/socialGroupType/FAM:label">
+            <value>Family</value>
           </text>
         </translation>
       </itext>

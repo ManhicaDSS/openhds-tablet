@@ -4,205 +4,229 @@
     <h:title>Mudança do chefe do agregado</h:title>
     <model>
       <itext>
+        <translation default="true()" lang="Portuguese">
+          <text id="/change_household_head/membershiptonewhoh:label">
+            <value>11. Relação dos membros com o chefe</value>
+          </text>
+          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead:label">
+            <value>4. Relação com o chefe de agregado</value>
+          </text>
+          <text id="/change_household_head/membershiptonewhoh/extId:label">
+            <value>1. ExtId do Membro</value>
+          </text>
+          <text id="/change_household_head/membershiptonewhoh/socialGroupId:label">
+            <value>3. ExtId do Agregado</value>
+          </text>
+          <text id="/change_household_head/causes/4:label">
+            <value>Separação</value>
+          </text>
+          <text id="/change_household_head/householdName:label">
+            <value>5. Número do Agregado</value>
+          </text>
+          <text id="/change_household_head/visitDate:label">
+            <value>2. Data da visita</value>
+          </text>
+          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/7:label">
+            <value>Sem relação</value>
+          </text>
+          <text id="/change_household_head/causes/3:label">
+            <value>Divórcio</value>
+          </text>
+          <text id="/change_household_head/new_hoh_id:label">
+            <value>6. ExtId do Novo Chefe de agregado</value>
+          </text>
+          <text id="/change_household_head/householdId:label">
+            <value>3. ExtId do Agregado</value>
+          </text>
+          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/2:label">
+            <value>Esposo/a</value>
+          </text>
+          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/4:label">
+            <value>Irmão/Irmã</value>
+          </text>
+          <text id="/change_household_head/causes/1:label">
+            <value>Por mudança de residência</value>
+          </text>
+          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/3:label">
+            <value>Filho/Filha</value>
+          </text>
+          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/6:label">
+            <value>Neto/a</value>
+          </text>
+          <text id="/change_household_head/causes/6:label">
+            <value>Morte</value>
+          </text>
+          <text id="/change_household_head/otherCauses:label">
+            <value>9.1. Especifique as causas da mudança</value>
+          </text>
+          <text id="/change_household_head/causes/2:label">
+            <value>Idade avançada do Anterior Chefe</value>
+          </text>
+          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/change_household_head/processedByMirth:label">
+            <value>processedByMirth</value>
+          </text>
+          <text id="/change_household_head/causes/5:label">
+            <value>Emprego</value>
+          </text>
+          <text id="/change_household_head/causes/99:label">
+            <value>Outros Motivos</value>
+          </text>
+          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/98:label">
+            <value>Outro parente</value>
+          </text>
+          <text id="/change_household_head/eventDate:label">
+            <value>8. Data da mudança</value>
+          </text>
+          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/5:label">
+            <value>Pai/Mãe</value>
+          </text>
+          <text id="/change_household_head/causes:label">
+            <value>9. Causa da mudança de chefe</value>
+          </text>
+          <text id="/change_household_head/membershiptonewhoh/memberName:label">
+            <value>2. Nome do membro</value>
+          </text>
+          <text id="/change_household_head/hh_people_nb:label">
+            <value>10. Número de Membros do Agregado</value>
+          </text>
+          <text id="/change_household_head/visitId:label">
+            <value>1. ExtId da visita</value>
+          </text>
+          <text id="/change_household_head/new_hoh_name:label">
+            <value>7. Nome do Novo Chefe de Agregado</value>
+          </text>
+          <text id="/change_household_head/fieldWorkerId:label">
+            <value>3. Código do Inquiridor</value>
+          </text>
+        </translation>
         <translation lang="Swahili">
           <text id="/change_household_head/membershiptonewhoh:label">
+            <value>-</value>
+          </text>
+          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead:label">
+            <value>-</value>
+          </text>
+          <text id="/change_household_head/membershiptonewhoh/extId:label">
+            <value>-</value>
+          </text>
+          <text id="/change_household_head/membershiptonewhoh/socialGroupId:label">
+            <value>-</value>
+          </text>
+          <text id="/change_household_head/causes/4:label">
+            <value>Separação</value>
+          </text>
+          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/5:label">
+            <value>Mzazi</value>
+          </text>
+          <text id="/change_household_head/hh_people_nb:label">
+            <value>-</value>
+          </text>
+          <text id="/change_household_head/causes/3:label">
+            <value>Divórcio</value>
+          </text>
+          <text id="/change_household_head/visitDate:label">
             <value>-</value>
           </text>
           <text id="/change_household_head/new_hoh_id:label">
             <value>-</value>
           </text>
           <text id="/change_household_head/householdId:label">
-            <value>-</value>
-          </text>
-          <text id="/change_household_head/causes/1:label">
-            <value>Por mudança de residência</value>
-          </text>
-          <text id="/change_household_head/causes/5:label">
-            <value>Emprego</value>
-          </text>
-          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/9:label">
-            <value>Sijui</value>
-          </text>
-          <text id="/change_household_head/causes/2:label">
-            <value>Idade avançada do Anterior Chefe</value>
-          </text>
-          <text id="/change_household_head/causes/6:label">
-            <value>Morte</value>
-          </text>
-          <text id="/change_household_head/processedByMirth:label">
-            <value>-</value>
-          </text>
-          <text id="/change_household_head/visitId:label">
-            <value>-</value>
-          </text>
-          <text id="/change_household_head/causes/99:label">
-            <value>Outros Motivos</value>
-          </text>
-          <text id="/change_household_head/eventDate:label">
-            <value>-</value>
-          </text>
-          <text id="/change_household_head/visitDate:label">
-            <value>-</value>
-          </text>
-          <text id="/change_household_head/hh_people_nb:label">
             <value>-</value>
           </text>
           <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/7:label">
             <value>Hakuna Mahusiano</value>
           </text>
-          <text id="/change_household_head/causes/4:label">
-            <value>Separação</value>
-          </text>
           <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/4:label">
             <value>Kaka/Dada</value>
-          </text>
-          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/2:label">
-            <value>Mke/Mme</value>
-          </text>
-          <text id="/change_household_head/membershiptonewhoh/socialGroupId:label">
-            <value>-</value>
-          </text>
-          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/5:label">
-            <value>Mzazi</value>
-          </text>
-          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/3:label">
-            <value>Mtoto Kiume/Kike</value>
-          </text>
-          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead:label">
-            <value>-</value>
-          </text>
-          <text id="/change_household_head/fieldWorkerId:label">
-            <value>-</value>
-          </text>
-          <text id="/change_household_head/causes/3:label">
-            <value>Divórcio</value>
-          </text>
-          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/8:label">
-            <value>Uhusiano Mwingine</value>
-          </text>
-          <text id="/change_household_head/new_hoh_name:label">
-            <value>-</value>
           </text>
           <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/6:label">
             <value>Mjukuu</value>
           </text>
-          <text id="/change_household_head/membershiptonewhoh/memberName:label">
-            <value>-</value>
-          </text>
-          <text id="/change_household_head/causes:label">
-            <value>-</value>
-          </text>
-          <text id="/change_household_head/otherCauses:label">
-            <value>-</value>
-          </text>
-          <text id="/change_household_head/householdName:label">
-            <value>-</value>
-          </text>
-          <text id="/change_household_head/membershiptonewhoh/extId:label">
-            <value>-</value>
-          </text>
-        </translation>
-        <translation default="true()" lang="Portuguese">
-          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/7:label">
-            <value>Sem relação</value>
-          </text>
-          <text id="/change_household_head/new_hoh_id:label">
-            <value>Novo ID do Chefe de agregado</value>
-          </text>
-          <text id="/change_household_head/householdId:label">
-            <value>Id do Agregado</value>
+          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/3:label">
+            <value>Mtoto Kiume/Kike</value>
           </text>
           <text id="/change_household_head/causes/1:label">
             <value>Por mudança de residência</value>
           </text>
-          <text id="/change_household_head/causes/5:label">
-            <value>Emprego</value>
-          </text>
-          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/9:label">
-            <value>Não sabe</value>
-          </text>
-          <text id="/change_household_head/causes/4:label">
-            <value>Separação</value>
+          <text id="/change_household_head/causes/6:label">
+            <value>Morte</value>
           </text>
           <text id="/change_household_head/causes/2:label">
             <value>Idade avançada do Anterior Chefe</value>
           </text>
-          <text id="/change_household_head/causes/6:label">
-            <value>Morte</value>
+          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/88:label">
+            <value>Sijui</value>
           </text>
           <text id="/change_household_head/processedByMirth:label">
-            <value>processedByMirth</value>
+            <value>-</value>
+          </text>
+          <text id="/change_household_head/causes/5:label">
+            <value>Emprego</value>
           </text>
           <text id="/change_household_head/causes/99:label">
             <value>Outros Motivos</value>
           </text>
+          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/98:label">
+            <value>Uhusiano Mwingine</value>
+          </text>
           <text id="/change_household_head/eventDate:label">
-            <value>Data da mudança</value>
-          </text>
-          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/4:label">
-            <value>Irmão/Irmã</value>
-          </text>
-          <text id="/change_household_head/hh_people_nb:label">
-            <value>Membros do Agregado</value>
-          </text>
-          <text id="/change_household_head/householdName:label">
-            <value>Número do Agregado</value>
-          </text>
-          <text id="/change_household_head/membershiptonewhoh:label">
-            <value>Alterar Filiação dos Membros</value>
-          </text>
-          <text id="/change_household_head/visitDate:label">
-            <value>Data da visita</value>
-          </text>
-          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/2:label">
-            <value>Esposo/a</value>
-          </text>
-          <text id="/change_household_head/membershiptonewhoh/socialGroupId:label">
-            <value>Id do Agregado</value>
-          </text>
-          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/5:label">
-            <value>Pai/Mãe</value>
-          </text>
-          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/3:label">
-            <value>Filho/Filha</value>
-          </text>
-          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead:label">
-            <value>Relação com o chefe de agregado</value>
-          </text>
-          <text id="/change_household_head/fieldWorkerId:label">
-            <value>Código do Inquiridor</value>
-          </text>
-          <text id="/change_household_head/causes/3:label">
-            <value>Divórcio</value>
-          </text>
-          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/8:label">
-            <value>Outro parente</value>
-          </text>
-          <text id="/change_household_head/visitId:label">
-            <value>Id da visita</value>
-          </text>
-          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/6:label">
-            <value>Neto/a</value>
-          </text>
-          <text id="/change_household_head/membershiptonewhoh/memberName:label">
-            <value>Nome do membro</value>
-          </text>
-          <text id="/change_household_head/causes:label">
-            <value>Causa da mudança de chefe</value>
-          </text>
-          <text id="/change_household_head/otherCauses:label">
-            <value>Especifique as causas da mudança</value>
+            <value>-</value>
           </text>
           <text id="/change_household_head/new_hoh_name:label">
-            <value>Nome do novo Chefe de Agregado</value>
+            <value>-</value>
           </text>
-          <text id="/change_household_head/membershiptonewhoh/extId:label">
-            <value>ExtId do Membro</value>
+          <text id="/change_household_head/causes:label">
+            <value>-</value>
+          </text>
+          <text id="/change_household_head/otherCauses:label">
+            <value>-</value>
+          </text>
+          <text id="/change_household_head/membershiptonewhoh/memberName:label">
+            <value>-</value>
+          </text>
+          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/2:label">
+            <value>Mke/Mme</value>
+          </text>
+          <text id="/change_household_head/visitId:label">
+            <value>-</value>
+          </text>
+          <text id="/change_household_head/householdName:label">
+            <value>-</value>
+          </text>
+          <text id="/change_household_head/fieldWorkerId:label">
+            <value>-</value>
           </text>
         </translation>
         <translation lang="English">
+          <text id="/change_household_head/membershiptonewhoh:label">
+            <value>Membership</value>
+          </text>
+          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead:label">
+            <value>Relationship to Group Head</value>
+          </text>
+          <text id="/change_household_head/membershiptonewhoh/extId:label">
+            <value>Member Id</value>
+          </text>
+          <text id="/change_household_head/membershiptonewhoh/socialGroupId:label">
+            <value>Social Group Id</value>
+          </text>
+          <text id="/change_household_head/causes/4:label">
+            <value>Separação</value>
+          </text>
+          <text id="/change_household_head/householdName:label">
+            <value>Household Name</value>
+          </text>
+          <text id="/change_household_head/visitDate:label">
+            <value>VIsit Date</value>
+          </text>
           <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/7:label">
             <value>Not Related</value>
+          </text>
+          <text id="/change_household_head/causes/3:label">
+            <value>Divórcio</value>
           </text>
           <text id="/change_household_head/new_hoh_id:label">
             <value>New Hoh Id</value>
@@ -210,92 +234,68 @@
           <text id="/change_household_head/householdId:label">
             <value>HouseHoldId</value>
           </text>
-          <text id="/change_household_head/causes/1:label">
-            <value>Por mudança de residência</value>
-          </text>
-          <text id="/change_household_head/causes/5:label">
-            <value>Emprego</value>
-          </text>
-          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/9:label">
-            <value>Don't Know</value>
-          </text>
-          <text id="/change_household_head/causes/4:label">
-            <value>Separação</value>
-          </text>
-          <text id="/change_household_head/causes/2:label">
-            <value>Idade avançada do Anterior Chefe</value>
-          </text>
-          <text id="/change_household_head/causes/6:label">
-            <value>Morte</value>
-          </text>
-          <text id="/change_household_head/processedByMirth:label">
-            <value>processedByMirth</value>
-          </text>
-          <text id="/change_household_head/causes/99:label">
-            <value>Outros Motivos</value>
-          </text>
-          <text id="/change_household_head/eventDate:label">
-            <value>Date of change</value>
+          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/2:label">
+            <value>Spouse</value>
           </text>
           <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/4:label">
             <value>Brother/Sister</value>
           </text>
-          <text id="/change_household_head/hh_people_nb:label">
-            <value>Members</value>
-          </text>
-          <text id="/change_household_head/householdName:label">
-            <value>Household Name</value>
-          </text>
-          <text id="/change_household_head/membershiptonewhoh:label">
-            <value>Membership</value>
-          </text>
-          <text id="/change_household_head/visitDate:label">
-            <value>VIsit Date</value>
-          </text>
-          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/2:label">
-            <value>Spouse</value>
-          </text>
-          <text id="/change_household_head/membershiptonewhoh/socialGroupId:label">
-            <value>Social Group Id</value>
-          </text>
-          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/5:label">
-            <value>Parent</value>
+          <text id="/change_household_head/causes/1:label">
+            <value>Por mudança de residência</value>
           </text>
           <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/3:label">
             <value>Son/Daughter</value>
           </text>
-          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead:label">
-            <value>Relationship to Group Head</value>
-          </text>
-          <text id="/change_household_head/fieldWorkerId:label">
-            <value>Field Worker Id</value>
-          </text>
-          <text id="/change_household_head/causes/3:label">
-            <value>Divórcio</value>
-          </text>
-          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/8:label">
-            <value>Other Relative</value>
-          </text>
-          <text id="/change_household_head/visitId:label">
-            <value>Visit Id</value>
-          </text>
           <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/6:label">
             <value>Grandchild</value>
           </text>
-          <text id="/change_household_head/membershiptonewhoh/memberName:label">
-            <value>Member Name</value>
-          </text>
-          <text id="/change_household_head/causes:label">
-            <value>Cause of the change</value>
+          <text id="/change_household_head/causes/6:label">
+            <value>Morte</value>
           </text>
           <text id="/change_household_head/otherCauses:label">
             <value>Especifique as causas da mudança</value>
           </text>
+          <text id="/change_household_head/causes/2:label">
+            <value>Idade avançada do Anterior Chefe</value>
+          </text>
+          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/88:label">
+            <value>Don't Know</value>
+          </text>
+          <text id="/change_household_head/processedByMirth:label">
+            <value>processedByMirth</value>
+          </text>
+          <text id="/change_household_head/causes/5:label">
+            <value>Emprego</value>
+          </text>
+          <text id="/change_household_head/causes/99:label">
+            <value>Outros Motivos</value>
+          </text>
+          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/98:label">
+            <value>Other Relative</value>
+          </text>
+          <text id="/change_household_head/eventDate:label">
+            <value>Date of change</value>
+          </text>
+          <text id="/change_household_head/membershiptonewhoh/relationshipToGroupHead/5:label">
+            <value>Parent</value>
+          </text>
+          <text id="/change_household_head/causes:label">
+            <value>Cause of the change</value>
+          </text>
+          <text id="/change_household_head/membershiptonewhoh/memberName:label">
+            <value>Member Name</value>
+          </text>
+          <text id="/change_household_head/hh_people_nb:label">
+            <value>Members</value>
+          </text>
+          <text id="/change_household_head/visitId:label">
+            <value>Visit Id</value>
+          </text>
           <text id="/change_household_head/new_hoh_name:label">
             <value>New Hoh Name</value>
           </text>
-          <text id="/change_household_head/membershiptonewhoh/extId:label">
-            <value>Member Id</value>
+          <text id="/change_household_head/fieldWorkerId:label">
+            <value>Field Worker Id</value>
           </text>
         </translation>
       </itext>
@@ -338,7 +338,7 @@
       <bind nodeset="/change_household_head/householdId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/change_household_head/householdName" readonly="true()" type="string"/>
       <bind nodeset="/change_household_head/new_hoh_id" readonly="true()" required="true()" type="string"/>
-      <bind nodeset="/change_household_head/new_hoh_name" readonly="true()" type="string"/>
+      <bind nodeset="/change_household_head/new_hoh_name" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/change_household_head/eventDate" required="true()" type="date"/>
       <bind nodeset="/change_household_head/causes" required="true()" type="select1"/>
       <bind nodeset="/change_household_head/otherCauses" relevant="selected( /change_household_head/causes , '99')" required="true()" type="string"/>
@@ -350,7 +350,7 @@
       <bind nodeset="/change_household_head/membershiptonewhoh/relationshipToGroupHead" required="true()" type="select1"/>
       <bind nodeset="/change_household_head/processedByMirth" readonly="true()" type="int"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/change_household_head/meta/instanceID" readonly="true()" type="string"/>
-      <bind calculate="concat(&quot;CHANGE_HOH-&quot;, /change_household_head/householdName )" nodeset="/change_household_head/meta/instanceName" type="string"/>
+      <bind calculate="concat(&quot;MudarChefe-&quot;, /change_household_head/householdName )" nodeset="/change_household_head/meta/instanceName" type="string"/>
     </model>
   </h:head>
   <h:body>
@@ -454,12 +454,12 @@
             <value>7</value>
           </item>
           <item>
-            <label ref="jr:itext('/change_household_head/membershiptonewhoh/relationshipToGroupHead/8:label')"/>
-            <value>8</value>
+            <label ref="jr:itext('/change_household_head/membershiptonewhoh/relationshipToGroupHead/98:label')"/>
+            <value>98</value>
           </item>
           <item>
-            <label ref="jr:itext('/change_household_head/membershiptonewhoh/relationshipToGroupHead/9:label')"/>
-            <value>9</value>
+            <label ref="jr:itext('/change_household_head/membershiptonewhoh/relationshipToGroupHead/88:label')"/>
+            <value>88</value>
           </item>
         </select1>
       </repeat>

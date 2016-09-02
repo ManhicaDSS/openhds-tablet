@@ -1,0 +1,974 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Informação sobre a imunização</h:title>
+    <model>
+      <instance>
+        <imunization id="imunization">
+          <deviceid/>
+          <start/>
+          <end/>
+          <visitId/>
+          <roundNumber/>
+          <fieldWorkerId/>
+          <locationId/>
+          <individualId/>
+          <houseNumber/>
+          <region/>
+          <permId/>
+          <name/>
+          <gender/>
+          <dob/>
+          <fatherPermId/>
+          <motherPermId/>
+          <vaccination>
+            <hasCard/>
+            <hasFwViewedCard/>
+            <reasonToNotViewCard/>
+            <cardStatus/>
+            <cardEmissionType/>
+            <reasonToNotHaveCard/>
+            <isPresent/>
+            <hasBcgScar/>
+            <hasAllVaccines/>
+            <howConfirmed/>
+            <vaccinesOnDatabase>2</vaccinesOnDatabase>
+            <isPossibleToRegister/>
+            <reasonToNotRegister/>
+          </vaccination>
+          <vaccines>
+            <bcg>
+              <hasRegisteredBcg>2</hasRegisteredBcg>
+              <receivedBcg>2</receivedBcg>
+              <receivedBcgDate/>
+            </bcg>
+            <polioDose0>
+              <hasRegisteredPd0>2</hasRegisteredPd0>
+              <receivedPd0>2</receivedPd0>
+              <receivedPd0Date/>
+            </polioDose0>
+            <polioDose1>
+              <hasRegisteredPd1>2</hasRegisteredPd1>
+              <receivedPd1>2</receivedPd1>
+              <receivedPd1Date/>
+            </polioDose1>
+            <polioDose2>
+              <hasRegisteredPd2>2</hasRegisteredPd2>
+              <receivedPd2>2</receivedPd2>
+              <receivedPd2Date/>
+            </polioDose2>
+            <polioDose3>
+              <hasRegisteredPd3>2</hasRegisteredPd3>
+              <receivedPd3>2</receivedPd3>
+              <receivedPd3Date/>
+            </polioDose3>
+            <dptDose1>
+              <hasRegisteredDpt1>2</hasRegisteredDpt1>
+              <receivedDpt1>2</receivedDpt1>
+              <receivedDpt1Date/>
+            </dptDose1>
+            <dptDose2>
+              <hasRegisteredDpt2>2</hasRegisteredDpt2>
+              <receivedDpt2>2</receivedDpt2>
+              <receivedDpt2Date/>
+            </dptDose2>
+            <dptDose3>
+              <hasRegisteredDpt3>2</hasRegisteredDpt3>
+              <receivedDpt3>2</receivedDpt3>
+              <receivedDpt3Date/>
+            </dptDose3>
+            <pcv10Dose1>
+              <hasRegisteredPcv1>2</hasRegisteredPcv1>
+              <receivedPcv1>2</receivedPcv1>
+              <receivedPcv1Date/>
+            </pcv10Dose1>
+            <pcv10Dose2>
+              <hasRegisteredPcv2>2</hasRegisteredPcv2>
+              <receivedPcv2>2</receivedPcv2>
+              <receivedPcv2Date/>
+            </pcv10Dose2>
+            <pcv10Dose3>
+              <hasRegisteredPcv3>2</hasRegisteredPcv3>
+              <receivedPcv3>2</receivedPcv3>
+              <receivedPcv3Date/>
+            </pcv10Dose3>
+            <sarampo>
+              <hasRegisteredSmp>2</hasRegisteredSmp>
+              <receivedSmp>2</receivedSmp>
+              <receivedSmpDate/>
+            </sarampo>
+            <rotavirusDose1>
+              <hasRegisteredRv1>2</hasRegisteredRv1>
+              <receivedRv1>2</receivedRv1>
+              <receivedRv1Date/>
+            </rotavirusDose1>
+            <rotavirusDose2>
+              <hasRegisteredRv2>2</hasRegisteredRv2>
+              <receivedRv2>2</receivedRv2>
+              <receivedRv2Date/>
+            </rotavirusDose2>
+            <rotavirusDose3>
+              <hasRegisteredRv3>2</hasRegisteredRv3>
+              <receivedRv3>2</receivedRv3>
+              <receivedRv3Date/>
+            </rotavirusDose3>
+            <vitaminaATotal>0</vitaminaATotal>
+            <vitaminaANrDoses>0</vitaminaANrDoses>
+            <vitaminaA_count/>
+            <vitaminaA jr:template="">
+              <vaNumber/>
+              <receivedVtaDate/>
+            </vitaminaA>
+            <mebendazolTotal>0</mebendazolTotal>
+            <mebendazolNrDoses>0</mebendazolNrDoses>
+            <mebendazol_count/>
+            <mebendazol jr:template="">
+              <mbNumber/>
+              <receivedMbzDate/>
+            </mebendazol>
+            <othersTotal>0</othersTotal>
+            <othersNrVaccines>0</othersNrVaccines>
+            <others_count/>
+            <others jr:template="">
+              <otNumber/>
+              <otName/>
+              <receivedDate/>
+            </others>
+          </vaccines>
+          <processedBySync/>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </imunization>
+      </instance>
+      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/imunization/deviceid" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/imunization/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/imunization/end" type="dateTime"/>
+      <bind nodeset="/imunization/visitId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/imunization/roundNumber" readonly="true()" required="true()" type="int"/>
+      <bind nodeset="/imunization/fieldWorkerId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/imunization/locationId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/imunization/individualId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/imunization/houseNumber" readonly="true()" required="true()" type="string"/>
+      <bind calculate="substr( /imunization/houseNumber , 0, 4)" nodeset="/imunization/region" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/imunization/permId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/imunization/name" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/imunization/gender" readonly="true()" required="true()" type="select1"/>
+      <bind constraint="(int((today() - .) div 365.24) &lt;= 5) and (today() &gt;= .)" jr:constraintMsg="Este formulario é para crianças menores de 5 anos (NB: a data de nascimento não pode ser maior que a data de hoje)" nodeset="/imunization/dob" readonly="true()" required="true()" type="date"/>
+      <bind nodeset="/imunization/fatherPermId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/imunization/motherPermId" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/imunization/vaccination" relevant="(int((today() -  /imunization/dob ) div 365.24) &lt;= 5) and (today() &gt;=  /imunization/dob )"/>
+      <bind nodeset="/imunization/vaccination/hasCard" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccination/hasFwViewedCard" relevant=" /imunization/vaccination/hasCard =1" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccination/reasonToNotViewCard" relevant=" /imunization/vaccination/hasFwViewedCard =2" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccination/cardStatus" relevant=" /imunization/vaccination/hasFwViewedCard =1" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccination/cardEmissionType" relevant=" /imunization/vaccination/hasFwViewedCard =1" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccination/reasonToNotHaveCard" relevant=" /imunization/vaccination/hasCard =2" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccination/isPresent" relevant=" /imunization/vaccination/hasCard &gt;=2" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccination/hasBcgScar" relevant=" /imunization/vaccination/isPresent =1" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccination/hasAllVaccines" relevant=" /imunization/vaccination/hasCard =1" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccination/howConfirmed" relevant=" /imunization/vaccination/hasAllVaccines =1" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccination/vaccinesOnDatabase" readonly="true()" relevant=" /imunization/vaccination/hasCard =1" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccination/isPossibleToRegister" relevant=" /imunization/vaccination/vaccinesOnDatabase =2" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccination/reasonToNotRegister" relevant=" /imunization/vaccination/isPossibleToRegister =2" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccines" relevant=" /imunization/vaccination/isPossibleToRegister =1"/>
+      <bind nodeset="/imunization/vaccines/bcg/hasRegisteredBcg" readonly="true()" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccines/bcg/receivedBcg" readonly=" /imunization/vaccines/bcg/hasRegisteredBcg =1" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=  /imunization/dob ) and (. &lt;= today())" jr:constraintMsg="Esta data não pode ser menor que a data de nasc. ou maior que a data de hoje" nodeset="/imunization/vaccines/bcg/receivedBcgDate" readonly=" /imunization/vaccines/bcg/hasRegisteredBcg =1" relevant=" /imunization/vaccines/bcg/receivedBcg =1" required="true()" type="date"/>
+      <bind nodeset="/imunization/vaccines/polioDose0/hasRegisteredPd0" readonly="true()" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccines/polioDose0/receivedPd0" readonly=" /imunization/vaccines/polioDose0/hasRegisteredPd0 =1" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=  /imunization/dob ) and (. &lt;= today())" jr:constraintMsg="Esta data não pode ser menor que a data de nasc. ou maior que a data de hoje" nodeset="/imunization/vaccines/polioDose0/receivedPd0Date" readonly=" /imunization/vaccines/polioDose0/hasRegisteredPd0 =1" relevant=" /imunization/vaccines/polioDose0/receivedPd0 =1" required="true()" type="date"/>
+      <bind nodeset="/imunization/vaccines/polioDose1/hasRegisteredPd1" readonly="true()" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccines/polioDose1/receivedPd1" readonly=" /imunization/vaccines/polioDose1/hasRegisteredPd1 =1" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=  /imunization/dob ) and (. &lt;= today())" jr:constraintMsg="Esta data não pode ser menor que a data de nasc. ou maior que a data de hoje" nodeset="/imunization/vaccines/polioDose1/receivedPd1Date" readonly=" /imunization/vaccines/polioDose1/hasRegisteredPd1 =1" relevant=" /imunization/vaccines/polioDose1/receivedPd1 =1" required="true()" type="date"/>
+      <bind nodeset="/imunization/vaccines/polioDose2/hasRegisteredPd2" readonly="true()" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccines/polioDose2/receivedPd2" readonly=" /imunization/vaccines/polioDose2/hasRegisteredPd2 =1" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=  /imunization/dob ) and (. &lt;= today())" jr:constraintMsg="Esta data não pode ser menor que a data de nasc. ou maior que a data de hoje" nodeset="/imunization/vaccines/polioDose2/receivedPd2Date" readonly=" /imunization/vaccines/polioDose2/hasRegisteredPd2 =1" relevant=" /imunization/vaccines/polioDose2/receivedPd2 =1" required="true()" type="date"/>
+      <bind nodeset="/imunization/vaccines/polioDose3/hasRegisteredPd3" readonly="true()" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccines/polioDose3/receivedPd3" readonly=" /imunization/vaccines/polioDose3/hasRegisteredPd3 =1" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=  /imunization/dob ) and (. &lt;= today())" jr:constraintMsg="Esta data não pode ser menor que a data de nasc. ou maior que a data de hoje" nodeset="/imunization/vaccines/polioDose3/receivedPd3Date" readonly=" /imunization/vaccines/polioDose3/hasRegisteredPd3 =1" relevant=" /imunization/vaccines/polioDose3/receivedPd3 =1" required="true()" type="date"/>
+      <bind nodeset="/imunization/vaccines/dptDose1/hasRegisteredDpt1" readonly="true()" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccines/dptDose1/receivedDpt1" readonly=" /imunization/vaccines/dptDose1/hasRegisteredDpt1 =1" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=  /imunization/dob ) and (. &lt;= today())" jr:constraintMsg="Esta data não pode ser menor que a data de nasc. ou maior que a data de hoje" nodeset="/imunization/vaccines/dptDose1/receivedDpt1Date" readonly=" /imunization/vaccines/dptDose1/hasRegisteredDpt1 =1" relevant=" /imunization/vaccines/dptDose1/receivedDpt1 =1" required="true()" type="date"/>
+      <bind nodeset="/imunization/vaccines/dptDose2/hasRegisteredDpt2" readonly="true()" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccines/dptDose2/receivedDpt2" readonly=" /imunization/vaccines/dptDose2/hasRegisteredDpt2 =1" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=  /imunization/dob ) and (. &lt;= today())" jr:constraintMsg="Esta data não pode ser menor que a data de nasc. ou maior que a data de hoje" nodeset="/imunization/vaccines/dptDose2/receivedDpt2Date" readonly=" /imunization/vaccines/dptDose2/hasRegisteredDpt2 =1" relevant=" /imunization/vaccines/dptDose2/receivedDpt2 =1" required="true()" type="date"/>
+      <bind nodeset="/imunization/vaccines/dptDose3/hasRegisteredDpt3" readonly="true()" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccines/dptDose3/receivedDpt3" readonly=" /imunization/vaccines/dptDose3/hasRegisteredDpt3 =1" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=  /imunization/dob ) and (. &lt;= today())" jr:constraintMsg="Esta data não pode ser menor que a data de nasc. ou maior que a data de hoje" nodeset="/imunization/vaccines/dptDose3/receivedDpt3Date" readonly=" /imunization/vaccines/dptDose3/hasRegisteredDpt3 =1" relevant=" /imunization/vaccines/dptDose3/receivedDpt3 =1" required="true()" type="date"/>
+      <bind nodeset="/imunization/vaccines/pcv10Dose1/hasRegisteredPcv1" readonly="true()" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccines/pcv10Dose1/receivedPcv1" readonly=" /imunization/vaccines/pcv10Dose1/hasRegisteredPcv1 =1" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=  /imunization/dob ) and (. &lt;= today())" jr:constraintMsg="Esta data não pode ser menor que a data de nasc. ou maior que a data de hoje" nodeset="/imunization/vaccines/pcv10Dose1/receivedPcv1Date" readonly=" /imunization/vaccines/pcv10Dose1/hasRegisteredPcv1 =1" relevant=" /imunization/vaccines/pcv10Dose1/receivedPcv1 =1" required="true()" type="date"/>
+      <bind nodeset="/imunization/vaccines/pcv10Dose2/hasRegisteredPcv2" readonly="true()" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccines/pcv10Dose2/receivedPcv2" readonly=" /imunization/vaccines/pcv10Dose2/hasRegisteredPcv2 =1" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=  /imunization/dob ) and (. &lt;= today())" jr:constraintMsg="Esta data não pode ser menor que a data de nasc. ou maior que a data de hoje" nodeset="/imunization/vaccines/pcv10Dose2/receivedPcv2Date" readonly=" /imunization/vaccines/pcv10Dose2/hasRegisteredPcv2 =1" relevant=" /imunization/vaccines/pcv10Dose2/receivedPcv2 =1" required="true()" type="date"/>
+      <bind nodeset="/imunization/vaccines/pcv10Dose3/hasRegisteredPcv3" readonly="true()" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccines/pcv10Dose3/receivedPcv3" readonly=" /imunization/vaccines/pcv10Dose3/hasRegisteredPcv3 =1" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=  /imunization/dob ) and (. &lt;= today())" jr:constraintMsg="Esta data não pode ser menor que a data de nasc. ou maior que a data de hoje" nodeset="/imunization/vaccines/pcv10Dose3/receivedPcv3Date" readonly=" /imunization/vaccines/pcv10Dose3/hasRegisteredPcv3 =1" relevant=" /imunization/vaccines/pcv10Dose3/receivedPcv3 =1" required="true()" type="date"/>
+      <bind nodeset="/imunization/vaccines/sarampo/hasRegisteredSmp" readonly="true()" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccines/sarampo/receivedSmp" readonly=" /imunization/vaccines/sarampo/hasRegisteredSmp =1" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=  /imunization/dob ) and (. &lt;= today())" jr:constraintMsg="Esta data não pode ser menor que a data de nasc. ou maior que a data de hoje" nodeset="/imunization/vaccines/sarampo/receivedSmpDate" readonly=" /imunization/vaccines/sarampo/hasRegisteredSmp =1" relevant=" /imunization/vaccines/sarampo/receivedSmp =1" required="true()" type="date"/>
+      <bind nodeset="/imunization/vaccines/rotavirusDose1/hasRegisteredRv1" readonly="true()" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccines/rotavirusDose1/receivedRv1" readonly=" /imunization/vaccines/rotavirusDose1/hasRegisteredRv1 =1" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=  /imunization/dob ) and (. &lt;= today())" jr:constraintMsg="Esta data não pode ser menor que a data de nasc. ou maior que a data de hoje" nodeset="/imunization/vaccines/rotavirusDose1/receivedRv1Date" readonly=" /imunization/vaccines/rotavirusDose1/hasRegisteredRv1 =1" relevant=" /imunization/vaccines/rotavirusDose1/receivedRv1 =1" required="true()" type="date"/>
+      <bind nodeset="/imunization/vaccines/rotavirusDose2/hasRegisteredRv2" readonly="true()" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccines/rotavirusDose2/receivedRv2" readonly=" /imunization/vaccines/rotavirusDose2/hasRegisteredRv2 =1" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=  /imunization/dob ) and (. &lt;= today())" jr:constraintMsg="Esta data não pode ser menor que a data de nasc. ou maior que a data de hoje" nodeset="/imunization/vaccines/rotavirusDose2/receivedRv2Date" readonly=" /imunization/vaccines/rotavirusDose2/hasRegisteredRv2 =1" relevant=" /imunization/vaccines/rotavirusDose2/receivedRv2 =1" required="true()" type="date"/>
+      <bind nodeset="/imunization/vaccines/rotavirusDose3/hasRegisteredRv3" readonly="true()" required="true()" type="select1"/>
+      <bind nodeset="/imunization/vaccines/rotavirusDose3/receivedRv3" readonly=" /imunization/vaccines/rotavirusDose3/hasRegisteredRv3 =1" required="true()" type="select1"/>
+      <bind constraint="(. &gt;=  /imunization/dob ) and (. &lt;= today())" jr:constraintMsg="Esta data não pode ser menor que a data de nasc. ou maior que a data de hoje" nodeset="/imunization/vaccines/rotavirusDose3/receivedRv3Date" readonly=" /imunization/vaccines/rotavirusDose3/hasRegisteredRv3 =1" relevant=" /imunization/vaccines/rotavirusDose3/receivedRv3 =1" required="true()" type="date"/>
+      <bind nodeset="/imunization/vaccines/vitaminaATotal" readonly="true()" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) and ( /imunization/vaccines/vitaminaATotal +.)&lt;=10" jr:constraintMsg="O número de doses recebidas + as doses que deseja adicionar não pode ser maior que 10 ou menor que zero" nodeset="/imunization/vaccines/vitaminaANrDoses" required="true()" type="int"/>
+      <bind calculate=" /imunization/vaccines/vitaminaANrDoses " nodeset="/imunization/vaccines/vitaminaA_count" readonly="true()" type="string"/>
+      <bind nodeset="/imunization/vaccines/vitaminaA" relevant=" /imunization/vaccines/vitaminaANrDoses &gt;0"/>
+      <bind calculate=" /imunization/vaccines/vitaminaATotal +position(..)" nodeset="/imunization/vaccines/vitaminaA/vaNumber" type="string"/>
+      <bind constraint="(. &gt;=  /imunization/dob ) and (. &lt;= today())" jr:constraintMsg="Esta data não pode ser menor que a data de nasc. ou maior que a data de hoje" nodeset="/imunization/vaccines/vitaminaA/receivedVtaDate" required="true()" type="date"/>
+      <bind nodeset="/imunization/vaccines/mebendazolTotal" readonly="true()" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) and ( /imunization/vaccines/mebendazolTotal +.)&lt;=10" jr:constraintMsg="O número de doses recebidas + as doses que deseja adicionar não pode ser maior que 10 ou menor que zero" nodeset="/imunization/vaccines/mebendazolNrDoses" required="true()" type="int"/>
+      <bind calculate=" /imunization/vaccines/mebendazolNrDoses " nodeset="/imunization/vaccines/mebendazol_count" readonly="true()" type="string"/>
+      <bind nodeset="/imunization/vaccines/mebendazol" relevant=" /imunization/vaccines/mebendazolNrDoses &gt;0"/>
+      <bind calculate=" /imunization/vaccines/mebendazolTotal +position(..)" nodeset="/imunization/vaccines/mebendazol/mbNumber" type="string"/>
+      <bind constraint="(. &gt;=  /imunization/dob ) and (. &lt;= today())" jr:constraintMsg="Esta data não pode ser menor que a data de nasc. ou maior que a data de hoje" nodeset="/imunization/vaccines/mebendazol/receivedMbzDate" required="true()" type="date"/>
+      <bind nodeset="/imunization/vaccines/othersTotal" readonly="true()" required="true()" type="int"/>
+      <bind constraint="(. &gt;=0) and ( /imunization/vaccines/othersTotal +.)&lt;=10" jr:constraintMsg="O número de doses recebidas + as doses que deseja adicionar não pode ser maior que 10 ou menor que zero" nodeset="/imunization/vaccines/othersNrVaccines" required="true()" type="int"/>
+      <bind calculate=" /imunization/vaccines/othersNrVaccines " nodeset="/imunization/vaccines/others_count" readonly="true()" type="string"/>
+      <bind nodeset="/imunization/vaccines/others" relevant=" /imunization/vaccines/othersNrVaccines &gt;0"/>
+      <bind calculate=" /imunization/vaccines/othersTotal +position(..)" nodeset="/imunization/vaccines/others/otNumber" type="string"/>
+      <bind nodeset="/imunization/vaccines/others/otName" required="true()" type="string"/>
+      <bind constraint="(. &gt;=  /imunization/dob ) and (. &lt;= today())" jr:constraintMsg="Esta data não pode ser menor que a data de nasc. ou maior que a data de hoje" nodeset="/imunization/vaccines/others/receivedDate" required="true()" type="date"/>
+      <bind nodeset="/imunization/processedBySync" readonly="true()" type="int"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/imunization/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="concat(&quot;Imunization_Dtls_&quot;, /imunization/permId )" nodeset="/imunization/meta/instanceName" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/imunization/visitId">
+      <label>1. Id da Visita</label>
+    </input>
+    <input ref="/imunization/roundNumber">
+      <label>2. Número da ronda</label>
+    </input>
+    <input ref="/imunization/fieldWorkerId">
+      <label>3. Código do Inquiridor</label>
+    </input>
+    <input ref="/imunization/locationId">
+      <label>4. ExtId do Agregado</label>
+    </input>
+    <input ref="/imunization/individualId">
+      <label>5. ExtId do Individuo</label>
+    </input>
+    <input ref="/imunization/houseNumber">
+      <label>6. Número do Agregado</label>
+    </input>
+    <input ref="/imunization/region">
+      <label>7. Bairro</label>
+    </input>
+    <input ref="/imunization/permId">
+      <label>8. Perm ID</label>
+    </input>
+    <input ref="/imunization/name">
+      <label>9. Nome</label>
+    </input>
+    <select1 ref="/imunization/gender">
+      <label>10. Sexo</label>
+      <item>
+        <label>Masculino</label>
+        <value>M</value>
+      </item>
+      <item>
+        <label>Feminino</label>
+        <value>F</value>
+      </item>
+    </select1>
+    <input appearance="no-calendar" ref="/imunization/dob">
+      <label>11. Data de Nascimento</label>
+    </input>
+    <input ref="/imunization/fatherPermId">
+      <label>12. Perm Id do Pai</label>
+    </input>
+    <input ref="/imunization/motherPermId">
+      <label>13. Perm Id da Mãe</label>
+    </input>
+    <group ref="/imunization/vaccination">
+      <label>14. Cartão de Vacinação</label>
+      <select1 ref="/imunization/vaccination/hasCard">
+        <label>1. A criança tem cartão de vacinação?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Recusa-se a responder</label>
+          <value>4</value>
+        </item>
+      </select1>
+      <select1 ref="/imunization/vaccination/hasFwViewedCard">
+        <label>1.1. O inquiridor viu o cartão?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não</label>
+          <value>2</value>
+        </item>
+      </select1>
+      <select1 ref="/imunization/vaccination/reasonToNotViewCard">
+        <label>1.1.0. Qual foi o motivo para não ter visto o cartão de vacinação?</label>
+        <item>
+          <label>Não foi localizado/Encontrado</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Recusa-se a responder</label>
+          <value>2</value>
+        </item>
+      </select1>
+      <select1 ref="/imunization/vaccination/cardStatus">
+        <label>1.1.1. Qual é o estado de conservação do cartão de vacinação?</label>
+        <item>
+          <label>Bem conservado</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Bom</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Razoável</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Mal conservado</label>
+          <value>4</value>
+        </item>
+      </select1>
+      <select1 ref="/imunization/vaccination/cardEmissionType">
+        <label>1.1.2. Qual é o tipo emissão do cartão de vacinação?</label>
+        <item>
+          <label>Original</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Segunda cópia</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Terceira cópia</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Quarta ou mais cópia</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Recusa-se a responder</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <select1 ref="/imunization/vaccination/reasonToNotHaveCard">
+        <label>1.2. Porque a criança não tem cartão de vacinação?</label>
+        <item>
+          <label>Perdeu</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não encontra</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Destruiu</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Não recebeu</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Outro motivo</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>Recusa-se a responder</label>
+          <value>7</value>
+        </item>
+      </select1>
+      <select1 ref="/imunization/vaccination/isPresent">
+        <label>1.3. A criança está presente?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não</label>
+          <value>2</value>
+        </item>
+      </select1>
+      <select1 ref="/imunization/vaccination/hasBcgScar">
+        <label>1.4. A criança tem cicatriz de BCG?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Não observada</label>
+          <value>3</value>
+        </item>
+      </select1>
+      <select1 ref="/imunization/vaccination/hasAllVaccines">
+        <label>2. A criança tem todas vacinas feitas para a idade corrente?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não</label>
+          <value>2</value>
+        </item>
+      </select1>
+      <select1 ref="/imunization/vaccination/howConfirmed">
+        <label>2.1. Como foi confirmada que a criança tem todas vacinas feitas?</label>
+        <item>
+          <label>Foi confrontado com os dados do cartão</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Informação pela história reportada pelo pessoal de saúde e estampado no cartão;</label>
+          <value>2</value>
+        </item>
+      </select1>
+      <select1 ref="/imunization/vaccination/vaccinesOnDatabase">
+        <label>2.2. As vacinas já estão registadas na base de dados?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não</label>
+          <value>2</value>
+        </item>
+      </select1>
+      <select1 ref="/imunization/vaccination/isPossibleToRegister">
+        <label>2.3. É possível fazer-se o registo das vacinas?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não</label>
+          <value>2</value>
+        </item>
+      </select1>
+      <select1 ref="/imunization/vaccination/reasonToNotRegister">
+        <label>2.4. Qual é o motivo para não fazer o registo das vacinas?</label>
+        <item>
+          <label>Caligrafia ilegível</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Mau estado do cartão</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Vacinação completa por história da mãe</label>
+          <value>3</value>
+        </item>
+      </select1>
+    </group>
+    <group ref="/imunization/vaccines">
+      <label>Vacinas / Doses</label>
+      <group ref="/imunization/vaccines/bcg">
+        <label>BCG</label>
+        <select1 ref="/imunization/vaccines/bcg/hasRegisteredBcg">
+          <label>Esta registada no sistema?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/imunization/vaccines/bcg/receivedBcg">
+          <label>15. Recebeu a vacina?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <input appearance="no-calendar" ref="/imunization/vaccines/bcg/receivedBcgDate">
+          <label>15.1. Data em que recebeu a vacina</label>
+        </input>
+      </group>
+      <group ref="/imunization/vaccines/polioDose0">
+        <label>PÓLIO Dose 0 (Dose zero)</label>
+        <select1 ref="/imunization/vaccines/polioDose0/hasRegisteredPd0">
+          <label>Esta registada no sistema?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/imunization/vaccines/polioDose0/receivedPd0">
+          <label>16. A criança recebeu a vacina de pólio zero?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <input appearance="no-calendar" ref="/imunization/vaccines/polioDose0/receivedPd0Date">
+          <label>16.1. Data da vacinação de pólio zero</label>
+        </input>
+      </group>
+      <group ref="/imunization/vaccines/polioDose1">
+        <label>PÓLIO Dose 1 (Primeira dose)</label>
+        <select1 ref="/imunization/vaccines/polioDose1/hasRegisteredPd1">
+          <label>Esta registada no sistema?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/imunization/vaccines/polioDose1/receivedPd1">
+          <label>17. Recebeu pólio 1?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <input appearance="no-calendar" ref="/imunization/vaccines/polioDose1/receivedPd1Date">
+          <label>17.1. Data de vacinação da Pólio 1</label>
+        </input>
+      </group>
+      <group ref="/imunization/vaccines/polioDose2">
+        <label>PÓLIO Dose 2 (Segunda dose)</label>
+        <select1 ref="/imunization/vaccines/polioDose2/hasRegisteredPd2">
+          <label>Esta registada no sistema?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/imunization/vaccines/polioDose2/receivedPd2">
+          <label>18. Recebeu a pólio 2?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <input appearance="no-calendar" ref="/imunization/vaccines/polioDose2/receivedPd2Date">
+          <label>18.1. Data de vacinação de Pólio 2</label>
+        </input>
+      </group>
+      <group ref="/imunization/vaccines/polioDose3">
+        <label>PÓLIO Dose 3 (Terceira dose)</label>
+        <select1 ref="/imunization/vaccines/polioDose3/hasRegisteredPd3">
+          <label>Esta registada no sistema?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/imunization/vaccines/polioDose3/receivedPd3">
+          <label>19. Recebeu a pólio 3?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <input appearance="no-calendar" ref="/imunization/vaccines/polioDose3/receivedPd3Date">
+          <label>19.1. Data de vacinação de Pólio 3</label>
+        </input>
+      </group>
+      <group ref="/imunization/vaccines/dptDose1">
+        <label>DPT-HepB-Hib Dose 1 (Primeira dose)</label>
+        <select1 ref="/imunization/vaccines/dptDose1/hasRegisteredDpt1">
+          <label>Esta registada no sistema?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/imunization/vaccines/dptDose1/receivedDpt1">
+          <label>18. A criança recebeu a vacina DPT-HepB-Hib?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <input appearance="no-calendar" ref="/imunization/vaccines/dptDose1/receivedDpt1Date">
+          <label>18.1. Data da vacinação da primeira dose de DPT-HepB-Hib</label>
+        </input>
+      </group>
+      <group ref="/imunization/vaccines/dptDose2">
+        <label>DPT-HepB-Hib Dose 2 (Segunda dose)</label>
+        <select1 ref="/imunization/vaccines/dptDose2/hasRegisteredDpt2">
+          <label>Esta registada no sistema?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/imunization/vaccines/dptDose2/receivedDpt2">
+          <label>19. Recebeu a Segunda dose de DPT-HepB-Hib?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <input appearance="no-calendar" ref="/imunization/vaccines/dptDose2/receivedDpt2Date">
+          <label>19.1. Data de vacinação da segunda dose de DPT-HebB-Hib</label>
+        </input>
+      </group>
+      <group ref="/imunization/vaccines/dptDose3">
+        <label>DPT-HepB-Hib Dose 3 (Terceira dose)</label>
+        <select1 ref="/imunization/vaccines/dptDose3/hasRegisteredDpt3">
+          <label>Esta registada no sistema?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/imunization/vaccines/dptDose3/receivedDpt3">
+          <label>20. Recebeu a terceira dose de DPT-HebB-Hib?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <input appearance="no-calendar" ref="/imunization/vaccines/dptDose3/receivedDpt3Date">
+          <label>20.1. Data da vacinação da terceira dose de DPT-HepB-Hib</label>
+        </input>
+      </group>
+      <group ref="/imunization/vaccines/pcv10Dose1">
+        <label>PCV10 Dose 1 (Primeira dose)</label>
+        <select1 ref="/imunization/vaccines/pcv10Dose1/hasRegisteredPcv1">
+          <label>Esta registada no sistema?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/imunization/vaccines/pcv10Dose1/receivedPcv1">
+          <label>21. A criança recebeu a vacina anti-pneumocócica (PCV10)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <input appearance="no-calendar" ref="/imunization/vaccines/pcv10Dose1/receivedPcv1Date">
+          <label>21.1. Data da vacinação da primeira dose de (PCV 10)</label>
+        </input>
+      </group>
+      <group ref="/imunization/vaccines/pcv10Dose2">
+        <label>PCV10 Dose 2 (Segunda dose)</label>
+        <select1 ref="/imunization/vaccines/pcv10Dose2/hasRegisteredPcv2">
+          <label>Esta registada no sistema?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/imunization/vaccines/pcv10Dose2/receivedPcv2">
+          <label>22. Recebeu a segunda dose (PCV 10)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <input appearance="no-calendar" ref="/imunization/vaccines/pcv10Dose2/receivedPcv2Date">
+          <label>22.1. Data da vacinação da segunda dose de (PCV10)</label>
+        </input>
+      </group>
+      <group ref="/imunization/vaccines/pcv10Dose3">
+        <label>PCV10 Dose 3 (Terceira dose)</label>
+        <select1 ref="/imunization/vaccines/pcv10Dose3/hasRegisteredPcv3">
+          <label>Esta registada no sistema?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/imunization/vaccines/pcv10Dose3/receivedPcv3">
+          <label>23. Recebeu a terceira dose (PCV10)?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <input appearance="no-calendar" ref="/imunization/vaccines/pcv10Dose3/receivedPcv3Date">
+          <label>23.1. Data de vacinação da terceira dose (PCV10)</label>
+        </input>
+      </group>
+      <group ref="/imunization/vaccines/sarampo">
+        <label>Sarampo</label>
+        <select1 ref="/imunization/vaccines/sarampo/hasRegisteredSmp">
+          <label>Esta registada no sistema?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/imunization/vaccines/sarampo/receivedSmp">
+          <label>24. A criança recebeu a vacina de sarampo?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <input appearance="no-calendar" ref="/imunization/vaccines/sarampo/receivedSmpDate">
+          <label>24.1. Data de vacinação de Sarampo</label>
+        </input>
+      </group>
+      <group ref="/imunization/vaccines/rotavirusDose1">
+        <label>Rota Virus Dose 1 (Primeira dose)</label>
+        <select1 ref="/imunization/vaccines/rotavirusDose1/hasRegisteredRv1">
+          <label>Esta registada no sistema?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/imunization/vaccines/rotavirusDose1/receivedRv1">
+          <label>25. A criança recebeu a vacina contra rotavirus primeira dose?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <input appearance="no-calendar" ref="/imunization/vaccines/rotavirusDose1/receivedRv1Date">
+          <label>25.1. Data de vacinação de rotavirus primeira dose</label>
+        </input>
+      </group>
+      <group ref="/imunization/vaccines/rotavirusDose2">
+        <label>Rota Virus Dose 2 (Segunda dose)</label>
+        <select1 ref="/imunization/vaccines/rotavirusDose2/hasRegisteredRv2">
+          <label>Esta registada no sistema?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/imunization/vaccines/rotavirusDose2/receivedRv2">
+          <label>26. A criança recebeu a vacina contra rotavirus segunda dose?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <input appearance="no-calendar" ref="/imunization/vaccines/rotavirusDose2/receivedRv2Date">
+          <label>26.1. Data da vacinação de rotavirus segunda dose</label>
+        </input>
+      </group>
+      <group ref="/imunization/vaccines/rotavirusDose3">
+        <label>Rota Virus Dose 3 (Terceira dose)</label>
+        <select1 ref="/imunization/vaccines/rotavirusDose3/hasRegisteredRv3">
+          <label>Esta registada no sistema?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/imunization/vaccines/rotavirusDose3/receivedRv3">
+          <label>27. A criança recebeu a vacina contra rotavirus terceira dose?</label>
+          <item>
+            <label>Sim</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Não</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <input appearance="no-calendar" ref="/imunization/vaccines/rotavirusDose3/receivedRv3Date">
+          <label>27.1. Data de vacinação de rotavirus terceira dose</label>
+        </input>
+      </group>
+      <input ref="/imunization/vaccines/vitaminaATotal">
+        <label>28.0. Total de Doses de Vitamina A recebidas (registadas no sistema)</label>
+      </input>
+      <input ref="/imunization/vaccines/vitaminaANrDoses">
+        <label>28.0.1. Deseja adicionar quantas doses de Vitamina A?</label>
+        <hint>Introduza 0 (zero) se não quiser inserir nenhuma dose</hint>
+      </input>
+      <group ref="/imunization/vaccines/vitaminaA">
+        <label>Vitamina A</label>
+        <repeat jr:count=" /imunization/vaccines/vitaminaA_count " nodeset="/imunization/vaccines/vitaminaA">
+          <input appearance="no-calendar" ref="/imunization/vaccines/vitaminaA/receivedVtaDate">
+            <label>28.1. Data da vacinação da <output value=" /imunization/vaccines/vitaminaA/vaNumber "/>ª dose de Vitamina A?</label>
+          </input>
+        </repeat>
+      </group>
+      <input ref="/imunization/vaccines/mebendazolTotal">
+        <label>29.0. Total de Doses de Mebendazol recebidas (registadas no sistema)</label>
+      </input>
+      <input ref="/imunization/vaccines/mebendazolNrDoses">
+        <label>29.0.1. Deseja adicionar quantas doses de Mebendazol?</label>
+        <hint>Introduza 0 (zero) se não quiser inserir nenhuma dose</hint>
+      </input>
+      <group ref="/imunization/vaccines/mebendazol">
+        <label>Mebendazol</label>
+        <repeat jr:count=" /imunization/vaccines/mebendazol_count " nodeset="/imunization/vaccines/mebendazol">
+          <input appearance="no-calendar" ref="/imunization/vaccines/mebendazol/receivedMbzDate">
+            <label>29.1. Data da vacinação da a <output value=" /imunization/vaccines/mebendazol/mbNumber "/>ª Dose de Mebendazol</label>
+          </input>
+        </repeat>
+      </group>
+      <input ref="/imunization/vaccines/othersTotal">
+        <label>30.0 Total de Outras vacinas recebidas (registadas no sistema)</label>
+      </input>
+      <input ref="/imunization/vaccines/othersNrVaccines">
+        <label>30.0.1 Deseja adicionar quantas vacinas?</label>
+        <hint>Introduza 0 (zero) se não quiser inserir nenhuma vacina</hint>
+      </input>
+      <group ref="/imunization/vaccines/others">
+        <label>Outras Vacinas</label>
+        <repeat jr:count=" /imunization/vaccines/others_count " nodeset="/imunization/vaccines/others">
+          <input ref="/imunization/vaccines/others/otName">
+            <label>30. Nome da <output value=" /imunization/vaccines/others/otNumber "/>ª vacina?</label>
+          </input>
+          <input appearance="no-calendar" ref="/imunization/vaccines/others/receivedDate">
+            <label>31. Data da vacinação da vacina <output value=" /imunization/vaccines/others/otName "/>?</label>
+          </input>
+        </repeat>
+      </group>
+    </group>
+    <input ref="/imunization/processedBySync">
+      <label>processed</label>
+    </input>
+  </h:body>
+</h:html>

@@ -4,223 +4,332 @@
     <h:title>Registo de Óbito</h:title>
     <model>
       <itext>
-        <translation lang="Swahili">
-          <text id="/death_registration/causeOfDeath/7:label">
-            <value>Prematuridade/Malformação congénita</value>
+        <translation default="true()" lang="Portuguese">
+          <text id="/death_registration/name:label">
+            <value>5. Nome do individuo</value>
           </text>
-          <text id="/death_registration/disease/3:label">
-            <value>Diarreia</value>
+          <text id="/death_registration/geoPlaceOfDeath/99:label">
+            <value>Recusa-se a responder</value>
           </text>
-          <text id="/death_registration/causeOfDeath/4:label">
-            <value>Homocidio</value>
-          </text>
-          <text id="/death_registration/disease:label">
-            <value>11. Se morreu de doença, tem ideia de que doença ele/a sofria?</value>
-          </text>
-          <text id="/death_registration/disease/4:label">
-            <value>Tuberculose</value>
-          </text>
-          <text id="/death_registration/processedBySync:label">
-            <value>Mirth</value>
-          </text>
-          <text id="/death_registration/causeOfDeath/2:label">
-            <value>Acidente de Trabalho</value>
-          </text>
-          <text id="/death_registration/placeOfDeath/6:label">
-            <value>-</value>
-          </text>
-          <text id="/death_registration/placeOfDeath/5:label">
-            <value>Kwingine</value>
-          </text>
-          <text id="/death_registration/permId:label">
-            <value>Perm Id do Individuo</value>
-          </text>
-          <text id="/death_registration/placeOfDeath/1:label">
-            <value>Nyumbani</value>
-          </text>
-          <text id="/death_registration/disease/1:label">
-            <value>Malária</value>
-          </text>
-          <text id="/death_registration/causeOfDeath/3:label">
-            <value>Acidente Rodoviário</value>
-          </text>
-          <text id="/death_registration/causeOfDeath:label">
-            <value>Cause of death</value>
-          </text>
-          <text id="/death_registration/placeOfDeath:label">
-            <value>Amefia wapi/Kifo kilitokea wapi?</value>
-          </text>
-          <text id="/death_registration/causeOfDeath/8:label">
-            <value>Causas ligada a gravidez</value>
+          <text id="/death_registration/geoPlaceOfDeath/10:label">
+            <value>Zambézia</value>
           </text>
           <text id="/death_registration/processedByMirth:label">
             <value>Mirth</value>
           </text>
-          <text id="/death_registration/causeOfDeath/1:label">
-            <value>Doença</value>
+          <text id="/death_registration/geoPlaceOfDeath/6:label">
+            <value>Inhambane</value>
           </text>
-          <text id="/death_registration/placeOfDeath/3:label">
-            <value>Health Centre or Clinic</value>
-          </text>
-          <text id="/death_registration/causeOfDeath/11:label">
-            <value>Nao sabe</value>
-          </text>
-          <text id="/death_registration/placeOfDeath/2:label">
-            <value>Hospitali</value>
-          </text>
-          <text id="/death_registration/visitId:label">
-            <value>Nambari ya Hudhurio</value>
-          </text>
-          <text id="/death_registration/dateOfDeath:label">
-            <value>Tarehe ya Kifo</value>
-          </text>
-          <text id="/death_registration/causeOfDeath/10:label">
-            <value>Outro</value>
-          </text>
-          <text id="/death_registration/disease/2:label">
-            <value>HIV</value>
-          </text>
-          <text id="/death_registration/causeOfDeath/5:label">
-            <value>Suicídio</value>
-          </text>
-          <text id="/death_registration/disease/99:label">
-            <value>Recusa</value>
-          </text>
-          <text id="/death_registration/fieldWorkerId:label">
-            <value>Nambari ya Mhojaji</value>
-          </text>
-          <text id="/death_registration/name:label">
-            <value>Individual Name</value>
-          </text>
-          <text id="/death_registration/placeOfDeathOther:label">
-            <value>Amefia wapi/Kifo kilitokea wapi kwingine taja?</value>
-          </text>
-          <text id="/death_registration/disease/88:label">
-            <value>Não sabe</value>
-          </text>
-          <text id="/death_registration/disease/5:label">
-            <value>Outras doenças</value>
-          </text>
-          <text id="/death_registration/individualId:label">
-            <value>Nambari ya Mwanakaya</value>
-          </text>
-          <text id="/death_registration/placeOfDeath/4:label">
-            <value>Traditional healer's home</value>
+          <text id="/death_registration/geoPlaceOfDeath/12:label">
+            <value>Cabo-Delgado</value>
           </text>
           <text id="/death_registration/causeOfDeath/6:label">
             <value>Idade avançada</value>
           </text>
-        </translation>
-        <translation default="true()" lang="Portuguese">
-          <text id="/death_registration/causeOfDeath/7:label">
-            <value>Prematuridade/Malformação congénita</value>
-          </text>
-          <text id="/death_registration/disease/3:label">
-            <value>Diarreia</value>
-          </text>
-          <text id="/death_registration/causeOfDeath/4:label">
-            <value>Homocidio</value>
-          </text>
-          <text id="/death_registration/disease:label">
-            <value>11. Tem ideia de que doença ele/a sofria?</value>
-          </text>
-          <text id="/death_registration/disease/4:label">
-            <value>Tuberculose</value>
-          </text>
-          <text id="/death_registration/processedBySync:label">
-            <value>DBSync</value>
+          <text id="/death_registration/fieldWorkerId:label">
+            <value>2. Código do Inquiridor</value>
           </text>
           <text id="/death_registration/causeOfDeath/2:label">
             <value>Acidente de Trabalho</value>
           </text>
-          <text id="/death_registration/placeOfDeath/6:label">
-            <value>Não sabe</value>
+          <text id="/death_registration/geoPlaceOfDeath/2:label">
+            <value>Província de Maputo</value>
           </text>
-          <text id="/death_registration/placeOfDeath/5:label">
-            <value>Outro lugar</value>
-          </text>
-          <text id="/death_registration/permId:label">
-            <value>Perm Id do Individuo</value>
+          <text id="/death_registration/placeOfDeath/2:label">
+            <value>Hospital</value>
           </text>
           <text id="/death_registration/placeOfDeath/1:label">
             <value>Em casa</value>
           </text>
-          <text id="/death_registration/disease/1:label">
-            <value>Malária</value>
+          <text id="/death_registration/processedBySync:label">
+            <value>DBSync</value>
+          </text>
+          <text id="/death_registration/placeOfDeath/6:label">
+            <value>Casa do pastor</value>
+          </text>
+          <text id="/death_registration/placeOfDeathOther:label">
+            <value>8.1 Introduza o Local da morte</value>
+          </text>
+          <text id="/death_registration/causeOfDeath/9:label">
+            <value>Malformação congénita</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/15:label">
+            <value>Swazilandia</value>
+          </text>
+          <text id="/death_registration/placeOfDeath/88:label">
+            <value>Não sabe</value>
           </text>
           <text id="/death_registration/causeOfDeath/3:label">
             <value>Acidente Rodoviário</value>
           </text>
-          <text id="/death_registration/causeOfDeath:label">
-            <value>Causa da morte</value>
-          </text>
-          <text id="/death_registration/placeOfDeath:label">
-            <value>Local da morte</value>
-          </text>
-          <text id="/death_registration/causeOfDeath/8:label">
-            <value>Causas ligada a gravidez</value>
-          </text>
-          <text id="/death_registration/processedByMirth:label">
-            <value>Mirth</value>
-          </text>
           <text id="/death_registration/causeOfDeath/1:label">
             <value>Doença</value>
           </text>
-          <text id="/death_registration/placeOfDeath/3:label">
-            <value>A Caminho do hospital</value>
-          </text>
-          <text id="/death_registration/causeOfDeath/11:label">
+          <text id="/death_registration/causeOfDeath/88:label">
             <value>Nao sabe</value>
           </text>
-          <text id="/death_registration/placeOfDeath/2:label">
-            <value>Hospital</value>
-          </text>
-          <text id="/death_registration/visitId:label">
-            <value>Id da Visita</value>
-          </text>
           <text id="/death_registration/dateOfDeath:label">
-            <value>Data da morte</value>
-          </text>
-          <text id="/death_registration/causeOfDeath/10:label">
-            <value>Outro</value>
-          </text>
-          <text id="/death_registration/disease/2:label">
-            <value>HIV</value>
-          </text>
-          <text id="/death_registration/causeOfDeath/5:label">
-            <value>Suicídio</value>
+            <value>6. Data da morte</value>
           </text>
           <text id="/death_registration/disease/99:label">
             <value>Recusa</value>
           </text>
-          <text id="/death_registration/fieldWorkerId:label">
-            <value>Código do Inquiridor</value>
+          <text id="/death_registration/geoPlaceOfDeath/4:label">
+            <value>Cidade da Matola</value>
           </text>
-          <text id="/death_registration/name:label">
-            <value>Nome do individuo</value>
+          <text id="/death_registration/placeOfDeath/3:label">
+            <value>A Caminho do hospital</value>
           </text>
-          <text id="/death_registration/placeOfDeathOther:label">
-            <value>Introduza o Local da morte</value>
-          </text>
-          <text id="/death_registration/disease/88:label">
-            <value>Não sabe</value>
-          </text>
-          <text id="/death_registration/disease/5:label">
-            <value>Outras doenças</value>
-          </text>
-          <text id="/death_registration/individualId:label">
-            <value>ExtId do Individuo</value>
+          <text id="/death_registration/geoPlaceOfDeath/14:label">
+            <value>Africa do Sul</value>
           </text>
           <text id="/death_registration/placeOfDeath/4:label">
             <value>No lugar do acidente</value>
           </text>
+          <text id="/death_registration/placeOfDeath/5:label">
+            <value>Casa do curandeiro</value>
+          </text>
+          <text id="/death_registration/permId:label">
+            <value>4. Perm Id do Individuo</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/17:label">
+            <value>Europa</value>
+          </text>
+          <text id="/death_registration/causeOfDeath:label">
+            <value>7. Causa da morte</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/19:label">
+            <value>América</value>
+          </text>
+          <text id="/death_registration/disease/2:label">
+            <value>HIV</value>
+          </text>
+          <text id="/death_registration/individualId:label">
+            <value>3. ExtId do Individuo</value>
+          </text>
+          <text id="/death_registration/visitId:label">
+            <value>1. ExtId da Visita</value>
+          </text>
+          <text id="/death_registration/disease/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/5:label">
+            <value>Gaza</value>
+          </text>
+          <text id="/death_registration/causeOfDeath/98:label">
+            <value>Outro</value>
+          </text>
+          <text id="/death_registration/disease/4:label">
+            <value>Tuberculose</value>
+          </text>
+          <text id="/death_registration/causeOfDeath/7:label">
+            <value>Prematuridade</value>
+          </text>
+          <text id="/death_registration/placeOfDeath:label">
+            <value>8. Local da morte</value>
+          </text>
+          <text id="/death_registration/disease:label">
+            <value>7.1. Tem ideia de que doença ele/a sofria?</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/18:label">
+            <value>Ásia</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/3:label">
+            <value>Cidade de Maputo</value>
+          </text>
+          <text id="/death_registration/disease/1:label">
+            <value>Malária</value>
+          </text>
+          <text id="/death_registration/disease/3:label">
+            <value>Diarreia</value>
+          </text>
+          <text id="/death_registration/causeOfDeath/4:label">
+            <value>Homicidio</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/11:label">
+            <value>Nampula</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/death_registration/causeOfDeath/5:label">
+            <value>Suicídio</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath:label">
+            <value>9. Lugar geográfico onde a pessoa morreu?</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/16:label">
+            <value>Outro país Africano</value>
+          </text>
+          <text id="/death_registration/disease/6:label">
+            <value>Infeções respiratórias</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/8:label">
+            <value>Manica</value>
+          </text>
+          <text id="/death_registration/placeOfDeath/98:label">
+            <value>Outro lugar</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/13:label">
+            <value>Niassa</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/1:label">
+            <value>Distrito da Manhiça</value>
+          </text>
+          <text id="/death_registration/disease/5:label">
+            <value>Outras doenças</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/7:label">
+            <value>Sofala</value>
+          </text>
+          <text id="/death_registration/placeOfDeath/7:label">
+            <value>Na Igreja</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/98:label">
+            <value>Outro</value>
+          </text>
+          <text id="/death_registration/causeOfDeath/8:label">
+            <value>Causas ligada a gravidez</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/9:label">
+            <value>Tete</value>
+          </text>
+        </translation>
+        <translation lang="Swahili">
+          <text id="/death_registration/name:label">
+            <value>Individual Name</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/99:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/10:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/6:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/disease/99:label">
+            <value>Recusa</value>
+          </text>
           <text id="/death_registration/causeOfDeath/6:label">
             <value>Idade avançada</value>
           </text>
-        </translation>
-        <translation lang="English">
+          <text id="/death_registration/fieldWorkerId:label">
+            <value>Nambari ya Mhojaji</value>
+          </text>
+          <text id="/death_registration/causeOfDeath/2:label">
+            <value>Acidente de Trabalho</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/2:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/processedByMirth:label">
+            <value>Mirth</value>
+          </text>
+          <text id="/death_registration/placeOfDeath/1:label">
+            <value>Nyumbani</value>
+          </text>
+          <text id="/death_registration/processedBySync:label">
+            <value>Mirth</value>
+          </text>
+          <text id="/death_registration/placeOfDeath/6:label">
+            <value>Casa do pastor</value>
+          </text>
+          <text id="/death_registration/placeOfDeathOther:label">
+            <value>Amefia wapi/Kifo kilitokea wapi kwingine taja?</value>
+          </text>
+          <text id="/death_registration/causeOfDeath/9:label">
+            <value>Malformação congénita</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/15:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/placeOfDeath/88:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/causeOfDeath/3:label">
+            <value>Acidente Rodoviário</value>
+          </text>
+          <text id="/death_registration/causeOfDeath/1:label">
+            <value>Doença</value>
+          </text>
+          <text id="/death_registration/causeOfDeath/88:label">
+            <value>Nao sabe</value>
+          </text>
+          <text id="/death_registration/dateOfDeath:label">
+            <value>Tarehe ya Kifo</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/12:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/4:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/placeOfDeath/3:label">
+            <value>Health Centre or Clinic</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/14:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/placeOfDeath/4:label">
+            <value>Traditional healer's home</value>
+          </text>
+          <text id="/death_registration/placeOfDeath/5:label">
+            <value>Casa do curandeiro</value>
+          </text>
+          <text id="/death_registration/permId:label">
+            <value>Perm Id do Individuo</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/17:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/causeOfDeath:label">
+            <value>Cause of death</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/19:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/disease/2:label">
+            <value>HIV</value>
+          </text>
+          <text id="/death_registration/individualId:label">
+            <value>Nambari ya Mwanakaya</value>
+          </text>
+          <text id="/death_registration/visitId:label">
+            <value>Nambari ya Hudhurio</value>
+          </text>
+          <text id="/death_registration/disease/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/5:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/causeOfDeath/98:label">
+            <value>Outro</value>
+          </text>
+          <text id="/death_registration/disease/4:label">
+            <value>Tuberculose</value>
+          </text>
           <text id="/death_registration/causeOfDeath/7:label">
             <value>Prematuridade/Malformação congénita</value>
+          </text>
+          <text id="/death_registration/placeOfDeath:label">
+            <value>Amefia wapi/Kifo kilitokea wapi?</value>
+          </text>
+          <text id="/death_registration/disease:label">
+            <value>9. Se morreu de doença, tem ideia de que doença ele/a sofria?</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/18:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/placeOfDeath/7:label">
+            <value>Na Igreja</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/3:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath:label">
+            <value>-</value>
           </text>
           <text id="/death_registration/disease/3:label">
             <value>Diarreia</value>
@@ -228,101 +337,244 @@
           <text id="/death_registration/causeOfDeath/4:label">
             <value>Homocidio</value>
           </text>
-          <text id="/death_registration/disease:label">
-            <value>11. Se morreu de doença, tem ideia de que doença ele/a sofria?</value>
-          </text>
-          <text id="/death_registration/disease/4:label">
-            <value>Tuberculose</value>
-          </text>
-          <text id="/death_registration/processedBySync:label">
-            <value>Mirth</value>
-          </text>
-          <text id="/death_registration/causeOfDeath/2:label">
-            <value>Acidente de Trabalho</value>
-          </text>
-          <text id="/death_registration/placeOfDeath/6:label">
+          <text id="/death_registration/geoPlaceOfDeath/11:label">
             <value>-</value>
-          </text>
-          <text id="/death_registration/placeOfDeath/5:label">
-            <value>Other</value>
-          </text>
-          <text id="/death_registration/permId:label">
-            <value>Perm Id do Individuo</value>
-          </text>
-          <text id="/death_registration/placeOfDeath/1:label">
-            <value>Home</value>
-          </text>
-          <text id="/death_registration/disease/1:label">
-            <value>Malária</value>
-          </text>
-          <text id="/death_registration/causeOfDeath/3:label">
-            <value>Acidente Rodoviário</value>
-          </text>
-          <text id="/death_registration/causeOfDeath:label">
-            <value>Cause of death</value>
-          </text>
-          <text id="/death_registration/placeOfDeath:label">
-            <value>Place of Death</value>
-          </text>
-          <text id="/death_registration/causeOfDeath/8:label">
-            <value>Causas ligada a gravidez</value>
-          </text>
-          <text id="/death_registration/processedByMirth:label">
-            <value>Mirth</value>
-          </text>
-          <text id="/death_registration/causeOfDeath/1:label">
-            <value>Doença</value>
-          </text>
-          <text id="/death_registration/placeOfDeath/3:label">
-            <value>Health Centre or Clinic</value>
-          </text>
-          <text id="/death_registration/causeOfDeath/11:label">
-            <value>Nao sabe</value>
-          </text>
-          <text id="/death_registration/placeOfDeath/2:label">
-            <value>Hospital</value>
-          </text>
-          <text id="/death_registration/visitId:label">
-            <value>Visit Id</value>
-          </text>
-          <text id="/death_registration/dateOfDeath:label">
-            <value>Date of Death</value>
-          </text>
-          <text id="/death_registration/causeOfDeath/10:label">
-            <value>Outro</value>
-          </text>
-          <text id="/death_registration/disease/2:label">
-            <value>HIV</value>
           </text>
           <text id="/death_registration/causeOfDeath/5:label">
             <value>Suicídio</value>
           </text>
-          <text id="/death_registration/disease/99:label">
-            <value>Recusa</value>
+          <text id="/death_registration/disease/1:label">
+            <value>Malária</value>
           </text>
-          <text id="/death_registration/fieldWorkerId:label">
-            <value>Field Worker Id</value>
+          <text id="/death_registration/geoPlaceOfDeath/16:label">
+            <value>-</value>
           </text>
-          <text id="/death_registration/name:label">
-            <value>Individual Name</value>
+          <text id="/death_registration/disease/6:label">
+            <value>Infeções respiratórias</value>
           </text>
-          <text id="/death_registration/placeOfDeathOther:label">
-            <value>Place of Death Other</value>
+          <text id="/death_registration/geoPlaceOfDeath/8:label">
+            <value>-</value>
           </text>
-          <text id="/death_registration/disease/88:label">
-            <value>Não sabe</value>
+          <text id="/death_registration/geoPlaceOfDeath/13:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/placeOfDeath/98:label">
+            <value>Kwingine</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/88:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/1:label">
+            <value>-</value>
           </text>
           <text id="/death_registration/disease/5:label">
             <value>Outras doenças</value>
           </text>
-          <text id="/death_registration/individualId:label">
-            <value>Individual Id</value>
+          <text id="/death_registration/geoPlaceOfDeath/7:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/placeOfDeath/2:label">
+            <value>Hospitali</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/98:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/causeOfDeath/8:label">
+            <value>Causas ligada a gravidez</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/9:label">
+            <value>-</value>
+          </text>
+        </translation>
+        <translation lang="English">
+          <text id="/death_registration/name:label">
+            <value>Individual Name</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/99:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/10:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/6:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/disease/99:label">
+            <value>Recusa</value>
+          </text>
+          <text id="/death_registration/causeOfDeath/6:label">
+            <value>Idade avançada</value>
+          </text>
+          <text id="/death_registration/fieldWorkerId:label">
+            <value>Field Worker Id</value>
+          </text>
+          <text id="/death_registration/causeOfDeath/2:label">
+            <value>Acidente de Trabalho</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/2:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/processedByMirth:label">
+            <value>Mirth</value>
+          </text>
+          <text id="/death_registration/placeOfDeath/1:label">
+            <value>Home</value>
+          </text>
+          <text id="/death_registration/processedBySync:label">
+            <value>Mirth</value>
+          </text>
+          <text id="/death_registration/placeOfDeath/6:label">
+            <value>Casa do pastor</value>
+          </text>
+          <text id="/death_registration/placeOfDeathOther:label">
+            <value>Place of Death Other</value>
+          </text>
+          <text id="/death_registration/causeOfDeath/9:label">
+            <value>Malformação congénita</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/15:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/placeOfDeath/88:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/causeOfDeath/3:label">
+            <value>Acidente Rodoviário</value>
+          </text>
+          <text id="/death_registration/causeOfDeath/1:label">
+            <value>Doença</value>
+          </text>
+          <text id="/death_registration/causeOfDeath/88:label">
+            <value>Nao sabe</value>
+          </text>
+          <text id="/death_registration/dateOfDeath:label">
+            <value>Date of Death</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/12:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/4:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/placeOfDeath/3:label">
+            <value>Health Centre or Clinic</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/14:label">
+            <value>-</value>
           </text>
           <text id="/death_registration/placeOfDeath/4:label">
             <value>Traditional healer's home</value>
           </text>
-          <text id="/death_registration/causeOfDeath/6:label">
-            <value>Idade avançada</value>
+          <text id="/death_registration/placeOfDeath/5:label">
+            <value>Casa do curandeiro</value>
+          </text>
+          <text id="/death_registration/permId:label">
+            <value>Perm Id do Individuo</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/17:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/causeOfDeath:label">
+            <value>Cause of death</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/19:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/disease/2:label">
+            <value>HIV</value>
+          </text>
+          <text id="/death_registration/individualId:label">
+            <value>Individual Id</value>
+          </text>
+          <text id="/death_registration/visitId:label">
+            <value>Visit Id</value>
+          </text>
+          <text id="/death_registration/disease/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/5:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/causeOfDeath/98:label">
+            <value>Outro</value>
+          </text>
+          <text id="/death_registration/disease/4:label">
+            <value>Tuberculose</value>
+          </text>
+          <text id="/death_registration/causeOfDeath/7:label">
+            <value>Prematuridade/Malformação congénita</value>
+          </text>
+          <text id="/death_registration/placeOfDeath:label">
+            <value>Place of Death</value>
+          </text>
+          <text id="/death_registration/disease:label">
+            <value>9. Se morreu de doença, tem ideia de que doença ele/a sofria?</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/18:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/placeOfDeath/7:label">
+            <value>Na Igreja</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/3:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/disease/3:label">
+            <value>Diarreia</value>
+          </text>
+          <text id="/death_registration/causeOfDeath/4:label">
+            <value>Homocidio</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/11:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/causeOfDeath/5:label">
+            <value>Suicídio</value>
+          </text>
+          <text id="/death_registration/disease/1:label">
+            <value>Malária</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/16:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/disease/6:label">
+            <value>Infeções respiratórias</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/8:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/13:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/placeOfDeath/98:label">
+            <value>Other</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/88:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/1:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/disease/5:label">
+            <value>Outras doenças</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/7:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/placeOfDeath/2:label">
+            <value>Hospital</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/98:label">
+            <value>-</value>
+          </text>
+          <text id="/death_registration/causeOfDeath/8:label">
+            <value>Causas ligada a gravidez</value>
+          </text>
+          <text id="/death_registration/geoPlaceOfDeath/9:label">
+            <value>-</value>
           </text>
         </translation>
       </itext>
@@ -341,6 +593,7 @@
           <disease/>
           <placeOfDeath/>
           <placeOfDeathOther/>
+          <geoPlaceOfDeath/>
           <processedByMirth/>
           <processedBySync/>
           <meta>
@@ -357,11 +610,12 @@
       <bind nodeset="/death_registration/individualId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/death_registration/permId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/death_registration/name" readonly="true()" required="true()" type="string"/>
-      <bind constraint=". &lt;= today()" nodeset="/death_registration/dateOfDeath" required="true()" type="date"/>
+      <bind constraint=". &lt;= today()" jr:constraintMsg="A data da morte não pode ser maior que a data de hoje" nodeset="/death_registration/dateOfDeath" required="true()" type="date"/>
       <bind nodeset="/death_registration/causeOfDeath" required="true()" type="select1"/>
       <bind nodeset="/death_registration/disease" relevant=" /death_registration/causeOfDeath =1" required="true()" type="select1"/>
       <bind nodeset="/death_registration/placeOfDeath" required="true()" type="select1"/>
-      <bind nodeset="/death_registration/placeOfDeathOther" relevant="selected( /death_registration/placeOfDeath , '5')" required="true()" type="string"/>
+      <bind nodeset="/death_registration/placeOfDeathOther" relevant=" /death_registration/placeOfDeath =98" required="true()" type="string"/>
+      <bind nodeset="/death_registration/geoPlaceOfDeath" required="true()" type="select1"/>
       <bind nodeset="/death_registration/processedByMirth" readonly="true()" type="int"/>
       <bind nodeset="/death_registration/processedBySync" readonly="true()" type="int"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/death_registration/meta/instanceID" readonly="true()" type="string"/>
@@ -422,12 +676,16 @@
         <value>8</value>
       </item>
       <item>
-        <label ref="jr:itext('/death_registration/causeOfDeath/10:label')"/>
-        <value>10</value>
+        <label ref="jr:itext('/death_registration/causeOfDeath/9:label')"/>
+        <value>9</value>
       </item>
       <item>
-        <label ref="jr:itext('/death_registration/causeOfDeath/11:label')"/>
-        <value>11</value>
+        <label ref="jr:itext('/death_registration/causeOfDeath/98:label')"/>
+        <value>98</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/death_registration/causeOfDeath/88:label')"/>
+        <value>88</value>
       </item>
     </select1>
     <select1 ref="/death_registration/disease">
@@ -451,6 +709,10 @@
       <item>
         <label ref="jr:itext('/death_registration/disease/5:label')"/>
         <value>5</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/death_registration/disease/6:label')"/>
+        <value>6</value>
       </item>
       <item>
         <label ref="jr:itext('/death_registration/disease/88:label')"/>
@@ -487,10 +749,113 @@
         <label ref="jr:itext('/death_registration/placeOfDeath/6:label')"/>
         <value>6</value>
       </item>
+      <item>
+        <label ref="jr:itext('/death_registration/placeOfDeath/7:label')"/>
+        <value>7</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/death_registration/placeOfDeath/98:label')"/>
+        <value>98</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/death_registration/placeOfDeath/88:label')"/>
+        <value>88</value>
+      </item>
     </select1>
     <input ref="/death_registration/placeOfDeathOther">
       <label ref="jr:itext('/death_registration/placeOfDeathOther:label')"/>
     </input>
+    <select1 ref="/death_registration/geoPlaceOfDeath">
+      <label ref="jr:itext('/death_registration/geoPlaceOfDeath:label')"/>
+      <item>
+        <label ref="jr:itext('/death_registration/geoPlaceOfDeath/1:label')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/death_registration/geoPlaceOfDeath/2:label')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/death_registration/geoPlaceOfDeath/3:label')"/>
+        <value>3</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/death_registration/geoPlaceOfDeath/4:label')"/>
+        <value>4</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/death_registration/geoPlaceOfDeath/5:label')"/>
+        <value>5</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/death_registration/geoPlaceOfDeath/6:label')"/>
+        <value>6</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/death_registration/geoPlaceOfDeath/7:label')"/>
+        <value>7</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/death_registration/geoPlaceOfDeath/8:label')"/>
+        <value>8</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/death_registration/geoPlaceOfDeath/9:label')"/>
+        <value>9</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/death_registration/geoPlaceOfDeath/10:label')"/>
+        <value>10</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/death_registration/geoPlaceOfDeath/11:label')"/>
+        <value>11</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/death_registration/geoPlaceOfDeath/12:label')"/>
+        <value>12</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/death_registration/geoPlaceOfDeath/13:label')"/>
+        <value>13</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/death_registration/geoPlaceOfDeath/14:label')"/>
+        <value>14</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/death_registration/geoPlaceOfDeath/15:label')"/>
+        <value>15</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/death_registration/geoPlaceOfDeath/16:label')"/>
+        <value>16</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/death_registration/geoPlaceOfDeath/17:label')"/>
+        <value>17</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/death_registration/geoPlaceOfDeath/18:label')"/>
+        <value>18</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/death_registration/geoPlaceOfDeath/19:label')"/>
+        <value>19</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/death_registration/geoPlaceOfDeath/98:label')"/>
+        <value>98</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/death_registration/geoPlaceOfDeath/88:label')"/>
+        <value>88</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/death_registration/geoPlaceOfDeath/99:label')"/>
+        <value>99</value>
+      </item>
+    </select1>
     <input ref="/death_registration/processedByMirth">
       <label ref="jr:itext('/death_registration/processedByMirth:label')"/>
     </input>

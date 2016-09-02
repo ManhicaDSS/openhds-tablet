@@ -5,180 +5,342 @@
     <model>
       <itext>
         <translation lang="Swahili">
-          <text id="/pregnancy_observation/ttinjection/YES:label">
-            <value>Ndiyo</value>
-          </text>
-          <text id="/pregnancy_observation/individualId:label">
-            <value>PERM Id</value>
-          </text>
-          <text id="/pregnancy_observation/processedByMirth:label">
-            <value>processed</value>
-          </text>
-          <text id="/pregnancy_observation/medicineforpregnancy/YES:label">
-            <value>Ndiyo</value>
-          </text>
-          <text id="/pregnancy_observation/estimatedAgeOfPreg:label">
-            <value>Idadi ya miezi ya ujauzito</value>
-          </text>
-          <text id="/pregnancy_observation/visitId:label">
-            <value>Nambari ya hudhurio</value>
-          </text>
-          <text id="/pregnancy_observation/lostPregnancies:label">
-            <value>11. Destas gravidezes quantas foram perdidas?</value>
-          </text>
-          <text id="/pregnancy_observation/ttinjection/NO:label">
+          <text id="/pregnancy_observation/hasPhone/2:label">
             <value>Hapana</value>
+          </text>
+          <text id="/pregnancy_observation/permId:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/3:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/98:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/4:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_observation/hasPhone/1:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/10:label">
+            <value>-</value>
           </text>
           <text id="/pregnancy_observation/numberOfPregncancies:label">
             <value>Ujauzito wa ngapi?</value>
           </text>
-          <text id="/pregnancy_observation/processedBySync:label">
-            <value>processed</value>
+          <text id="/pregnancy_observation/birthHealthUnit/1:label">
+            <value>-</value>
           </text>
-          <text id="/pregnancy_observation/expectedDeliveryDate:label">
-            <value>expectedDeliveryDate</value>
+          <text id="/pregnancy_observation/birthHealthUnit/11:label">
+            <value>-</value>
           </text>
-          <text id="/pregnancy_observation/ttinjectionDates:label">
-            <value>Specify if other medicine</value>
+          <text id="/pregnancy_observation/birthHealthUnit/13:label">
+            <value>-</value>
           </text>
-          <text id="/pregnancy_observation/ttinjection:label">
-            <value>Have you received TT injection?</value>
-          </text>
-          <text id="/pregnancy_observation/permId:label">
+          <text id="/pregnancy_observation/birthHealthUnit/6:label">
             <value>-</value>
           </text>
           <text id="/pregnancy_observation/name:label">
             <value>Nome da mulher</value>
+          </text>
+          <text id="/pregnancy_observation/medicineforpregnancy:label">
+            <value>Have you received any medicine for the pregnancy?</value>
+          </text>
+          <text id="/pregnancy_observation/phoneNumber:label">
+            <value>14.1. Peço seu número de telefone ou de alguém mais próximo a si?</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/2:label">
+            <value>-</value>
           </text>
           <text id="/pregnancy_observation/recordedDate:label">
             <value>Tarehe iliyo andikishwa</value>
           </text>
-          <text id="/pregnancy_observation/fieldWorkerId:label">
-            <value>Nambari ya Mhojaji</value>
-          </text>
-          <text id="/pregnancy_observation/medicineforpregnancy/NO:label">
-            <value>Hapana</value>
-          </text>
-          <text id="/pregnancy_observation/medicineforpregnancy:label">
-            <value>Have you received any medicine for the pregnancy?</value>
-          </text>
-        </translation>
-        <translation default="true()" lang="Portuguese">
-          <text id="/pregnancy_observation/ttinjection/YES:label">
-            <value>Sim</value>
-          </text>
-          <text id="/pregnancy_observation/individualId:label">
-            <value>ExtId da mulher</value>
-          </text>
-          <text id="/pregnancy_observation/processedByMirth:label">
-            <value>processed</value>
-          </text>
-          <text id="/pregnancy_observation/medicineforpregnancy/YES:label">
-            <value>Sim</value>
-          </text>
-          <text id="/pregnancy_observation/estimatedAgeOfPreg:label">
-            <value>9. Quantos meses tem esta gravidez</value>
-          </text>
-          <text id="/pregnancy_observation/visitId:label">
-            <value>Id da visita</value>
+          <text id="/pregnancy_observation/birthHealthUnit/5:label">
+            <value>-</value>
           </text>
           <text id="/pregnancy_observation/lostPregnancies:label">
             <value>11. Destas gravidezes quantas foram perdidas?</value>
           </text>
-          <text id="/pregnancy_observation/ttinjection/NO:label">
-            <value>Não</value>
+          <text id="/pregnancy_observation/birthHealthUnit:label">
+            <value>15. Unidade sanitária onde pretende dar o parto?</value>
           </text>
-          <text id="/pregnancy_observation/numberOfPregncancies:label">
-            <value>10. Numero total de gravidezes até o momento?</value>
+          <text id="/pregnancy_observation/hasPhone:label">
+            <value>14. A Sra. Ou alguém no seu agregado possui telefone?</value>
           </text>
           <text id="/pregnancy_observation/processedBySync:label">
-            <value>processed by dbsync</value>
+            <value>processed</value>
           </text>
-          <text id="/pregnancy_observation/expectedDeliveryDate:label">
-            <value>12. Data estimada de parto</value>
+          <text id="/pregnancy_observation/birthHealthUnit/88:label">
+            <value>-</value>
           </text>
-          <text id="/pregnancy_observation/ttinjectionDates:label">
-            <value>14.1 Introduza as datas em toma a vacina.</value>
+          <text id="/pregnancy_observation/birthHealthUnit/7:label">
+            <value>-</value>
           </text>
-          <text id="/pregnancy_observation/ttinjection:label">
-            <value>14. Recebeu vacina contra tetano?</value>
-          </text>
-          <text id="/pregnancy_observation/permId:label">
-            <value>Perm Id da mulher</value>
-          </text>
-          <text id="/pregnancy_observation/name:label">
-            <value>7. Nome da mulher</value>
-          </text>
-          <text id="/pregnancy_observation/recordedDate:label">
-            <value>8. Data do registo de observação</value>
-          </text>
-          <text id="/pregnancy_observation/fieldWorkerId:label">
-            <value>Código do Inquiridor</value>
-          </text>
-          <text id="/pregnancy_observation/medicineforpregnancy/NO:label">
-            <value>Não</value>
-          </text>
-          <text id="/pregnancy_observation/medicineforpregnancy:label">
-            <value>13. Recebeu qualquer medicamento durante a Gravidez?</value>
-          </text>
-        </translation>
-        <translation lang="English">
-          <text id="/pregnancy_observation/ttinjection/YES:label">
-            <value>Yes</value>
+          <text id="/pregnancy_observation/birthHealthUnit/9:label">
+            <value>-</value>
           </text>
           <text id="/pregnancy_observation/individualId:label">
             <value>PERM Id</value>
           </text>
-          <text id="/pregnancy_observation/processedByMirth:label">
-            <value>processed</value>
+          <text id="/pregnancy_observation/medicineforpregnancy/2:label">
+            <value>Hapana</value>
           </text>
-          <text id="/pregnancy_observation/medicineforpregnancy/YES:label">
-            <value>Yes</value>
+          <text id="/pregnancy_observation/fieldWorkerId:label">
+            <value>Nambari ya Mhojaji</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthOther:label">
+            <value>15.1. Especifique a unidade sanitaria onde deu parto?</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/8:label">
+            <value>-</value>
           </text>
           <text id="/pregnancy_observation/estimatedAgeOfPreg:label">
-            <value>Number of months pregnant</value>
+            <value>Idadi ya miezi ya ujauzito</value>
           </text>
-          <text id="/pregnancy_observation/visitId:label">
-            <value>Visit Id</value>
+          <text id="/pregnancy_observation/phoneNumber:hint">
+            <value>-</value>
           </text>
-          <text id="/pregnancy_observation/lostPregnancies:label">
-            <value>11. Destas gravidezes quantas foram perdidas?</value>
-          </text>
-          <text id="/pregnancy_observation/ttinjection/NO:label">
-            <value>No</value>
-          </text>
-          <text id="/pregnancy_observation/numberOfPregncancies:label">
-            <value>Total number of pregnancies to date</value>
-          </text>
-          <text id="/pregnancy_observation/processedBySync:label">
-            <value>processed</value>
+          <text id="/pregnancy_observation/medicineforpregnancy/1:label">
+            <value>Ndiyo</value>
           </text>
           <text id="/pregnancy_observation/expectedDeliveryDate:label">
             <value>expectedDeliveryDate</value>
           </text>
-          <text id="/pregnancy_observation/ttinjectionDates:label">
-            <value>Specify if other medicine</value>
+          <text id="/pregnancy_observation/birthHealthUnit/12:label">
+            <value>-</value>
           </text>
-          <text id="/pregnancy_observation/ttinjection:label">
-            <value>Have you received TT injection?</value>
+          <text id="/pregnancy_observation/processedByMirth:label">
+            <value>processed</value>
+          </text>
+          <text id="/pregnancy_observation/visitId:label">
+            <value>Nambari ya hudhurio</value>
+          </text>
+        </translation>
+        <translation lang="English">
+          <text id="/pregnancy_observation/hasPhone/2:label">
+            <value>No</value>
           </text>
           <text id="/pregnancy_observation/permId:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/3:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/98:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/4:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_observation/hasPhone/1:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/10:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_observation/numberOfPregncancies:label">
+            <value>Total number of pregnancies to date</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/1:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/11:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/13:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/6:label">
             <value>-</value>
           </text>
           <text id="/pregnancy_observation/name:label">
             <value>Nome da mulher</value>
           </text>
+          <text id="/pregnancy_observation/medicineforpregnancy:label">
+            <value>Have you received any medicine for the pregnancy?</value>
+          </text>
+          <text id="/pregnancy_observation/phoneNumber:label">
+            <value>14.1. Peço seu número de telefone ou de alguém mais próximo a si?</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/2:label">
+            <value>-</value>
+          </text>
           <text id="/pregnancy_observation/recordedDate:label">
             <value>Recorded Date</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/5:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_observation/lostPregnancies:label">
+            <value>11. Destas gravidezes quantas foram perdidas?</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit:label">
+            <value>15. Unidade sanitária onde pretende dar o parto?</value>
+          </text>
+          <text id="/pregnancy_observation/hasPhone:label">
+            <value>14. A Sra. Ou alguém no seu agregado possui telefone?</value>
+          </text>
+          <text id="/pregnancy_observation/processedBySync:label">
+            <value>processed</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/88:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/7:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/9:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_observation/individualId:label">
+            <value>PERM Id</value>
+          </text>
+          <text id="/pregnancy_observation/medicineforpregnancy/2:label">
+            <value>No</value>
           </text>
           <text id="/pregnancy_observation/fieldWorkerId:label">
             <value>Field Worker Id</value>
           </text>
-          <text id="/pregnancy_observation/medicineforpregnancy/NO:label">
-            <value>No</value>
+          <text id="/pregnancy_observation/birthHealthOther:label">
+            <value>15.1. Especifique a unidade sanitaria onde deu parto?</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/8:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_observation/estimatedAgeOfPreg:label">
+            <value>Number of months pregnant</value>
+          </text>
+          <text id="/pregnancy_observation/phoneNumber:hint">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_observation/medicineforpregnancy/1:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy_observation/expectedDeliveryDate:label">
+            <value>expectedDeliveryDate</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/12:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_observation/processedByMirth:label">
+            <value>processed</value>
+          </text>
+          <text id="/pregnancy_observation/visitId:label">
+            <value>Visit Id</value>
+          </text>
+        </translation>
+        <translation default="true()" lang="Portuguese">
+          <text id="/pregnancy_observation/hasPhone/2:label">
+            <value>Não</value>
+          </text>
+          <text id="/pregnancy_observation/permId:label">
+            <value>4. Perm Id da mulher</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/98:label">
+            <value>Outra</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/5:label">
+            <value>CS de Malavele</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/4:label">
+            <value>CS da Palmeira</value>
+          </text>
+          <text id="/pregnancy_observation/hasPhone/1:label">
+            <value>Sim</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/10:label">
+            <value>CS de Maluana</value>
+          </text>
+          <text id="/pregnancy_observation/numberOfPregncancies:label">
+            <value>8. Numero total de gravidezes até o momento?</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/1:label">
+            <value>Hospital da Manhiça</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/11:label">
+            <value>CS de Calanga</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/13:label">
+            <value>CS de Chibucutsu</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/6:label">
+            <value>CS de Taninga</value>
+          </text>
+          <text id="/pregnancy_observation/name:label">
+            <value>5. Nome da mulher</value>
           </text>
           <text id="/pregnancy_observation/medicineforpregnancy:label">
-            <value>Have you received any medicine for the pregnancy?</value>
+            <value>10. Recebeu qualquer medicamento durante a Gravidez?</value>
+          </text>
+          <text id="/pregnancy_observation/phoneNumber:label">
+            <value>10.1. Peço seu número de telefone ou de alguém mais próximo a si?</value>
+          </text>
+          <text id="/pregnancy_observation/recordedDate:label">
+            <value>6. Data do registo de observação</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/3:label">
+            <value>CS da Maragra</value>
+          </text>
+          <text id="/pregnancy_observation/lostPregnancies:label">
+            <value>8.1. Destas gravidezes quantas foram perdidas?</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit:label">
+            <value>11. Unidade sanitária onde pretende dar o parto?</value>
+          </text>
+          <text id="/pregnancy_observation/hasPhone:label">
+            <value>10. A Sra. Ou alguém no seu agregado possui telefone?</value>
+          </text>
+          <text id="/pregnancy_observation/visitId:label">
+            <value>1. ExtId da visita</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/88:label">
+            <value>Não sabe.</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/7:label">
+            <value>CS de 3 de Fevereiro</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/9:label">
+            <value>CS de Munguine</value>
+          </text>
+          <text id="/pregnancy_observation/individualId:label">
+            <value>3. ExtId da mulher</value>
+          </text>
+          <text id="/pregnancy_observation/medicineforpregnancy/2:label">
+            <value>Não</value>
+          </text>
+          <text id="/pregnancy_observation/fieldWorkerId:label">
+            <value>2. Código do Inquiridor</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthOther:label">
+            <value>11.1. Especifique a unidade sanitaria onde deu parto?</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/8:label">
+            <value>CS de Ilha Josina Machel</value>
+          </text>
+          <text id="/pregnancy_observation/estimatedAgeOfPreg:label">
+            <value>7. Número aproximado de meses da gravidez</value>
+          </text>
+          <text id="/pregnancy_observation/processedByMirth:label">
+            <value>processed</value>
+          </text>
+          <text id="/pregnancy_observation/processedBySync:label">
+            <value>processed by dbsync</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/2:label">
+            <value>Hospital de Xinavane</value>
+          </text>
+          <text id="/pregnancy_observation/expectedDeliveryDate:label">
+            <value>9. Data provável do parto?</value>
+          </text>
+          <text id="/pregnancy_observation/birthHealthUnit/12:label">
+            <value>CS de Mirona</value>
+          </text>
+          <text id="/pregnancy_observation/phoneNumber:hint">
+            <value>Se não souber coloque 88</value>
+          </text>
+          <text id="/pregnancy_observation/medicineforpregnancy/1:label">
+            <value>Sim</value>
           </text>
         </translation>
       </itext>
@@ -198,8 +360,10 @@
           <lostPregnancies/>
           <expectedDeliveryDate/>
           <medicineforpregnancy/>
-          <ttinjection/>
-          <ttinjectionDates/>
+          <hasPhone/>
+          <phoneNumber/>
+          <birthHealthUnit/>
+          <birthHealthOther/>
           <processedByMirth/>
           <processedBySync/>
           <meta>
@@ -219,11 +383,13 @@
       <bind nodeset="/pregnancy_observation/recordedDate" readonly="true()" required="true()" type="date"/>
       <bind nodeset="/pregnancy_observation/estimatedAgeOfPreg" required="true()" type="int"/>
       <bind nodeset="/pregnancy_observation/numberOfPregncancies" required="true()" type="int"/>
-      <bind constraint=". &gt;= 0" jr:constraintMsg="O numero não pode ser negativo" nodeset="/pregnancy_observation/lostPregnancies" required="true()" type="int"/>
-      <bind constraint=".&gt;= today()" nodeset="/pregnancy_observation/expectedDeliveryDate" required="true()" type="date"/>
-      <bind nodeset="/pregnancy_observation/medicineforpregnancy" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy_observation/ttinjection" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy_observation/ttinjectionDates" relevant=" /pregnancy_observation/ttinjection =1" required="true()" type="string"/>
+      <bind constraint=". &gt;= 0" jr:constraintMsg="O numero não pode ser negativo" nodeset="/pregnancy_observation/lostPregnancies" relevant=" /pregnancy_observation/numberOfPregncancies &gt;0" required="true()" type="int"/>
+      <bind constraint=". &gt;= today()" jr:constraintMsg="A data deve ser maior ou igual a data de hoje" nodeset="/pregnancy_observation/expectedDeliveryDate" required="true()" type="date"/>
+      <bind nodeset="/pregnancy_observation/medicineforpregnancy" relevant="1=0" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_observation/hasPhone" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_observation/phoneNumber" relevant=" /pregnancy_observation/hasPhone =1" required="true()" type="string"/>
+      <bind nodeset="/pregnancy_observation/birthHealthUnit" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_observation/birthHealthOther" relevant=" /pregnancy_observation/birthHealthUnit =98" required="true()" type="string"/>
       <bind nodeset="/pregnancy_observation/processedByMirth" readonly="true()" type="int"/>
       <bind nodeset="/pregnancy_observation/processedBySync" readonly="true()" type="int"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/pregnancy_observation/meta/instanceID" readonly="true()" type="string"/>
@@ -264,27 +430,94 @@
     <select1 ref="/pregnancy_observation/medicineforpregnancy">
       <label ref="jr:itext('/pregnancy_observation/medicineforpregnancy:label')"/>
       <item>
-        <label ref="jr:itext('/pregnancy_observation/medicineforpregnancy/YES:label')"/>
-        <value>YES</value>
+        <label ref="jr:itext('/pregnancy_observation/medicineforpregnancy/1:label')"/>
+        <value>1</value>
       </item>
       <item>
-        <label ref="jr:itext('/pregnancy_observation/medicineforpregnancy/NO:label')"/>
-        <value>NO</value>
+        <label ref="jr:itext('/pregnancy_observation/medicineforpregnancy/2:label')"/>
+        <value>2</value>
       </item>
     </select1>
-    <select1 ref="/pregnancy_observation/ttinjection">
-      <label ref="jr:itext('/pregnancy_observation/ttinjection:label')"/>
+    <select1 ref="/pregnancy_observation/hasPhone">
+      <label ref="jr:itext('/pregnancy_observation/hasPhone:label')"/>
       <item>
-        <label ref="jr:itext('/pregnancy_observation/ttinjection/YES:label')"/>
-        <value>YES</value>
+        <label ref="jr:itext('/pregnancy_observation/hasPhone/1:label')"/>
+        <value>1</value>
       </item>
       <item>
-        <label ref="jr:itext('/pregnancy_observation/ttinjection/NO:label')"/>
-        <value>NO</value>
+        <label ref="jr:itext('/pregnancy_observation/hasPhone/2:label')"/>
+        <value>2</value>
       </item>
     </select1>
-    <input ref="/pregnancy_observation/ttinjectionDates">
-      <label ref="jr:itext('/pregnancy_observation/ttinjectionDates:label')"/>
+    <input ref="/pregnancy_observation/phoneNumber">
+      <label ref="jr:itext('/pregnancy_observation/phoneNumber:label')"/>
+      <hint ref="jr:itext('/pregnancy_observation/phoneNumber:hint')"/>
+    </input>
+    <select1 ref="/pregnancy_observation/birthHealthUnit">
+      <label ref="jr:itext('/pregnancy_observation/birthHealthUnit:label')"/>
+      <item>
+        <label ref="jr:itext('/pregnancy_observation/birthHealthUnit/1:label')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/pregnancy_observation/birthHealthUnit/2:label')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/pregnancy_observation/birthHealthUnit/3:label')"/>
+        <value>3</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/pregnancy_observation/birthHealthUnit/4:label')"/>
+        <value>4</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/pregnancy_observation/birthHealthUnit/5:label')"/>
+        <value>5</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/pregnancy_observation/birthHealthUnit/6:label')"/>
+        <value>6</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/pregnancy_observation/birthHealthUnit/7:label')"/>
+        <value>7</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/pregnancy_observation/birthHealthUnit/8:label')"/>
+        <value>8</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/pregnancy_observation/birthHealthUnit/9:label')"/>
+        <value>9</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/pregnancy_observation/birthHealthUnit/10:label')"/>
+        <value>10</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/pregnancy_observation/birthHealthUnit/11:label')"/>
+        <value>11</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/pregnancy_observation/birthHealthUnit/12:label')"/>
+        <value>12</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/pregnancy_observation/birthHealthUnit/13:label')"/>
+        <value>13</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/pregnancy_observation/birthHealthUnit/98:label')"/>
+        <value>98</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/pregnancy_observation/birthHealthUnit/88:label')"/>
+        <value>88</value>
+      </item>
+    </select1>
+    <input ref="/pregnancy_observation/birthHealthOther">
+      <label ref="jr:itext('/pregnancy_observation/birthHealthOther:label')"/>
     </input>
     <input ref="/pregnancy_observation/processedByMirth">
       <label ref="jr:itext('/pregnancy_observation/processedByMirth:label')"/>

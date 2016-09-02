@@ -4,442 +4,550 @@
     <h:title>Registo de Visita</h:title>
     <model>
       <itext>
-        <translation lang="Swahili">
-          <text id="/visit_registration/reasonToNotComplete/99:label">
-            <value>-</value>
-          </text>
-          <text id="/visit_registration/whynotrightcode:label">
-            <value>-</value>
-          </text>
-          <text id="/visit_registration/reason/99:label">
-            <value>Other</value>
-          </text>
-          <text id="/visit_registration/whynotrightcode/1:label">
-            <value>Barcode not readable</value>
-          </text>
-          <text id="/visit_registration/reason/3:label">
-            <value>Person Out Migrated</value>
-          </text>
-          <text id="/visit_registration/intervieweeName:label">
-            <value>Jina la Mhojiwa</value>
-          </text>
-          <text id="/visit_registration/houseNoLocated:label">
-            <value>Localização do número do agregado?</value>
-          </text>
-          <text id="/visit_registration/reasonToNotComplete:label">
-            <value>Motivo de não ter completado o inquérito?</value>
-          </text>
-          <text id="/visit_registration/whynotrightcode/0:label">
-            <value>Hapana Barcode</value>
-          </text>
-          <text id="/visit_registration/reason/2:label">
-            <value>New House</value>
-          </text>
-          <text id="/visit_registration/houseNoLocated/2:label">
-            <value>Parede</value>
-          </text>
-          <text id="/visit_registration/reasonToNotComplete/3:label">
-            <value>-</value>
-          </text>
-          <text id="/visit_registration/reasonToNotComplete/5:label">
-            <value>-</value>
-          </text>
-          <text id="/visit_registration/locationIdCheck:label">
-            <value>Nambari ya Kaya</value>
-          </text>
-          <text id="/visit_registration/reason/1:label">
-            <value>Round</value>
-          </text>
-          <text id="/visit_registration/houseNoLocated/3:label">
-            <value>Árvore</value>
-          </text>
-          <text id="/visit_registration/reasonToNotComplete/2:label">
-            <value>-</value>
-          </text>
-          <text id="/visit_registration/reason:label">
-            <value>Sababu ya kuhojiwa</value>
-          </text>
+        <translation lang="English">
           <text id="/visit_registration/houseNoNeedRepaint/1:label">
             <value>Yes</value>
           </text>
-          <text id="/visit_registration/processedBySync:label">
-            <value>processed</value>
-          </text>
-          <text id="/visit_registration/reasonToNotComplete/88:label">
-            <value>-</value>
-          </text>
-          <text id="/visit_registration/reasonToNotComplete/1:label">
-            <value>-</value>
-          </text>
-          <text id="/visit_registration/houseNoLocated/1:label">
-            <value>Porta</value>
-          </text>
-          <text id="/visit_registration/farmhouse:label">
-            <value>Uhojaji Umefanyikia Wapi?</value>
-          </text>
-          <text id="/visit_registration/completedQuest:label">
-            <value>Inquérito completo?</value>
-          </text>
-          <text id="/visit_registration/visitId:label">
-            <value>Nambari ya Hudhurio</value>
-          </text>
-          <text id="/visit_registration/coordinates:label">
-            <value>Nukuhu Takwimu za GPS:</value>
-          </text>
-          <text id="/visit_registration/houseNoNeedRepaint:label">
-            <value>A casa precisa ser repintada?</value>
-          </text>
-          <text id="/visit_registration/completedQuest/1:label">
-            <value>Yes</value>
-          </text>
-          <text id="/visit_registration/correctInterviewee/1:label">
-            <value>Ndiyo</value>
-          </text>
-          <text id="/visit_registration/houseNoNeedRepaint/2:label">
-            <value>Yes</value>
-          </text>
-          <text id="/visit_registration/correctInterviewee/2:label">
-            <value>Hapana</value>
-          </text>
-          <text id="/visit_registration/checkRightId:label">
-            <value>-</value>
-          </text>
-          <text id="/visit_registration/houseNoLocated/4:label">
-            <value>Porta de quintal</value>
-          </text>
-          <text id="/visit_registration/farmhouse/0:label">
-            <value>Shambani</value>
-          </text>
-          <text id="/visit_registration/visitDate:label">
-            <value>Tarehe ya Hudhurio</value>
-          </text>
-          <text id="/visit_registration/correctInterviewee:label">
-            <value>Je, Mwanakaya uliye mchagua ndiye unaye muhoji?</value>
-          </text>
-          <text id="/visit_registration/fieldWorkerId:label">
-            <value>Nambari ya Mhojaji</value>
-          </text>
-          <text id="/visit_registration/houseNoLocated/5:label">
-            <value>Outro Local</value>
-          </text>
-          <text id="/visit_registration/completedQuest/2:label">
-            <value>Yes</value>
-          </text>
-          <text id="/visit_registration/intervieweeId:label">
-            <value>Nambari ya Mhojaji</value>
-          </text>
-          <text id="/visit_registration/farmhouse/1:label">
-            <value>Nyumbani</value>
-          </text>
-          <text id="/visit_registration/locationId:label">
-            <value>Nambari ya Kaya</value>
-          </text>
-          <text id="/visit_registration/processedByMirth:label">
-            <value>processed</value>
+          <text id="/visit_registration/locationName:label">
+            <value>Location Name</value>
           </text>
           <text id="/visit_registration/roundNumber:label">
             <value>Round number</value>
           </text>
-          <text id="/visit_registration/reasonToNotComplete/4:label">
-            <value>-</value>
+          <text id="/visit_registration/houseNoNeedRepaint/2:label">
+            <value>Yes</value>
           </text>
-          <text id="/visit_registration/locationcalculated:label">
-            <value>check</value>
-          </text>
-          <text id="/visit_registration/locationName:label">
-            <value>location Name</value>
-          </text>
-        </translation>
-        <translation default="true()" lang="Portuguese">
-          <text id="/visit_registration/reasonToNotComplete/99:label">
-            <value>Recusa.</value>
-          </text>
-          <text id="/visit_registration/whynotrightcode:label">
-            <value>Porque o código de barras não corresponde?</value>
-          </text>
-          <text id="/visit_registration/reason/99:label">
-            <value>Outra</value>
-          </text>
-          <text id="/visit_registration/whynotrightcode/1:label">
-            <value>Codigo de barras nao é legivel</value>
-          </text>
-          <text id="/visit_registration/reason/3:label">
-            <value>Actualização de imunização</value>
-          </text>
-          <text id="/visit_registration/intervieweeName:label">
-            <value>Nome do/a respondente</value>
-          </text>
-          <text id="/visit_registration/houseNoLocated:label">
-            <value>Localização do número do agregado?</value>
-          </text>
-          <text id="/visit_registration/reasonToNotComplete:label">
-            <value>Motivo de não ter completado o inquérito?</value>
-          </text>
-          <text id="/visit_registration/whynotrightcode/0:label">
-            <value>Sem codigo de barras na casa</value>
-          </text>
-          <text id="/visit_registration/reason/2:label">
-            <value>Registo de eventos</value>
-          </text>
-          <text id="/visit_registration/houseNoLocated/2:label">
-            <value>Parede</value>
+          <text id="/visit_registration/fieldWorkerId:label">
+            <value>Field Worker Id</value>
           </text>
           <text id="/visit_registration/reasonToNotComplete/3:label">
-            <value>Casa desabitada</value>
+            <value>-</value>
           </text>
-          <text id="/visit_registration/reasonToNotComplete/5:label">
-            <value>Outro motivo</value>
+          <text id="/visit_registration/reason/6:label">
+            <value>Mapeamento GPS</value>
           </text>
-          <text id="/visit_registration/locationIdCheck:label">
-            <value>ExtId da Casa/Agregado</value>
+          <text id="/visit_registration/neighbors/house3:hint">
+            <value>-</value>
           </text>
-          <text id="/visit_registration/reason/1:label">
-            <value>Ronda</value>
+          <text id="/visit_registration/whynotrightcode/0:label">
+            <value>No Barcode in the house</value>
+          </text>
+          <text id="/visit_registration/intervieweeId:label">
+            <value>Interviewee ID</value>
           </text>
           <text id="/visit_registration/houseNoLocated/3:label">
             <value>Árvore</value>
           </text>
-          <text id="/visit_registration/reasonToNotComplete/2:label">
-            <value>Casa destruída</value>
-          </text>
-          <text id="/visit_registration/reason:label">
-            <value>Razão para ser entrevistado</value>
-          </text>
-          <text id="/visit_registration/houseNoNeedRepaint/1:label">
-            <value>Sim</value>
-          </text>
-          <text id="/visit_registration/processedBySync:label">
-            <value>processed by dbsync</value>
-          </text>
-          <text id="/visit_registration/reasonToNotComplete/88:label">
-            <value>Não sabe</value>
-          </text>
-          <text id="/visit_registration/houseNoLocated/1:label">
-            <value>Porta</value>
-          </text>
-          <text id="/visit_registration/farmhouse:label">
-            <value>Onde é que a visita esta sendo realizada?</value>
-          </text>
-          <text id="/visit_registration/completedQuest:label">
-            <value>Inquérito completo?</value>
-          </text>
-          <text id="/visit_registration/visitId:label">
-            <value>Id da visita</value>
-          </text>
-          <text id="/visit_registration/coordinates:label">
-            <value>Gravar Coordenadas GPS:</value>
-          </text>
-          <text id="/visit_registration/houseNoNeedRepaint:label">
-            <value>A casa precisa ser repintada?</value>
+          <text id="/visit_registration/reason/4:label">
+            <value>Correção de erros</value>
           </text>
           <text id="/visit_registration/completedQuest/1:label">
-            <value>Sim</value>
+            <value>Yes</value>
           </text>
-          <text id="/visit_registration/correctInterviewee/1:label">
-            <value>Sim</value>
-          </text>
-          <text id="/visit_registration/houseNoNeedRepaint/2:label">
-            <value>Não</value>
-          </text>
-          <text id="/visit_registration/correctInterviewee/2:label">
-            <value>Nao</value>
-          </text>
-          <text id="/visit_registration/checkRightId:label">
-            <value>O código de barras não coincide com o ExtId da casa, tem certeza que deseja prosseguir?</value>
-          </text>
-          <text id="/visit_registration/houseNoLocated/4:label">
-            <value>Porta de quintal</value>
-          </text>
-          <text id="/visit_registration/reasonToNotComplete/1:label">
-            <value>Casa não encontrada</value>
-          </text>
-          <text id="/visit_registration/visitDate:label">
-            <value>Data da visita</value>
-          </text>
-          <text id="/visit_registration/correctInterviewee:label">
-            <value>É a pessoa seleccionada, a mesma que está sendo entrevista?</value>
-          </text>
-          <text id="/visit_registration/fieldWorkerId:label">
-            <value>Código do Inquiridor</value>
-          </text>
-          <text id="/visit_registration/houseNoLocated/5:label">
-            <value>Outro Local</value>
-          </text>
-          <text id="/visit_registration/farmhouse/0:label">
-            <value>Nao esta em casa</value>
-          </text>
-          <text id="/visit_registration/completedQuest/2:label">
-            <value>Não</value>
-          </text>
-          <text id="/visit_registration/intervieweeId:label">
-            <value>Id do Respondente</value>
-          </text>
-          <text id="/visit_registration/farmhouse/1:label">
-            <value>Em casa</value>
-          </text>
-          <text id="/visit_registration/locationId:label">
-            <value>ExtId da Casa/Agregado</value>
-          </text>
-          <text id="/visit_registration/processedByMirth:label">
+          <text id="/visit_registration/processedBySync:label">
             <value>processed</value>
           </text>
-          <text id="/visit_registration/roundNumber:label">
-            <value>Número da ronda</value>
+          <text id="/visit_registration/neighbors/house1:label">
+            <value>1. Número de agregado do 1º Vizinho</value>
           </text>
-          <text id="/visit_registration/reasonToNotComplete/4:label">
-            <value>Sem informante</value>
+          <text id="/visit_registration/intervieweeName:label">
+            <value>Name of interviewee</value>
           </text>
-          <text id="/visit_registration/locationcalculated:label">
-            <value>Verificar</value>
+          <text id="/visit_registration/reason/3:label">
+            <value>Person Out Migrated</value>
           </text>
-          <text id="/visit_registration/locationName:label">
-            <value>Número da Casa/Agregado</value>
+          <text id="/visit_registration/visitId:label">
+            <value>Visit Id</value>
           </text>
-        </translation>
-        <translation lang="English">
-          <text id="/visit_registration/reasonToNotComplete/99:label">
+          <text id="/visit_registration/reasonToNotComplete/2:label">
+            <value>-</value>
+          </text>
+          <text id="/visit_registration/reason/1:label">
+            <value>Round</value>
+          </text>
+          <text id="/visit_registration/neighbors/house2:label">
+            <value>2. Número de agregado do 2º Vizinho</value>
+          </text>
+          <text id="/visit_registration/reason/2:label">
+            <value>New House</value>
+          </text>
+          <text id="/visit_registration/neighbors/house1:hint">
+            <value>-</value>
+          </text>
+          <text id="/visit_registration/reason/5:label">
+            <value>Supervisão</value>
+          </text>
+          <text id="/visit_registration/neighbors:label">
+            <value>-</value>
+          </text>
+          <text id="/visit_registration/houseNoLocated/2:label">
+            <value>Parede</value>
+          </text>
+          <text id="/visit_registration/reasonToNotComplete/5:label">
             <value>-</value>
           </text>
           <text id="/visit_registration/whynotrightcode:label">
             <value>Why the barcode doesn't correspond?</value>
           </text>
-          <text id="/visit_registration/reason/99:label">
-            <value>Other</value>
-          </text>
-          <text id="/visit_registration/whynotrightcode/1:label">
-            <value>Barcode not readable</value>
-          </text>
-          <text id="/visit_registration/reason/3:label">
-            <value>Person Out Migrated</value>
-          </text>
-          <text id="/visit_registration/intervieweeName:label">
-            <value>Name of interviewee</value>
-          </text>
-          <text id="/visit_registration/houseNoLocated:label">
-            <value>Localização do número do agregado?</value>
+          <text id="/visit_registration/coordinates:label">
+            <value>Record the GPS coordinates:</value>
           </text>
           <text id="/visit_registration/reasonToNotComplete:label">
-            <value>Motivo de não ter completado o inquérito?</value>
+            <value>Porque não é possivel completar o inquérito?</value>
           </text>
-          <text id="/visit_registration/whynotrightcode/0:label">
-            <value>No Barcode in the house</value>
+          <text id="/visit_registration/neighbors/house3:label">
+            <value>3. Número de agregado do 3º Vizinho</value>
           </text>
-          <text id="/visit_registration/reason/2:label">
-            <value>New House</value>
+          <text id="/visit_registration/houseNoLocated/4:label">
+            <value>Porta de quintal</value>
           </text>
-          <text id="/visit_registration/houseNoLocated/2:label">
-            <value>Parede</value>
-          </text>
-          <text id="/visit_registration/reasonToNotComplete/3:label">
-            <value>-</value>
-          </text>
-          <text id="/visit_registration/reasonToNotComplete/5:label">
-            <value>-</value>
-          </text>
-          <text id="/visit_registration/locationIdCheck:label">
-            <value>Location Id</value>
-          </text>
-          <text id="/visit_registration/reason/1:label">
-            <value>Round</value>
-          </text>
-          <text id="/visit_registration/houseNoLocated/3:label">
-            <value>Árvore</value>
-          </text>
-          <text id="/visit_registration/reasonToNotComplete/2:label">
-            <value>-</value>
+          <text id="/visit_registration/houseNoLocated/1:label">
+            <value>Porta</value>
           </text>
           <text id="/visit_registration/reason:label">
             <value>Reason for being interviewed</value>
           </text>
+          <text id="/visit_registration/locationId:label">
+            <value>Location Id</value>
+          </text>
+          <text id="/visit_registration/neighbors/house2:hint">
+            <value>-</value>
+          </text>
+          <text id="/visit_registration/farmhouse/1:label">
+            <value>House</value>
+          </text>
+          <text id="/visit_registration/correctInterviewee/2:label">
+            <value>No</value>
+          </text>
+          <text id="/visit_registration/locationIdCheck:label">
+            <value>Location Id</value>
+          </text>
+          <text id="/visit_registration/farmhouse/2:label">
+            <value>Na unidade Sanitária</value>
+          </text>
+          <text id="/visit_registration/farmhouse/3:label">
+            <value>Local de trabalho do respondente</value>
+          </text>
+          <text id="/visit_registration/correctInterviewee:label">
+            <value>Is the person selected the one you are actually interviewing?</value>
+          </text>
+          <text id="/visit_registration/correctInterviewee/1:label">
+            <value>Yes</value>
+          </text>
+          <text id="/visit_registration/reasonToNotComplete/1:label">
+            <value>-</value>
+          </text>
+          <text id="/visit_registration/farmhouse/99:label">
+            <value>Not at home</value>
+          </text>
+          <text id="/visit_registration/reasonToNotComplete/99:label">
+            <value>-</value>
+          </text>
+          <text id="/visit_registration/reasonToNotComplete/4:label">
+            <value>-</value>
+          </text>
+          <text id="/visit_registration/visitDate:label">
+            <value>Visit Date</value>
+          </text>
+          <text id="/visit_registration/houseNoLocated:label">
+            <value>Localização do número do agregado?</value>
+          </text>
+          <text id="/visit_registration/reason/99:label">
+            <value>Other</value>
+          </text>
+          <text id="/visit_registration/houseNoLocated/5:label">
+            <value>Outro Local</value>
+          </text>
+          <text id="/visit_registration/locationcalculated:label">
+            <value>check</value>
+          </text>
+          <text id="/visit_registration/houseNoNeedRepaint:label">
+            <value>A casa precisa ser repintada?</value>
+          </text>
+          <text id="/visit_registration/reasonToNotComplete/88:label">
+            <value>-</value>
+          </text>
+          <text id="/visit_registration/whynotrightcode/1:label">
+            <value>Barcode not readable</value>
+          </text>
+          <text id="/visit_registration/checkRightId:label">
+            <value>The barcode doesn't match the Location ID are you sure you want to proceed?</value>
+          </text>
+          <text id="/visit_registration/farmhouse:label">
+            <value>Where is the visit taking place?</value>
+          </text>
+          <text id="/visit_registration/processedByMirth:label">
+            <value>processed</value>
+          </text>
+          <text id="/visit_registration/completedQuest:label">
+            <value>É possivel completar o inquerito/visita?</value>
+          </text>
+          <text id="/visit_registration/completedQuest/2:label">
+            <value>Yes</value>
+          </text>
+        </translation>
+        <translation lang="Swahili">
           <text id="/visit_registration/houseNoNeedRepaint/1:label">
+            <value>Yes</value>
+          </text>
+          <text id="/visit_registration/locationName:label">
+            <value>location Name</value>
+          </text>
+          <text id="/visit_registration/roundNumber:label">
+            <value>Round number</value>
+          </text>
+          <text id="/visit_registration/houseNoNeedRepaint/2:label">
+            <value>Yes</value>
+          </text>
+          <text id="/visit_registration/fieldWorkerId:label">
+            <value>Nambari ya Mhojaji</value>
+          </text>
+          <text id="/visit_registration/reasonToNotComplete/3:label">
+            <value>-</value>
+          </text>
+          <text id="/visit_registration/reason/6:label">
+            <value>Mapeamento GPS</value>
+          </text>
+          <text id="/visit_registration/whynotrightcode:label">
+            <value>-</value>
+          </text>
+          <text id="/visit_registration/neighbors/house3:hint">
+            <value>-</value>
+          </text>
+          <text id="/visit_registration/intervieweeId:label">
+            <value>Nambari ya Mhojaji</value>
+          </text>
+          <text id="/visit_registration/houseNoLocated/3:label">
+            <value>Árvore</value>
+          </text>
+          <text id="/visit_registration/reason/5:label">
+            <value>Supervisão</value>
+          </text>
+          <text id="/visit_registration/completedQuest/1:label">
             <value>Yes</value>
           </text>
           <text id="/visit_registration/processedBySync:label">
             <value>processed</value>
           </text>
-          <text id="/visit_registration/reasonToNotComplete/88:label">
-            <value>-</value>
+          <text id="/visit_registration/neighbors/house1:label">
+            <value>1. Número de agregado do 1º Vizinho</value>
           </text>
-          <text id="/visit_registration/reasonToNotComplete/1:label">
-            <value>-</value>
+          <text id="/visit_registration/intervieweeName:label">
+            <value>Jina la Mhojiwa</value>
           </text>
-          <text id="/visit_registration/houseNoLocated/1:label">
-            <value>Porta</value>
-          </text>
-          <text id="/visit_registration/farmhouse:label">
-            <value>Where is the visit taking place?</value>
-          </text>
-          <text id="/visit_registration/completedQuest:label">
-            <value>Inquérito completo?</value>
+          <text id="/visit_registration/reason/3:label">
+            <value>Person Out Migrated</value>
           </text>
           <text id="/visit_registration/visitId:label">
-            <value>Visit Id</value>
+            <value>Nambari ya Hudhurio</value>
+          </text>
+          <text id="/visit_registration/reasonToNotComplete/2:label">
+            <value>-</value>
+          </text>
+          <text id="/visit_registration/reason/1:label">
+            <value>Round</value>
+          </text>
+          <text id="/visit_registration/neighbors/house2:label">
+            <value>2. Número de agregado do 2º Vizinho</value>
+          </text>
+          <text id="/visit_registration/reason/2:label">
+            <value>New House</value>
+          </text>
+          <text id="/visit_registration/neighbors/house1:hint">
+            <value>-</value>
+          </text>
+          <text id="/visit_registration/reason/4:label">
+            <value>Correção de erros</value>
+          </text>
+          <text id="/visit_registration/neighbors:label">
+            <value>-</value>
+          </text>
+          <text id="/visit_registration/houseNoLocated/2:label">
+            <value>Parede</value>
+          </text>
+          <text id="/visit_registration/reasonToNotComplete/5:label">
+            <value>-</value>
+          </text>
+          <text id="/visit_registration/whynotrightcode/0:label">
+            <value>Hapana Barcode</value>
           </text>
           <text id="/visit_registration/coordinates:label">
-            <value>Record the GPS coordinates:</value>
+            <value>Nukuhu Takwimu za GPS:</value>
           </text>
-          <text id="/visit_registration/houseNoNeedRepaint:label">
-            <value>A casa precisa ser repintada?</value>
+          <text id="/visit_registration/reasonToNotComplete:label">
+            <value>Porque não é possivel completar o inquérito?</value>
           </text>
-          <text id="/visit_registration/completedQuest/1:label">
-            <value>Yes</value>
-          </text>
-          <text id="/visit_registration/correctInterviewee/1:label">
-            <value>Yes</value>
-          </text>
-          <text id="/visit_registration/houseNoNeedRepaint/2:label">
-            <value>Yes</value>
-          </text>
-          <text id="/visit_registration/correctInterviewee/2:label">
-            <value>No</value>
-          </text>
-          <text id="/visit_registration/checkRightId:label">
-            <value>The barcode doesn't match the Location ID are you sure you want to proceed?</value>
+          <text id="/visit_registration/neighbors/house3:label">
+            <value>3. Número de agregado do 3º Vizinho</value>
           </text>
           <text id="/visit_registration/houseNoLocated/4:label">
             <value>Porta de quintal</value>
           </text>
-          <text id="/visit_registration/farmhouse/0:label">
-            <value>Not at home</value>
+          <text id="/visit_registration/houseNoLocated/1:label">
+            <value>Porta</value>
           </text>
-          <text id="/visit_registration/visitDate:label">
-            <value>Visit Date</value>
-          </text>
-          <text id="/visit_registration/correctInterviewee:label">
-            <value>Is the person selected the one you are actually interviewing?</value>
-          </text>
-          <text id="/visit_registration/fieldWorkerId:label">
-            <value>Field Worker Id</value>
-          </text>
-          <text id="/visit_registration/houseNoLocated/5:label">
-            <value>Outro Local</value>
-          </text>
-          <text id="/visit_registration/completedQuest/2:label">
-            <value>Yes</value>
-          </text>
-          <text id="/visit_registration/intervieweeId:label">
-            <value>Interviewee ID</value>
-          </text>
-          <text id="/visit_registration/farmhouse/1:label">
-            <value>House</value>
+          <text id="/visit_registration/reason:label">
+            <value>Sababu ya kuhojiwa</value>
           </text>
           <text id="/visit_registration/locationId:label">
-            <value>Location Id</value>
+            <value>Nambari ya Kaya</value>
           </text>
-          <text id="/visit_registration/processedByMirth:label">
-            <value>processed</value>
+          <text id="/visit_registration/neighbors/house2:hint">
+            <value>-</value>
           </text>
-          <text id="/visit_registration/roundNumber:label">
-            <value>Round number</value>
+          <text id="/visit_registration/farmhouse/1:label">
+            <value>Nyumbani</value>
+          </text>
+          <text id="/visit_registration/correctInterviewee/2:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/visit_registration/locationIdCheck:label">
+            <value>Nambari ya Kaya</value>
+          </text>
+          <text id="/visit_registration/farmhouse/2:label">
+            <value>Na unidade Sanitária</value>
+          </text>
+          <text id="/visit_registration/farmhouse/3:label">
+            <value>Local de trabalho do respondente</value>
+          </text>
+          <text id="/visit_registration/correctInterviewee:label">
+            <value>Je, Mwanakaya uliye mchagua ndiye unaye muhoji?</value>
+          </text>
+          <text id="/visit_registration/correctInterviewee/1:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/visit_registration/reasonToNotComplete/1:label">
+            <value>-</value>
+          </text>
+          <text id="/visit_registration/farmhouse/99:label">
+            <value>Shambani</value>
+          </text>
+          <text id="/visit_registration/reasonToNotComplete/99:label">
+            <value>-</value>
           </text>
           <text id="/visit_registration/reasonToNotComplete/4:label">
             <value>-</value>
           </text>
+          <text id="/visit_registration/visitDate:label">
+            <value>Tarehe ya Hudhurio</value>
+          </text>
+          <text id="/visit_registration/houseNoLocated:label">
+            <value>Localização do número do agregado?</value>
+          </text>
+          <text id="/visit_registration/reason/99:label">
+            <value>Other</value>
+          </text>
+          <text id="/visit_registration/houseNoLocated/5:label">
+            <value>Outro Local</value>
+          </text>
           <text id="/visit_registration/locationcalculated:label">
             <value>check</value>
           </text>
+          <text id="/visit_registration/houseNoNeedRepaint:label">
+            <value>A casa precisa ser repintada?</value>
+          </text>
+          <text id="/visit_registration/reasonToNotComplete/88:label">
+            <value>-</value>
+          </text>
+          <text id="/visit_registration/whynotrightcode/1:label">
+            <value>Barcode not readable</value>
+          </text>
+          <text id="/visit_registration/checkRightId:label">
+            <value>-</value>
+          </text>
+          <text id="/visit_registration/farmhouse:label">
+            <value>Uhojaji Umefanyikia Wapi?</value>
+          </text>
+          <text id="/visit_registration/processedByMirth:label">
+            <value>processed</value>
+          </text>
+          <text id="/visit_registration/completedQuest:label">
+            <value>É possivel completar o inquerito/visita?</value>
+          </text>
+          <text id="/visit_registration/completedQuest/2:label">
+            <value>Yes</value>
+          </text>
+        </translation>
+        <translation default="true()" lang="Portuguese">
+          <text id="/visit_registration/houseNoNeedRepaint/1:label">
+            <value>Sim</value>
+          </text>
+          <text id="/visit_registration/whynotrightcode/0:label">
+            <value>Sem codigo de barras na casa</value>
+          </text>
           <text id="/visit_registration/locationName:label">
-            <value>Location Name</value>
+            <value>4. Número da Casa/Agregado</value>
+          </text>
+          <text id="/visit_registration/roundNumber:label">
+            <value>5. Número da ronda</value>
+          </text>
+          <text id="/visit_registration/houseNoNeedRepaint/2:label">
+            <value>Não</value>
+          </text>
+          <text id="/visit_registration/fieldWorkerId:label">
+            <value>2. Código do Inquiridor</value>
+          </text>
+          <text id="/visit_registration/reasonToNotComplete/3:label">
+            <value>Casa desabitada</value>
+          </text>
+          <text id="/visit_registration/reason/6:label">
+            <value>Mapeamento GPS</value>
+          </text>
+          <text id="/visit_registration/neighbors/house3:hint">
+            <value>Preencha com o formato XXXX-XXX</value>
+          </text>
+          <text id="/visit_registration/intervieweeId:label">
+            <value>7. ExtId do Respondente</value>
+          </text>
+          <text id="/visit_registration/houseNoLocated/3:label">
+            <value>Árvore</value>
+          </text>
+          <text id="/visit_registration/reason/4:label">
+            <value>Correção de erros</value>
+          </text>
+          <text id="/visit_registration/completedQuest/1:label">
+            <value>Sim</value>
+          </text>
+          <text id="/visit_registration/processedBySync:label">
+            <value>processed by dbsync</value>
+          </text>
+          <text id="/visit_registration/neighbors/house1:label">
+            <value>1. Número de agregado do 1º Vizinho</value>
+          </text>
+          <text id="/visit_registration/intervieweeName:label">
+            <value>11. Nome do/a respondente</value>
+          </text>
+          <text id="/visit_registration/reason/3:label">
+            <value>Actualização de imunização</value>
+          </text>
+          <text id="/visit_registration/visitId:label">
+            <value>1. ExtId da visita</value>
+          </text>
+          <text id="/visit_registration/reason/1:label">
+            <value>Ronda</value>
+          </text>
+          <text id="/visit_registration/neighbors/house2:label">
+            <value>2. Número de agregado do 2º Vizinho</value>
+          </text>
+          <text id="/visit_registration/neighbors/house1:hint">
+            <value>Preencha com o formato XXXX-XXX</value>
+          </text>
+          <text id="/visit_registration/reason/5:label">
+            <value>Supervisão</value>
+          </text>
+          <text id="/visit_registration/neighbors:label">
+            <value>15. Números de agregados vizinhos: (Se não é possivel identificar coloque 88)</value>
+          </text>
+          <text id="/visit_registration/houseNoLocated/2:label">
+            <value>Parede</value>
+          </text>
+          <text id="/visit_registration/reasonToNotComplete/5:label">
+            <value>Outro motivo</value>
+          </text>
+          <text id="/visit_registration/whynotrightcode:label">
+            <value>Porque o código de barras não corresponde?</value>
+          </text>
+          <text id="/visit_registration/neighbors/house2:hint">
+            <value>Preencha com o formato XXXX-XXX</value>
+          </text>
+          <text id="/visit_registration/correctInterviewee/1:label">
+            <value>Sim</value>
+          </text>
+          <text id="/visit_registration/neighbors/house3:label">
+            <value>3. Número de agregado do 3º Vizinho</value>
+          </text>
+          <text id="/visit_registration/reasonToNotComplete/2:label">
+            <value>Casa destruída</value>
+          </text>
+          <text id="/visit_registration/houseNoLocated/1:label">
+            <value>Porta</value>
+          </text>
+          <text id="/visit_registration/reason:label">
+            <value>9. Motivo da visita</value>
+          </text>
+          <text id="/visit_registration/locationId:label">
+            <value>3. ExtId da Casa/Agregado</value>
+          </text>
+          <text id="/visit_registration/coordinates:label">
+            <value>16. Gravar Coordenadas GPS:</value>
+          </text>
+          <text id="/visit_registration/farmhouse/1:label">
+            <value>Em casa</value>
+          </text>
+          <text id="/visit_registration/correctInterviewee/2:label">
+            <value>Nao</value>
+          </text>
+          <text id="/visit_registration/locationIdCheck:label">
+            <value>ExtId da Casa/Agregado</value>
+          </text>
+          <text id="/visit_registration/farmhouse/2:label">
+            <value>Na unidade Sanitária</value>
+          </text>
+          <text id="/visit_registration/farmhouse/3:label">
+            <value>Local de trabalho do respondente</value>
+          </text>
+          <text id="/visit_registration/correctInterviewee:label">
+            <value>10. A pessoa seleccionada é a mesma que está sendo entrevista?</value>
+          </text>
+          <text id="/visit_registration/farmhouse:label">
+            <value>12. Onde é que a visita esta sendo realizada?</value>
+          </text>
+          <text id="/visit_registration/reasonToNotComplete/1:label">
+            <value>Casa não encontrada</value>
+          </text>
+          <text id="/visit_registration/farmhouse/99:label">
+            <value>Outro lugar</value>
+          </text>
+          <text id="/visit_registration/reasonToNotComplete/99:label">
+            <value>Recusa.</value>
+          </text>
+          <text id="/visit_registration/processedByMirth:label">
+            <value>processed</value>
+          </text>
+          <text id="/visit_registration/visitDate:label">
+            <value>6. Data da visita</value>
+          </text>
+          <text id="/visit_registration/houseNoLocated:label">
+            <value>13. Localização do número do agregado?</value>
+          </text>
+          <text id="/visit_registration/reason/99:label">
+            <value>Outra</value>
+          </text>
+          <text id="/visit_registration/houseNoLocated/5:label">
+            <value>Outro Local</value>
+          </text>
+          <text id="/visit_registration/locationcalculated:label">
+            <value>Verificar</value>
+          </text>
+          <text id="/visit_registration/houseNoNeedRepaint:label">
+            <value>14. A casa precisa ser repintada?</value>
+          </text>
+          <text id="/visit_registration/reasonToNotComplete/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/visit_registration/reasonToNotComplete:label">
+            <value>8.1. Porque não é possivel completar o inquérito?</value>
+          </text>
+          <text id="/visit_registration/houseNoLocated/4:label">
+            <value>Porta de quintal</value>
+          </text>
+          <text id="/visit_registration/whynotrightcode/1:label">
+            <value>Codigo de barras nao é legivel</value>
+          </text>
+          <text id="/visit_registration/checkRightId:label">
+            <value>O código de barras não coincide com o ExtId da casa, tem certeza que deseja prosseguir?</value>
+          </text>
+          <text id="/visit_registration/reason/2:label">
+            <value>Registo de eventos</value>
+          </text>
+          <text id="/visit_registration/reasonToNotComplete/4:label">
+            <value>Sem informante</value>
+          </text>
+          <text id="/visit_registration/completedQuest:label">
+            <value>8. É possivel completar o inquerito/visita?</value>
+          </text>
+          <text id="/visit_registration/completedQuest/2:label">
+            <value>Não</value>
           </text>
         </translation>
       </itext>
@@ -459,14 +567,19 @@
           <whynotrightcode/>
           <visitDate/>
           <intervieweeId/>
-          <correctInterviewee/>
-          <intervieweeName/>
-          <reason/>
           <completedQuest/>
           <reasonToNotComplete/>
+          <reason/>
+          <correctInterviewee/>
+          <intervieweeName/>
           <farmhouse/>
           <houseNoLocated/>
           <houseNoNeedRepaint/>
+          <neighbors>
+            <house1/>
+            <house2/>
+            <house3/>
+          </neighbors>
           <coordinates/>
           <processedByMirth/>
           <processedBySync/>
@@ -486,19 +599,23 @@
       <bind nodeset="/visit_registration/roundNumber" readonly="true()" required="true()" type="int"/>
       <bind nodeset="/visit_registration/locationIdCheck" relevant="1=0" type="barcode"/>
       <bind calculate="concat(substr( /visit_registration/locationIdCheck ,0,3),'0000',substr( /visit_registration/locationIdCheck ,3,5))" nodeset="/visit_registration/locationcalculated" readonly="true()" relevant="1=0" type="string"/>
-      <bind nodeset="/visit_registration/checkRightId" relevant="1=0 and ( /visit_registration/locationId  != /visit_registration/locationcalculated  and  /visit_registration/locationId  != /visit_registration/locationIdCheck )" required="true()" type="string"/>
-      <bind nodeset="/visit_registration/whynotrightcode" relevant="1=0 and ( /visit_registration/locationId  != /visit_registration/locationcalculated  and  /visit_registration/locationId  != /visit_registration/locationIdCheck )" required="true()" type="select1"/>
+      <bind nodeset="/visit_registration/checkRightId" relevant="1=0 and ( /visit_registration/locationId  != /visit_registration/locationcalculated  and  /visit_registration/locationId  != /visit_registration/locationIdCheck )" type="string"/>
+      <bind nodeset="/visit_registration/whynotrightcode" relevant="1=0 and ( /visit_registration/locationId  != /visit_registration/locationcalculated  and  /visit_registration/locationId  != /visit_registration/locationIdCheck )" type="select1"/>
       <bind nodeset="/visit_registration/visitDate" readonly="true()" required="true()" type="date"/>
       <bind nodeset="/visit_registration/intervieweeId" readonly="true()" required="true()" type="string"/>
-      <bind nodeset="/visit_registration/correctInterviewee" required="true()" type="select1"/>
-      <bind nodeset="/visit_registration/intervieweeName" relevant="../correctInterviewee = '2'" required="true()" type="string"/>
-      <bind nodeset="/visit_registration/reason" required="true()" type="select1"/>
       <bind nodeset="/visit_registration/completedQuest" required="true()" type="select1"/>
       <bind nodeset="/visit_registration/reasonToNotComplete" relevant=" /visit_registration/completedQuest =2" required="true()" type="select1"/>
-      <bind nodeset="/visit_registration/farmhouse" relevant=" /visit_registration/completedQuest !=2" required="true()" type="select1"/>
-      <bind nodeset="/visit_registration/houseNoLocated" relevant=" /visit_registration/completedQuest !=2" required="true()" type="select1"/>
-      <bind nodeset="/visit_registration/houseNoNeedRepaint" relevant=" /visit_registration/completedQuest !=2" required="true()" type="select1"/>
-      <bind nodeset="/visit_registration/coordinates" relevant="../farmhouse = '1' and ( /visit_registration/locationId  != /visit_registration/locationcalculated ) and  /visit_registration/completedQuest !=2" type="geopoint"/>
+      <bind nodeset="/visit_registration/reason" relevant=" /visit_registration/completedQuest =1" required="true()" type="select1"/>
+      <bind nodeset="/visit_registration/correctInterviewee" relevant=" /visit_registration/completedQuest =1" required="true()" type="select1"/>
+      <bind nodeset="/visit_registration/intervieweeName" relevant=" /visit_registration/completedQuest =1 and  /visit_registration/correctInterviewee =2" required="true()" type="string"/>
+      <bind nodeset="/visit_registration/farmhouse" relevant=" /visit_registration/completedQuest =1" required="true()" type="select1"/>
+      <bind nodeset="/visit_registration/houseNoLocated" relevant=" /visit_registration/completedQuest =1 and ( /visit_registration/reason =1 or  /visit_registration/reason =5 or  /visit_registration/reason =6)" required="true()" type="select1"/>
+      <bind nodeset="/visit_registration/houseNoNeedRepaint" relevant=" /visit_registration/completedQuest =1 and ( /visit_registration/reason =1 or  /visit_registration/reason =5 or  /visit_registration/reason =6)" required="true()" type="select1"/>
+      <bind nodeset="/visit_registration/neighbors" relevant=" /visit_registration/completedQuest =1 and ( /visit_registration/reason =1 or  /visit_registration/reason =5 or  /visit_registration/reason =6)"/>
+      <bind constraint="(regex(., '^[0-9]{4}-[0-9]{3}$'))" jr:constraintMsg="O formato do numero de agregado deve ser XXXX-XXX" nodeset="/visit_registration/neighbors/house1" required="true()" type="string"/>
+      <bind constraint="(regex(., '^[0-9]{4}-[0-9]{3}$'))" jr:constraintMsg="O formato do numero de agregado deve ser XXXX-XXX" nodeset="/visit_registration/neighbors/house2" required="true()" type="string"/>
+      <bind constraint="(regex(., '^[0-9]{4}-[0-9]{3}$'))" jr:constraintMsg="O formato do numero de agregado deve ser XXXX-XXX" nodeset="/visit_registration/neighbors/house3" required="true()" type="string"/>
+      <bind nodeset="/visit_registration/coordinates" relevant=" /visit_registration/farmhouse  = '1' and  /visit_registration/completedQuest =1 and ( /visit_registration/reason =1 or  /visit_registration/reason =5 or  /visit_registration/reason =6)" type="geopoint"/>
       <bind nodeset="/visit_registration/processedByMirth" readonly="true()" type="int"/>
       <bind nodeset="/visit_registration/processedBySync" readonly="true()" type="int"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/visit_registration/meta/instanceID" readonly="true()" type="string"/>
@@ -547,39 +664,6 @@
     <input ref="/visit_registration/intervieweeId">
       <label ref="jr:itext('/visit_registration/intervieweeId:label')"/>
     </input>
-    <select1 ref="/visit_registration/correctInterviewee">
-      <label ref="jr:itext('/visit_registration/correctInterviewee:label')"/>
-      <item>
-        <label ref="jr:itext('/visit_registration/correctInterviewee/1:label')"/>
-        <value>1</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/visit_registration/correctInterviewee/2:label')"/>
-        <value>2</value>
-      </item>
-    </select1>
-    <input ref="/visit_registration/intervieweeName">
-      <label ref="jr:itext('/visit_registration/intervieweeName:label')"/>
-    </input>
-    <select1 ref="/visit_registration/reason">
-      <label ref="jr:itext('/visit_registration/reason:label')"/>
-      <item>
-        <label ref="jr:itext('/visit_registration/reason/1:label')"/>
-        <value>1</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/visit_registration/reason/2:label')"/>
-        <value>2</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/visit_registration/reason/3:label')"/>
-        <value>3</value>
-      </item>
-      <item>
-        <label ref="jr:itext('/visit_registration/reason/99:label')"/>
-        <value>99</value>
-      </item>
-    </select1>
     <select1 ref="/visit_registration/completedQuest">
       <label ref="jr:itext('/visit_registration/completedQuest:label')"/>
       <item>
@@ -622,15 +706,68 @@
         <value>99</value>
       </item>
     </select1>
+    <select1 ref="/visit_registration/reason">
+      <label ref="jr:itext('/visit_registration/reason:label')"/>
+      <item>
+        <label ref="jr:itext('/visit_registration/reason/1:label')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/visit_registration/reason/2:label')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/visit_registration/reason/3:label')"/>
+        <value>3</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/visit_registration/reason/4:label')"/>
+        <value>4</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/visit_registration/reason/5:label')"/>
+        <value>5</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/visit_registration/reason/6:label')"/>
+        <value>6</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/visit_registration/reason/99:label')"/>
+        <value>99</value>
+      </item>
+    </select1>
+    <select1 ref="/visit_registration/correctInterviewee">
+      <label ref="jr:itext('/visit_registration/correctInterviewee:label')"/>
+      <item>
+        <label ref="jr:itext('/visit_registration/correctInterviewee/1:label')"/>
+        <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/visit_registration/correctInterviewee/2:label')"/>
+        <value>2</value>
+      </item>
+    </select1>
+    <input ref="/visit_registration/intervieweeName">
+      <label ref="jr:itext('/visit_registration/intervieweeName:label')"/>
+    </input>
     <select1 ref="/visit_registration/farmhouse">
       <label ref="jr:itext('/visit_registration/farmhouse:label')"/>
       <item>
-        <label ref="jr:itext('/visit_registration/farmhouse/0:label')"/>
-        <value>0</value>
-      </item>
-      <item>
         <label ref="jr:itext('/visit_registration/farmhouse/1:label')"/>
         <value>1</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/visit_registration/farmhouse/2:label')"/>
+        <value>2</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/visit_registration/farmhouse/3:label')"/>
+        <value>3</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/visit_registration/farmhouse/99:label')"/>
+        <value>99</value>
       </item>
     </select1>
     <select1 ref="/visit_registration/houseNoLocated">
@@ -667,9 +804,23 @@
         <value>2</value>
       </item>
     </select1>
+    <group ref="/visit_registration/neighbors">
+      <label ref="jr:itext('/visit_registration/neighbors:label')"/>
+      <input appearance="numbers" ref="/visit_registration/neighbors/house1">
+        <label ref="jr:itext('/visit_registration/neighbors/house1:label')"/>
+        <hint ref="jr:itext('/visit_registration/neighbors/house1:hint')"/>
+      </input>
+      <input appearance="numbers" ref="/visit_registration/neighbors/house2">
+        <label ref="jr:itext('/visit_registration/neighbors/house2:label')"/>
+        <hint ref="jr:itext('/visit_registration/neighbors/house2:hint')"/>
+      </input>
+      <input appearance="numbers" ref="/visit_registration/neighbors/house3">
+        <label ref="jr:itext('/visit_registration/neighbors/house3:label')"/>
+        <hint ref="jr:itext('/visit_registration/neighbors/house3:hint')"/>
+      </input>
+    </group>
     <input ref="/visit_registration/coordinates">
       <label ref="jr:itext('/visit_registration/coordinates:label')"/>
-      <hint>GPS coordinates can only be collected when outside.</hint>
     </input>
     <input ref="/visit_registration/processedByMirth">
       <label ref="jr:itext('/visit_registration/processedByMirth:label')"/>
