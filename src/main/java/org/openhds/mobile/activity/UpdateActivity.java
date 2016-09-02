@@ -635,7 +635,8 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
         @Override
         protected Void doInBackground(Void... params) {
             filledForm = formFiller.fillInternalInMigrationForm(locationVisit, individual);
-            formFiller.addOriginHouseNumber(filledForm, getContentResolver());
+            formFiller.addOriginHouseNumber(filledForm, getContentResolver());                       
+            filledForm.addExtraParam("inMigType", RETURNING_TO_DSS==1 ? "2" : "1"); //1. Internal In, 2. Return to DSS                        
             updatable = new InternalInMigrationUpdate();
             return null;
         }
@@ -1460,6 +1461,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
             filledForm = formFiller.fillExternalInmigration(locationVisit, id);
             filledForm.setIndividualLastName(permId);
             filledForm.setLocationName(locationVisit.getLocation().getName());
+            filledForm.addExtraParam("inMigType", RETURNING_TO_DSS==1 ? "2" : "1"); 
             
             updatable = new ExternalInMigrationUpdate();            
             return null;

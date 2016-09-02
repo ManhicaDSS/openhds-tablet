@@ -143,7 +143,7 @@
 	<string name="imunizationBtn_lbl">2. Imunização</string>
 	<string name="householdBtn_lbl">3. Agregado Familiar</string>
 	<string name="membershipBtn_lbl">4. Relação com chefe</string>
-	<string name="relationshipBtn_lbl">5. Estado Civil</string>
+	<string name="relationshipBtn_lbl">5. União Marital</string>
 	<string name="inMigrationBtn_lbl">6. Imigração</string>
 	<string name="outMigrationBtn_lbl">7. Emigração Externa</string>
 	<string name="pregRegBtn_lbl">8. Observação de Gravidez</string>
