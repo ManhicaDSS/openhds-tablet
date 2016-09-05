@@ -105,6 +105,18 @@ public class Database {
 	public void open() throws SQLException {
 	    database = dbHelper.getWritableDatabase();
 	}
+	
+	public void beginTransaction(){
+		database.beginTransaction();
+	}
+
+	public void endTransaction(){
+		database.endTransaction();
+	}
+
+	public void setTransactionSuccessful(){
+		database.setTransactionSuccessful();
+	}
 
     public void close() {
 	    dbHelper.close();

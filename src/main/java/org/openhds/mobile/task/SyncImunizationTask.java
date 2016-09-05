@@ -1,5 +1,8 @@
 package org.openhds.mobile.task;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -8,6 +11,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -34,6 +39,7 @@ import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
 import android.os.AsyncTask;
+import android.os.Environment;
 import android.util.Log;
 
 /**
@@ -45,8 +51,7 @@ import android.util.Log;
  * references that must be satisfied (e.g. individual references a location
  * location)
  */
-public class SyncImunizationTask extends
-		AsyncTask<Void, Integer, HttpTask.EndResult> {
+public class SyncImunizationTask extends AsyncTask<Void, Integer, HttpTask.EndResult> {
 
 	private static final String API_PATH = "/api/rest";
 
@@ -69,6 +74,8 @@ public class SyncImunizationTask extends
 
 	private State state;
 	private Entity entity;
+	
+	private boolean isDownloadingZipFile;
 
 	private enum State {
 		DOWNLOADING, SAVING
@@ -111,7 +118,11 @@ public class SyncImunizationTask extends
 		}
 
 		if (values.length > 0) {
-			builder.append(" " + mContext.getString(R.string.sync_task_saved)  + " " + values[0]  + " " +  mContext.getString(R.string.sync_task_items));
+			String msg = " " + mContext.getString(R.string.sync_task_saved)  + " " + values[0]  + " " +  mContext.getString(R.string.sync_task_items);
+			if (state == State.DOWNLOADING && isDownloadingZipFile){
+				msg = " " + mContext.getString(R.string.sync_task_saved)  + " " + values[0]  + "KB";
+			}
+			builder.append(msg);
 		}
 
 		dialog.setMessage(builder.toString());
@@ -131,10 +142,9 @@ public class SyncImunizationTask extends
 		// download, we simply download it all
 		deleteAllTables();
 		//deleteAllClipDatabase();
-		try {	
-			
+		try {			
 			entity = Entity.IMUNIZATION;
-			processUrl("https://sap.manhica.net:4703/files/dss/imunizations.xml"); //changing to control
+			processUrl("http://sap.manhica.net:4780/manhica-dbsync/api/dss-explorer/imunizations/zip"); //changing to control
 		} catch (Exception e) {
 			e.printStackTrace();
 			return HttpTask.EndResult.FAILURE;
@@ -148,10 +158,72 @@ public class SyncImunizationTask extends
 		// foreign keys	
 		deleteAllDssDatabase();
 	}
+	
+	private String getAppStoragePath(){
+		File root = Environment.getExternalStorageDirectory();
+		String destinationPath = root.getAbsolutePath() + File.separator
+				+ "Android" + File.separator + "data" + File.separator
+				+ "org.openhds.mobile" + File.separator + "files" + File.separator + "downloads" + File.separator;
+
+		File baseDir = new File(destinationPath);
+		if (!baseDir.exists()) {
+			boolean created = baseDir.mkdirs();
+			if (!created) {
+				return destinationPath;
+			}
+		}
+		
+		return destinationPath;
+	}
+	
+	private InputStream saveFileToStorage(InputStream inputStream) throws Exception {
+
+		String path = getAppStoragePath() + "imunizations.zip";
+		FileOutputStream fout = new FileOutputStream(path);
+		byte[] buffer = new byte[10*1024];
+		int len = 0;
+		long total = 0;
+
+		publishProgress();
+
+		while ((len = inputStream.read(buffer)) != -1){
+			fout.write(buffer, 0, len);
+			total += len;
+			int perc =  (int) ((total/(1024)));
+			publishProgress(perc);
+		}
+
+		fout.close();
+		inputStream.close();
+
+		FileInputStream fin = new FileInputStream(path);
+
+		return fin;
+	}
+	
+	private void processZIPDocument(InputStream inputStream) throws Exception {
+
+		Log.d("zip", "processing zip file");
+
+
+		ZipInputStream zin = new ZipInputStream(inputStream);
+		ZipEntry entry = zin.getNextEntry();
+
+		Log.d("zip-entry", ""+entry);
+		
+		if (entry != null){
+			processXMLDocument(zin);
+			zin.closeEntry();
+		}
+
+		zin.close();
+	}
 
 	private void processUrl(String url) throws Exception {
 		state = State.DOWNLOADING;
 		publishProgress();
+		
+		this.isDownloadingZipFile = url.endsWith("zip");
 
 		httpGet = new HttpGet(url);
 		processResponse();
@@ -159,16 +231,27 @@ public class SyncImunizationTask extends
 
 	private void processResponse() throws Exception {
 		InputStream inputStream = getResponse();
-		if (inputStream != null)
-			processXMLDocument(inputStream);
+		
+		if (this.isDownloadingZipFile){
+			InputStream zipInputStream = saveFileToStorage(inputStream);
+			if (zipInputStream != null){
+				Log.d("download", "zip = "+zipInputStream);
+				processZIPDocument(zipInputStream);
+				zipInputStream.close();
+			}
+				
+		}else{
+			if (inputStream != null)
+				processXMLDocument(inputStream);
+		}
 	}
 
 	private InputStream getResponse() throws AuthenticationException,
 			ClientProtocolException, IOException {
 		HttpResponse response = null;
 
-		httpGet.addHeader(new BasicScheme().authenticate(creds, httpGet));
-		httpGet.addHeader("content-type", "application/xml");
+		//httpGet.addHeader(new BasicScheme().authenticate(creds, httpGet));
+		//httpGet.addHeader("content-type", "application/xml");
 		response = client.execute(httpGet);
 		
 		//Handle 404
@@ -225,6 +308,7 @@ public class SyncImunizationTask extends
 		
 		org.openhds.mobile.dss.database.Database database = new org.openhds.mobile.dss.database.Database(mContext);
         database.open();
+        database.beginTransaction();
 		
         values.clear();
 		
@@ -464,9 +548,13 @@ public class SyncImunizationTask extends
 			parser.nextTag();
 			imunization.setVacOthersTotal(parser.nextText());
 						
-			valuesTb.add(imunization);
+			//valuesTb.add(imunization);
 			
-			publishProgress(count);
+			database.insert(imunization);
+			
+			if (count % 100 == 0) {
+				publishProgress(count);
+			}
 
 			parser.nextTag(); // </pregnancyIdentification>
 			parser.nextTag(); // <pregnancyIdentification>			
@@ -476,6 +564,7 @@ public class SyncImunizationTask extends
 		state = State.SAVING;
 		entity = Entity.IMUNIZATION;
 		
+		/*
 		if (!valuesTb.isEmpty()) {
 			count = 0;
 			for (Imunization p : valuesTb){
@@ -484,7 +573,10 @@ public class SyncImunizationTask extends
 				publishProgress(count);
 			}
 		}
+		*/
 		
+		database.setTransactionSuccessful();
+		database.endTransaction();
 		database.close();
 	}		
 		

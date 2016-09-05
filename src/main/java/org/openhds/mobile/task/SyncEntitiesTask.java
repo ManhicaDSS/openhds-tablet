@@ -1,5 +1,8 @@
 package org.openhds.mobile.task;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -8,6 +11,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -26,6 +31,7 @@ import org.openhds.mobile.OpenHDS;
 import org.openhds.mobile.R;
 import org.openhds.mobile.listener.SyncDatabaseListener;
 import org.openhds.mobile.model.Settings;
+import org.openhds.mobile.provider.OpenHDSProvider;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
@@ -35,7 +41,9 @@ import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
 import android.os.AsyncTask;
+import android.os.Environment;
 import android.util.Log;
+import net.sqlcipher.database.SQLiteDatabase;
 
 /**
  * AsyncTask responsible for downloading the OpenHDS "database", that is a
@@ -70,6 +78,8 @@ public class SyncEntitiesTask extends
 
 	private State state;
 	private Entity entity;
+	
+	private boolean isDownloadingZipFile;
 
 	private enum State {
 		DOWNLOADING, SAVING
@@ -136,7 +146,13 @@ public class SyncEntitiesTask extends
 		}
 
 		if (values.length > 0) {
-			builder.append(" " + mContext.getString(R.string.sync_task_saved)  + " " + values[0]  + " " +  mContext.getString(R.string.sync_task_items));
+			String msg = " " + mContext.getString(R.string.sync_task_saved)  + " " + values[0]  + " " +  mContext.getString(R.string.sync_task_items);
+			
+			if (state == State.DOWNLOADING && isDownloadingZipFile){
+				msg = " " + mContext.getString(R.string.sync_task_saved)  + " " + values[0]  + "KB";
+			}
+			
+			builder.append(msg);
 		}
 
 		dialog.setMessage(builder.toString());
@@ -161,7 +177,7 @@ public class SyncEntitiesTask extends
 			processUrl(baseurl + API_PATH + "/locationhierarchies");
 
 			entity = Entity.LOCATION;
-			processUrl(baseurl + API_PATH + "/locations/cached");
+			processUrl(baseurl + API_PATH + "/locations/zipped");
 
 			entity = Entity.ROUND;
 			processUrl(baseurl + API_PATH + "/rounds");
@@ -170,16 +186,16 @@ public class SyncEntitiesTask extends
 			processUrl(baseurl + API_PATH + "/locationhierarchylevels");
 
 			entity = Entity.VISIT;
-			processUrl(baseurl + API_PATH + "/visits/cached");
+			processUrl(baseurl + API_PATH + "/visits/zipped");
 
 			entity = Entity.RELATIONSHIP;
-			processUrl(baseurl + API_PATH + "/relationships/cached");
+			processUrl(baseurl + API_PATH + "/relationships/zipped");
 
 			entity = Entity.INDIVIDUAL;
-			processUrl(baseurl + API_PATH + "/individuals/cached");
+			processUrl(baseurl + API_PATH + "/individuals/zipped");
 
 			entity = Entity.SOCIALGROUP;
-			processUrl(baseurl + API_PATH + "/socialgroups/cached");
+			processUrl(baseurl + API_PATH + "/socialgroups/zipped");
 			
 			entity = Entity.SETTINGS;
 			processUrl(baseurl + API_PATH + "/settings");
@@ -205,10 +221,70 @@ public class SyncEntitiesTask extends
 		resolver.delete(OpenHDS.Locations.CONTENT_ID_URI_BASE, null, null);
 		resolver.delete(OpenHDS.Settings.CONTENT_ID_URI_BASE, null, null);
 	}
+	
+	private String getAppStoragePath(){
+		File root = Environment.getExternalStorageDirectory();
+		String destinationPath = root.getAbsolutePath() + File.separator
+				+ "Android" + File.separator + "data" + File.separator
+				+ "org.openhds.mobile" + File.separator + "files" + File.separator + "downloads" + File.separator;
+
+		File baseDir = new File(destinationPath);
+		if (!baseDir.exists()) {
+			boolean created = baseDir.mkdirs();
+			if (!created) {
+				return destinationPath;
+			}
+		}
+		
+		return destinationPath;
+	}
+	
+	private InputStream saveFileToStorage(InputStream inputStream) throws Exception {
+
+		String path = getAppStoragePath() + "temp.zip";
+		FileOutputStream fout = new FileOutputStream(path);
+		byte[] buffer = new byte[10*1024];
+		int len = 0;
+		long total = 0;
+
+		publishProgress();
+
+		while ((len = inputStream.read(buffer)) != -1){
+			fout.write(buffer, 0, len);
+			total += len;
+			int perc =  (int) ((total/(1024)));
+			publishProgress(perc);
+		}
+
+		fout.close();
+		inputStream.close();
+
+		FileInputStream fin = new FileInputStream(path);
+
+		return fin;
+	}
+	
+	private void processZIPDocument(InputStream inputStream) throws Exception {
+
+		Log.d("zip", "processing zip file");
+
+
+		ZipInputStream zin = new ZipInputStream(inputStream);
+		ZipEntry entry = zin.getNextEntry();
+
+		if (entry != null){
+			processXMLDocument(zin);
+			zin.closeEntry();
+		}
+
+		zin.close();
+	}
 
 	private void processUrl(String url) throws Exception {
 		state = State.DOWNLOADING;
 		publishProgress();
+		
+		this.isDownloadingZipFile = url.endsWith("zipped");
 
 		httpGet = new HttpGet(url);
 		processResponse();
@@ -216,8 +292,19 @@ public class SyncEntitiesTask extends
 
 	private void processResponse() throws Exception {
 		InputStream inputStream = getResponse();
-		if (inputStream != null)
-			processXMLDocument(inputStream);
+		
+		if (this.isDownloadingZipFile){
+			InputStream zipInputStream = saveFileToStorage(inputStream);
+			if (zipInputStream != null){
+				Log.d("download", "zip = "+zipInputStream);
+				processZIPDocument(zipInputStream);
+				zipInputStream.close();
+			}
+				
+		}else{
+			if (inputStream != null)
+				processXMLDocument(inputStream);
+		}
 	}
 
 	private InputStream getResponse() throws AuthenticationException,
@@ -336,6 +423,11 @@ public class SyncEntitiesTask extends
 			throws XmlPullParserException, IOException {
 		parser.nextTag();
 		int locationCount = 0;
+		
+		OpenHDSProvider provider = OpenHDSProvider.CURRENT_PROVIDER;
+		Log.d("provider-hacking", ""+provider);
+		
+		SQLiteDatabase db = provider.openDatabaseForFastInsert();
 
 		values.clear();
 		while (notEndOfXmlDoc("locations", parser)) {
@@ -379,7 +471,10 @@ public class SyncEntitiesTask extends
 			cv.put(OpenHDS.Locations.COLUMN_LOCATION_LONGITUDE,
 					parser.nextText());
 
-			values.add(cv);
+			//values.add(cv);
+			
+			//insert one by one
+			provider.insert(db, OpenHDS.Locations.CONTENT_ID_URI_BASE, cv);
 
 			locationCount += 1;
 
@@ -387,13 +482,14 @@ public class SyncEntitiesTask extends
 			parser.nextTag(); // <location> or </locations>
 
 			if (locationCount % 100 == 0) {
-				persistLocations();
-				values.clear();
+				//persistLocations();
+				//values.clear();
 				publishProgress(locationCount);
 			}
 		}
 
-		persistLocations();
+		//persistLocations();
+		provider.finishDatabaseFastInsert(db);
 	}
 
 	private void persistLocations() {
@@ -407,6 +503,11 @@ public class SyncEntitiesTask extends
 			throws XmlPullParserException, IOException {
 		int individualsParsed = 0;
 		parser.nextTag();
+		
+		OpenHDSProvider provider = OpenHDSProvider.CURRENT_PROVIDER;
+		Log.d("provider-hacking", ""+provider);
+				
+		SQLiteDatabase db = provider.openDatabaseForFastInsert();
 
 		values.clear();
 		List<ContentValues> individualSocialGroups = new ArrayList<ContentValues>();
@@ -489,30 +590,32 @@ public class SyncEntitiesTask extends
 						parser.nextText());
 				parser.nextTag(); // </mother>
 
-				values.add(cv);
+				//values.add(cv);
 
 				if (groups != null) {
 					for (String item : groups) {
 						ContentValues socialGroups = new ContentValues();
-						socialGroups
-								.put(OpenHDS.IndividualGroups.COLUMN_INDIVIDUALUUID,
-										cv.getAsString(OpenHDS.Individuals.COLUMN_INDIVIDUAL_EXTID));
-						socialGroups
-								.put(OpenHDS.IndividualGroups.COLUMN_SOCIALGROUPUUID,
-										item);
-						individualSocialGroups.add(socialGroups);
+						socialGroups.put(OpenHDS.IndividualGroups.COLUMN_INDIVIDUALUUID, cv.getAsString(OpenHDS.Individuals.COLUMN_INDIVIDUAL_EXTID));
+						socialGroups.put(OpenHDS.IndividualGroups.COLUMN_SOCIALGROUPUUID, item);
+						//individualSocialGroups.add(socialGroups);
+						
+						//persist individual socialgroup, insert one by one
+						provider.insert(db, OpenHDS.IndividualGroups.CONTENT_ID_URI_BASE, socialGroups);
 					}
 				}
 
 				individualsParsed += 1;
+				
+				//persist individual, insert one by one
+				provider.insert(db, OpenHDS.Individuals.CONTENT_ID_URI_BASE, cv);
 
 				parser.nextTag(); // </individual>
 				parser.nextTag(); // </individuals> or <individual>
 
 				if (individualsParsed % 100 == 0) {
-					persistParsedIndividuals(individualSocialGroups);
-					values.clear();
-					individualSocialGroups.clear();
+					//persistParsedIndividuals(individualSocialGroups);
+					//values.clear();
+					//individualSocialGroups.clear();
 					publishProgress(individualsParsed);
 				}
 			} catch (Exception e) {
@@ -520,7 +623,8 @@ public class SyncEntitiesTask extends
 			}
 		}
 
-		persistParsedIndividuals(individualSocialGroups);
+		//persistParsedIndividuals(individualSocialGroups);
+		provider.finishDatabaseFastInsert(db);
 	}
 
 	private void persistParsedIndividuals(
@@ -625,6 +729,12 @@ public class SyncEntitiesTask extends
 	private void processVisitParams(XmlPullParser parser)
 			throws XmlPullParserException, IOException {
 		parser.nextTag();
+		
+		OpenHDSProvider provider = OpenHDSProvider.CURRENT_PROVIDER;
+		Log.d("provider-hacking", ""+provider);
+		int visitsCount = 0;
+		
+		SQLiteDatabase db = provider.openDatabaseForFastInsert();
 
 		values.clear();
 		while (notEndOfXmlDoc("visits", parser)) {
@@ -650,21 +760,43 @@ public class SyncEntitiesTask extends
 			cv.put(OpenHDS.Visits.COLUMN_VISIT_LOCATION, parser.nextText());
 			parser.nextTag(); // </visitLocation>
 
-			values.add(cv);
+			//values.add(cv);
+			
+			visitsCount++;
+			
+			//insert one by one
+			provider.insert(db, OpenHDS.Visits.CONTENT_ID_URI_BASE, cv);
+
+			if (visitsCount % 100 == 0) {
+				//persistLocations();
+				//values.clear();
+				publishProgress(visitsCount);
+			}
 
 			parser.nextTag(); // </visit>
 			parser.nextTag(); // </visits> or <visit>
 		}
+		
+		provider.finishDatabaseFastInsert(db);
 
+		/*
 		if (!values.isEmpty()) {
 			resolver.bulkInsert(OpenHDS.Visits.CONTENT_ID_URI_BASE,
 					values.toArray(emptyArray));
 		}
+		*/
 	}
 
 	private void processSocialGroupParams(XmlPullParser parser)
 			throws XmlPullParserException, IOException {
 		parser.nextTag();
+		
+		int sgCounts = 0;
+		
+		OpenHDSProvider provider = OpenHDSProvider.CURRENT_PROVIDER;
+		Log.d("provider-hacking", ""+provider);
+		
+		SQLiteDatabase db = provider.openDatabaseForFastInsert();
 
 		values.clear();
 		while (notEndOfXmlDoc("socialGroups", parser)) {
@@ -688,21 +820,41 @@ public class SyncEntitiesTask extends
 			cv.put(OpenHDS.SocialGroups.COLUMN_SOCIALGROUP_GROUPNAME,
 					parser.nextText());
 
-			values.add(cv);
+			//values.add(cv);
+			provider.insert(db, OpenHDS.SocialGroups.CONTENT_ID_URI_BASE, cv);
+
+			sgCounts++;
+			
+			if (sgCounts % 100 == 0) {
+				//persistLocations();
+				//values.clear();
+				publishProgress(sgCounts);
+			}
 
 			parser.nextTag(); // </socialGroup>
 			parser.nextTag(); // </socialGroups> or <socialGroup>
 		}
+		
+		provider.finishDatabaseFastInsert(db);
 
+		/*
 		if (!values.isEmpty()) {
 			resolver.bulkInsert(OpenHDS.SocialGroups.CONTENT_ID_URI_BASE,
 					values.toArray(emptyArray));
 		}
+		*/
 	}
 
 	private void processRelationshipParams(XmlPullParser parser)
 			throws XmlPullParserException, IOException {
 		parser.nextTag();
+		
+		int relatCounts = 0;
+		
+		OpenHDSProvider provider = OpenHDSProvider.CURRENT_PROVIDER;
+		Log.d("provider-hacking", ""+provider);
+		
+		SQLiteDatabase db = provider.openDatabaseForFastInsert();
 
 		values.clear();
 		while (notEndOfXmlDoc("relationships", parser)) {
@@ -735,16 +887,29 @@ public class SyncEntitiesTask extends
 			parser.nextTag(); // <aIsToB>
 			parser.nextText();
 
-			values.add(cv);
+			//values.add(cv);
+			provider.insert(db, OpenHDS.Relationships.CONTENT_ID_URI_BASE, cv);
+			
+			relatCounts++;
+
+			if (relatCounts % 100 == 0) {
+				//persistLocations();
+				//values.clear();
+				publishProgress(relatCounts);
+			}
 
 			parser.nextTag(); // </relationship>
 			parser.nextTag(); // </relationships> or <relationship>
 		}
+		
+		provider.finishDatabaseFastInsert(db);
 
+		/*
 		if (!values.isEmpty()) {
 			resolver.bulkInsert(OpenHDS.Relationships.CONTENT_ID_URI_BASE,
 					values.toArray(emptyArray));
 		}
+		*/
 	}
 	
 	private void processSettingsParams(XmlPullParser parser)
