@@ -82,6 +82,7 @@
           <deficiencyName/>
           <deficiencyCauses/>
           <deficiencyCausesName/>
+          <hasFertility/>
           <fertility>
             <hasPrevPregnancies/>
             <nrPregnancies/>
@@ -185,7 +186,8 @@
       <bind nodeset="/individual_details/deficiencyName" relevant=" /individual_details/deficiency =98" required="true()" type="string"/>
       <bind nodeset="/individual_details/deficiencyCauses" relevant=" /individual_details/isUpdatable =1 and  /individual_details/hasDeficiency =1" required="true()" type="select1"/>
       <bind nodeset="/individual_details/deficiencyCausesName" relevant=" /individual_details/isUpdatable =1 and  /individual_details/deficiencyCauses =98" required="true()" type="string"/>
-      <bind nodeset="/individual_details/fertility" relevant=" /individual_details/isUpdatable =1 and  /individual_details/gender ='F' and  /individual_details/age  &gt;= 12"/>
+      <bind nodeset="/individual_details/hasFertility" relevant=" /individual_details/isUpdatable =1 and  /individual_details/gender ='F' and  /individual_details/age  &gt;= 12" type="select1"/>
+      <bind nodeset="/individual_details/fertility" relevant=" /individual_details/hasFertility =1"/>
       <bind nodeset="/individual_details/fertility/hasPrevPregnancies" required="true()" type="select1"/>
       <bind constraint=". &gt;= 1" jr:constraintMsg="O valor deve ser maior ou igual a 1" nodeset="/individual_details/fertility/nrPregnancies" relevant=" /individual_details/fertility/hasPrevPregnancies =1" required="true()" type="int"/>
       <bind constraint=". &gt;= 0" jr:constraintMsg="O valor deve ser maior ou igual a zero" nodeset="/individual_details/fertility/nrLivebirths" relevant=" /individual_details/fertility/hasPrevPregnancies =1" required="true()" type="int"/>
@@ -1505,6 +1507,17 @@
     <input ref="/individual_details/deficiencyCausesName">
       <label>42.2.1. Especifique as causas da deficiência?</label>
     </input>
+    <select1 ref="/individual_details/hasFertility">
+      <label>43.0 Pretende colher a secção de fecundidade</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
     <group ref="/individual_details/fertility">
       <label>Secção de Fecundidade</label>
       <select1 ref="/individual_details/fertility/hasPrevPregnancies">

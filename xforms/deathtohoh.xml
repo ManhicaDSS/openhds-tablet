@@ -5,49 +5,79 @@
     <model>
       <itext>
         <translation lang="English">
-          <text id="/deathtohoh/causeOfDeath/1:label">
-            <value>Doença</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/4:label">
-            <value>Brother/Sister</value>
-          </text>
-          <text id="/deathtohoh/disease/3:label">
-            <value>Diarreia</value>
-          </text>
-          <text id="/deathtohoh/causeOfDeath/8:label">
-            <value>Causas ligada a gravidez</value>
-          </text>
-          <text id="/deathtohoh/placeOfDeath/1:label">
-            <value>Home</value>
-          </text>
-          <text id="/deathtohoh/disease/99:label">
-            <value>Recusa</value>
-          </text>
-          <text id="/deathtohoh/permId:label">
-            <value>Perm ID</value>
-          </text>
-          <text id="/deathtohoh/placeOfDeath/88:label">
-            <value>-</value>
+          <text id="/deathtohoh/causeOfDeath:label">
+            <value>Cause of death</value>
           </text>
           <text id="/deathtohoh/geoPlaceOfDeath/1:label">
             <value>-</value>
           </text>
+          <text id="/deathtohoh/membershiptonewhoh/extId:label">
+            <value>Member Id</value>
+          </text>
           <text id="/deathtohoh/causeOfDeath/6:label">
             <value>Idade avançada</value>
           </text>
-          <text id="/deathtohoh/placeOfDeathOther:label">
-            <value>Place of Death(Other)</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/6:label">
-            <value>Grandchild</value>
-          </text>
-          <text id="/deathtohoh/disease/5:label">
-            <value>Outras doenças</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/88:label">
+          <text id="/deathtohoh/processedBySync:label">
             <value>-</value>
           </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/9:label">
+          <text id="/deathtohoh/disease/99:label">
+            <value>Recusa</value>
+          </text>
+          <text id="/deathtohoh/placeOfDeath/98:label">
+            <value>Other</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/98:label">
+            <value>Other Relative</value>
+          </text>
+          <text id="/deathtohoh/causeOfDeath/9:label">
+            <value>Malformação congénita</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/4:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh:label">
+            <value>Membership</value>
+          </text>
+          <text id="/deathtohoh/individualId:label">
+            <value>Individual ID</value>
+          </text>
+          <text id="/deathtohoh/causeOfDeath/4:label">
+            <value>Homocidio</value>
+          </text>
+          <text id="/deathtohoh/disease/6:label">
+            <value>Infeções respiratórias</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/16:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/7:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/placeOfDeath:label">
+            <value>Place of Death</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/88:label">
+            <value>Don't Know</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/19:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/causeOfDeath/88:label">
+            <value>Nao sabe</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/socialGroupId:label">
+            <value>Social Group Id</value>
+          </text>
+          <text id="/deathtohoh/placeOfDeath/1:label">
+            <value>Home</value>
+          </text>
+          <text id="/deathtohoh/causeOfDeath/98:label">
+            <value>Outro</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/5:label">
+            <value>Parent</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/15:label">
             <value>-</value>
           </text>
           <text id="/deathtohoh/geoPlaceOfDeath/3:label">
@@ -56,127 +86,49 @@
           <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead:label">
             <value>Relationship to Group Head</value>
           </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/14:label">
+          <text id="/deathtohoh/geoPlaceOfDeath/18:label">
             <value>-</value>
           </text>
-          <text id="/deathtohoh/causeOfDeath/2:label">
-            <value>Acidente de Trabalho</value>
+          <text id="/deathtohoh/permId:label">
+            <value>Perm ID</value>
           </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/10:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/placeOfDeath/6:label">
-            <value>Casa do pastor</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/5:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/disease/6:label">
-            <value>Infeções respiratórias</value>
-          </text>
-          <text id="/deathtohoh/hh_people_nb:label">
-            <value>Outcomes</value>
-          </text>
-          <text id="/deathtohoh/individualId:label">
-            <value>Individual ID</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/12:label">
+          <text id="/deathtohoh/geoPlaceOfDeath/98:label">
             <value>-</value>
           </text>
           <text id="/deathtohoh/placeOfDeath/5:label">
             <value>Casa do curandeiro</value>
           </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/17:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/causeOfDeath/9:label">
-            <value>Malformação congénita</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/99:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/householdId:label">
-            <value>HouseHoldId</value>
-          </text>
-          <text id="/deathtohoh/placeOfDeath/7:label">
-            <value>Na Igreja</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/15:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/8:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/date:label">
-            <value>Date of Death</value>
-          </text>
-          <text id="/deathtohoh/causeOfDeath/88:label">
-            <value>Nao sabe</value>
-          </text>
-          <text id="/deathtohoh/causeOfDeath/5:label">
-            <value>Suicídio</value>
+          <text id="/deathtohoh/new_hoh_id:label">
+            <value>New Hoh Id</value>
           </text>
           <text id="/deathtohoh/disease/4:label">
             <value>Tuberculose</value>
           </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/19:label">
+          <text id="/deathtohoh/geoPlaceOfDeath:label">
             <value>-</value>
           </text>
           <text id="/deathtohoh/causeOfDeath/3:label">
             <value>Acidente Rodoviário</value>
           </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/13:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/8:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/6:label">
+            <value>Grandchild</value>
+          </text>
           <text id="/deathtohoh/processedByMirth:label">
             <value>processedByMirth</value>
           </text>
-          <text id="/deathtohoh/causeOfDeath:label">
-            <value>Cause of death</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/18:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/4:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/2:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh/extId:label">
-            <value>Member Id</value>
-          </text>
-          <text id="/deathtohoh/placeOfDeath/2:label">
-            <value>Hospital</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh:label">
-            <value>Membership</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/88:label">
-            <value>Don't Know</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/3:label">
-            <value>Son/Daughter</value>
-          </text>
-          <text id="/deathtohoh/placeOfDeath:label">
-            <value>Place of Death</value>
-          </text>
-          <text id="/deathtohoh/disease/2:label">
-            <value>HIV</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/2:label">
-            <value>Spouse</value>
-          </text>
-          <text id="/deathtohoh/placeOfDeath/4:label">
-            <value>Traditional healer's home</value>
+          <text id="/deathtohoh/causeOfDeath/2:label">
+            <value>Acidente de Trabalho</value>
           </text>
           <text id="/deathtohoh/geoPlaceOfDeath/11:label">
             <value>-</value>
           </text>
-          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/7:label">
-            <value>Not Related</value>
-          </text>
-          <text id="/deathtohoh/causeOfDeath/7:label">
-            <value>Prematuridade/Malformação congénita</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/7:label">
+          <text id="/deathtohoh/geoPlaceOfDeath/10:label">
             <value>-</value>
           </text>
           <text id="/deathtohoh/geoPlaceOfDeath/6:label">
@@ -185,235 +137,474 @@
           <text id="/deathtohoh/disease:label">
             <value>9. Se morreu de doença, tem ideia de que doença ele/a sofria?</value>
           </text>
-          <text id="/deathtohoh/placeOfDeath/98:label">
-            <value>Other</value>
+          <text id="/deathtohoh/causeOfDeath/8:label">
+            <value>Causas ligada a gravidez</value>
           </text>
-          <text id="/deathtohoh/disease/88:label">
-            <value>Não sabe</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/13:label">
+          <text id="/deathtohoh/geoPlaceOfDeath/17:label">
             <value>-</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/98:label">
-            <value>Other Relative</value>
-          </text>
-          <text id="/deathtohoh/disease:hint">
-            <value>9. Se morreu de doença, tem ideia de que doença ele/a sofria?</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/98:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/16:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/disease/1:label">
-            <value>Malária</value>
-          </text>
-          <text id="/deathtohoh/causeOfDeath/4:label">
-            <value>Homocidio</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh/socialGroupId:label">
-            <value>Social Group Id</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh/memberName:label">
-            <value>Member Name</value>
-          </text>
-          <text id="/deathtohoh/visitId:label">
-            <value>Visit Id</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/new_hoh_id:label">
-            <value>New Hoh Id</value>
-          </text>
-          <text id="/deathtohoh/causeOfDeath/98:label">
-            <value>Outro</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/5:label">
-            <value>Parent</value>
-          </text>
-          <text id="/deathtohoh/fieldWorkerId:label">
-            <value>Field Worker Id</value>
-          </text>
-          <text id="/deathtohoh/placeOfDeath/3:label">
-            <value>Health Centre or Clinic</value>
-          </text>
-        </translation>
-        <translation default="true()" lang="Portuguese">
-          <text id="/deathtohoh/causeOfDeath/1:label">
-            <value>Doença</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/4:label">
-            <value>Irmão/Irmã</value>
           </text>
           <text id="/deathtohoh/disease/3:label">
             <value>Diarreia</value>
           </text>
-          <text id="/deathtohoh/causeOfDeath/8:label">
-            <value>Causas ligada a gravidez</value>
+          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/4:label">
+            <value>Brother/Sister</value>
           </text>
-          <text id="/deathtohoh/membershiptonewhoh:label">
-            <value>12. Nova Relação com o chefe de Agregado</value>
+          <text id="/deathtohoh/geoPlaceOfDeath/12:label">
+            <value>-</value>
           </text>
-          <text id="/deathtohoh/placeOfDeath/1:label">
-            <value>Em casa</value>
+          <text id="/deathtohoh/placeOfDeath/3:label">
+            <value>Health Centre or Clinic</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/memberName:label">
+            <value>Member Name</value>
+          </text>
+          <text id="/deathtohoh/date:label">
+            <value>Date of Death</value>
+          </text>
+          <text id="/deathtohoh/causeOfDeath/1:label">
+            <value>Doença</value>
+          </text>
+          <text id="/deathtohoh/disease/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/deathtohoh/disease/2:label">
+            <value>HIV</value>
+          </text>
+          <text id="/deathtohoh/fieldWorkerId:label">
+            <value>Field Worker Id</value>
+          </text>
+          <text id="/deathtohoh/placeOfDeath/2:label">
+            <value>Hospital</value>
+          </text>
+          <text id="/deathtohoh/hh_people_nb:label">
+            <value>Outcomes</value>
+          </text>
+          <text id="/deathtohoh/placeOfDeath/88:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/causeOfDeath/7:label">
+            <value>Prematuridade/Malformação congénita</value>
+          </text>
+          <text id="/deathtohoh/disease:hint">
+            <value>9. Se morreu de doença, tem ideia de que doença ele/a sofria?</value>
+          </text>
+          <text id="/deathtohoh/causeOfDeath/5:label">
+            <value>Suicídio</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/99:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/2:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/5:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/placeOfDeath/4:label">
+            <value>Traditional healer's home</value>
+          </text>
+          <text id="/deathtohoh/placeOfDeathOther:label">
+            <value>Place of Death(Other)</value>
+          </text>
+          <text id="/deathtohoh/placeOfDeath/6:label">
+            <value>Casa do pastor</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/9:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/7:label">
+            <value>Not Related</value>
+          </text>
+          <text id="/deathtohoh/visitId:label">
+            <value>Visit Id</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/3:label">
+            <value>Son/Daughter</value>
+          </text>
+          <text id="/deathtohoh/disease/5:label">
+            <value>Outras doenças</value>
+          </text>
+          <text id="/deathtohoh/placeOfDeath/7:label">
+            <value>Na Igreja</value>
+          </text>
+          <text id="/deathtohoh/disease/1:label">
+            <value>Malária</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/88:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/14:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/2:label">
+            <value>Spouse</value>
+          </text>
+          <text id="/deathtohoh/householdId:label">
+            <value>HouseHoldId</value>
+          </text>
+        </translation>
+        <translation lang="Swahili">
+          <text id="/deathtohoh/causeOfDeath:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/1:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/extId:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/causeOfDeath/6:label">
+            <value>Idade avançada</value>
+          </text>
+          <text id="/deathtohoh/processedBySync:label">
+            <value>-</value>
           </text>
           <text id="/deathtohoh/disease/99:label">
             <value>Recusa</value>
           </text>
-          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/5:label">
-            <value>Pai/Mãe</value>
+          <text id="/deathtohoh/placeOfDeath/98:label">
+            <value>Kwingine</value>
           </text>
-          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/88:label">
-            <value>Não sabe</value>
-          </text>
-          <text id="/deathtohoh/permId:label">
-            <value>6. Perm ID do Novo Chefe de agregado</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/1:label">
-            <value>Distrito da Manhiça</value>
-          </text>
-          <text id="/deathtohoh/causeOfDeath/6:label">
-            <value>Idade avançada</value>
+          <text id="/deathtohoh/placeOfDeath/3:label">
+            <value>Health Centre or Clinic</value>
           </text>
           <text id="/deathtohoh/causeOfDeath/9:label">
             <value>Malformação congénita</value>
           </text>
           <text id="/deathtohoh/geoPlaceOfDeath/4:label">
-            <value>Cidade da Matola</value>
+            <value>-</value>
           </text>
-          <text id="/deathtohoh/disease/5:label">
-            <value>Outras doenças</value>
+          <text id="/deathtohoh/membershiptonewhoh:label">
+            <value>-</value>
           </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/88:label">
-            <value>Não sabe</value>
+          <text id="/deathtohoh/individualId:label">
+            <value>-</value>
           </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/9:label">
-            <value>Tete</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/3:label">
-            <value>Cidade de Maputo</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead:label">
-            <value>4. Relação com o chefe de agregado</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/14:label">
-            <value>Africa do Sul</value>
-          </text>
-          <text id="/deathtohoh/causeOfDeath/2:label">
-            <value>Acidente de Trabalho</value>
-          </text>
-          <text id="/deathtohoh/placeOfDeath/6:label">
-            <value>Casa do pastor</value>
+          <text id="/deathtohoh/causeOfDeath/4:label">
+            <value>Homocidio</value>
           </text>
           <text id="/deathtohoh/disease/6:label">
             <value>Infeções respiratórias</value>
           </text>
-          <text id="/deathtohoh/hh_people_nb:label">
-            <value>11. Número de residentes na casa</value>
+          <text id="/deathtohoh/geoPlaceOfDeath/16:label">
+            <value>-</value>
           </text>
-          <text id="/deathtohoh/individualId:label">
-            <value>4. ExtId do Individuo</value>
+          <text id="/deathtohoh/geoPlaceOfDeath/7:label">
+            <value>-</value>
           </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/12:label">
-            <value>Cabo-Delgado</value>
+          <text id="/deathtohoh/placeOfDeath:label">
+            <value>-</value>
           </text>
-          <text id="/deathtohoh/placeOfDeath/5:label">
-            <value>Casa do curandeiro</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/17:label">
-            <value>Europa</value>
-          </text>
-          <text id="/deathtohoh/placeOfDeath/7:label">
-            <value>Na Igreja</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/11:label">
-            <value>Nampula</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/99:label">
-            <value>Recusa-se a responder</value>
-          </text>
-          <text id="/deathtohoh/householdId:label">
-            <value>3. ExtId do Agregado</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/15:label">
-            <value>Swazilandia</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/8:label">
-            <value>Manica</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/7:label">
-            <value>Sem relação</value>
+          <text id="/deathtohoh/geoPlaceOfDeath/19:label">
+            <value>-</value>
           </text>
           <text id="/deathtohoh/causeOfDeath/88:label">
             <value>Nao sabe</value>
           </text>
-          <text id="/deathtohoh/causeOfDeath/5:label">
-            <value>Suicídio</value>
+          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/5:label">
+            <value>Mzazi</value>
+          </text>
+          <text id="/deathtohoh/placeOfDeath/1:label">
+            <value>Nyumbani</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/18:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/15:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/socialGroupId:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/memberName:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/disease/5:label">
+            <value>Outras doenças</value>
+          </text>
+          <text id="/deathtohoh/permId:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/placeOfDeath/5:label">
+            <value>Casa do curandeiro</value>
+          </text>
+          <text id="/deathtohoh/causeOfDeath/98:label">
+            <value>Outro</value>
           </text>
           <text id="/deathtohoh/disease/4:label">
             <value>Tuberculose</value>
           </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/19:label">
-            <value>América</value>
+          <text id="/deathtohoh/geoPlaceOfDeath:label">
+            <value>-</value>
           </text>
           <text id="/deathtohoh/causeOfDeath/3:label">
             <value>Acidente Rodoviário</value>
           </text>
-          <text id="/deathtohoh/processedByMirth:label">
-            <value>processedByMirth</value>
+          <text id="/deathtohoh/geoPlaceOfDeath/13:label">
+            <value>-</value>
           </text>
-          <text id="/deathtohoh/causeOfDeath:label">
-            <value>8. Causa da morte</value>
+          <text id="/deathtohoh/geoPlaceOfDeath/8:label">
+            <value>-</value>
           </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/18:label">
-            <value>Ásia</value>
+          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/88:label">
+            <value>Sijui</value>
+          </text>
+          <text id="/deathtohoh/visitId:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/causeOfDeath/2:label">
+            <value>Acidente de Trabalho</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/11:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/6:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/new_hoh_id:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/causeOfDeath/8:label">
+            <value>Causas ligada a gravidez</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/17:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/disease/3:label">
+            <value>Diarreia</value>
           </text>
           <text id="/deathtohoh/geoPlaceOfDeath/10:label">
-            <value>Zambézia</value>
+            <value>-</value>
           </text>
-          <text id="/deathtohoh/placeOfDeath/88:label">
+          <text id="/deathtohoh/geoPlaceOfDeath/12:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/processedByMirth:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/placeOfDeath/7:label">
+            <value>Na Igreja</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/98:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/7:label">
+            <value>Hakuna Mahusiano</value>
+          </text>
+          <text id="/deathtohoh/disease/1:label">
+            <value>Malária</value>
+          </text>
+          <text id="/deathtohoh/disease/88:label">
             <value>Não sabe</value>
-          </text>
-          <text id="/deathtohoh/placeOfDeath/2:label">
-            <value>Hospital</value>
-          </text>
-          <text id="/deathtohoh/date:label">
-            <value>7. Data da morte</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh/extId:label">
-            <value>1. ExtId do Membro</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/2:label">
-            <value>Província de Maputo</value>
-          </text>
-          <text id="/deathtohoh/placeOfDeath:label">
-            <value>9. Local da morte</value>
           </text>
           <text id="/deathtohoh/disease/2:label">
             <value>HIV</value>
           </text>
-          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/2:label">
-            <value>Esposo/a</value>
+          <text id="/deathtohoh/geoPlaceOfDeath/3:label">
+            <value>-</value>
           </text>
-          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/6:label">
-            <value>Neto/a</value>
+          <text id="/deathtohoh/placeOfDeath/2:label">
+            <value>Hospitali</value>
           </text>
-          <text id="/deathtohoh/placeOfDeath/4:label">
-            <value>No lugar do acidente</value>
+          <text id="/deathtohoh/hh_people_nb:label">
+            <value>-</value>
           </text>
-          <text id="/deathtohoh/placeOfDeathOther:label">
-            <value>9.1 Introduza o Local da morte</value>
+          <text id="/deathtohoh/disease:label">
+            <value>-</value>
           </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/5:label">
-            <value>Gaza</value>
+          <text id="/deathtohoh/placeOfDeath/88:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/fieldWorkerId:label">
+            <value>-</value>
           </text>
           <text id="/deathtohoh/causeOfDeath/7:label">
             <value>Prematuridade</value>
           </text>
+          <text id="/deathtohoh/disease:hint">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/causeOfDeath/5:label">
+            <value>Suicídio</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/99:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/2:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/5:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/placeOfDeath/4:label">
+            <value>Traditional healer's home</value>
+          </text>
+          <text id="/deathtohoh/placeOfDeathOther:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/placeOfDeath/6:label">
+            <value>Casa do pastor</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/9:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/date:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/6:label">
+            <value>Mjukuu</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/3:label">
+            <value>Mtoto Kiume/Kike</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/4:label">
+            <value>Kaka/Dada</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/98:label">
+            <value>Uhusiano Mwingine</value>
+          </text>
+          <text id="/deathtohoh/causeOfDeath/1:label">
+            <value>Doença</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/88:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/14:label">
+            <value>-</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/2:label">
+            <value>Mke/Mme</value>
+          </text>
+          <text id="/deathtohoh/householdId:label">
+            <value>-</value>
+          </text>
+        </translation>
+        <translation default="true()" lang="Portuguese">
+          <text id="/deathtohoh/causeOfDeath:label">
+            <value>8. Causa da morte</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/1:label">
+            <value>Distrito da Manhiça</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/18:label">
+            <value>Ásia</value>
+          </text>
+          <text id="/deathtohoh/causeOfDeath/6:label">
+            <value>Idade avançada</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/7:label">
+            <value>Sem relação</value>
+          </text>
+          <text id="/deathtohoh/disease/99:label">
+            <value>Recusa</value>
+          </text>
+          <text id="/deathtohoh/placeOfDeath/98:label">
+            <value>Outro lugar</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/98:label">
+            <value>Outro parente</value>
+          </text>
+          <text id="/deathtohoh/causeOfDeath/9:label">
+            <value>Malformação congénita</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh:label">
+            <value>12. Nova Relação com o chefe de Agregado</value>
+          </text>
+          <text id="/deathtohoh/individualId:label">
+            <value>4. ExtId do Individuo</value>
+          </text>
+          <text id="/deathtohoh/causeOfDeath/4:label">
+            <value>Homicidio</value>
+          </text>
+          <text id="/deathtohoh/disease/6:label">
+            <value>Infeções respiratórias</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/16:label">
+            <value>Outro país Africano</value>
+          </text>
           <text id="/deathtohoh/geoPlaceOfDeath/7:label">
             <value>Sofala</value>
+          </text>
+          <text id="/deathtohoh/placeOfDeath:label">
+            <value>9. Local da morte</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/19:label">
+            <value>América</value>
+          </text>
+          <text id="/deathtohoh/causeOfDeath/88:label">
+            <value>Nao sabe</value>
+          </text>
+          <text id="/deathtohoh/causeOfDeath/3:label">
+            <value>Acidente Rodoviário</value>
+          </text>
+          <text id="/deathtohoh/placeOfDeath/1:label">
+            <value>Em casa</value>
+          </text>
+          <text id="/deathtohoh/causeOfDeath/98:label">
+            <value>Outro</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/5:label">
+            <value>Pai/Mãe</value>
+          </text>
+          <text id="/deathtohoh/processedBySync:label">
+            <value>processedBySync</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/15:label">
+            <value>Swazilandia</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/socialGroupId:label">
+            <value>2. ExtId do Agregado</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/memberName:label">
+            <value>3. Nome do membro</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead:label">
+            <value>4. Relação com o chefe de agregado</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/11:label">
+            <value>Nampula</value>
+          </text>
+          <text id="/deathtohoh/permId:label">
+            <value>6. Perm ID do Novo Chefe de agregado</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/extId:label">
+            <value>1. ExtId do Membro</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/3:label">
+            <value>Cidade de Maputo</value>
+          </text>
+          <text id="/deathtohoh/new_hoh_id:label">
+            <value>5. ExtId do Novo Chefe de agregado</value>
+          </text>
+          <text id="/deathtohoh/disease/4:label">
+            <value>Tuberculose</value>
+          </text>
+          <text id="/deathtohoh/placeOfDeath/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/13:label">
+            <value>Niassa</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/8:label">
+            <value>Manica</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/6:label">
+            <value>Neto/a</value>
+          </text>
+          <text id="/deathtohoh/placeOfDeath/5:label">
+            <value>Casa do curandeiro</value>
+          </text>
+          <text id="/deathtohoh/causeOfDeath/2:label">
+            <value>Acidente de Trabalho</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/4:label">
+            <value>Irmão/Irmã</value>
           </text>
           <text id="/deathtohoh/geoPlaceOfDeath/6:label">
             <value>Inhambane</value>
@@ -421,53 +612,41 @@
           <text id="/deathtohoh/disease:label">
             <value>8.1. Tem ideia de que doença ele/a sofria?</value>
           </text>
-          <text id="/deathtohoh/placeOfDeath/98:label">
-            <value>Outro lugar</value>
+          <text id="/deathtohoh/causeOfDeath/8:label">
+            <value>Causas ligada a gravidez</value>
           </text>
-          <text id="/deathtohoh/disease/88:label">
-            <value>Não sabe</value>
+          <text id="/deathtohoh/geoPlaceOfDeath/17:label">
+            <value>Europa</value>
           </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/13:label">
-            <value>Niassa</value>
+          <text id="/deathtohoh/disease/3:label">
+            <value>Diarreia</value>
           </text>
-          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/98:label">
-            <value>Outro parente</value>
+          <text id="/deathtohoh/geoPlaceOfDeath/10:label">
+            <value>Zambézia</value>
           </text>
-          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/3:label">
-            <value>Filho/Filha</value>
+          <text id="/deathtohoh/geoPlaceOfDeath/12:label">
+            <value>Cabo-Delgado</value>
           </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/16:label">
-            <value>Outro país Africano</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh/socialGroupId:label">
-            <value>2. ExtId do Agregado</value>
-          </text>
-          <text id="/deathtohoh/disease:hint">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/disease/1:label">
-            <value>Malária</value>
-          </text>
-          <text id="/deathtohoh/causeOfDeath/4:label">
-            <value>Homicidio</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh/memberName:label">
-            <value>3. Nome do membro</value>
-          </text>
-          <text id="/deathtohoh/visitId:label">
-            <value>1. ExtId da visita</value>
+          <text id="/deathtohoh/processedByMirth:label">
+            <value>processedByMirth</value>
           </text>
           <text id="/deathtohoh/placeOfDeath/3:label">
             <value>A Caminho do hospital</value>
           </text>
-          <text id="/deathtohoh/new_hoh_id:label">
-            <value>5. ExtId do Novo Chefe de agregado</value>
-          </text>
-          <text id="/deathtohoh/causeOfDeath/98:label">
-            <value>Outro</value>
-          </text>
           <text id="/deathtohoh/geoPlaceOfDeath/98:label">
             <value>Outro</value>
+          </text>
+          <text id="/deathtohoh/date:label">
+            <value>7. Data da morte</value>
+          </text>
+          <text id="/deathtohoh/causeOfDeath/1:label">
+            <value>Doença</value>
+          </text>
+          <text id="/deathtohoh/disease/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/deathtohoh/disease/2:label">
+            <value>HIV</value>
           </text>
           <text id="/deathtohoh/fieldWorkerId:label">
             <value>2. Código do Inquiridor</value>
@@ -475,241 +654,71 @@
           <text id="/deathtohoh/geoPlaceOfDeath:label">
             <value>9. Lugar geográfico onde a pessoa morreu?</value>
           </text>
-        </translation>
-        <translation lang="Swahili">
-          <text id="/deathtohoh/causeOfDeath/1:label">
-            <value>Doença</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/4:label">
-            <value>Kaka/Dada</value>
-          </text>
-          <text id="/deathtohoh/date:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/disease/3:label">
-            <value>Diarreia</value>
-          </text>
-          <text id="/deathtohoh/causeOfDeath/8:label">
-            <value>Causas ligada a gravidez</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/88:label">
-            <value>Sijui</value>
-          </text>
-          <text id="/deathtohoh/disease/1:label">
-            <value>Malária</value>
-          </text>
-          <text id="/deathtohoh/permId:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/placeOfDeath/88:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/1:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/causeOfDeath/6:label">
-            <value>Idade avançada</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/3:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/6:label">
-            <value>Mjukuu</value>
-          </text>
-          <text id="/deathtohoh/disease/5:label">
-            <value>Outras doenças</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/88:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/9:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/19:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/causeOfDeath/2:label">
-            <value>Acidente de Trabalho</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/10:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/placeOfDeath/6:label">
-            <value>Casa do pastor</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/5:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/disease/6:label">
-            <value>Infeções respiratórias</value>
-          </text>
           <text id="/deathtohoh/hh_people_nb:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/placeOfDeathOther:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/placeOfDeath/5:label">
-            <value>Casa do curandeiro</value>
-          </text>
-          <text id="/deathtohoh/causeOfDeath/9:label">
-            <value>Malformação congénita</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/17:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/placeOfDeath/7:label">
-            <value>Na Igreja</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/99:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/98:label">
-            <value>Uhusiano Mwingine</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/4:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/15:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/8:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/7:label">
-            <value>Hakuna Mahusiano</value>
-          </text>
-          <text id="/deathtohoh/causeOfDeath/88:label">
-            <value>Nao sabe</value>
-          </text>
-          <text id="/deathtohoh/causeOfDeath/5:label">
-            <value>Suicídio</value>
-          </text>
-          <text id="/deathtohoh/disease/4:label">
-            <value>Tuberculose</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh/memberName:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/processedByMirth:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/causeOfDeath:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/18:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/householdId:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/2:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/14:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/placeOfDeath/2:label">
-            <value>Hospitali</value>
-          </text>
-          <text id="/deathtohoh/placeOfDeath/1:label">
-            <value>Nyumbani</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh/extId:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/3:label">
-            <value>Mtoto Kiume/Kike</value>
-          </text>
-          <text id="/deathtohoh/placeOfDeath:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/disease/2:label">
-            <value>HIV</value>
-          </text>
-          <text id="/deathtohoh/disease/99:label">
-            <value>Recusa</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/2:label">
-            <value>Mke/Mme</value>
-          </text>
-          <text id="/deathtohoh/placeOfDeath/4:label">
-            <value>Traditional healer's home</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/12:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/membershiptonewhoh/socialGroupId:label">
-            <value>-</value>
+            <value>11. Número de residentes na casa</value>
           </text>
           <text id="/deathtohoh/causeOfDeath/7:label">
             <value>Prematuridade</value>
           </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/7:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/6:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/disease:label">
-            <value>-</value>
-          </text>
-          <text id="/deathtohoh/placeOfDeath/98:label">
-            <value>Kwingine</value>
-          </text>
-          <text id="/deathtohoh/disease/88:label">
-            <value>Não sabe</value>
-          </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/13:label">
-            <value>-</value>
-          </text>
           <text id="/deathtohoh/disease:hint">
             <value>-</value>
           </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/98:label">
-            <value>-</value>
+          <text id="/deathtohoh/causeOfDeath/5:label">
+            <value>Suicídio</value>
           </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/16:label">
-            <value>-</value>
+          <text id="/deathtohoh/geoPlaceOfDeath/99:label">
+            <value>Recusa-se a responder</value>
           </text>
-          <text id="/deathtohoh/causeOfDeath/3:label">
-            <value>Acidente Rodoviário</value>
+          <text id="/deathtohoh/geoPlaceOfDeath/2:label">
+            <value>Província de Maputo</value>
           </text>
-          <text id="/deathtohoh/causeOfDeath/4:label">
-            <value>Homocidio</value>
+          <text id="/deathtohoh/geoPlaceOfDeath/5:label">
+            <value>Gaza</value>
           </text>
-          <text id="/deathtohoh/new_hoh_id:label">
-            <value>-</value>
+          <text id="/deathtohoh/placeOfDeath/4:label">
+            <value>No lugar do acidente</value>
           </text>
-          <text id="/deathtohoh/individualId:label">
-            <value>-</value>
+          <text id="/deathtohoh/placeOfDeathOther:label">
+            <value>9.1 Introduza o Local da morte</value>
+          </text>
+          <text id="/deathtohoh/placeOfDeath/6:label">
+            <value>Casa do pastor</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/9:label">
+            <value>Tete</value>
+          </text>
+          <text id="/deathtohoh/geoPlaceOfDeath/4:label">
+            <value>Cidade da Matola</value>
           </text>
           <text id="/deathtohoh/visitId:label">
-            <value>-</value>
+            <value>1. ExtId da visita</value>
           </text>
-          <text id="/deathtohoh/geoPlaceOfDeath:label">
-            <value>-</value>
+          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/3:label">
+            <value>Filho/Filha</value>
           </text>
-          <text id="/deathtohoh/geoPlaceOfDeath/11:label">
-            <value>-</value>
+          <text id="/deathtohoh/disease/5:label">
+            <value>Outras doenças</value>
           </text>
-          <text id="/deathtohoh/causeOfDeath/98:label">
-            <value>Outro</value>
+          <text id="/deathtohoh/placeOfDeath/7:label">
+            <value>Na Igreja</value>
           </text>
-          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/5:label">
-            <value>Mzazi</value>
+          <text id="/deathtohoh/disease/1:label">
+            <value>Malária</value>
           </text>
-          <text id="/deathtohoh/fieldWorkerId:label">
-            <value>-</value>
+          <text id="/deathtohoh/geoPlaceOfDeath/88:label">
+            <value>Não sabe</value>
           </text>
-          <text id="/deathtohoh/placeOfDeath/3:label">
-            <value>Health Centre or Clinic</value>
+          <text id="/deathtohoh/geoPlaceOfDeath/14:label">
+            <value>Africa do Sul</value>
+          </text>
+          <text id="/deathtohoh/membershiptonewhoh/relationshipToGroupHead/2:label">
+            <value>Esposo/a</value>
+          </text>
+          <text id="/deathtohoh/householdId:label">
+            <value>3. ExtId do Agregado</value>
+          </text>
+          <text id="/deathtohoh/placeOfDeath/2:label">
+            <value>Hospital</value>
           </text>
         </translation>
       </itext>
@@ -739,6 +748,7 @@
             <relationshipToGroupHead/>
           </membershiptonewhoh>
           <processedByMirth/>
+          <processedBySync/>
           <meta>
             <instanceID/>
             <instanceName/>
@@ -767,6 +777,7 @@
       <bind nodeset="/deathtohoh/membershiptonewhoh/memberName" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/deathtohoh/membershiptonewhoh/relationshipToGroupHead" required="true()" type="select1"/>
       <bind nodeset="/deathtohoh/processedByMirth" readonly="true()" type="int"/>
+      <bind nodeset="/deathtohoh/processedBySync" type="int"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/deathtohoh/meta/instanceID" readonly="true()" type="string"/>
       <bind calculate="concat(&quot;ObitoChefe-&quot;, /deathtohoh/permId )" nodeset="/deathtohoh/meta/instanceName" type="string"/>
     </model>
@@ -1063,6 +1074,9 @@
     </group>
     <input ref="/deathtohoh/processedByMirth">
       <label ref="jr:itext('/deathtohoh/processedByMirth:label')"/>
+    </input>
+    <input ref="/deathtohoh/processedBySync">
+      <label ref="jr:itext('/deathtohoh/processedBySync:label')"/>
     </input>
   </h:body>
 </h:html>
