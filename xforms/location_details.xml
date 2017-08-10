@@ -87,6 +87,12 @@
             <trashRecycleMethod/>
             <trashUsedAsFertilizer/>
           </sec5>
+          <ine>
+            <registered/>
+            <reasonToNotReg/>
+            <otherReasonToNotReg/>
+            <tagAtDoor/>
+          </ine>
           <processedByMirth/>
           <processedBySync/>
           <meta>
@@ -170,6 +176,10 @@
       <bind nodeset="/location_details/sec5/trashRecycledPart" relevant=" /location_details/sec5/trashTreatment =5" required="true()" type="string"/>
       <bind nodeset="/location_details/sec5/trashRecycleMethod" relevant=" /location_details/sec5/trashTreatment =5" required="true()" type="string"/>
       <bind nodeset="/location_details/sec5/trashUsedAsFertilizer" relevant=" /location_details/sec5/trashTreatment =7" required="true()" type="string"/>
+      <bind nodeset="/location_details/ine/registered" required="true()" type="select1"/>
+      <bind nodeset="/location_details/ine/reasonToNotReg" relevant=" /location_details/ine/registered =2" required="true()" type="select1"/>
+      <bind nodeset="/location_details/ine/otherReasonToNotReg" relevant=" /location_details/ine/registered =2 and  /location_details/ine/reasonToNotReg =4" required="true()" type="string"/>
+      <bind nodeset="/location_details/ine/tagAtDoor" relevant=" /location_details/ine/registered =1" required="true()" type="select1"/>
       <bind nodeset="/location_details/processedByMirth" readonly="true()" type="int"/>
       <bind nodeset="/location_details/processedBySync" readonly="true()" type="int"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/location_details/meta/instanceID" readonly="true()" type="string"/>
@@ -628,6 +638,10 @@
           <value>7</value>
         </item>
         <item>
+          <label>Água Mineral</label>
+          <value>8</value>
+        </item>
+        <item>
           <label>Outra</label>
           <value>98</value>
         </item>
@@ -856,6 +870,14 @@
           <label>O agregado faz pessoalmente a evacuação das fezes</label>
           <value>3</value>
         </item>
+        <item>
+          <label>Outro</label>
+          <value>98</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>99</value>
+        </item>
       </select1>
       <select1 ref="/location_details/sec4/canSeeLatrine">
         <label>36. O Sr/a aceita que eu possa verificar as condições da latrina do seu agregado?</label>
@@ -1045,6 +1067,57 @@
         <label>42.4. Qual parte é usada como fertilizante?</label>
         <hint>Esta resposta só pode ser respondida se a resposta da perg. 43 for &quot;É usado como fertilizante&quot;</hint>
       </input>
+    </group>
+    <group ref="/location_details/ine">
+      <label>A seguir perguntas sobre: Censo INE 2017</label>
+      <select1 ref="/location_details/ine/registered">
+        <label>X. O agregado foi recenseado durante o censo do INE de 2017?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não</label>
+          <value>2</value>
+        </item>
+      </select1>
+      <select1 ref="/location_details/ine/reasonToNotReg">
+        <label>XI. Indique o motivo do agregado não ter sido recenseado?</label>
+        <item>
+          <label>Equipa não veio</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não estavam em casa</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>Não sabe</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>Outro Motivo</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>Recusaram</label>
+          <value>99</value>
+        </item>
+      </select1>
+      <input ref="/location_details/ine/otherReasonToNotReg">
+        <label>XI.I. Especifique o motivo do agregado não ter sido recenseado?</label>
+      </input>
+      <select1 ref="/location_details/ine/tagAtDoor">
+        <label>XII. A etiqueta do censo do INE esta colada na porta?</label>
+        <item>
+          <label>Sim</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>Não</label>
+          <value>2</value>
+        </item>
+      </select1>
     </group>
     <input ref="/location_details/processedByMirth">
       <label>processed</label>
