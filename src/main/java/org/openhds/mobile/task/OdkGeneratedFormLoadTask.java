@@ -63,11 +63,12 @@ public class OdkGeneratedFormLoadTask extends AsyncTask<Void, Void, Boolean> {
         if (cursor.moveToFirst()) {
             String jrFormId = cursor.getString(0);
             String formFilePath = cursor.getString(1);
+            String formVersion = cursor.getString(2);
             String xml = processXml(jrFormId, formFilePath);
 
             File targetFile = saveFile(xml,jrFormId);
             if (targetFile != null) {
-                return writeContent(targetFile, filledForm.getFormName(), jrFormId);
+                return writeContent(targetFile, filledForm.getFormName(), jrFormId, formVersion);
             }
         }
         cursor.close();
@@ -77,7 +78,7 @@ public class OdkGeneratedFormLoadTask extends AsyncTask<Void, Void, Boolean> {
 
     private Cursor getCursorForFormsProvider(String name) {
         return resolver.query(FormsProviderAPI.FormsColumns.CONTENT_URI, new String[] {
-                FormsProviderAPI.FormsColumns.JR_FORM_ID, FormsProviderAPI.FormsColumns.FORM_FILE_PATH },
+                FormsProviderAPI.FormsColumns.JR_FORM_ID, FormsProviderAPI.FormsColumns.FORM_FILE_PATH, FormsProviderAPI.FormsColumns.JR_VERSION },
                 FormsProviderAPI.FormsColumns.JR_FORM_ID + " like ?", new String[] { name + "%" }, null);
     }
 
@@ -432,12 +433,17 @@ public class OdkGeneratedFormLoadTask extends AsyncTask<Void, Void, Boolean> {
         return targetFile;
     }
 
-    private boolean writeContent(File targetFile, String displayName, String formId) {
+    private boolean writeContent(File targetFile, String displayName, String formId, String formVersion) {
 
         ContentValues values = new ContentValues();
         values.put(InstanceProviderAPI.InstanceColumns.INSTANCE_FILE_PATH, targetFile.getAbsolutePath());
         values.put(InstanceProviderAPI.InstanceColumns.DISPLAY_NAME, displayName);
         values.put(InstanceProviderAPI.InstanceColumns.JR_FORM_ID, formId);
+        
+        if (formVersion != null){
+            values.put(InstanceProviderAPI.InstanceColumns.JR_VERSION, formVersion);
+        }
+        
         odkUri = resolver.insert(InstanceProviderAPI.InstanceColumns.CONTENT_URI, values);
         if (odkUri == null) {
             return false;
