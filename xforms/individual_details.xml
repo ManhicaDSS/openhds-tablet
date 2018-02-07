@@ -4,7 +4,7 @@
     <h:title>Informação sobre o individuo</h:title>
     <model>
       <instance>
-        <individual_details id="individual_details">
+        <individual_details id="individual_details" version="20181">
           <deviceid/>
           <start/>
           <end/>
@@ -59,7 +59,12 @@
           <relationWithHead/>
           <relationWithSubsHead/>
           <canReadWrite/>
+          <learningPlace/>
+          <hasEducation/>
           <education/>
+          <canTestReading/>
+          <note_reading/>
+          <readingQuality/>
           <motherTongue/>
           <religion/>
           <maritalStatus/>
@@ -149,21 +154,26 @@
       <bind nodeset="/individual_details/idReceiptExpStat" relevant=" /individual_details/isUpdatable =1 and  /individual_details/hasIdentityDoc =1and  /individual_details/hasIdReceipt =1" required="true()" type="select1"/>
       <bind nodeset="/individual_details/hasPassport" relevant=" /individual_details/isUpdatable =1 and  /individual_details/hasIdentityDoc =1" required="true()" type="select1"/>
       <bind nodeset="/individual_details/passportExpStat" relevant=" /individual_details/isUpdatable =1 and  /individual_details/hasIdentityDoc =1 and  /individual_details/hasPassport =1" required="true()" type="select1"/>
-      <bind nodeset="/individual_details/hasDrivingLicense" relevant=" /individual_details/isUpdatable =1 and  /individual_details/hasIdentityDoc =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/hasDrivingLicense" relevant=" /individual_details/isUpdatable =1 and  /individual_details/hasIdentityDoc =1 and  /individual_details/age &gt;=18" required="true()" type="select1"/>
       <bind nodeset="/individual_details/drivLicenseExpStat" relevant=" /individual_details/isUpdatable =1 and  /individual_details/hasIdentityDoc =1 and  /individual_details/hasDrivingLicense =1" required="true()" type="select1"/>
-      <bind nodeset="/individual_details/hasVoterCard" relevant=" /individual_details/isUpdatable =1 and  /individual_details/hasIdentityDoc =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/hasVoterCard" relevant=" /individual_details/isUpdatable =1 and  /individual_details/hasIdentityDoc =1 and  /individual_details/age &gt;=18" required="true()" type="select1"/>
       <bind nodeset="/individual_details/placeOfBirth" relevant=" /individual_details/isUpdatable =1" required="true()" type="select1"/>
-      <bind nodeset="/individual_details/fatherAlive" relevant=" /individual_details/isUpdatable =1 and  /individual_details/age &lt;15" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/fatherAlive" relevant=" /individual_details/isUpdatable =1 and  /individual_details/age  &lt; 18" required="true()" type="select1"/>
       <bind nodeset="/individual_details/fatherLivesHere" relevant=" /individual_details/isUpdatable =1 and  /individual_details/fatherAlive =1" required="true()" type="select1"/>
       <bind nodeset="/individual_details/fatherDeathDate" relevant=" /individual_details/isUpdatable =1 and  /individual_details/fatherAlive =2" required="true()" type="date"/>
-      <bind nodeset="/individual_details/motherAlive" relevant=" /individual_details/isUpdatable =1 and  /individual_details/age  &lt; 15" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/motherAlive" relevant=" /individual_details/isUpdatable =1 and  /individual_details/age  &lt; 18" required="true()" type="select1"/>
       <bind nodeset="/individual_details/motherLivesHere" relevant=" /individual_details/isUpdatable =1 and  /individual_details/motherAlive =1" required="true()" type="select1"/>
       <bind nodeset="/individual_details/motherDeathDate" relevant=" /individual_details/isUpdatable =1 and  /individual_details/motherAlive =2" required="true()" type="date"/>
       <bind nodeset="/individual_details/headLivesHere" relevant=" /individual_details/isUpdatable =1" required="true()" type="select1"/>
       <bind nodeset="/individual_details/relationWithHead" relevant=" /individual_details/isUpdatable =1 and  /individual_details/headLivesHere =1" required="true()" type="select1"/>
       <bind nodeset="/individual_details/relationWithSubsHead" relevant=" /individual_details/isUpdatable =1 and  /individual_details/headLivesHere =2" required="true()" type="select1"/>
       <bind nodeset="/individual_details/canReadWrite" relevant=" /individual_details/isUpdatable =1 and ( /individual_details/age  &gt; 6)" required="true()" type="select1"/>
-      <bind nodeset="/individual_details/education" relevant=" /individual_details/isUpdatable =1 and ( /individual_details/age  &gt; 6)" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/learningPlace" relevant=" /individual_details/canReadWrite =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/hasEducation" relevant=" /individual_details/isUpdatable =1 and ( /individual_details/age  &gt; 6)" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/education" relevant=" /individual_details/hasEducation =1" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/canTestReading" relevant=" /individual_details/canReadWrite =1 and ( /individual_details/hasEducation =2 or  /individual_details/education &lt;=11)" required="true()" type="select1"/>
+      <bind nodeset="/individual_details/note_reading" readonly="true()" relevant=" /individual_details/canTestReading =1" type="string"/>
+      <bind nodeset="/individual_details/readingQuality" relevant=" /individual_details/canTestReading =1" required="true()" type="select1"/>
       <bind nodeset="/individual_details/motherTongue" relevant=" /individual_details/isUpdatable =1 and ( /individual_details/age  &gt;= 15)" required="true()" type="select1"/>
       <bind nodeset="/individual_details/religion" relevant=" /individual_details/isUpdatable =1 and ( /individual_details/age  &gt;= 15)" required="true()" type="select1"/>
       <bind nodeset="/individual_details/maritalStatus" relevant=" /individual_details/isUpdatable =1 and ( /individual_details/age  &gt;= 15)" required="true()" type="select1"/>
@@ -833,63 +843,133 @@
         <value>2</value>
       </item>
     </select1>
-    <select1 ref="/individual_details/education">
-      <label>32. Qual é a classe mais elevada que o Sr/a concluiu?</label>
+    <select1 ref="/individual_details/learningPlace">
+      <label>31.1. Onde foi que aprendeu a ler e escrever?</label>
       <item>
-        <label>Analfabeto</label>
+        <label>Na Escola</label>
         <value>1</value>
       </item>
       <item>
-        <label>Abaixo de 5 grau</label>
+        <label>Creche</label>
         <value>2</value>
       </item>
       <item>
-        <label>5ª classe</label>
+        <label>Em casa</label>
         <value>3</value>
       </item>
       <item>
-        <label>7ª classe</label>
+        <label>Na Igreja</label>
         <value>4</value>
       </item>
       <item>
-        <label>10ª classe</label>
+        <label>Outro</label>
+        <value>98</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/hasEducation">
+      <label>31.2. Frequentou a educação formal?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/education">
+      <label>31.2.1. Qual é a classe mais elevada que o Sr/a concluiu?</label>
+      <item>
+        <label>Analfabeto / Nenhuma / Não escolarizado</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Alfabetização 1º</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Alfabetização 2º</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Alfabetização 3º</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>1ª Classe</label>
         <value>5</value>
       </item>
       <item>
-        <label>12ª classe</label>
+        <label>2ª Classe</label>
         <value>6</value>
       </item>
       <item>
-        <label>Ensino técnico elementar</label>
+        <label>3ª Classe</label>
         <value>7</value>
       </item>
       <item>
-        <label>Ensino técnico básico</label>
+        <label>4ª Classe</label>
         <value>8</value>
       </item>
       <item>
-        <label>Ensino técnico médio</label>
+        <label>5ª Classe</label>
         <value>9</value>
       </item>
       <item>
-        <label>Bacharel</label>
+        <label>6ª Classe</label>
         <value>10</value>
       </item>
       <item>
-        <label>Licenciatura</label>
+        <label>7ª Classe</label>
         <value>11</value>
       </item>
       <item>
-        <label>Mestrado</label>
+        <label>8ª Classe</label>
         <value>12</value>
       </item>
       <item>
-        <label>Doutoramento</label>
+        <label>9ª Classe</label>
         <value>13</value>
       </item>
       <item>
-        <label>Nenhuma</label>
+        <label>10ª Classe</label>
         <value>14</value>
+      </item>
+      <item>
+        <label>11ª Classe</label>
+        <value>15</value>
+      </item>
+      <item>
+        <label>12ª Classe</label>
+        <value>16</value>
+      </item>
+      <item>
+        <label>Ensino técnico elementar</label>
+        <value>17</value>
+      </item>
+      <item>
+        <label>Ensino técnico básico</label>
+        <value>18</value>
+      </item>
+      <item>
+        <label>Ensino técnico médio</label>
+        <value>19</value>
+      </item>
+      <item>
+        <label>Bacharel</label>
+        <value>20</value>
+      </item>
+      <item>
+        <label>Licenciatura</label>
+        <value>21</value>
+      </item>
+      <item>
+        <label>Mestrado</label>
+        <value>22</value>
+      </item>
+      <item>
+        <label>Doutoramento</label>
+        <value>23</value>
       </item>
       <item>
         <label>Outro</label>
@@ -898,6 +978,41 @@
       <item>
         <label>Não sabe</label>
         <value>88</value>
+      </item>
+    </select1>
+    <select1 ref="/individual_details/canTestReading">
+      <label>32. Pode ler o texto a seguir?</label>
+      <item>
+        <label>Sim</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Não esta presente</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Recusa</label>
+        <value>99</value>
+      </item>
+    </select1>
+    <input ref="/individual_details/note_reading">
+      <label>32.1. Leia o texto abaixo
+
+&lt;h1&gt;O centro de investigação em saúde da manhiça foi criado em 1996 para promover pesquisa biomédica&lt;/h1&gt;</label>
+    </input>
+    <select1 ref="/individual_details/readingQuality">
+      <label>32.2. Nivel de qualidade de leitura?</label>
+      <item>
+        <label>Fluentemente</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Com dificuldade</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Não consegue ler</label>
+        <value>3</value>
       </item>
     </select1>
     <select1 ref="/individual_details/motherTongue">
