@@ -129,7 +129,7 @@ public class UpdateActivity extends Activity implements ValueFragment.ValueListe
     protected static final int FILTER_SOCIALGROUP = 80;
     
     private static int MINIMUM_HOUSEHOLD_AGE;
-    private static final int DEFAULT_MINIMUM_HOUSEHOLD_AGE = 14;
+    private static final int DEFAULT_MINIMUM_HOUSEHOLD_AGE = 12;
     
     private static int MINIMUM_PARENTHOOD_AGE;
     private static final int DEFAULT_MINIMUM_PARENTHOOD_AGE = 12;

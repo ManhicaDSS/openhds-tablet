@@ -315,7 +315,7 @@ public class ValueFragment extends ListFragment implements LoaderCallbacks<Curso
 	            	filter2 = filter2 + " AND ";
 	            }   
 	            //filter2 = filter2 + "(strftime('%Y', date('now')) - substr(dob,7))>13";
-	            filter2 = filter2 + "(strftime('%Y', date('now')) - substr(dob,7))>13 AND " + OpenHDS.Individuals.COLUMN_RESIDENCE_END_TYPE +"!='EXT'";
+	            filter2 = filter2 + "(strftime('%Y', date('now')) - substr(dob,7))>11 AND " + OpenHDS.Individuals.COLUMN_RESIDENCE_END_TYPE +"!='EXT'";
 	            return new CursorLoader(getActivity(), OpenHDS.Individuals.CONTENT_ID_URI_BASE, null, filter2, args2,
 	                    OpenHDS.Individuals._ID + " ASC");
 	        }
