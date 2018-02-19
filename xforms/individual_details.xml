@@ -991,6 +991,10 @@
         <value>2</value>
       </item>
       <item>
+        <label>Deficiente Visual</label>
+        <value>3</value>
+      </item>
+      <item>
         <label>Recusa</label>
         <value>99</value>
       </item>

@@ -4,766 +4,291 @@
     <h:title>Registo de Imigração</h:title>
     <model>
       <itext>
-        <translation lang="Swahili">
-          <text id="/in_migration/relationWithOriginHead/88:label">
-            <value>Não sabe</value>
-          </text>
-          <text id="/in_migration/inMigType:label">
-            <value>Tipo de Imigração Interna</value>
-          </text>
-          <text id="/in_migration/individualInfo/individualId:label">
-            <value>Nambari ya Mwanakaya</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/98:label">
-            <value>Outro</value>
-          </text>
-          <text id="/in_migration/processedByMirth:label">
-            <value>processed</value>
-          </text>
-          <text id="/in_migration/individualInfo/gender/F:label">
-            <value>Mwanamke</value>
-          </text>
-          <text id="/in_migration/individualInfo/partialDate:label">
-            <value>Partial Date</value>
-          </text>
-          <text id="/in_migration/individualInfo/partialDate/2:label">
-            <value>Tarehe Imekadiliwa</value>
-          </text>
-          <text id="/in_migration/reason/98:label">
-            <value>Outro</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/6:label">
-            <value>Cunhado/a</value>
-          </text>
-          <text id="/in_migration/movedfrom/8:label">
-            <value>Zambezia</value>
-          </text>
-          <text id="/in_migration/reasonOther:label">
-            <value>Sababu</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/3:label">
-            <value>Irmão/a</value>
-          </text>
-          <text id="/in_migration/movedfrom/98:label">
-            <value>Outro</value>
-          </text>
-          <text id="/in_migration/individualInfo/dateOfBirth:label">
-            <value>Tarehe ya Kuzaliwa</value>
-          </text>
-          <text id="/in_migration/reason/3:label">
-            <value>KUBADILIKA KWA HALI YA NDOA</value>
-          </text>
-          <text id="/in_migration/individualInfo/lastName:label">
-            <value>Jina la Ukoo</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead:label">
-            <value>Relação do Imigrante com o chefe de agregado de destino?</value>
-          </text>
-          <text id="/in_migration/shortorlongstay/3:label">
-            <value>Unknown</value>
-          </text>
-          <text id="/in_migration/origin:label">
-            <value>Aliko Tokea</value>
-          </text>
-          <text id="/in_migration/movedfrom/17:label">
-            <value>Americas</value>
-          </text>
-          <text id="/in_migration/individualInfo/partialDate/1:label">
-            <value>Tarehe Kamili</value>
-          </text>
-          <text id="/in_migration/neighMovedfrom:label">
-            <value>Neighborhood member Moved FROM:</value>
-          </text>
-          <text id="/in_migration/shortorlongstay/1:label">
-            <value>Long (more than 1 year)</value>
-          </text>
-          <text id="/in_migration/movedfrom/11:label">
-            <value>Niassa</value>
-          </text>
-          <text id="/in_migration/inMigType/1:label">
-            <value>Imigração Interna</value>
-          </text>
-          <text id="/in_migration/inMigType/2:label">
-            <value>Retorno ao DSS</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/10:label">
-            <value>Primo/a</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/8:label">
-            <value>Neto/a</value>
-          </text>
-          <text id="/in_migration/individualInfo/firstName:label">
-            <value>Jina la Kwanza</value>
-          </text>
-          <text id="/in_migration/warning:label">
-            <value>-</value>
-          </text>
-          <text id="/in_migration/individualInfo:label">
-            <value>individualIdInfoGRP</value>
-          </text>
-          <text id="/in_migration/reason/12:label">
-            <value>Acompanhantes dos progenitores/responsaveis</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/11:label">
-            <value>Sobrinho/a</value>
-          </text>
-          <text id="/in_migration/reason:label">
-            <value>Sababu</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/98:label">
-            <value>Outro</value>
-          </text>
-          <text id="/in_migration/individualInfo/permId:label">
-            <value>Perm ID</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/12:label">
-            <value>Avó</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/1:label">
-            <value>Pai/Mãe</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/4:label">
-            <value>Esposo/a</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/11:label">
-            <value>Sobrinho/a</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/12:label">
-            <value>Avó</value>
-          </text>
-          <text id="/in_migration/locationName:label">
-            <value>Agregado de destino</value>
-          </text>
-          <text id="/in_migration/reason/2:label">
-            <value>UFUGAJI</value>
-          </text>
-          <text id="/in_migration/movedfrom/13:label">
-            <value>Swazilandia</value>
-          </text>
-          <text id="/in_migration/processedBySync:label">
-            <value>processed</value>
-          </text>
-          <text id="/in_migration/movedfrom/1:label">
-            <value>Provincia de Maputo</value>
-          </text>
-          <text id="/in_migration/movedfrom/7:label">
-            <value>Tete</value>
-          </text>
-          <text id="/in_migration/reason/11:label">
-            <value>Custo de Aluguer da casa</value>
-          </text>
-          <text id="/in_migration/individualInfo/gender:label">
-            <value>Jinsia</value>
-          </text>
-          <text id="/in_migration/movedfrom/5:label">
-            <value>Sofala</value>
-          </text>
-          <text id="/in_migration/movedfrom/4:label">
-            <value>Inhamban</value>
-          </text>
-          <text id="/in_migration/visitId:label">
-            <value>Nambari ya Hudhurio</value>
-          </text>
-          <text id="/in_migration/reason/10:label">
-            <value>Situação Economica</value>
-          </text>
-          <text id="/in_migration/movedfrom/14:label">
-            <value>Outro país Africano</value>
-          </text>
-          <text id="/in_migration/movedfrom/3:label">
-            <value>Gaza</value>
-          </text>
-          <text id="/in_migration/originHouseNo:label">
-            <value>Agregado de origem</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/13:label">
-            <value>Não família</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/2:label">
-            <value>Filho/a</value>
-          </text>
-          <text id="/in_migration/individualInfo/middleName:label">
-            <value>Jina la Kati</value>
-          </text>
-          <text id="/in_migration/individualInfo/motherId:label">
-            <value>Nambari ya Mama</value>
-          </text>
-          <text id="/in_migration/individualInfo/fatherId:label">
-            <value>Nambari ya Baba</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead:label">
-            <value>Relação do imigrante com o chefe de agregado de origem?</value>
-          </text>
-          <text id="/in_migration/movedfrom/9:label">
-            <value>Nampula</value>
-          </text>
-          <text id="/in_migration/fieldWorkerId:label">
-            <value>Nambari ya Mhojaji</value>
-          </text>
-          <text id="/in_migration/reason/6:label">
-            <value>KAZI</value>
-          </text>
-          <text id="/in_migration/movedfrom/2:label">
-            <value>Cidade de Maputo</value>
-          </text>
-          <text id="/in_migration/reason/7:label">
-            <value>Moved to new house</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/5:label">
-            <value>Nora</value>
-          </text>
-          <text id="/in_migration/dateOfMigration:label">
-            <value>Tarehe ya Kuhamia</value>
-          </text>
-          <text id="/in_migration/locationId:label">
-            <value>Nambari ya Eneo</value>
-          </text>
-          <text id="/in_migration/movedfrom/12:label">
-            <value>Africa de Sul</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/9:label">
-            <value>Enteado/a</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/7:label">
-            <value>Tio/a</value>
-          </text>
-          <text id="/in_migration/reason/5:label">
-            <value>ELIMU/SHULE</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead:hint">
-            <value>Relação do Imigrante com o chefe de agregado de destino?</value>
-          </text>
-          <text id="/in_migration/shortorlongstay:label">
-            <value>Is he/she planning to stay long term or short term?</value>
-          </text>
-          <text id="/in_migration/movedfrom/16:label">
-            <value>Asia</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/10:label">
-            <value>Primo/a</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/88:label">
-            <value>Não sabe</value>
-          </text>
-          <text id="/in_migration/movedfromName:label">
-            <value>Place member Moved FROM:</value>
-          </text>
-          <text id="/in_migration/movedfrom/10:label">
-            <value>Cabo Delgado</value>
-          </text>
-          <text id="/in_migration/reason/4:label">
-            <value>FISHING</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/1:label">
-            <value>Pai/Mãe</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/7:label">
-            <value>Tio/a</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/8:label">
-            <value>Neto/a</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/4:label">
-            <value>Esposo/a</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/13:label">
-            <value>Não família</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/2:label">
-            <value>Filho/a</value>
-          </text>
-          <text id="/in_migration/movedfrom/88:label">
-            <value>Não sabe</value>
-          </text>
-          <text id="/in_migration/individualInfo/gender/M:label">
-            <value>Mwanaume</value>
-          </text>
-          <text id="/in_migration/reason/8:label">
-            <value>NYINGINE</value>
-          </text>
-          <text id="/in_migration/reason/88:label">
-            <value>Não sabe</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/5:label">
-            <value>Nora</value>
-          </text>
-          <text id="/in_migration/reason/1:label">
-            <value>Came with relative(s)</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/6:label">
-            <value>Cunhado/a</value>
-          </text>
-          <text id="/in_migration/reason/9:label">
-            <value>Educação</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/9:label">
-            <value>Enteado/a</value>
-          </text>
-          <text id="/in_migration/movedfrom:label">
-            <value>Place member Moved FROM:</value>
-          </text>
-          <text id="/in_migration/shortorlongstay/2:label">
-            <value>Short (up to a year)</value>
-          </text>
-          <text id="/in_migration/migrationType:label">
-            <value>migrationType_label</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/3:label">
-            <value>Irmão/a</value>
-          </text>
-          <text id="/in_migration/movedfrom/6:label">
-            <value>Manica</value>
-          </text>
-          <text id="/in_migration/movedfrom/15:label">
-            <value>Europa</value>
-          </text>
-        </translation>
-        <translation lang="English">
-          <text id="/in_migration/relationWithOriginHead/88:label">
-            <value>Não sabe</value>
-          </text>
-          <text id="/in_migration/inMigType:label">
-            <value>Tipo de Imigração Interna</value>
-          </text>
-          <text id="/in_migration/individualInfo/individualId:label">
-            <value>Individual Id</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/98:label">
-            <value>Outro</value>
-          </text>
-          <text id="/in_migration/processedByMirth:label">
-            <value>processed</value>
-          </text>
-          <text id="/in_migration/individualInfo/gender/F:label">
-            <value>Female</value>
-          </text>
-          <text id="/in_migration/individualInfo/partialDate:label">
-            <value>Partial Date</value>
-          </text>
-          <text id="/in_migration/individualInfo/partialDate/2:label">
-            <value>Approximate</value>
-          </text>
-          <text id="/in_migration/reason/98:label">
-            <value>Outro</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/6:label">
-            <value>Cunhado/a</value>
-          </text>
-          <text id="/in_migration/movedfrom/8:label">
-            <value>Zambezia</value>
-          </text>
-          <text id="/in_migration/reasonOther:label">
-            <value>reason</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/3:label">
-            <value>Irmão/a</value>
-          </text>
-          <text id="/in_migration/movedfrom/98:label">
-            <value>Outro</value>
-          </text>
-          <text id="/in_migration/individualInfo/dateOfBirth:label">
-            <value>Date of Birth</value>
-          </text>
-          <text id="/in_migration/reason/3:label">
-            <value>MARITAL CHANGE</value>
-          </text>
-          <text id="/in_migration/individualInfo/lastName:label">
-            <value>Last Name</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead:label">
-            <value>Relação do Imigrante com o chefe de agregado de destino?</value>
-          </text>
-          <text id="/in_migration/shortorlongstay/3:label">
-            <value>Unknown</value>
-          </text>
-          <text id="/in_migration/origin:label">
-            <value>origin</value>
-          </text>
-          <text id="/in_migration/movedfrom/17:label">
-            <value>Americas</value>
-          </text>
-          <text id="/in_migration/individualInfo/partialDate/1:label">
-            <value>Exact</value>
-          </text>
-          <text id="/in_migration/neighMovedfrom:label">
-            <value>Neighborhood member Moved FROM:</value>
-          </text>
-          <text id="/in_migration/shortorlongstay/1:label">
-            <value>Long (more than 1 year)</value>
-          </text>
-          <text id="/in_migration/movedfrom/11:label">
-            <value>Niassa</value>
-          </text>
-          <text id="/in_migration/inMigType/1:label">
-            <value>Imigração Interna</value>
-          </text>
-          <text id="/in_migration/inMigType/2:label">
-            <value>Retorno ao DSS</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/10:label">
-            <value>Primo/a</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/8:label">
-            <value>Neto/a</value>
-          </text>
-          <text id="/in_migration/individualInfo/firstName:label">
-            <value>First Name</value>
-          </text>
-          <text id="/in_migration/warning:label">
-            <value>The migration date can not be prior or equal to the Birth date. Please go back and correct it.</value>
-          </text>
-          <text id="/in_migration/movedfrom/9:label">
-            <value>Nampula</value>
-          </text>
-          <text id="/in_migration/reason/12:label">
-            <value>Acompanhantes dos progenitores/responsaveis</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/11:label">
-            <value>Sobrinho/a</value>
-          </text>
-          <text id="/in_migration/reason:label">
-            <value>reason</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/98:label">
-            <value>Outro</value>
-          </text>
-          <text id="/in_migration/individualInfo/permId:label">
-            <value>Perm ID</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/12:label">
-            <value>Avó</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/1:label">
-            <value>Pai/Mãe</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/4:label">
-            <value>Esposo/a</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/11:label">
-            <value>Sobrinho/a</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/12:label">
-            <value>Avó</value>
-          </text>
-          <text id="/in_migration/locationName:label">
-            <value>Agregado de destino</value>
-          </text>
-          <text id="/in_migration/reason/2:label">
-            <value>FARMING</value>
-          </text>
-          <text id="/in_migration/movedfrom/13:label">
-            <value>Swazilandia</value>
-          </text>
-          <text id="/in_migration/processedBySync:label">
-            <value>processed</value>
-          </text>
-          <text id="/in_migration/movedfrom/1:label">
-            <value>Provincia de Maputo</value>
-          </text>
-          <text id="/in_migration/movedfrom/7:label">
-            <value>Tete</value>
-          </text>
-          <text id="/in_migration/individualInfo/gender:label">
-            <value>gender</value>
-          </text>
-          <text id="/in_migration/reason/11:label">
-            <value>Custo de Aluguer da casa</value>
-          </text>
-          <text id="/in_migration/movedfrom/6:label">
-            <value>Manica</value>
-          </text>
-          <text id="/in_migration/movedfrom/5:label">
-            <value>Sofala</value>
-          </text>
-          <text id="/in_migration/movedfrom/4:label">
-            <value>Inhamban</value>
-          </text>
-          <text id="/in_migration/visitId:label">
-            <value>Visit Id</value>
-          </text>
-          <text id="/in_migration/reason/10:label">
-            <value>Situação Economica</value>
-          </text>
-          <text id="/in_migration/movedfrom/14:label">
-            <value>Outro país Africano</value>
-          </text>
-          <text id="/in_migration/movedfrom/3:label">
-            <value>Gaza</value>
-          </text>
-          <text id="/in_migration/originHouseNo:label">
-            <value>Agregado de Origem</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/13:label">
-            <value>Não família</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/2:label">
-            <value>Filho/a</value>
-          </text>
-          <text id="/in_migration/individualInfo/middleName:label">
-            <value>Middle Name</value>
-          </text>
-          <text id="/in_migration/individualInfo:label">
-            <value>-</value>
-          </text>
-          <text id="/in_migration/individualInfo/motherId:label">
-            <value>Mother Id</value>
-          </text>
-          <text id="/in_migration/individualInfo/fatherId:label">
-            <value>Father Id</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead:label">
-            <value>Relação do imigrante com o chefe de agregado de origem?</value>
-          </text>
-          <text id="/in_migration/fieldWorkerId:label">
-            <value>Field Worker Id</value>
-          </text>
-          <text id="/in_migration/reason/6:label">
-            <value>WORK</value>
-          </text>
-          <text id="/in_migration/movedfrom/2:label">
-            <value>Cidade de Maputo</value>
-          </text>
-          <text id="/in_migration/reason/7:label">
-            <value>Moved to new house</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/5:label">
-            <value>Nora</value>
-          </text>
-          <text id="/in_migration/dateOfMigration:label">
-            <value>Date of In Migration</value>
-          </text>
-          <text id="/in_migration/locationId:label">
-            <value>Location Id</value>
-          </text>
-          <text id="/in_migration/movedfrom/12:label">
-            <value>Africa de Sul</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/9:label">
-            <value>Enteado/a</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/7:label">
-            <value>Tio/a</value>
-          </text>
-          <text id="/in_migration/reason/5:label">
-            <value>EDUCATION/SCHOOL</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead:hint">
-            <value>-</value>
-          </text>
-          <text id="/in_migration/shortorlongstay:label">
-            <value>Is he/she planning to stay long term or short term?</value>
-          </text>
-          <text id="/in_migration/movedfrom/16:label">
-            <value>Asia</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/10:label">
-            <value>Primo/a</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/88:label">
-            <value>Não sabe</value>
-          </text>
-          <text id="/in_migration/movedfromName:label">
-            <value>Place member Moved FROM:</value>
-          </text>
-          <text id="/in_migration/movedfrom/10:label">
-            <value>Cabo Delgado</value>
-          </text>
-          <text id="/in_migration/reason/4:label">
-            <value>FISHING</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/1:label">
-            <value>Pai/Mãe</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/7:label">
-            <value>Tio/a</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/8:label">
-            <value>Neto/a</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/4:label">
-            <value>Esposo/a</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/13:label">
-            <value>Não família</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/2:label">
-            <value>Filho/a</value>
-          </text>
-          <text id="/in_migration/movedfrom/88:label">
-            <value>Não sabe</value>
-          </text>
-          <text id="/in_migration/individualInfo/gender/M:label">
-            <value>Male</value>
-          </text>
-          <text id="/in_migration/reason/8:label">
-            <value>OTHER</value>
-          </text>
-          <text id="/in_migration/reason/88:label">
-            <value>Não sabe</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/5:label">
-            <value>Nora</value>
-          </text>
-          <text id="/in_migration/reason/1:label">
-            <value>Came with relative(s)</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/6:label">
-            <value>Cunhado/a</value>
-          </text>
-          <text id="/in_migration/reason/9:label">
-            <value>Educação</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/9:label">
-            <value>Enteado/a</value>
-          </text>
-          <text id="/in_migration/movedfrom:label">
-            <value>Place member Moved FROM:</value>
-          </text>
-          <text id="/in_migration/shortorlongstay/2:label">
-            <value>Short (up to a year)</value>
-          </text>
-          <text id="/in_migration/migrationType:label">
-            <value>migrationType</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/3:label">
-            <value>Irmão/a</value>
-          </text>
-          <text id="/in_migration/movedfrom/15:label">
-            <value>Europa</value>
-          </text>
-        </translation>
         <translation default="true()" lang="Portuguese">
-          <text id="/in_migration/relationWithOriginHead/88:label">
-            <value>Não sabe</value>
+          <text id="/in_migration/relationWithDestinyOriginHead/12:label">
+            <value>Avó</value>
           </text>
-          <text id="/in_migration/inMigType:label">
-            <value>Tipo de Imigração Interna</value>
-          </text>
-          <text id="/in_migration/individualInfo/individualId:label">
-            <value>1. ExtId do individuo</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/98:label">
-            <value>Outro</value>
-          </text>
-          <text id="/in_migration/processedByMirth:label">
-            <value>processed</value>
-          </text>
-          <text id="/in_migration/individualInfo/gender/F:label">
-            <value>Femenino</value>
-          </text>
-          <text id="/in_migration/individualInfo/partialDate:label">
-            <value>9. A Data de nascimento é Exata/Aproximada?</value>
-          </text>
-          <text id="/in_migration/individualInfo/partialDate/2:label">
-            <value>Aproximado</value>
-          </text>
-          <text id="/in_migration/reason/98:label">
-            <value>Outro</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/6:label">
-            <value>Cunhado/a</value>
-          </text>
-          <text id="/in_migration/movedfrom/8:label">
-            <value>Zambezia</value>
-          </text>
-          <text id="/in_migration/reasonOther:label">
-            <value>7.1. Especifique a causa da migração</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/3:label">
-            <value>Irmão/a</value>
-          </text>
-          <text id="/in_migration/movedfrom/98:label">
-            <value>Outro</value>
-          </text>
-          <text id="/in_migration/individualInfo/dateOfBirth:label">
-            <value>8. Data de nascimento</value>
-          </text>
-          <text id="/in_migration/reason/3:label">
-            <value>Divorcio</value>
-          </text>
-          <text id="/in_migration/individualInfo/lastName:label">
-            <value>6. Apelido</value>
+          <text id="/in_migration/movedfrom/9:label">
+            <value>Nampula</value>
           </text>
           <text id="/in_migration/relationWithDestinyOriginHead:label">
             <value>12. Relação do Imigrante com o chefe de agregado de destino?</value>
           </text>
-          <text id="/in_migration/shortorlongstay/3:label">
-            <value>Mais de 1 ano</value>
+          <text id="/in_migration/movedfrom/14:label">
+            <value>Outro país Africano</value>
           </text>
-          <text id="/in_migration/origin:label">
-            <value>9. ExtId do Agregado de Origem</value>
+          <text id="/in_migration/movedfrom/8:label">
+            <value>Zambezia</value>
           </text>
           <text id="/in_migration/movedfrom/17:label">
             <value>Americas</value>
           </text>
-          <text id="/in_migration/individualInfo/partialDate/1:label">
-            <value>Exato</value>
+          <text id="/in_migration/reason/4:label">
+            <value>Separação</value>
           </text>
-          <text id="/in_migration/neighMovedfrom:label">
-            <value>15. Bairro de Origem</value>
+          <text id="/in_migration/reason/9:label">
+            <value>Educação</value>
           </text>
-          <text id="/in_migration/shortorlongstay/1:label">
-            <value>De 3 a 6 meses</value>
-          </text>
-          <text id="/in_migration/movedfrom/11:label">
-            <value>Niassa</value>
-          </text>
-          <text id="/in_migration/inMigType/1:label">
-            <value>Imigração Interna</value>
-          </text>
-          <text id="/in_migration/inMigType/2:label">
-            <value>Retorno ao DSS</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/10:label">
-            <value>Primo/a</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/8:label">
-            <value>Neto/a</value>
-          </text>
-          <text id="/in_migration/individualInfo/firstName:label">
-            <value>5. Nome</value>
-          </text>
-          <text id="/in_migration/warning:label">
-            <value>A data da imigração não pode ser menor ou igual a data de nascimento. Por favor volte e corrija.</value>
-          </text>
-          <text id="/in_migration/individualInfo:label">
-            <value>5. Informação do Individuo</value>
-          </text>
-          <text id="/in_migration/reason/12:label">
-            <value>Acompanhantes dos progenitores/responsaveis</value>
+          <text id="/in_migration/movedfrom:label">
+            <value>13. Lugar de Origem</value>
           </text>
           <text id="/in_migration/relationWithOriginHead/11:label">
             <value>Sobrinho/a</value>
           </text>
-          <text id="/in_migration/reason:label">
-            <value>7. Causas da migração</value>
+          <text id="/in_migration/movedfrom/16:label">
+            <value>Asia</value>
           </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/98:label">
-            <value>Outro</value>
+          <text id="/in_migration/relationWithOriginHead/3:label">
+            <value>Irmão/a</value>
           </text>
-          <text id="/in_migration/individualInfo/permId:label">
-            <value>2. Perm ID</value>
+          <text id="/in_migration/relationWithDestinyOriginHead/13:label">
+            <value>Não família</value>
           </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/12:label">
-            <value>Avó</value>
+          <text id="/in_migration/movedfrom/10:label">
+            <value>Cabo Delgado</value>
           </text>
-          <text id="/in_migration/relationWithOriginHead/1:label">
+          <text id="/in_migration/reason/1:label">
+            <value>Emprego</value>
+          </text>
+          <text id="/in_migration/individualInfo/gender:label">
+            <value>7. Sexo</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/1:label">
             <value>Pai/Mãe</value>
           </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/4:label">
-            <value>Esposo/a</value>
+          <text id="/in_migration/reason/7:label">
+            <value>Maioridade/Independência</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/2:label">
+            <value>Filho/a</value>
+          </text>
+          <text id="/in_migration/individualInfo/partialDate:label">
+            <value>9. A Data de nascimento é Exata/Aproximada?</value>
           </text>
           <text id="/in_migration/relationWithDestinyOriginHead/11:label">
             <value>Sobrinho/a</value>
           </text>
-          <text id="/in_migration/relationWithOriginHead/12:label">
-            <value>Avó</value>
+          <text id="/in_migration/shortorlongstay/1:label">
+            <value>De 3 a 6 meses</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/0:label">
+            <value>O Proprio chefe</value>
+          </text>
+          <text id="/in_migration/reason/11:label">
+            <value>Custo de Aluguer da casa</value>
+          </text>
+          <text id="/in_migration/shortorlongstay:label">
+            <value>8. Tempo que prevê permanecer neste agregado?</value>
+          </text>
+          <text id="/in_migration/individualInfo/dateOfBirth:label">
+            <value>8. Data de nascimento</value>
+          </text>
+          <text id="/in_migration/individualInfo/lastName:label">
+            <value>6. Apelido</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/6:label">
+            <value>Cunhado/a</value>
+          </text>
+          <text id="/in_migration/movedfrom/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/3:label">
+            <value>Irmão/a</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/1:label">
+            <value>Pai/Mãe</value>
+          </text>
+          <text id="/in_migration/individualInfo/partialDate/2:label">
+            <value>Aproximado</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead:hint">
+            <value>-</value>
+          </text>
+          <text id="/in_migration/individualInfo:label">
+            <value>5. Informação do Individuo</value>
+          </text>
+          <text id="/in_migration/individualInfo/partialDate/1:label">
+            <value>Exato</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/9:label">
+            <value>Enteado/a</value>
+          </text>
+          <text id="/in_migration/visitId:label">
+            <value>1. ExtId da Visita</value>
+          </text>
+          <text id="/in_migration/movedfrom/2:label">
+            <value>Cidade de Maputo</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/5:label">
+            <value>Nora</value>
+          </text>
+          <text id="/in_migration/reason/12:label">
+            <value>Acompanhantes dos progenitores/responsaveis</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/4:label">
+            <value>Esposo/a</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/98:label">
+            <value>Outro</value>
           </text>
           <text id="/in_migration/locationName:label">
             <value>4. Agregado de destino</value>
           </text>
+          <text id="/in_migration/inMigType:label">
+            <value>Tipo de Imigração Interna</value>
+          </text>
+          <text id="/in_migration/reason/10:label">
+            <value>Busca de melhores condições de vida</value>
+          </text>
+          <text id="/in_migration/individualInfo/individualId:label">
+            <value>1. ExtId do individuo</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/13:label">
+            <value>Não família</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/6:label">
+            <value>Cunhado/a</value>
+          </text>
+          <text id="/in_migration/migrationType:label">
+            <value>Tipo de Migração</value>
+          </text>
+          <text id="/in_migration/shortorlongstay/2:label">
+            <value>De 6 meses a 1 ano</value>
+          </text>
+          <text id="/in_migration/individualInfo/firstName:label">
+            <value>5. Nome</value>
+          </text>
+          <text id="/in_migration/movedfrom/11:label">
+            <value>Niassa</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/98:label">
+            <value>Outro</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/9:label">
+            <value>Enteado/a</value>
+          </text>
+          <text id="/in_migration/individualInfo/middleName:label">
+            <value>0. Nome do meio</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/10:label">
+            <value>Primo/a</value>
+          </text>
+          <text id="/in_migration/movedfrom/7:label">
+            <value>Tete</value>
+          </text>
+          <text id="/in_migration/originHouseNo:label">
+            <value>10. Agregado de Origem</value>
+          </text>
           <text id="/in_migration/reason/2:label">
             <value>Casamento</value>
+          </text>
+          <text id="/in_migration/movedfrom/4:label">
+            <value>Inhambane</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/8:label">
+            <value>Neto/a</value>
+          </text>
+          <text id="/in_migration/movedfrom/98:label">
+            <value>Outro</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/10:label">
+            <value>Primo/a</value>
+          </text>
+          <text id="/in_migration/origin:label">
+            <value>9. ExtId do Agregado de Origem</value>
+          </text>
+          <text id="/in_migration/individualInfo/gender/M:label">
+            <value>Masculino</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/0:label">
+            <value>O Proprio chefe</value>
+          </text>
+          <text id="/in_migration/movedfrom/12:label">
+            <value>Africa de Sul</value>
+          </text>
+          <text id="/in_migration/movedfromName:label">
+            <value>14. Especifique o lugar de origem</value>
+          </text>
+          <text id="/in_migration/dateOfMigration:label">
+            <value>6. Data da imigração</value>
+          </text>
+          <text id="/in_migration/inMigType/1:label">
+            <value>Imigração Interna</value>
+          </text>
+          <text id="/in_migration/reason/3:label">
+            <value>Divorcio</value>
+          </text>
+          <text id="/in_migration/movedfrom/1:label">
+            <value>Provincia de Maputo</value>
+          </text>
+          <text id="/in_migration/movedfrom/15:label">
+            <value>Europa</value>
+          </text>
+          <text id="/in_migration/shortorlongstay/3:label">
+            <value>Mais de 1 ano</value>
+          </text>
+          <text id="/in_migration/locationId:label">
+            <value>3. ExtId da Localização</value>
+          </text>
+          <text id="/in_migration/individualInfo/motherId:label">
+            <value>3. ExtId da mãe</value>
+          </text>
+          <text id="/in_migration/reason/8:label">
+            <value>Perca de parentes/responsaveis</value>
+          </text>
+          <text id="/in_migration/reason:label">
+            <value>7. Causas da migração</value>
+          </text>
+          <text id="/in_migration/reason/6:label">
+            <value>Situação Familiar</value>
+          </text>
+          <text id="/in_migration/fieldWorkerId:label">
+            <value>2. Código do Inquiridor</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/8:label">
+            <value>Neto/a</value>
+          </text>
+          <text id="/in_migration/individualInfo/gender/F:label">
+            <value>Femenino</value>
+          </text>
+          <text id="/in_migration/movedfrom/5:label">
+            <value>Sofala</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/7:label">
+            <value>Tio/a</value>
+          </text>
+          <text id="/in_migration/reasonOther:label">
+            <value>7.1. Especifique a causa da migração</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/7:label">
+            <value>Tio/a</value>
+          </text>
+          <text id="/in_migration/processedByMirth:label">
+            <value>processed</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/12:label">
+            <value>Avó</value>
+          </text>
+          <text id="/in_migration/reason/98:label">
+            <value>Outro</value>
+          </text>
+          <text id="/in_migration/individualInfo/fatherId:label">
+            <value>4. ExtId do Pai</value>
+          </text>
+          <text id="/in_migration/individualInfo/permId:label">
+            <value>2. Perm ID</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/5:label">
+            <value>Nora</value>
+          </text>
+          <text id="/in_migration/movedfrom/3:label">
+            <value>Gaza</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/2:label">
+            <value>Filho/a</value>
           </text>
           <text id="/in_migration/movedfrom/13:label">
             <value>Swazilandia</value>
@@ -771,179 +296,672 @@
           <text id="/in_migration/processedBySync:label">
             <value>processed by dbsync</value>
           </text>
-          <text id="/in_migration/movedfrom/1:label">
-            <value>Provincia de Maputo</value>
+          <text id="/in_migration/warning:label">
+            <value>A data da imigração não pode ser menor ou igual a data de nascimento. Por favor volte e corrija.</value>
           </text>
-          <text id="/in_migration/movedfrom/7:label">
-            <value>Tete</value>
-          </text>
-          <text id="/in_migration/reason/11:label">
-            <value>Custo de Aluguer da casa</value>
-          </text>
-          <text id="/in_migration/individualInfo/gender:label">
-            <value>7. Sexo</value>
-          </text>
-          <text id="/in_migration/movedfrom/5:label">
-            <value>Sofala</value>
-          </text>
-          <text id="/in_migration/movedfrom/4:label">
-            <value>Inhambane</value>
-          </text>
-          <text id="/in_migration/visitId:label">
-            <value>1. ExtId da Visita</value>
-          </text>
-          <text id="/in_migration/reason/10:label">
-            <value>Busca de melhores condições de vida</value>
-          </text>
-          <text id="/in_migration/movedfrom/14:label">
-            <value>Outro país Africano</value>
-          </text>
-          <text id="/in_migration/movedfrom/3:label">
-            <value>Gaza</value>
-          </text>
-          <text id="/in_migration/originHouseNo:label">
-            <value>10. Agregado de Origem</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/13:label">
-            <value>Não família</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/2:label">
-            <value>Filho/a</value>
-          </text>
-          <text id="/in_migration/individualInfo/middleName:label">
-            <value>0. Nome do meio</value>
-          </text>
-          <text id="/in_migration/individualInfo/motherId:label">
-            <value>3. ExtId da mãe</value>
-          </text>
-          <text id="/in_migration/individualInfo/fatherId:label">
-            <value>4. ExtId do Pai</value>
+          <text id="/in_migration/relationWithOriginHead/88:label">
+            <value>Não sabe</value>
           </text>
           <text id="/in_migration/relationWithOriginHead:label">
             <value>11. Relação do imigrante com o chefe de agregado de origem?</value>
           </text>
-          <text id="/in_migration/movedfrom/9:label">
-            <value>Nampula</value>
-          </text>
-          <text id="/in_migration/fieldWorkerId:label">
-            <value>2. Código do Inquiridor</value>
-          </text>
-          <text id="/in_migration/reason/6:label">
-            <value>Situação Familiar</value>
-          </text>
-          <text id="/in_migration/movedfrom/2:label">
-            <value>Cidade de Maputo</value>
-          </text>
-          <text id="/in_migration/reason/7:label">
-            <value>Maioridade/Independência</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/5:label">
-            <value>Nora</value>
-          </text>
-          <text id="/in_migration/dateOfMigration:label">
-            <value>6. Data da imigração</value>
-          </text>
-          <text id="/in_migration/locationId:label">
-            <value>3. ExtId da Localização</value>
-          </text>
-          <text id="/in_migration/movedfrom/12:label">
-            <value>Africa de Sul</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/9:label">
-            <value>Enteado/a</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/7:label">
-            <value>Tio/a</value>
-          </text>
           <text id="/in_migration/reason/5:label">
             <value>Doença</value>
           </text>
-          <text id="/in_migration/relationWithDestinyOriginHead:hint">
-            <value>-</value>
-          </text>
-          <text id="/in_migration/shortorlongstay:label">
-            <value>8. Tempo que prevê permanecer neste agregado?</value>
-          </text>
-          <text id="/in_migration/movedfrom/16:label">
-            <value>Asia</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/10:label">
-            <value>Primo/a</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/88:label">
-            <value>Não sabe</value>
-          </text>
-          <text id="/in_migration/movedfromName:label">
-            <value>14. Especifique o lugar de origem</value>
-          </text>
-          <text id="/in_migration/movedfrom/10:label">
-            <value>Cabo Delgado</value>
-          </text>
-          <text id="/in_migration/reason/4:label">
-            <value>Separação</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/1:label">
-            <value>Pai/Mãe</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/7:label">
-            <value>Tio/a</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/8:label">
-            <value>Neto/a</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/4:label">
-            <value>Esposo/a</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/13:label">
-            <value>Não família</value>
-          </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/2:label">
-            <value>Filho/a</value>
-          </text>
-          <text id="/in_migration/movedfrom/88:label">
-            <value>Não sabe</value>
-          </text>
-          <text id="/in_migration/individualInfo/gender/M:label">
-            <value>Masculino</value>
-          </text>
-          <text id="/in_migration/reason/8:label">
-            <value>Perca de parentes/responsaveis</value>
+          <text id="/in_migration/inMigType/2:label">
+            <value>Retorno ao DSS</value>
           </text>
           <text id="/in_migration/reason/88:label">
             <value>Não sabe</value>
           </text>
-          <text id="/in_migration/relationWithDestinyOriginHead/5:label">
-            <value>Nora</value>
+          <text id="/in_migration/neighMovedfrom:label">
+            <value>15. Bairro de Origem</value>
           </text>
-          <text id="/in_migration/reason/1:label">
-            <value>Emprego</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/6:label">
-            <value>Cunhado/a</value>
-          </text>
-          <text id="/in_migration/reason/9:label">
-            <value>Educação</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/9:label">
-            <value>Enteado/a</value>
-          </text>
-          <text id="/in_migration/movedfrom:label">
-            <value>13. Lugar de Origem</value>
-          </text>
-          <text id="/in_migration/shortorlongstay/2:label">
-            <value>De 6 meses a 1 ano</value>
-          </text>
-          <text id="/in_migration/migrationType:label">
-            <value>Tipo de Migração</value>
-          </text>
-          <text id="/in_migration/relationWithOriginHead/3:label">
-            <value>Irmão/a</value>
+          <text id="/in_migration/relationWithOriginHead/4:label">
+            <value>Esposo/a</value>
           </text>
           <text id="/in_migration/movedfrom/6:label">
             <value>Manica</value>
           </text>
+        </translation>
+        <translation lang="English">
+          <text id="/in_migration/relationWithDestinyOriginHead/12:label">
+            <value>Avó</value>
+          </text>
+          <text id="/in_migration/movedfrom/9:label">
+            <value>Nampula</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead:label">
+            <value>Relação do Imigrante com o chefe de agregado de destino?</value>
+          </text>
+          <text id="/in_migration/movedfrom/14:label">
+            <value>Outro país Africano</value>
+          </text>
+          <text id="/in_migration/movedfrom/8:label">
+            <value>Zambezia</value>
+          </text>
+          <text id="/in_migration/movedfrom/17:label">
+            <value>Americas</value>
+          </text>
+          <text id="/in_migration/reason/4:label">
+            <value>FISHING</value>
+          </text>
+          <text id="/in_migration/reason/9:label">
+            <value>Educação</value>
+          </text>
+          <text id="/in_migration/movedfrom:label">
+            <value>Place member Moved FROM:</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/11:label">
+            <value>Sobrinho/a</value>
+          </text>
+          <text id="/in_migration/movedfrom/16:label">
+            <value>Asia</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/3:label">
+            <value>Irmão/a</value>
+          </text>
+          <text id="/in_migration/movedfrom/4:label">
+            <value>Inhamban</value>
+          </text>
+          <text id="/in_migration/movedfrom/10:label">
+            <value>Cabo Delgado</value>
+          </text>
+          <text id="/in_migration/reason/1:label">
+            <value>Came with relative(s)</value>
+          </text>
+          <text id="/in_migration/individualInfo/gender:label">
+            <value>gender</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/1:label">
+            <value>Pai/Mãe</value>
+          </text>
+          <text id="/in_migration/reason/7:label">
+            <value>Moved to new house</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/2:label">
+            <value>Filho/a</value>
+          </text>
+          <text id="/in_migration/individualInfo/partialDate:label">
+            <value>Partial Date</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/11:label">
+            <value>Sobrinho/a</value>
+          </text>
+          <text id="/in_migration/shortorlongstay/1:label">
+            <value>Long (more than 1 year)</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/0:label">
+            <value>O Proprio chefe</value>
+          </text>
+          <text id="/in_migration/reason/11:label">
+            <value>Custo de Aluguer da casa</value>
+          </text>
+          <text id="/in_migration/shortorlongstay:label">
+            <value>Is he/she planning to stay long term or short term?</value>
+          </text>
+          <text id="/in_migration/individualInfo/dateOfBirth:label">
+            <value>Date of Birth</value>
+          </text>
+          <text id="/in_migration/individualInfo/lastName:label">
+            <value>Last Name</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/6:label">
+            <value>Cunhado/a</value>
+          </text>
+          <text id="/in_migration/movedfrom/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/3:label">
+            <value>Irmão/a</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/1:label">
+            <value>Pai/Mãe</value>
+          </text>
+          <text id="/in_migration/individualInfo/partialDate/2:label">
+            <value>Approximate</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead:hint">
+            <value>-</value>
+          </text>
+          <text id="/in_migration/individualInfo:label">
+            <value>-</value>
+          </text>
+          <text id="/in_migration/individualInfo/partialDate/1:label">
+            <value>Exact</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/9:label">
+            <value>Enteado/a</value>
+          </text>
+          <text id="/in_migration/visitId:label">
+            <value>Visit Id</value>
+          </text>
+          <text id="/in_migration/movedfrom/2:label">
+            <value>Cidade de Maputo</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/5:label">
+            <value>Nora</value>
+          </text>
+          <text id="/in_migration/reason/12:label">
+            <value>Acompanhantes dos progenitores/responsaveis</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/4:label">
+            <value>Esposo/a</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/98:label">
+            <value>Outro</value>
+          </text>
+          <text id="/in_migration/locationName:label">
+            <value>Agregado de destino</value>
+          </text>
+          <text id="/in_migration/inMigType:label">
+            <value>Tipo de Imigração Interna</value>
+          </text>
+          <text id="/in_migration/reason/10:label">
+            <value>Situação Economica</value>
+          </text>
+          <text id="/in_migration/individualInfo/individualId:label">
+            <value>Individual Id</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/13:label">
+            <value>Não família</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/6:label">
+            <value>Cunhado/a</value>
+          </text>
+          <text id="/in_migration/migrationType:label">
+            <value>migrationType</value>
+          </text>
+          <text id="/in_migration/shortorlongstay/2:label">
+            <value>Short (up to a year)</value>
+          </text>
+          <text id="/in_migration/individualInfo/firstName:label">
+            <value>First Name</value>
+          </text>
+          <text id="/in_migration/movedfrom/11:label">
+            <value>Niassa</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/98:label">
+            <value>Outro</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/9:label">
+            <value>Enteado/a</value>
+          </text>
+          <text id="/in_migration/individualInfo/middleName:label">
+            <value>Middle Name</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/10:label">
+            <value>Primo/a</value>
+          </text>
+          <text id="/in_migration/movedfrom/7:label">
+            <value>Tete</value>
+          </text>
+          <text id="/in_migration/originHouseNo:label">
+            <value>Agregado de Origem</value>
+          </text>
+          <text id="/in_migration/reason/2:label">
+            <value>FARMING</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/13:label">
+            <value>Não família</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/8:label">
+            <value>Neto/a</value>
+          </text>
+          <text id="/in_migration/movedfrom/98:label">
+            <value>Outro</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/10:label">
+            <value>Primo/a</value>
+          </text>
+          <text id="/in_migration/origin:label">
+            <value>origin</value>
+          </text>
+          <text id="/in_migration/individualInfo/gender/M:label">
+            <value>Male</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/0:label">
+            <value>O Proprio chefe</value>
+          </text>
+          <text id="/in_migration/movedfrom/12:label">
+            <value>Africa de Sul</value>
+          </text>
+          <text id="/in_migration/movedfromName:label">
+            <value>Place member Moved FROM:</value>
+          </text>
+          <text id="/in_migration/dateOfMigration:label">
+            <value>Date of In Migration</value>
+          </text>
+          <text id="/in_migration/inMigType/1:label">
+            <value>Imigração Interna</value>
+          </text>
+          <text id="/in_migration/reason/3:label">
+            <value>MARITAL CHANGE</value>
+          </text>
+          <text id="/in_migration/movedfrom/1:label">
+            <value>Provincia de Maputo</value>
+          </text>
           <text id="/in_migration/movedfrom/15:label">
             <value>Europa</value>
+          </text>
+          <text id="/in_migration/shortorlongstay/3:label">
+            <value>Unknown</value>
+          </text>
+          <text id="/in_migration/locationId:label">
+            <value>Location Id</value>
+          </text>
+          <text id="/in_migration/individualInfo/motherId:label">
+            <value>Mother Id</value>
+          </text>
+          <text id="/in_migration/reason/8:label">
+            <value>OTHER</value>
+          </text>
+          <text id="/in_migration/reason:label">
+            <value>reason</value>
+          </text>
+          <text id="/in_migration/reason/6:label">
+            <value>WORK</value>
+          </text>
+          <text id="/in_migration/fieldWorkerId:label">
+            <value>Field Worker Id</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/8:label">
+            <value>Neto/a</value>
+          </text>
+          <text id="/in_migration/individualInfo/gender/F:label">
+            <value>Female</value>
+          </text>
+          <text id="/in_migration/movedfrom/5:label">
+            <value>Sofala</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/7:label">
+            <value>Tio/a</value>
+          </text>
+          <text id="/in_migration/reasonOther:label">
+            <value>reason</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/7:label">
+            <value>Tio/a</value>
+          </text>
+          <text id="/in_migration/processedByMirth:label">
+            <value>processed</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/12:label">
+            <value>Avó</value>
+          </text>
+          <text id="/in_migration/reason/98:label">
+            <value>Outro</value>
+          </text>
+          <text id="/in_migration/individualInfo/fatherId:label">
+            <value>Father Id</value>
+          </text>
+          <text id="/in_migration/individualInfo/permId:label">
+            <value>Perm ID</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/5:label">
+            <value>Nora</value>
+          </text>
+          <text id="/in_migration/movedfrom/3:label">
+            <value>Gaza</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/2:label">
+            <value>Filho/a</value>
+          </text>
+          <text id="/in_migration/movedfrom/13:label">
+            <value>Swazilandia</value>
+          </text>
+          <text id="/in_migration/processedBySync:label">
+            <value>processed</value>
+          </text>
+          <text id="/in_migration/warning:label">
+            <value>The migration date can not be prior or equal to the Birth date. Please go back and correct it.</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead:label">
+            <value>Relação do imigrante com o chefe de agregado de origem?</value>
+          </text>
+          <text id="/in_migration/reason/5:label">
+            <value>EDUCATION/SCHOOL</value>
+          </text>
+          <text id="/in_migration/inMigType/2:label">
+            <value>Retorno ao DSS</value>
+          </text>
+          <text id="/in_migration/reason/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/in_migration/neighMovedfrom:label">
+            <value>Neighborhood member Moved FROM:</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/4:label">
+            <value>Esposo/a</value>
+          </text>
+          <text id="/in_migration/movedfrom/6:label">
+            <value>Manica</value>
+          </text>
+        </translation>
+        <translation lang="Swahili">
+          <text id="/in_migration/relationWithDestinyOriginHead/12:label">
+            <value>Avó</value>
+          </text>
+          <text id="/in_migration/movedfrom/9:label">
+            <value>Nampula</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead:label">
+            <value>Relação do Imigrante com o chefe de agregado de destino?</value>
+          </text>
+          <text id="/in_migration/movedfrom/14:label">
+            <value>Outro país Africano</value>
+          </text>
+          <text id="/in_migration/movedfrom/8:label">
+            <value>Zambezia</value>
+          </text>
+          <text id="/in_migration/movedfrom/17:label">
+            <value>Americas</value>
+          </text>
+          <text id="/in_migration/reason/4:label">
+            <value>FISHING</value>
+          </text>
+          <text id="/in_migration/reason/9:label">
+            <value>Educação</value>
+          </text>
+          <text id="/in_migration/movedfrom:label">
+            <value>Place member Moved FROM:</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/11:label">
+            <value>Sobrinho/a</value>
+          </text>
+          <text id="/in_migration/movedfrom/16:label">
+            <value>Asia</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/3:label">
+            <value>Irmão/a</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/13:label">
+            <value>Não família</value>
+          </text>
+          <text id="/in_migration/movedfrom/10:label">
+            <value>Cabo Delgado</value>
+          </text>
+          <text id="/in_migration/reason/1:label">
+            <value>Came with relative(s)</value>
+          </text>
+          <text id="/in_migration/individualInfo/gender:label">
+            <value>Jinsia</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/1:label">
+            <value>Pai/Mãe</value>
+          </text>
+          <text id="/in_migration/reason/7:label">
+            <value>Moved to new house</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/2:label">
+            <value>Filho/a</value>
+          </text>
+          <text id="/in_migration/individualInfo/partialDate:label">
+            <value>Partial Date</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/11:label">
+            <value>Sobrinho/a</value>
+          </text>
+          <text id="/in_migration/shortorlongstay/1:label">
+            <value>Long (more than 1 year)</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/0:label">
+            <value>O Proprio chefe</value>
+          </text>
+          <text id="/in_migration/reason/11:label">
+            <value>Custo de Aluguer da casa</value>
+          </text>
+          <text id="/in_migration/shortorlongstay:label">
+            <value>Is he/she planning to stay long term or short term?</value>
+          </text>
+          <text id="/in_migration/individualInfo/dateOfBirth:label">
+            <value>Tarehe ya Kuzaliwa</value>
+          </text>
+          <text id="/in_migration/individualInfo/lastName:label">
+            <value>Jina la Ukoo</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/6:label">
+            <value>Cunhado/a</value>
+          </text>
+          <text id="/in_migration/movedfrom/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/3:label">
+            <value>Irmão/a</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/1:label">
+            <value>Pai/Mãe</value>
+          </text>
+          <text id="/in_migration/individualInfo/partialDate/2:label">
+            <value>Tarehe Imekadiliwa</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead:hint">
+            <value>Relação do Imigrante com o chefe de agregado de destino?</value>
+          </text>
+          <text id="/in_migration/individualInfo:label">
+            <value>individualIdInfoGRP</value>
+          </text>
+          <text id="/in_migration/individualInfo/partialDate/1:label">
+            <value>Tarehe Kamili</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/9:label">
+            <value>Enteado/a</value>
+          </text>
+          <text id="/in_migration/visitId:label">
+            <value>Nambari ya Hudhurio</value>
+          </text>
+          <text id="/in_migration/movedfrom/2:label">
+            <value>Cidade de Maputo</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/5:label">
+            <value>Nora</value>
+          </text>
+          <text id="/in_migration/reason/12:label">
+            <value>Acompanhantes dos progenitores/responsaveis</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/4:label">
+            <value>Esposo/a</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/98:label">
+            <value>Outro</value>
+          </text>
+          <text id="/in_migration/locationName:label">
+            <value>Agregado de destino</value>
+          </text>
+          <text id="/in_migration/inMigType:label">
+            <value>Tipo de Imigração Interna</value>
+          </text>
+          <text id="/in_migration/reason/10:label">
+            <value>Situação Economica</value>
+          </text>
+          <text id="/in_migration/individualInfo/individualId:label">
+            <value>Nambari ya Mwanakaya</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/13:label">
+            <value>Não família</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/6:label">
+            <value>Cunhado/a</value>
+          </text>
+          <text id="/in_migration/migrationType:label">
+            <value>migrationType_label</value>
+          </text>
+          <text id="/in_migration/shortorlongstay/2:label">
+            <value>Short (up to a year)</value>
+          </text>
+          <text id="/in_migration/individualInfo/firstName:label">
+            <value>Jina la Kwanza</value>
+          </text>
+          <text id="/in_migration/movedfrom/11:label">
+            <value>Niassa</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/98:label">
+            <value>Outro</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/9:label">
+            <value>Enteado/a</value>
+          </text>
+          <text id="/in_migration/individualInfo/middleName:label">
+            <value>Jina la Kati</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/10:label">
+            <value>Primo/a</value>
+          </text>
+          <text id="/in_migration/movedfrom/7:label">
+            <value>Tete</value>
+          </text>
+          <text id="/in_migration/originHouseNo:label">
+            <value>Agregado de origem</value>
+          </text>
+          <text id="/in_migration/reason/2:label">
+            <value>UFUGAJI</value>
+          </text>
+          <text id="/in_migration/movedfrom/4:label">
+            <value>Inhamban</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/8:label">
+            <value>Neto/a</value>
+          </text>
+          <text id="/in_migration/movedfrom/98:label">
+            <value>Outro</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/10:label">
+            <value>Primo/a</value>
+          </text>
+          <text id="/in_migration/origin:label">
+            <value>Aliko Tokea</value>
+          </text>
+          <text id="/in_migration/individualInfo/gender/M:label">
+            <value>Mwanaume</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/0:label">
+            <value>O Proprio chefe</value>
+          </text>
+          <text id="/in_migration/movedfrom/12:label">
+            <value>Africa de Sul</value>
+          </text>
+          <text id="/in_migration/movedfromName:label">
+            <value>Place member Moved FROM:</value>
+          </text>
+          <text id="/in_migration/dateOfMigration:label">
+            <value>Tarehe ya Kuhamia</value>
+          </text>
+          <text id="/in_migration/inMigType/1:label">
+            <value>Imigração Interna</value>
+          </text>
+          <text id="/in_migration/reason/3:label">
+            <value>KUBADILIKA KWA HALI YA NDOA</value>
+          </text>
+          <text id="/in_migration/movedfrom/1:label">
+            <value>Provincia de Maputo</value>
+          </text>
+          <text id="/in_migration/movedfrom/15:label">
+            <value>Europa</value>
+          </text>
+          <text id="/in_migration/shortorlongstay/3:label">
+            <value>Unknown</value>
+          </text>
+          <text id="/in_migration/locationId:label">
+            <value>Nambari ya Eneo</value>
+          </text>
+          <text id="/in_migration/individualInfo/motherId:label">
+            <value>Nambari ya Mama</value>
+          </text>
+          <text id="/in_migration/reason/8:label">
+            <value>NYINGINE</value>
+          </text>
+          <text id="/in_migration/reason:label">
+            <value>Sababu</value>
+          </text>
+          <text id="/in_migration/reason/6:label">
+            <value>KAZI</value>
+          </text>
+          <text id="/in_migration/fieldWorkerId:label">
+            <value>Nambari ya Mhojaji</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/8:label">
+            <value>Neto/a</value>
+          </text>
+          <text id="/in_migration/individualInfo/gender/F:label">
+            <value>Mwanamke</value>
+          </text>
+          <text id="/in_migration/movedfrom/5:label">
+            <value>Sofala</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/7:label">
+            <value>Tio/a</value>
+          </text>
+          <text id="/in_migration/reasonOther:label">
+            <value>Sababu</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/7:label">
+            <value>Tio/a</value>
+          </text>
+          <text id="/in_migration/processedByMirth:label">
+            <value>processed</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/12:label">
+            <value>Avó</value>
+          </text>
+          <text id="/in_migration/reason/98:label">
+            <value>Outro</value>
+          </text>
+          <text id="/in_migration/individualInfo/fatherId:label">
+            <value>Nambari ya Baba</value>
+          </text>
+          <text id="/in_migration/individualInfo/permId:label">
+            <value>Perm ID</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/5:label">
+            <value>Nora</value>
+          </text>
+          <text id="/in_migration/movedfrom/3:label">
+            <value>Gaza</value>
+          </text>
+          <text id="/in_migration/relationWithDestinyOriginHead/2:label">
+            <value>Filho/a</value>
+          </text>
+          <text id="/in_migration/movedfrom/13:label">
+            <value>Swazilandia</value>
+          </text>
+          <text id="/in_migration/processedBySync:label">
+            <value>processed</value>
+          </text>
+          <text id="/in_migration/warning:label">
+            <value>-</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead:label">
+            <value>Relação do imigrante com o chefe de agregado de origem?</value>
+          </text>
+          <text id="/in_migration/reason/5:label">
+            <value>ELIMU/SHULE</value>
+          </text>
+          <text id="/in_migration/inMigType/2:label">
+            <value>Retorno ao DSS</value>
+          </text>
+          <text id="/in_migration/reason/88:label">
+            <value>Não sabe</value>
+          </text>
+          <text id="/in_migration/neighMovedfrom:label">
+            <value>Neighborhood member Moved FROM:</value>
+          </text>
+          <text id="/in_migration/relationWithOriginHead/4:label">
+            <value>Esposo/a</value>
+          </text>
+          <text id="/in_migration/movedfrom/6:label">
+            <value>Manica</value>
           </text>
         </translation>
       </itext>
@@ -1192,6 +1210,10 @@
     <select1 ref="/in_migration/relationWithOriginHead">
       <label ref="jr:itext('/in_migration/relationWithOriginHead:label')"/>
       <item>
+        <label ref="jr:itext('/in_migration/relationWithOriginHead/0:label')"/>
+        <value>0</value>
+      </item>
+      <item>
         <label ref="jr:itext('/in_migration/relationWithOriginHead/1:label')"/>
         <value>1</value>
       </item>
@@ -1255,6 +1277,10 @@
     <select1 ref="/in_migration/relationWithDestinyOriginHead">
       <label ref="jr:itext('/in_migration/relationWithDestinyOriginHead:label')"/>
       <hint ref="jr:itext('/in_migration/relationWithDestinyOriginHead:hint')"/>
+      <item>
+        <label ref="jr:itext('/in_migration/relationWithDestinyOriginHead/0:label')"/>
+        <value>0</value>
+      </item>
       <item>
         <label ref="jr:itext('/in_migration/relationWithDestinyOriginHead/1:label')"/>
         <value>1</value>
