@@ -281,21 +281,23 @@ public class LocationVisit implements Serializable {
 
          String generatedName = null;
          String baseName = getLatestLevelName(); 
+         String lzFormat = "%03d"; //leading zero format, current code result is 000, newer should be 0000, only change after DSS chief decision
          
-         //001-999
+         //001-999/9
          //NEXT       
          if (cursor.moveToFirst()) {
          	
          	int nextCode = 0;        	       	        	
          	        	
-         	for (int i=1; i<=999; i++){
+         	for (int i=1; i<=9999; i++){ //was 999
          		        		        		
          		int locCode = 0;
          		
          		try{
          			
          			String locName = cursor.getString(0);
-             		String strLocCode = locName.substring(locName.length()-3);
+         			int hyphenIndex = locName.lastIndexOf("-");
+             		String strLocCode = locName.substring(hyphenIndex+1); //was "locName.length()-3", result = 000, we now get the last character "-" 0000-000, we can get 000/0000
          			
          			locCode = Integer.parseInt(strLocCode);
          			
@@ -316,16 +318,16 @@ public class LocationVisit implements Serializable {
          			cursor.moveToNext();
          			break;
          		}        		
-         	}
+         	}         	         	
          	
          	if (nextCode==0){
          		generatedName = "COULDNT GENERATE";
          	}else{
-         		generatedName = String.format(getLatestLevelName() + "-" + "%03d", nextCode);
+         		generatedName = String.format(getLatestLevelName() + "-" + lzFormat, nextCode); //for numbers less than 100 will generate ### format and allow #### formats, but after future decisions this should change and start generating only new code format
          	}        	
              //generatedName = generateLocationNameFrom(cursor.getString(0));
          } else {
-             generatedName = getLatestLevelName() + "-001";
+             generatedName = String.format(getLatestLevelName() + "-" + lzFormat, 1); //was getLatestLevelName() + "-001"; //-0001
          }
 
          cursor.close();
