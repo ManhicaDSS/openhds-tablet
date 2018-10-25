@@ -26,6 +26,8 @@ public class SelectionFilterLocFragment extends Fragment implements OnClickListe
         void onSeeListLocation(String village);
 
         void onSearch(String location);
+        
+        void onSearch(String locationExtId, String locationName);
     }
 
     // keep track of the original values - these may be set by an activity
@@ -33,6 +35,7 @@ public class SelectionFilterLocFragment extends Fragment implements OnClickListe
     private String location = "";
 
     private TextView locationTxt;
+    private TextView locationNameTxt;
     private Button clearBtn, searchBtn;
     private Listener listener;
 
@@ -47,8 +50,9 @@ public class SelectionFilterLocFragment extends Fragment implements OnClickListe
         searchBtn.setOnClickListener(this);
 
         locationTxt = (TextView) view.findViewById(R.id.locationTxt);
+        
+        locationNameTxt = (TextView) view.findViewById(R.id.locationNameTxt);
      
-
         return view;
     }
 
@@ -66,7 +70,7 @@ public class SelectionFilterLocFragment extends Fragment implements OnClickListe
     public void onClick(View view) {
         int id = view.getId();
 		if (id == R.id.searchFilterBtn) {
-			listener.onSearch(locationTxt.getText().toString());
+			listener.onSearch(locationTxt.getText().toString(), locationNameTxt.getText().toString());
 		} else if (id == R.id.clearFilterBtn) {
 			clear();
 		}
@@ -74,6 +78,7 @@ public class SelectionFilterLocFragment extends Fragment implements OnClickListe
 
     private void clear() {
         locationTxt.setText(location);
+        locationNameTxt.setText(location);
     }
 
 

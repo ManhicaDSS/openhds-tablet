@@ -53,6 +53,43 @@
 
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/locationNameLbl"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/location_name_lbl"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/locationNameTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/location_name_hint_lbl" />
+
+            <Button
+                android:id="@+id/location_name_see_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:enabled="false"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="@string/see_list"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+        
+        
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >

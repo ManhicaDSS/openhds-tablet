@@ -37,6 +37,8 @@
     <string name="household_not_found">Não foi possível encontrar um Agregado Familiar para este Indivíduo</string>
     <string name="idGenerationFailure">Um erro ocorreu ao gerar uma ID</string>
     <string name="location_lbl">Localização:</string>
+    <string name="location_name_lbl">Numero da Casa / PERM Id:</string>
+    <string name="location_name_hint_lbl">PERM Id ou uma parcela</string>
     <string name="form_lbl">Formulário:</string>
     <string name="login_btn">Entrar</string>
     <string name="logout_btn">Sair</string>

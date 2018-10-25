@@ -89,12 +89,17 @@ public class FilterLocationActivity extends Activity implements ValueListener, S
     public void onSearch(String location) {
         valueFragment.loadFilteredLocations(location);
     }
+    
+    @Override
+	public void onSearch(String locationExtId, String locationName) {
+    	valueFragment.loadFilteredLocations(locationExtId, locationName);
+	}
 
 	public void onIndividualSelected(Individual individual) {
 		// TODO Auto-generated method stub
 		
 	}
-
+	
 
 
 }

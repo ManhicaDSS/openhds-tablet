@@ -38,6 +38,9 @@
     <string name="household_not_found">A household was not found for this Individual</string>
     <string name="idGenerationFailure">An error occurred while generating an id</string>
     <string name="location_lbl">Location:</string>
+    <string name="location_name_lbl">Location Name/House Number:</string>
+    <string name="location_name_hint_lbl">Location Name / PERM Id</string>
+    
     <string name="form_lbl">Form:</string>
     <string name="login_btn">Login</string>
     <string name="logout_btn">Logout</string>

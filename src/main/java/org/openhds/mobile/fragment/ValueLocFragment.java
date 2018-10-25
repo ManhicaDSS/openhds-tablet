@@ -116,11 +116,23 @@ public class ValueLocFragment extends ListFragment implements LoaderCallbacks<Cu
     }
 
     private Loader<Cursor> buildLocationCursorLoader(Bundle arg1) {
-        if (TextUtils.isEmpty(arg1.getString("extId"))) {
+        if (TextUtils.isEmpty(arg1.getString("extId")) && TextUtils.isEmpty(arg1.getString("name"))) {
             return buildCursorLoader(OpenHDS.Locations.CONTENT_ID_URI_BASE, null, null);
         } else {
-            return buildCursorLoader(OpenHDS.Locations.CONTENT_ID_URI_BASE, OpenHDS.Locations.COLUMN_LOCATION_EXTID
-                    + " = ?", new String[] { arg1.getString("extId") });
+        	String where = "";
+        	List<String> args = new ArrayList<String>();
+        	
+        	if (!TextUtils.isEmpty(arg1.getString("extId"))) {
+        		where += OpenHDS.Locations.COLUMN_LOCATION_EXTID + " like ?";
+        		args.add( "%" + arg1.getString("extId") + "%" );
+        	}
+        	if (!TextUtils.isEmpty(arg1.getString("name"))) {
+        		where += where.isEmpty() ? "" : " and ";
+        		where += OpenHDS.Locations.COLUMN_LOCATION_NAME + " like ?";
+        		args.add( "%" + arg1.getString("name") + "%" );
+        	}        	
+        	
+            return buildCursorLoader(OpenHDS.Locations.CONTENT_ID_URI_BASE, where, args.toArray(new String[0]));
         }
     }
 
@@ -210,13 +222,44 @@ public class ValueLocFragment extends ListFragment implements LoaderCallbacks<Cu
      * Loads a list of Locations that are filtered by the arguments
      * 
      * @param location
-     *            the location id to filter, or null to ignore filtering on
-     *            location
+     *            the location id to filter, or null to ignore filtering on location
      */
     public void loadFilteredLocations(String location) {
         listCurrentlyDisplayed = Displayed.LOCATION;
         Bundle bundle = new Bundle();
         bundle.putString("extId", location);
+        getLoaderManager().restartLoader(LOCATION_LOADER, bundle, this);
+    }
+    
+    /**
+     * Loads a list of Locations that are filtered by the arguments
+     * 
+     * @param locationExtId the location id to filter, or null to ignore filtering on location
+     * @param locationName the location name or house number to filter, or null to ignore filtering on location
+     */
+    public void loadFilteredLocations(String locationExtId, String locationName) {
+        listCurrentlyDisplayed = Displayed.LOCATION;
+        Bundle bundle = new Bundle();
+        
+        if (locationExtId != null && !locationExtId.isEmpty()) {
+        	bundle.putString("extId", locationExtId);
+        }
+        if (locationName != null && !locationName.isEmpty()) {
+        	bundle.putString("name", locationName);
+        }
+        
+        getLoaderManager().restartLoader(LOCATION_LOADER, bundle, this);
+    }
+    
+    /**
+     * Loads a list of Locations that are filtered by the arguments
+     * 
+     * @param locationName/houseNumber the location name/house number to filter, or null to ignore filtering on location
+     */
+    public void loadFilteredLocationsByName(String locationName) {
+        listCurrentlyDisplayed = Displayed.LOCATION;
+        Bundle bundle = new Bundle();
+        bundle.putString("name", locationName);
         getLoaderManager().restartLoader(LOCATION_LOADER, bundle, this);
     }
 
