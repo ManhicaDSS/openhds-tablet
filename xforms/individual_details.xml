@@ -132,11 +132,11 @@
       <bind nodeset="/individual_details/fatherId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/individual_details/motherId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/individual_details/fatherPermId" readonly="true()" required="true()" type="string"/>
-      <bind nodeset="/individual_details/fatherName" readonly="true()" type="string"/>
+      <bind nodeset="/individual_details/fatherName" type="string"/>
       <bind nodeset="/individual_details/motherPermId" readonly="true()" required="true()" type="string"/>
-      <bind nodeset="/individual_details/motherName" readonly="true()" type="string"/>
+      <bind nodeset="/individual_details/motherName" type="string"/>
       <bind nodeset="/individual_details/spousePermId" readonly="true()" type="string"/>
-      <bind nodeset="/individual_details/spouseName" readonly="true()" type="string"/>
+      <bind nodeset="/individual_details/spouseName" type="string"/>
       <bind nodeset="/individual_details/isUpdatable" required="true()" type="select1"/>
       <bind nodeset="/individual_details/reasonToNotUpdate" relevant=" /individual_details/isUpdatable =2" required="true()" type="select1"/>
       <bind nodeset="/individual_details/isPresent" relevant=" /individual_details/isUpdatable =1" required="true()" type="select1"/>
