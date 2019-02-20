@@ -49,6 +49,7 @@ public class SyncDatabaseHelper implements SyncDatabaseListener {
 	}
 
 	public void startSync() {
+		progressDialog.dismiss(); 
 		progressDialog.show();
 
 		if (null != currentTask && currentTask.getStatus() == Status.RUNNING) {
