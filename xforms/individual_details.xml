@@ -135,8 +135,8 @@
       <bind nodeset="/individual_details/fatherName" type="string"/>
       <bind nodeset="/individual_details/motherPermId" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/individual_details/motherName" type="string"/>
-      <bind nodeset="/individual_details/spousePermId" readonly="true()" type="string"/>
-      <bind nodeset="/individual_details/spouseName" type="string"/>
+      <bind nodeset="/individual_details/spousePermId" readonly="true()" relevant=" /individual_details/age  &gt;= 15" type="string"/>
+      <bind nodeset="/individual_details/spouseName" relevant=" /individual_details/age  &gt;= 15" type="string"/>
       <bind nodeset="/individual_details/isUpdatable" required="true()" type="select1"/>
       <bind nodeset="/individual_details/reasonToNotUpdate" relevant=" /individual_details/isUpdatable =2" required="true()" type="select1"/>
       <bind nodeset="/individual_details/isPresent" relevant=" /individual_details/isUpdatable =1" required="true()" type="select1"/>
