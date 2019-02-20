@@ -271,7 +271,7 @@ public class LocationVisit implements Serializable {
         location.setName(locationName);      
     }
     
-    //Generate the locationName to handle the HouseNo Code (##-####-###) from Manhiça DSS
+    //Generate the locationName to handle the HouseNo Code (##-####-###) from Manhica DSS
  	private String generateLocationName(ContentResolver resolver) { 		 		 
  		
          Cursor cursor = resolver.query(OpenHDS.Locations.CONTENT_ID_URI_BASE,
@@ -406,7 +406,7 @@ public class LocationVisit implements Serializable {
         if (cursor.moveToFirst()) {
             generatedId = generateLocationIdFrom(cursor.getString(0), resolver);
         } else {
-            generatedId = getLatestLevelExtId() + "000001";
+            generatedId = getLatestLevelExtId() + fieldWorker.getExtId().substring(2,5) + "001";
         }
 
         cursor.close();
@@ -415,11 +415,11 @@ public class LocationVisit implements Serializable {
 
     private String generateLocationIdFrom(String lastGeneratedId, ContentResolver resolver) {
         try {
-            int increment = Integer.parseInt(lastGeneratedId.substring(3, 9));
+            int increment = Integer.parseInt(lastGeneratedId.substring(6, 9));
             int nextIncrement = increment + 1;
-            return String.format(getLatestLevelExtId() + "%06d", nextIncrement);
+            return String.format(getLatestLevelExtId() +  fieldWorker.getExtId().substring(2,5) + "%03d", nextIncrement);
         } catch (NumberFormatException e) {
-            return getLatestLevelExtId() + "000001";
+            return getLatestLevelExtId() +  fieldWorker.getExtId().substring(2,5) + "001";
         }
     }
 
